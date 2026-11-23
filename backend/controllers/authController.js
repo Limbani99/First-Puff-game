@@ -18,7 +18,7 @@ const createToken = (user) => {
 // Register player
 const register = async (req, res) => {
   try {
-    const { username, email, password, avatar } = req.body;
+    const { username, email, password, avatar, gameSave } = req.body;
 
     if (!username || !email || !password) {
       return res.status(400).json({ message: "Username, email, and password are required" });
@@ -37,16 +37,17 @@ const register = async (req, res) => {
     const validAvatars = ["hippo", "frog", "pig", "penguin"];
     const chosenAvatar = validAvatars.includes(avatar) ? avatar : "hippo";
 
+    // Create user with any existing offline progress
     const user = await User.create({
       username,
       email: email.toLowerCase(),
       password,
       role: "player",
       avatar: chosenAvatar,
-      unlockedLevel: 1,
-      stars: {},
-      bestTimes: {},
-      settings: { sound: true, vibration: true },
+      unlockedLevel: gameSave?.unlockedLevel || 1,
+      stars: gameSave?.stars || {},
+      bestTimes: gameSave?.bestTimes || {},
+      settings: gameSave?.settings || { sound: true, vibration: true },
     });
 
     const token = createToken(user);
@@ -56,7 +57,7 @@ const register = async (req, res) => {
     delete userData.password;
 
     res.status(201).json({
-      message: "Welcome aboard! Account created successfully 🦛💨",
+      message: "Welcome aboard! Account created and saved to DB 🦛💨",
       token,
       user: userData,
     });
@@ -66,23 +67,93 @@ const register = async (req, res) => {
   }
 };
 
-// Login player / user
+// Login player / user (with auto-create if new & automatic progress sync to DB)
 const login = async (req, res) => {
   try {
-    const { email, password } = req.body;
+    const { email, password, gameSave } = req.body;
 
     if (!email || !password) {
       return res.status(400).json({ message: "Email and password are required" });
     }
 
-    const user = await User.findOne({ email: email.toLowerCase() });
+    let user = await User.findOne({ email: email.toLowerCase() });
+
+    // If user does not exist yet, automatically register them and add them to DB!
     if (!user) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      const cleanPrefix = email.split("@")[0].replace(/[^a-zA-Z0-9_]/g, "");
+      const generatedUsername = cleanPrefix || "Player" + Math.floor(100 + Math.random() * 900);
+
+      // Check if username taken, append suffix if so
+      let finalUsername = generatedUsername;
+      const userExists = await User.findOne({ username: finalUsername });
+      if (userExists) {
+        finalUsername = `${generatedUsername}_${Math.floor(100 + Math.random() * 900)}`;
+      }
+
+      user = await User.create({
+        username: finalUsername,
+        email: email.toLowerCase(),
+        password,
+        role: "player",
+        avatar: "hippo",
+        unlockedLevel: gameSave?.unlockedLevel || 1,
+        stars: gameSave?.stars || {},
+        bestTimes: gameSave?.bestTimes || {},
+        settings: gameSave?.settings || { sound: true, vibration: true },
+      });
+
+      const token = createToken(user);
+      const userData = user.toObject();
+      delete userData.password;
+
+      return res.status(200).json({
+        message: "New account created and game data added to DB! 🎉",
+        token,
+        user: userData,
+        isNewUser: true,
+      });
     }
 
+    // Existing user: verify password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
       return res.status(400).json({ message: "Invalid email or password" });
+    }
+
+    // Merge offline game progress into DB if provided
+    if (gameSave) {
+      if (!user.stars) user.stars = new Map();
+      if (!user.bestTimes) user.bestTimes = new Map();
+
+      user.unlockedLevel = Math.max(user.unlockedLevel || 1, Number(gameSave.unlockedLevel) || 1);
+
+      if (gameSave.stars && typeof gameSave.stars === "object") {
+        for (const [lvl, val] of Object.entries(gameSave.stars)) {
+          const existing = user.stars.get(String(lvl)) || 0;
+          if (Number(val) > existing) {
+            user.stars.set(String(lvl), Number(val));
+          }
+        }
+      }
+
+      if (gameSave.bestTimes && typeof gameSave.bestTimes === "object") {
+        for (const [lvl, val] of Object.entries(gameSave.bestTimes)) {
+          const existing = user.bestTimes.get(String(lvl));
+          const newTime = Number(val);
+          if (existing === undefined || newTime < existing) {
+            user.bestTimes.set(String(lvl), newTime);
+          }
+        }
+      }
+
+      if (gameSave.settings) {
+        user.settings = {
+          sound: gameSave.settings.sound ?? user.settings?.sound ?? true,
+          vibration: gameSave.settings.vibration ?? user.settings?.vibration ?? true,
+        };
+      }
+
+      await user.save();
     }
 
     const token = createToken(user);
@@ -90,7 +161,7 @@ const login = async (req, res) => {
     delete userData.password;
 
     res.status(200).json({
-      message: "Logged in successfully 🎉",
+      message: "Logged in and game data synced to DB 🎉",
       token,
       user: userData,
     });

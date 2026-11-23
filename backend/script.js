@@ -36,6 +36,16 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static uploaded avatars / images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+// Check MongoDB connection state before database requests
+app.use("/api", (req, res, next) => {
+  if (mongoose.connection.readyState !== 1) {
+    return res.status(503).json({
+      message: "Database is not connected. Please make sure MongoDB is running or check your MONGO_URI.",
+    });
+  }
+  next();
+});
+
 // Mount API Routers
 app.use("/api/users", require("./routers/users"));
 app.use("/api/game", require("./routers/game"));

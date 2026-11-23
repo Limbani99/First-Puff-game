@@ -24,14 +24,44 @@ export default function Login() {
     setLoading(true);
 
     try {
-      const { data } = await axios.post(`${apiBaseUrl}/api/users/login`, form);
+      // Get current local progress so it immediately syncs into MongoDB on login
+      let gameSave = null;
+      try {
+        const raw = localStorage.getItem("first_puff_save");
+        if (raw) gameSave = JSON.parse(raw);
+      } catch {}
+
+      const { data } = await axios.post(`${apiBaseUrl}/api/users/login`, {
+        ...form,
+        gameSave,
+      });
+
       login(data.user, data.token);
-      toast.success(data.message || "Logged in successfully 🎉");
+
+      // Merge backend progress into local save
+      if (data.user) {
+        try {
+          const localSave = JSON.parse(localStorage.getItem("first_puff_save") || "{}");
+          const mergedUnlocked = Math.max(localSave.unlockedLevel || 1, data.user.unlockedLevel || 1);
+          const mergedStars = { ...(localSave.stars || {}), ...(data.user.stars || {}) };
+          const mergedTimes = { ...(localSave.bestTimes || {}), ...(data.user.bestTimes || {}) };
+
+          localStorage.setItem("first_puff_save", JSON.stringify({
+            ...localSave,
+            unlockedLevel: mergedUnlocked,
+            stars: mergedStars,
+            bestTimes: mergedTimes,
+            settings: data.user.settings || localSave.settings || { sound: true, vibration: true }
+          }));
+        } catch {}
+      }
+
+      toast.success(data.message || "Logged in & data saved to DB 🎉");
       soundManager.playWin();
       navigate("/home");
     } catch (err) {
       soundManager.playBump();
-      toast.error(err.response?.data?.message || "Login failed. Check your credentials.");
+      toast.error(err.response?.data?.message || "Login failed. Check your connection.");
     } finally {
       setLoading(false);
     }

@@ -42,7 +42,17 @@ export default function Register() {
     setLoading(true);
 
     try {
-      const { data } = await axios.post(`${apiBaseUrl}/api/users/register`, form);
+      let gameSave = null;
+      try {
+        const raw = localStorage.getItem("first_puff_save");
+        if (raw) gameSave = JSON.parse(raw);
+      } catch {}
+
+      const { data } = await axios.post(`${apiBaseUrl}/api/users/register`, {
+        ...form,
+        gameSave,
+      });
+
       if (data.token && data.user) {
         login(data.user, data.token);
       }
