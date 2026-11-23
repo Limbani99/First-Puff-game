@@ -99,17 +99,17 @@ export default function Home() {
 
         {/* Crew preview chips */}
         <div className="flex items-center gap-2.5 mt-3 sm:mt-5 bg-slate-900/50 backdrop-blur-sm px-4 py-1.5 rounded-2xl border border-white/10 shadow-lg">
-          <button type="button" onClick={() => soundManager.playPuff('hippo', 0.6)} title="Hippo: Forward Propulsion" className="hover:scale-115 active:scale-95 transition-transform">
-            <AnimalAvatar crew="hippo" size={26} />
+          <button type="button" onClick={() => soundManager.playPuff('hippo', 0.6)} title="Devayat: Forward Propulsion" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="hippo" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('frog', 0.6)} title="Frog: Steer Right" className="hover:scale-115 active:scale-95 transition-transform">
-            <AnimalAvatar crew="frog" size={26} />
+          <button type="button" onClick={() => soundManager.playPuff('frog', 0.6)} title="Aditya: Steer Right" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="frog" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('pig', 0.6)} title="Pig: Steer Left" className="hover:scale-115 active:scale-95 transition-transform">
-            <AnimalAvatar crew="pig" size={26} />
+          <button type="button" onClick={() => soundManager.playPuff('pig', 0.6)} title="Gaman: Steer Left" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="pig" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('penguin', 0.6)} title="Penguin: Brake Shield" className="hover:scale-115 active:scale-95 transition-transform">
-            <AnimalAvatar crew="penguin" size={26} />
+          <button type="button" onClick={() => soundManager.playPuff('penguin', 0.6)} title="Darshan: Brake Shield" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="penguin" size={28} />
           </button>
         </div>
       </div>

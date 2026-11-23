@@ -10,51 +10,55 @@
 export const CREW_MEMBERS = {
   "hippo": {
     "id": "hippo",
-    "name": "Hippo",
-    "role": "Pusher",
-    "avatar": "🦛",
+    "name": "Devayat Khavad",
+    "role": "Forward Engine",
+    "avatar": "/avatar/devayath.webp",
+    "image": "/avatar/devayath.webp",
     "color": "#8b5cf6",
-    "bgColor": "bg-purple-500",
+    "bgColor": "bg-purple-600",
     "borderColor": "border-purple-300",
     "direction": "Forward",
     "label": "Forward",
-    "description": "Puffs backward to propel the raft forward"
+    "description": "Powerful forward engine"
   },
   "penguin": {
     "id": "penguin",
-    "name": "Penguin",
-    "role": "Brake",
-    "avatar": "🐧",
+    "name": "Darshan Raval",
+    "role": "Brake Shield",
+    "avatar": "/avatar/Darshan-Raval.webp",
+    "image": "/avatar/Darshan-Raval.webp",
     "color": "#06b6d4",
-    "bgColor": "bg-cyan-500",
+    "bgColor": "bg-cyan-600",
     "borderColor": "border-cyan-300",
     "direction": "Backward",
     "label": "Brake",
-    "description": "Puffs forward to slow down and reverse"
+    "description": "Brakes and reverses the raft"
   },
   "frog": {
     "id": "frog",
-    "name": "Frog",
-    "role": "Steer Right",
-    "avatar": "🐸",
+    "name": "Aditya Gadhvi",
+    "role": "Right Jet",
+    "avatar": "/avatar/Aditya-Gadhvi.webp",
+    "image": "/avatar/Aditya-Gadhvi.webp",
     "color": "#22c55e",
-    "bgColor": "bg-emerald-500",
+    "bgColor": "bg-emerald-600",
     "borderColor": "border-emerald-300",
     "direction": "Right",
     "label": "Right",
-    "description": "Puffs left to push the raft right"
+    "description": "Steers the raft to the right"
   },
   "pig": {
     "id": "pig",
-    "name": "Pig",
-    "role": "Steer Left",
-    "avatar": "🐷",
+    "name": "Gaman Santhal",
+    "role": "Left Jet",
+    "avatar": "/avatar/singer-gaman-santhal.webp",
+    "image": "/avatar/singer-gaman-santhal.webp",
     "color": "#ec4899",
-    "bgColor": "bg-pink-500",
+    "bgColor": "bg-pink-600",
     "borderColor": "border-pink-300",
     "direction": "Left",
     "label": "Left",
-    "description": "Puffs right to push the raft left"
+    "description": "Steers the raft to the left"
   }
 };
 

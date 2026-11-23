@@ -10,10 +10,10 @@ import { soundManager } from "../game/sound";
 import AnimalAvatar from "../component/AnimalAvatar";
 
 const CREW_CHOICES = [
-  { id: "hippo", emoji: "🦛", name: "Hippo", role: "Forward Engine" },
-  { id: "frog", emoji: "🐸", name: "Frog", role: "Right Jet" },
-  { id: "pig", emoji: "🐷", name: "Pig", role: "Left Jet" },
-  { id: "penguin", emoji: "🐧", name: "Penguin", role: "Brake Shield" },
+  { id: "hippo", emoji: "🦛", name: "Devayat", role: "Forward Engine" },
+  { id: "frog", emoji: "🐸", name: "Aditya", role: "Right Jet" },
+  { id: "pig", emoji: "🐷", name: "Gaman", role: "Left Jet" },
+  { id: "penguin", emoji: "🐧", name: "Darshan", role: "Brake Shield" },
 ];
 
 export default function Register() {

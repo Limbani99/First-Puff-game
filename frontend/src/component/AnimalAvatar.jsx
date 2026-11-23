@@ -279,12 +279,60 @@ export function PenguinAvatar({ size = 36, className = '', isPuffing = false }) 
   );
 }
 
+export const AVATAR_MAP = {
+  hippo: '/avatar/devayath.webp',
+  devayat: '/avatar/devayath.webp',
+  devayath: '/avatar/devayath.webp',
+  'devayat khavad': '/avatar/devayath.webp',
+  '🦛': '/avatar/devayath.webp',
+
+  frog: '/avatar/Aditya-Gadhvi.webp',
+  aditya: '/avatar/Aditya-Gadhvi.webp',
+  'aditya-gadhvi': '/avatar/Aditya-Gadhvi.webp',
+  'aditya gadhvi': '/avatar/Aditya-Gadhvi.webp',
+  '🐸': '/avatar/Aditya-Gadhvi.webp',
+
+  pig: '/avatar/singer-gaman-santhal.webp',
+  gaman: '/avatar/singer-gaman-santhal.webp',
+  'singer-gaman-santhal': '/avatar/singer-gaman-santhal.webp',
+  'gaman santhal': '/avatar/singer-gaman-santhal.webp',
+  '🐷': '/avatar/singer-gaman-santhal.webp',
+
+  penguin: '/avatar/Darshan-Raval.webp',
+  darshan: '/avatar/Darshan-Raval.webp',
+  'darshan-raval': '/avatar/Darshan-Raval.webp',
+  'darshan raval': '/avatar/Darshan-Raval.webp',
+  '🐧': '/avatar/Darshan-Raval.webp',
+};
+
 /**
- * Universal Animal Avatar Dispatcher
- * Can be used with crew name ('hippo', 'frog', 'pig', 'penguin')
+ * Universal Avatar Dispatcher
+ * Renders the custom avatar photos from /avatar/ folder in public,
+ * with graceful fallback to vector art if needed.
  */
-export default function AnimalAvatar({ crew = 'hippo', size = 36, className = '', isPuffing = false, fallback = '🦛' }) {
+export default function AnimalAvatar({ crew = 'hippo', size = 36, className = '', isPuffing = false, fallback = '⭐' }) {
   const norm = String(crew || '').toLowerCase().trim();
+  const imgSrc = AVATAR_MAP[norm];
+
+  const sizePx = typeof size === 'number' ? `${size}px` : size;
+
+  if (imgSrc) {
+    return (
+      <div
+        className={`relative inline-flex items-center justify-center rounded-full overflow-hidden shrink-0 select-none shadow-sm transition-transform ${
+          isPuffing ? 'scale-110 drop-shadow-[0_0_8px_rgba(250,204,21,0.85)]' : ''
+        } ${className}`}
+        style={{ width: sizePx, height: sizePx }}
+      >
+        <img
+          src={imgSrc}
+          alt={norm}
+          className="w-full h-full object-cover rounded-full select-none pointer-events-none"
+          loading="eager"
+        />
+      </div>
+    );
+  }
 
   if (norm === 'hippo' || norm === '🦛') {
     return <HippoAvatar size={size} className={className} isPuffing={isPuffing} />;

@@ -457,9 +457,25 @@ function drawRaft(ctx, raft, unlockedCrew = []) {
   ctx.restore();
 }
 
+// Preload avatar portraits from /avatar/ in public for on-raft rendering
+const crewAvatarImages = {};
+if (typeof window !== 'undefined') {
+  const avatarSources = {
+    hippo: '/avatar/devayath.webp',
+    frog: '/avatar/Aditya-Gadhvi.webp',
+    pig: '/avatar/singer-gaman-santhal.webp',
+    penguin: '/avatar/Darshan-Raval.webp',
+  };
+  for (const [key, src] of Object.entries(avatarSources)) {
+    const img = new Image();
+    img.src = src;
+    crewAvatarImages[key] = img;
+  }
+}
+
 /**
- * High-definition Canvas 2D Cartoon Animal Vector Renderer
- * Replaces blurry emoji text with crisp, animated cartoon character faces
+ * High-definition Canvas 2D Cartoon Animal & Avatar Photo Renderer
+ * Renders custom avatar photo badges with smooth fallback to cartoon vector faces
  */
 function drawCrewAnimal(ctx, crewId, x, y, isPuffing) {
   ctx.save();
@@ -481,6 +497,43 @@ function drawCrewAnimal(ctx, crewId, x, y, isPuffing) {
   ctx.beginPath();
   ctx.ellipse(0, 3, 11, 5, 0, 0, Math.PI * 2);
   ctx.fill();
+
+  // Check if avatar photo is loaded
+  const avatarImg = crewAvatarImages[crewId];
+  if (avatarImg && avatarImg.complete && avatarImg.naturalWidth > 0) {
+    const avatarR = 10.5;
+
+    // Glowing ring on puff
+    if (isPuffing) {
+      ctx.fillStyle = 'rgba(250, 204, 21, 0.65)';
+      ctx.beginPath();
+      ctx.arc(0, -1, avatarR + 3.5, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Border ring matching crew color
+    const ringColors = {
+      hippo: '#8b5cf6',
+      frog: '#22c55e',
+      pig: '#ec4899',
+      penguin: '#06b6d4',
+    };
+    ctx.fillStyle = ringColors[crewId] || '#ffffff';
+    ctx.beginPath();
+    ctx.arc(0, -1, avatarR + 1.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Clip circular portrait
+    ctx.save();
+    ctx.beginPath();
+    ctx.arc(0, -1, avatarR, 0, Math.PI * 2);
+    ctx.clip();
+    ctx.drawImage(avatarImg, -avatarR, -avatarR - 1, avatarR * 2, avatarR * 2);
+    ctx.restore();
+
+    ctx.restore();
+    return;
+  }
 
   if (crewId === 'hippo') {
     // === HIPPO: Purple Chubby Mascot ===
