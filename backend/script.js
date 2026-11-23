@@ -5,10 +5,12 @@ const cors = require("cors");
 const path = require("path");
 const dns = require("dns");
 
-// Use public DNS to ensure SRV records resolve reliably across all networks
-try {
-  dns.setServers(["8.8.8.8", "1.1.1.1"]);
-} catch {}
+// Use public DNS for SRV records on Windows if needed
+if (process.platform === "win32") {
+  try {
+    dns.setServers(["8.8.8.8", "1.1.1.1"]);
+  } catch {}
+}
 
 dotenv.config();
 
@@ -42,16 +44,19 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static uploaded avatars / images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
-// Public Health check route (includes database status)
+let lastMongoError = null;
+
+// Public Health check route (includes database status and error diagnostics)
 app.get("/api/health", (req, res) => {
   const isConnected = mongoose.connection.readyState === 1;
   res.status(isConnected ? 200 : 503).json({
     status: isConnected ? "healthy" : "database_disconnected",
     database: isConnected ? "connected" : "disconnected",
     readyState: mongoose.connection.readyState,
+    error: lastMongoError,
     hint: isConnected
       ? "Database is connected and ready."
-      : "Please configure MONGO_URI in Render dashboard with a valid MongoDB Atlas connection string.",
+      : "Check MongoDB Atlas Network Access: make sure IP 0.0.0.0/0 is added.",
   });
 });
 
@@ -60,7 +65,9 @@ app.use("/api", (req, res, next) => {
   if (req.path === "/health") return next();
   if (mongoose.connection.readyState !== 1) {
     return res.status(503).json({
-      message: "Database is not connected. Please make sure MongoDB is running or check your MONGO_URI.",
+      message: lastMongoError
+        ? `Database error: ${lastMongoError}. Make sure 0.0.0.0/0 is whitelisted in MongoDB Atlas Network Access.`
+        : "Database is not connected. Please make sure MongoDB is running or check your MONGO_URI.",
     });
   }
   next();
@@ -76,7 +83,8 @@ app.get("/", (req, res) => {
   res.json({
     name: "First Puff Game API",
     status: "healthy",
-    database: isConnected ? "connected" : "disconnected (add MONGO_URI in Render dashboard)",
+    database: isConnected ? "connected" : "disconnected",
+    error: lastMongoError,
     environment: process.env.NODE_ENV || "development",
     version: "1.0.0",
     docs: {
@@ -91,16 +99,20 @@ app.get("/", (req, res) => {
 const DEFAULT_ATLAS_URI = "mongodb+srv://patelmann2424_db_user:argMpoZzSVqoBOJP@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
 const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
 
-mongoose
-  .connect(MONGO_URI, {
-    serverSelectionTimeoutMS: 8000,
-  })
-  .then(() => {
+const connectDB = async () => {
+  try {
+    await mongoose.connect(MONGO_URI, {
+      serverSelectionTimeoutMS: 8000,
+    });
+    lastMongoError = null;
     console.log("MongoDB connected successfully for First Puff 🦛💨");
-  })
-  .catch((err) => {
+  } catch (err) {
+    lastMongoError = err.message;
     console.error("MongoDB connection error:", err.message);
-  });
+    setTimeout(connectDB, 5000);
+  }
+};
+connectDB();
 
 const PORT = process.env.PORT || 5000;
 app.listen(PORT, "0.0.0.0", () => {
