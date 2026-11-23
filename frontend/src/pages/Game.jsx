@@ -232,7 +232,7 @@ export default function Game() {
 
   const handleNextLevel = () => {
     soundManager.playClick();
-    if (currentLevel.id < LEVELS.length) {
+    if (currentLevel.id < 50) {
       navigate(`/play/${currentLevel.id + 1}`);
     } else {
       navigate('/levels');
@@ -463,7 +463,7 @@ export default function Game() {
 
             {/* Action Buttons */}
             <div className="w-full flex flex-col gap-2.5 mt-2">
-              {currentLevel.id < LEVELS.length ? (
+              {currentLevel.id < 50 ? (
                 <button
                   onClick={handleNextLevel}
                   className="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-500 hover:brightness-110 active:scale-95 font-black text-sm uppercase shadow-lg flex items-center justify-center gap-2 border border-white/40 transition-transform"
@@ -473,7 +473,7 @@ export default function Game() {
                 </button>
               ) : (
                 <div className="p-2 text-center text-xs font-black text-yellow-300 bg-yellow-950/40 rounded-xl border border-yellow-500/30">
-                  🎉 Congratulations! You completed all {LEVELS.length} levels!
+                  🎉 Congratulations! You completed all 50 levels!
                 </div>
               )}
 

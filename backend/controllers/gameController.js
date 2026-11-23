@@ -43,7 +43,7 @@ const saveProgress = async (req, res) => {
       user.bestTimes.set(String(numLevel), numTime);
     }
 
-    // Unlock next level if applicable (up to 50 levels)
+    // Unlock next level if applicable
     if (numLevel >= user.unlockedLevel && user.unlockedLevel < 50) {
       user.unlockedLevel = numLevel + 1;
     }
@@ -81,8 +81,8 @@ const syncProgress = async (req, res) => {
     if (!user.stars) user.stars = new Map();
     if (!user.bestTimes) user.bestTimes = new Map();
 
-    // Merge unlocked level (keep max)
-    user.unlockedLevel = Math.max(user.unlockedLevel || 1, Number(unlockedLevel) || 1);
+    // Merge unlocked level (keep max up to 50)
+    user.unlockedLevel = Math.min(50, Math.max(user.unlockedLevel || 1, Number(unlockedLevel) || 1));
 
     // Merge stars
     for (const [lvl, val] of Object.entries(stars)) {
