@@ -8,11 +8,12 @@ import StarRating from '../component/StarRating';
 import AnimalAvatar from '../component/AnimalAvatar';
 
 const ZONES = [
-  { id: 'all', label: 'All', range: [1, 50] },
-  { id: 'z1', label: 'Z1 (1-10)', range: [1, 10] },
-  { id: 'z2', label: 'Z2 (11-22)', range: [11, 22] },
-  { id: 'z3', label: 'Z3 (23-35)', range: [23, 35] },
-  { id: 'z4', label: 'Z4 (36-50)', range: [36, 50] },
+  { id: 'all', label: 'All', range: [1, 50], title: 'All 50 Levels' },
+  { id: 'z1', label: '1–10', range: [1, 10], title: 'Level 1–10 | Desi Banko Ki Entry' },
+  { id: 'z2', label: '11–20', range: [11, 20], title: 'Level 11–20 | Desi Dhamaal' },
+  { id: 'z3', label: '21–30', range: [21, 30], title: 'Level 21–30 | Banka Badmasho' },
+  { id: 'z4', label: '31–40', range: [31, 40], title: 'Level 31–40 | Maha Dhurandharo' },
+  { id: 'z5', label: '41–50', range: [41, 50], title: 'Level 41–50 | Baap No Baap' },
 ];
 
 export default function LevelSelect() {
@@ -96,6 +97,13 @@ export default function LevelSelect() {
         className="flex-1 overflow-y-auto no-scrollbar p-4 space-y-3"
         style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
       >
+        <div className="flex items-center justify-between px-1 text-xs font-black text-amber-300 uppercase tracking-wide">
+          <span>{currentZone.title}</span>
+          <span className="text-[10px] text-sky-300 font-bold">
+            {displayedLevels.filter(l => l.id <= unlockedLevel).length} / {displayedLevels.length} Unlocked
+          </span>
+        </div>
+
         <div className="grid grid-cols-2 gap-3">
           {displayedLevels.map((level) => {
             const isUnlocked = level.id <= unlockedLevel;

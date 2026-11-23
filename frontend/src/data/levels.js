@@ -1,9 +1,11 @@
 // Level definitions for First Puff - 50 Progressive Casual & Hard Levels
 // Progressive river physics, challenging obstacles, and rewarding crew mechanics
 // 50 Levels total: 150 Stars possible (3 stars per level)
-// Levels 1-22: Progressive learning & river exploration
-// Levels 23-43: Custom Handcrafted Artistic River Patterns (Not Hard)
-// Levels 44-50: The Grand Climax Rapids
+// Level 1-10: Desi Banko Ki Entry
+// Level 11-20: Desi Dhamaal
+// Level 21-30: Banka Badmasho
+// Level 31-40: Maha Dhurandharo
+// Level 41-50: Baap No Baap
 
 export const CREW_MEMBERS = {
   "hippo": {
@@ -59,7 +61,7 @@ export const CREW_MEMBERS = {
 export const LEVELS = [
   {
     "id": 1,
-    "name": "First Puff",
+    "name": "Banko Bakhedo",
     "targetTime": 20,
     "hint": "Tap the Hippo to move forward!",
     "crewUnlocked": [
@@ -93,11 +95,12 @@ export const LEVELS = [
         }
       ],
       "obstacles": []
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 2,
-    "name": "Wide River",
+    "name": "Dedko Banko",
     "targetTime": 25,
     "hint": "Frog pushes you right.",
     "crewUnlocked": [
@@ -132,11 +135,12 @@ export const LEVELS = [
         }
       ],
       "obstacles": []
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 3,
-    "name": "Gentle Curve",
+    "name": "Dukkad No Dhamaliyo",
     "targetTime": 30,
     "hint": "Use the Pig to go left.",
     "crewUnlocked": [
@@ -172,11 +176,12 @@ export const LEVELS = [
         }
       ],
       "obstacles": []
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 4,
-    "name": "Charge It",
+    "name": "Undar No Ustad",
     "targetTime": 25,
     "hint": "Hold the button to charge a big puff!",
     "crewUnlocked": [
@@ -212,11 +217,12 @@ export const LEVELS = [
         }
       ],
       "obstacles": []
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 5,
-    "name": "Little Rocks",
+    "name": "Penguin Ni Panoti",
     "targetTime": 35,
     "hint": "Rocks slow you down. Go around them.",
     "crewUnlocked": [
@@ -260,11 +266,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 6,
-    "name": "Zig Zag",
+    "name": "Gotaliyo Gabbar",
     "targetTime": 40,
     "hint": "Turn early, then straighten up.",
     "crewUnlocked": [
@@ -300,11 +307,12 @@ export const LEVELS = [
         }
       ],
       "obstacles": []
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 7,
-    "name": "Slow Logs",
+    "name": "Banko Badmash",
     "targetTime": 40,
     "hint": "Wait for the log to pass.",
     "crewUnlocked": [
@@ -360,11 +368,12 @@ export const LEVELS = [
           "radius": 20
         }
       ]
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 8,
-    "name": "Brake Time",
+    "name": "Chakram Chaudhary",
     "targetTime": 35,
     "hint": "Penguin brakes the raft. Stop on the flag!",
     "crewUnlocked": [
@@ -419,11 +428,12 @@ export const LEVELS = [
           "dir": 1
         }
       ]
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 9,
-    "name": "Narrow Gate",
+    "name": "Lafanga No Lafdo",
     "targetTime": 45,
     "hint": "Line up before the gate.",
     "crewUnlocked": [
@@ -512,11 +522,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 10,
-    "name": "River Crossing",
+    "name": "Naseeb No Nawab",
     "targetTime": 55,
     "hint": "Use all four crew members together!",
     "crewUnlocked": [
@@ -593,11 +604,12 @@ export const LEVELS = [
           "radius": 20
         }
       ]
-    }
+    },
+    "zone": "Desi Banko Ki Entry"
   },
   {
     "id": 11,
-    "name": "Reed Strait",
+    "name": "Dedko Dhurandhar",
     "targetTime": 35,
     "hint": "Stay centered in the narrow stream.",
     "crewUnlocked": [
@@ -666,11 +678,12 @@ export const LEVELS = [
           "radius": 24
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 12,
-    "name": "Pebble Beach",
+    "name": "Pinku Bawaliyo",
     "targetTime": 35,
     "hint": "Small rocks ahead! Gentle puffs are key.",
     "crewUnlocked": [
@@ -744,11 +757,12 @@ export const LEVELS = [
           "dir": -1
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 13,
-    "name": "Twin Gates",
+    "name": "Undar No Bahubali",
     "targetTime": 40,
     "hint": "Pass cleanly through two wooden gates.",
     "crewUnlocked": [
@@ -826,11 +840,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 14,
-    "name": "Log Drift",
+    "name": "Banko Bajigar",
     "targetTime": 40,
     "hint": "Watch both logs move before puffing.",
     "crewUnlocked": [
@@ -892,11 +907,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 15,
-    "name": "The Horseshoe",
+    "name": "Dhakkamukki No Dado",
     "targetTime": 45,
     "hint": "A long right turn then hard left bend.",
     "crewUnlocked": [
@@ -996,11 +1012,12 @@ export const LEVELS = [
           "dir": -1
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 16,
-    "name": "Boulder Alley",
+    "name": "Lapsano Lafango",
     "targetTime": 40,
     "hint": "Alternate left and right between boulders.",
     "crewUnlocked": [
@@ -1086,11 +1103,12 @@ export const LEVELS = [
           "dir": -1
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 17,
-    "name": "Fast Stream",
+    "name": "Khiladi Khalas",
     "targetTime": 35,
     "hint": "Charge Hippo to speed through straightaways.",
     "crewUnlocked": [
@@ -1183,11 +1201,12 @@ export const LEVELS = [
           "radius": 26
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 18,
-    "name": "Criss-Cross",
+    "name": "Kudakud No King",
     "targetTime": 45,
     "hint": "Logs moving in opposite directions!",
     "crewUnlocked": [
@@ -1293,11 +1312,12 @@ export const LEVELS = [
           "dir": 1
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 19,
-    "name": "The Funnel",
+    "name": "Gotalano Gangster",
     "targetTime": 40,
     "hint": "River narrows as you approach the flag.",
     "crewUnlocked": [
@@ -1390,11 +1410,12 @@ export const LEVELS = [
           "radius": 26
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 20,
-    "name": "Rapids Rush",
+    "name": "Bapu No Bakhedo",
     "targetTime": 55,
     "hint": "Zone 2 finale! Combine every skill.",
     "crewUnlocked": [
@@ -1488,11 +1509,12 @@ export const LEVELS = [
           "dir": -1
         }
       ]
-    }
+    },
+    "zone": "Desi Dhamaal"
   },
   {
     "id": 21,
-    "name": "Mossy Banks",
+    "name": "Bawlo Badshah",
     "targetTime": 40,
     "hint": "Winding river with grassy shores.",
     "crewUnlocked": [
@@ -1604,11 +1626,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 22,
-    "name": "Triple Gates",
+    "name": "Bhagambhag No Bhadveer",
     "targetTime": 45,
     "hint": "Three gates in a row. Maintain your line.",
     "crewUnlocked": [
@@ -1713,11 +1736,12 @@ export const LEVELS = [
           "radius": 22
         }
       ]
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 23,
-    "name": "The Crank",
+    "name": "Taplibaj Tolki",
     "targetTime": 50,
     "hint": "Steer across the river bend from right to left!",
     "crewUnlocked": [
@@ -1787,11 +1811,12 @@ export const LEVELS = [
       ],
       "startX": 245,
       "finishX": 115
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 24,
-    "name": "River Pocket",
+    "name": "Kismat No Kangalo",
     "targetTime": 52,
     "hint": "Glide gently into the right bay and back out.",
     "crewUnlocked": [
@@ -1871,11 +1896,12 @@ export const LEVELS = [
       ],
       "startX": 135,
       "finishX": 135
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 25,
-    "name": "Staircase Rapids",
+    "name": "Banko Boss",
     "targetTime": 55,
     "hint": "Three gentle steps up and to the right!",
     "crewUnlocked": [
@@ -1955,11 +1981,12 @@ export const LEVELS = [
       ],
       "startX": 100,
       "finishX": 260
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 26,
-    "name": "Step Cascade",
+    "name": "Undha Pag No Ustad",
     "targetTime": 55,
     "hint": "Step left as you ascend the river terrace.",
     "crewUnlocked": [
@@ -2039,11 +2066,12 @@ export const LEVELS = [
       ],
       "startX": 260,
       "finishX": 100
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 27,
-    "name": "Switchback Alley",
+    "name": "Khurshi No Khalnayak",
     "targetTime": 58,
     "hint": "Use Frog and Pig to smoothly weave each bend.",
     "crewUnlocked": [
@@ -2130,11 +2158,12 @@ export const LEVELS = [
       ],
       "startX": 110,
       "finishX": 250
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 28,
-    "name": "Rolling Waves",
+    "name": "Mathakut No Maharathi",
     "targetTime": 58,
     "hint": "Gentle sinusoidal waves guide your raft.",
     "crewUnlocked": [
@@ -2226,11 +2255,12 @@ export const LEVELS = [
       ],
       "startX": 190,
       "finishX": 199
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 29,
-    "name": "The Chasm Basin",
+    "name": "Fasayo Fatakdo",
     "targetTime": 54,
     "hint": "Cross the central channel into the right stream.",
     "crewUnlocked": [
@@ -2305,11 +2335,12 @@ export const LEVELS = [
       ],
       "startX": 105,
       "finishX": 255
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 30,
-    "name": "Castle Battlement",
+    "name": "Gotalano Gabbar",
     "targetTime": 60,
     "hint": "Left, right, left, and center - stay steady!",
     "crewUnlocked": [
@@ -2396,11 +2427,12 @@ export const LEVELS = [
       ],
       "startX": 150,
       "finishX": 180
-    }
+    },
+    "zone": "Banka Badmasho"
   },
   {
     "id": 31,
-    "name": "Diagonal Steps",
+    "name": "Chakram Champion",
     "targetTime": 56,
     "hint": "Climb diagonally across four gentle river terraces.",
     "crewUnlocked": [
@@ -2475,11 +2507,12 @@ export const LEVELS = [
       ],
       "startX": 112,
       "finishX": 256
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 32,
-    "name": "Grand Terrace",
+    "name": "Bheja No Bhadko",
     "targetTime": 58,
     "hint": "Step steadily right to left down the great terrace.",
     "crewUnlocked": [
@@ -2554,11 +2587,12 @@ export const LEVELS = [
       ],
       "startX": 241,
       "finishX": 105
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 33,
-    "name": "Twin Arches",
+    "name": "Tantiya Khech Tofani",
     "targetTime": 54,
     "hint": "Sail through the twin wooden gates in succession.",
     "crewUnlocked": [
@@ -2634,11 +2668,12 @@ export const LEVELS = [
       ],
       "startX": 170,
       "finishX": 250
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 34,
-    "name": "Pyramid Peak",
+    "name": "Babal No Badshah",
     "targetTime": 50,
     "hint": "Follow the triangular corridor up to the summit.",
     "crewUnlocked": [
@@ -2713,11 +2748,12 @@ export const LEVELS = [
       ],
       "startX": 180,
       "finishX": 180
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 35,
-    "name": "Terrace Ridge",
+    "name": "Kudka Maar Kaliya",
     "targetTime": 52,
     "hint": "Three gentle shelves climbing from right to left.",
     "crewUnlocked": [
@@ -2792,11 +2828,12 @@ export const LEVELS = [
       ],
       "startX": 250,
       "finishX": 110
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 36,
-    "name": "The Diagonal Y",
+    "name": "Undar No Akhado",
     "targetTime": 52,
     "hint": "Follow the bold diagonal slash across the river.",
     "crewUnlocked": [
@@ -2866,11 +2903,12 @@ export const LEVELS = [
       ],
       "startX": 137,
       "finishX": 130
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 37,
-    "name": "Box Horseshoe",
+    "name": "Dedka No Dabdabho",
     "targetTime": 58,
     "hint": "A grand rectangular loop: across, up, and back!",
     "crewUnlocked": [
@@ -2952,11 +2990,12 @@ export const LEVELS = [
       ],
       "startX": 169,
       "finishX": 100
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 38,
-    "name": "The Serpentine 5",
+    "name": "Penguin No Power",
     "targetTime": 60,
     "hint": "Weave the double S-curves like a graceful snake.",
     "crewUnlocked": [
@@ -3036,11 +3075,12 @@ export const LEVELS = [
       ],
       "startX": 250,
       "finishX": 110
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 39,
-    "name": "Letter N Channel",
+    "name": "Dukkad No Dadagiri Dance",
     "targetTime": 54,
     "hint": "Up the left leg, cross diagonally, up the right leg!",
     "crewUnlocked": [
@@ -3110,11 +3150,12 @@ export const LEVELS = [
       ],
       "startX": 100,
       "finishX": 260
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 40,
-    "name": "The Flying V",
+    "name": "Jeet No Jalebibaj",
     "targetTime": 52,
     "hint": "Angle smoothly down into the apex and out to glory.",
     "crewUnlocked": [
@@ -3179,11 +3220,12 @@ export const LEVELS = [
       ],
       "startX": 118,
       "finishX": 246
-    }
+    },
+    "zone": "Maha Dhurandharo"
   },
   {
     "id": 41,
-    "name": "Wide Slalom",
+    "name": "Banko Bahubali",
     "targetTime": 60,
     "hint": "Full-width sweeping maneuvers from bank to bank.",
     "crewUnlocked": [
@@ -3258,11 +3300,12 @@ export const LEVELS = [
       ],
       "startX": 150,
       "finishX": 107
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 42,
-    "name": "Canyon Key",
+    "name": "Kismat No King",
     "targetTime": 60,
     "hint": "Follow the keyhole turns through the golden canyons.",
     "crewUnlocked": [
@@ -3350,11 +3393,12 @@ export const LEVELS = [
       ],
       "startX": 190,
       "finishX": 156
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 43,
-    "name": "The Mighty W",
+    "name": "Maha Mathafodi",
     "targetTime": 62,
     "hint": "A magnificent W-shaped river course to triumph!",
     "crewUnlocked": [
@@ -3441,11 +3485,12 @@ export const LEVELS = [
       ],
       "startX": 134,
       "finishX": 260
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 44,
-    "name": "The Boulder Labyrinth",
+    "name": "Gotalano Guru",
     "targetTime": 64,
     "hint": "A staggering rock labyrinth. Follow the open water seams; don't corner yourself.",
     "crewUnlocked": [
@@ -3713,11 +3758,12 @@ export const LEVELS = [
           "radius": 18
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 45,
-    "name": "Raging Flume",
+    "name": "Akkal No Andhariyo",
     "targetTime": 64,
     "hint": "Narrow flume with high drift. Logs sweep at 120 px/s! Time your Hippo boost.",
     "crewUnlocked": [
@@ -3995,11 +4041,12 @@ export const LEVELS = [
           "radius": 21
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 46,
-    "name": "Scissor Rapids Extreme",
+    "name": "Chhelli Ghadi No Lafango",
     "targetTime": 65,
     "hint": "Three pairs of scissor logs patrolling in sync. Dash through the moment they cross!",
     "crewUnlocked": [
@@ -4289,11 +4336,12 @@ export const LEVELS = [
           "radius": 21
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 47,
-    "name": "Delta Chokepoint",
+    "name": "Char Chakram Na Chaudhary",
     "targetTime": 66,
     "hint": "River pinches to 135px with boulders pinching the channel. Perfect steering required.",
     "crewUnlocked": [
@@ -4578,11 +4626,12 @@ export const LEVELS = [
           "radius": 23
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 48,
-    "name": "Grand Slalom Blitz",
+    "name": "Bhayankar Babaliyo",
     "targetTime": 67,
     "hint": "Five precision gates across 2600px of cascading river. Maintain calm under pressure.",
     "crewUnlocked": [
@@ -4871,11 +4920,12 @@ export const LEVELS = [
           "radius": 23
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 49,
-    "name": "Maelstrom Approach",
+    "name": "Baap No Baap Badshah",
     "targetTime": 68,
     "hint": "Penultimate challenge: 27 hazards, rapid current, and brutal scissor traps.",
     "crewUnlocked": [
@@ -5173,11 +5223,12 @@ export const LEVELS = [
           "radius": 21
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   },
   {
     "id": 50,
-    "name": "The Legendary Delta",
+    "name": "Gujarat No Banko Gabbar! 🏆",
     "targetTime": 70,
     "hint": "The Ultimate Challenge! 29 obstacles across 2700px. Prove yourself as Grand Captain!",
     "crewUnlocked": [
@@ -5494,6 +5545,7 @@ export const LEVELS = [
           "radius": 23
         }
       ]
-    }
+    },
+    "zone": "Baap No Baap"
   }
 ];
