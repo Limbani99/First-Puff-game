@@ -9,11 +9,11 @@ import AnimalAvatar from '../component/AnimalAvatar';
 
 const ZONES = [
   { id: 'all', label: 'All', range: [1, 50], title: 'All 50 Levels' },
-  { id: 'z1', label: '1–10', range: [1, 10], title: 'Level 1–10 | Desi Banko Ki Entry' },
-  { id: 'z2', label: '11–20', range: [11, 20], title: 'Level 11–20 | Desi Dhamaal' },
-  { id: 'z3', label: '21–30', range: [21, 30], title: 'Level 21–30 | Banka Badmasho' },
-  { id: 'z4', label: '31–40', range: [31, 40], title: 'Level 31–40 | Maha Dhurandharo' },
-  { id: 'z5', label: '41–50', range: [41, 50], title: 'Level 41–50 | Baap No Baap' },
+  { id: 'z1', label: '1–10', range: [1, 10], title: 'Level 1–10 | ખલાસી થી ભુવાજી (Entry Zone)' },
+  { id: 'z2', label: '11–20', range: [11, 20], title: 'Level 11–20 | દેવાયત નો દબદબો (Khavad & Santhal)' },
+  { id: 'z3', label: '21–30', range: [21, 30], title: 'Level 21–30 | રાવલ રોમાન્સ & ધારલ (Darshan & Dharal)' },
+  { id: 'z4', label: '31–40', range: [31, 40], title: 'Level 31–40 | આદિત્ય નો અખાડો (Aditya Gadhvi Folk)' },
+  { id: 'z5', label: '41–50', range: [41, 50], title: 'Level 41–50 | મહા સંગ્રામ : બાપ નો બાપ (Ultimate Clashes)' },
 ];
 
 export default function LevelSelect() {
