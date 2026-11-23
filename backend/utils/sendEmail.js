@@ -1,9 +1,15 @@
 const nodemailer = require("nodemailer");
 
 /**
- * Career-Bridge style email sender using nodemailer
+ * Career-Bridge style email sender using nodemailer.
+ * If credentials are not configured, it logs and skips gracefully.
  */
 const sendEmail = async ({ to, subject, html }) => {
+  if (!process.env.EMAIL_USER || !process.env.EMAIL_PASS) {
+    console.log("Email credentials not configured in environment. Skipping email dispatch.");
+    return null;
+  }
+
   try {
     const transporter = nodemailer.createTransport({
       service: "gmail",
@@ -25,7 +31,6 @@ const sendEmail = async ({ to, subject, html }) => {
     return info;
   } catch (error) {
     console.error("Error sending email: ", error.message);
-    // In development or when credentials are not configured, don't crash
     return null;
   }
 };

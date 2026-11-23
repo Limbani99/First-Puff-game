@@ -115,7 +115,8 @@ export default function GameProvider({ children }) {
     try {
       const token = localStorage.getItem('first_puff_token');
       if (token) {
-        fetch('http://localhost:5000/api/game/save', {
+        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        fetch(`${apiUrl}/api/game/save`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',

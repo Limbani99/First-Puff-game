@@ -8,8 +8,28 @@ dotenv.config();
 
 const app = express();
 
-// Middleware (matching Career-Bridge architecture)
-app.use(cors());
+// CORS configuration (optimized for Vercel frontend & local development)
+app.use(
+  cors({
+    origin: (origin, callback) => {
+      // Allow requests with no origin (e.g. mobile apps, curl, Postman)
+      if (!origin) return callback(null, true);
+      // Allow localhost or any vercel.app preview/production deployment
+      if (
+        origin.includes("localhost") ||
+        origin.endsWith(".vercel.app") ||
+        (process.env.CLIENT_URL && origin === process.env.CLIENT_URL)
+      ) {
+        return callback(null, true);
+      }
+      return callback(null, true); // Fallback allow all origins
+    },
+    credentials: true,
+    methods: ["GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"],
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
+
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
@@ -20,11 +40,12 @@ app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 app.use("/api/users", require("./routers/users"));
 app.use("/api/game", require("./routers/game"));
 
-// Root / Health check route
+// Root / Health check route for Render
 app.get("/", (req, res) => {
   res.json({
     name: "First Puff Game API",
-    status: "running",
+    status: "healthy",
+    environment: process.env.NODE_ENV || "development",
     version: "1.0.0",
     docs: {
       auth: "/api/users",
@@ -45,7 +66,7 @@ mongoose
   });
 
 const PORT = process.env.PORT || 5000;
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`First Puff server running on port ${PORT}`);
 });
 
