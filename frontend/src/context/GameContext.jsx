@@ -115,7 +115,7 @@ export default function GameProvider({ children }) {
     try {
       const token = localStorage.getItem('first_puff_token');
       if (token) {
-        const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:5000";
+        const apiUrl = import.meta.env.VITE_API_URL || "https://first-puff.onrender.com";
         fetch(`${apiUrl}/api/game/save`, {
           method: 'POST',
           headers: {

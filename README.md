@@ -111,14 +111,17 @@ npm run dev
 ```
 Open [http://localhost:5173](http://localhost:5173) in your browser (switch to mobile view in DevTools for the best experience).
 
-### 3. Run Backend (Optional)
+### Live Deployments
+* **Backend API (Render)**: [https://first-puff.onrender.com](https://first-puff.onrender.com)
+* **Frontend**: Deployable on Vercel and GitHub Pages.
+
+### 3. Run Backend (Optional Local Setup)
 ```bash
 cd backend
 npm install
-cp .env.example .env
 npm start
 ```
-Server runs at `http://localhost:5000`.
+Local server runs at `http://localhost:5000` (cloud backend runs on Render).
 
 ---
 
