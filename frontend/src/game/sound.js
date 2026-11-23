@@ -92,6 +92,26 @@ export const soundManager = {
     }
   },
 
+  // Play Gaman Santhal song when passing through or touching a gate
+  playGamanMusic() {
+    if (this.muted) return;
+    this.stopMusic();
+    try {
+      const audio = new Audio(encodeURI('/music/gaman sir music.mp3'));
+      audio.loop = false;
+      audio.volume = 0.85;
+      this.currentMusic = audio;
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.catch((err) => {
+          console.warn('Gaman music playback error:', err);
+        });
+      }
+    } catch (e) {
+      console.warn('Gaman music error:', e);
+    }
+  },
+
   // Stop currently playing win or loss music track
   stopMusic() {
     if (this.currentMusic) {

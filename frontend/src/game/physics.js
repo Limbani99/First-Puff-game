@@ -36,6 +36,8 @@ export function updatePhysics(raft, world, dt) {
   }
 
   // 2. Position update
+  raft.prevX = raft.x;
+  raft.prevY = raft.y;
   raft.x += raft.vx * (dt * 60);
   raft.y += raft.vy * (dt * 60);
 

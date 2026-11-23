@@ -114,11 +114,13 @@ export default function Game() {
         // Update physics
         updatePhysics(raft, world, dt);
 
-        // Resolve collisions
+        // Resolve collisions and gate passing
         resolveCollisions(raft, world, (hitObs) => {
           soundManager.playBump();
           if (hitObs && hitObs.type === 'log') {
             soundManager.playDharalMusic();
+          } else if (hitObs && hitObs.type === 'gate') {
+            soundManager.playGamanMusic();
           }
           shakeRef.current = 1.0;
           setBumps(raft.bumps);
@@ -129,6 +131,12 @@ export default function Game() {
             setIsGameOver(true);
             soundManager.playGameOver();
             soundManager.playLossMusic();
+          }
+        }, (passedGate) => {
+          // Play Gaman Santhal music when passing cleanly through the gate!
+          soundManager.playGamanMusic();
+          if (particlesRef.current) {
+            particlesRef.current.spawnRipple(raft.x, raft.y, 28);
           }
         });
 

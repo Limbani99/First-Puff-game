@@ -50,7 +50,7 @@ export function getRiverBounds(waypoints, y) {
 }
 
 // Check and resolve collisions with river banks and obstacles
-export function resolveCollisions(raft, world, onBump) {
+export function resolveCollisions(raft, world, onBump, onGatePass) {
   let bumped = false;
   let hitObs = null;
   const now = performance.now();
@@ -154,7 +154,22 @@ export function resolveCollisions(raft, world, onBump) {
           }
         }
       } else if (obs.type === 'gate') {
-        // Gate has left and right posts
+        // 1. Check if raft passes cleanly through the gate opening
+        const minX = Math.min(obs.leftX, obs.rightX);
+        const maxX = Math.max(obs.leftX, obs.rightX);
+        const isBetweenX = raft.x >= minX - 12 && raft.x <= maxX + 12;
+        const prevY = raft.prevY !== undefined ? raft.prevY : raft.y;
+        const crossedY = (prevY >= obs.y && raft.y <= obs.y) ||
+                         (prevY <= obs.y && raft.y >= obs.y) ||
+                         Math.abs(raft.y - obs.y) <= 12;
+
+        if (isBetweenX && crossedY && !obs.passed) {
+          obs.passed = true;
+          obs.passedTime = performance.now();
+          if (onGatePass) onGatePass(obs);
+        }
+
+        // 2. Gate left and right posts collision
         const posts = [
           { x: obs.leftX, y: obs.y, radius: obs.postRadius },
           { x: obs.rightX, y: obs.y, radius: obs.postRadius }

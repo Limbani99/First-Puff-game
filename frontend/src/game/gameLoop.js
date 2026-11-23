@@ -1294,6 +1294,150 @@ function drawDharalLogObstacle(ctx, obs) {
   ctx.restore();
 }
 
+/**
+ * Gaman Santhal Gate / Toran Arch (Gate obstacle)
+ * Authentic royal toran gateway with carved wooden posts, fluttering red/saffron flags,
+ * festive hanging buntings, water ripple foam, and an animated royal "👑 GAMAN BHUVAJI 👑"
+ * banner that celebrates with floating musical notes and gold sparks when passed through!
+ */
+function drawGamanGate(ctx, obs) {
+  const time = performance.now() * 0.002;
+  const posts = [obs.leftX, obs.rightX];
+  const midX = (obs.leftX + obs.rightX) / 2;
+  const gateW = Math.abs(obs.rightX - obs.leftX);
+
+  ctx.save();
+
+  // 1. Water wake and shadows around posts
+  for (const px of posts) {
+    // Post shadow
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.3)';
+    ctx.beginPath();
+    ctx.ellipse(px + 3, obs.y + 4, obs.postRadius, obs.postRadius * 0.7, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Water ripple ring around post
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+    ctx.lineWidth = 1.2;
+    const ripple = Math.sin(time * 3 + px * 0.1) * 1.5;
+    ctx.beginPath();
+    ctx.ellipse(px, obs.y + 2, obs.postRadius + 3 + ripple, obs.postRadius * 0.6, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Wooden gate post (rich teak)
+    ctx.fillStyle = '#b45309';
+    ctx.beginPath();
+    ctx.arc(px, obs.y, obs.postRadius, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Golden inner rim ring
+    ctx.strokeStyle = '#fef08a';
+    ctx.lineWidth = 3;
+    ctx.beginPath();
+    ctx.arc(px, obs.y, obs.postRadius * 0.65, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // Center brass post finial
+    ctx.fillStyle = '#f59e0b';
+    ctx.beginPath();
+    ctx.arc(px, obs.y, 4, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Fluttering saffron flag on top of post
+    const flagWave = Math.sin(time * 5 + px) * 2;
+    ctx.fillStyle = '#f97316'; // Saffron
+    ctx.beginPath();
+    ctx.moveTo(px, obs.y - obs.postRadius);
+    ctx.lineTo(px + 15, obs.y - obs.postRadius - 6 + flagWave);
+    ctx.lineTo(px, obs.y - obs.postRadius - 13);
+    ctx.closePath();
+    ctx.fill();
+
+    // Flag pole
+    ctx.strokeStyle = '#78350f';
+    ctx.lineWidth = 1.8;
+    ctx.beginPath();
+    ctx.moveTo(px, obs.y - obs.postRadius + 2);
+    ctx.lineTo(px, obs.y - obs.postRadius - 15);
+    ctx.stroke();
+  }
+
+  // 2. Gate String / Toran Arch
+  const dip = 12;
+  const toranMidY = obs.y + dip;
+
+  // Passed celebration glow
+  if (obs.passed) {
+    ctx.strokeStyle = 'rgba(250, 204, 21, 0.85)';
+    ctx.lineWidth = 3;
+  } else {
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.75)';
+    ctx.lineWidth = 1.8;
+  }
+
+  ctx.beginPath();
+  ctx.moveTo(obs.leftX, obs.y);
+  ctx.quadraticCurveTo(midX, toranMidY, obs.rightX, obs.y);
+  ctx.stroke();
+
+  // 3. Hanging Festival Bunting Flags along the rope
+  const buntingCount = Math.max(3, Math.floor(gateW / 24));
+  const flagColors = ['#f97316', '#dc2626', '#10b981', '#facc15', '#ec4899'];
+  for (let i = 1; i < buntingCount; i++) {
+    const t = i / buntingCount;
+    // Quadratic Bezier interpolation point
+    const bx = (1 - t) * (1 - t) * obs.leftX + 2 * (1 - t) * t * midX + t * t * obs.rightX;
+    const by = (1 - t) * (1 - t) * obs.y + 2 * (1 - t) * t * toranMidY + t * t * obs.y;
+
+    const bColor = flagColors[i % flagColors.length];
+    ctx.fillStyle = bColor;
+    ctx.beginPath();
+    ctx.moveTo(bx - 3.5, by);
+    ctx.lineTo(bx + 3.5, by);
+    ctx.lineTo(bx, by + 6);
+    ctx.closePath();
+    ctx.fill();
+  }
+
+  // 4. Center Gaman Santhal Toran Badge / Crown
+  const badgeY = toranMidY + 4;
+  ctx.font = 'bold 7px "Segoe UI", Arial, sans-serif';
+  const badgeText = obs.passed ? '🎵 GAMAN SIR 🎵' : '👑 GAMAN BHUVAJI 👑';
+  const tw = ctx.measureText(badgeText).width;
+
+  if (obs.passed) {
+    // Glowing celebratory gold badge
+    ctx.fillStyle = 'rgba(234, 88, 12, 0.95)';
+    fillSafeRoundRect(ctx, midX - tw / 2 - 4, badgeY - 5, tw + 8, 11, 4);
+    ctx.strokeStyle = '#facc15';
+    ctx.lineWidth = 1.5;
+    strokeSafeRoundRect(ctx, midX - tw / 2 - 4, badgeY - 5, tw + 8, 11, 4);
+    ctx.fillStyle = '#fef08a';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(badgeText, midX, badgeY + 0.5);
+
+    // Floating music notes wafting up
+    const noteFloat = (time * 12) % 18;
+    ctx.font = 'bold 9px "Segoe UI", Arial, sans-serif';
+    ctx.fillText('🎶', midX - 16, badgeY - 8 - noteFloat);
+    ctx.fillText('🎵', midX + 16, badgeY - 6 - noteFloat);
+  } else {
+    // Royal badge before passing
+    ctx.fillStyle = 'rgba(15, 23, 42, 0.85)';
+    fillSafeRoundRect(ctx, midX - tw / 2 - 3, badgeY - 5, tw + 6, 10, 3);
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 1;
+    strokeSafeRoundRect(ctx, midX - tw / 2 - 3, badgeY - 5, tw + 6, 10, 3);
+    ctx.fillStyle = '#fef08a';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(badgeText, midX, badgeY);
+  }
+
+  ctx.restore();
+}
+
 function drawObstacles(ctx, world, cameraY, canvasHeight) {
   if (!world.obstacles) return;
 
@@ -1306,49 +1450,7 @@ function drawObstacles(ctx, world, cameraY, canvasHeight) {
       drawDharalLogObstacle(ctx, obs);
     } else if (obs.type === 'gate') {
       if (obs.y < cameraY - 50 || obs.y > cameraY + canvasHeight + 50) continue;
-
-      ctx.save();
-      const posts = [obs.leftX, obs.rightX];
-
-      for (const px of posts) {
-        // Post shadow
-        ctx.fillStyle = 'rgba(15, 23, 42, 0.3)';
-        ctx.beginPath();
-        ctx.ellipse(px + 3, obs.y + 4, obs.postRadius, obs.postRadius * 0.7, 0, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Wooden gate post
-        ctx.fillStyle = '#b45309';
-        ctx.beginPath();
-        ctx.arc(px, obs.y, obs.postRadius, 0, Math.PI * 2);
-        ctx.fill();
-
-        // Post top ring
-        ctx.strokeStyle = '#fef08a';
-        ctx.lineWidth = 3;
-        ctx.beginPath();
-        ctx.arc(px, obs.y, obs.postRadius * 0.65, 0, Math.PI * 2);
-        ctx.stroke();
-
-        // Little red flag on top of post
-        ctx.fillStyle = '#ef4444';
-        ctx.beginPath();
-        ctx.moveTo(px, obs.y - obs.postRadius);
-        ctx.lineTo(px + 14, obs.y - obs.postRadius - 6);
-        ctx.lineTo(px, obs.y - obs.postRadius - 12);
-        ctx.closePath();
-        ctx.fill();
-      }
-
-      // Floating pennant banner string connecting the posts
-      ctx.strokeStyle = 'rgba(255, 255, 255, 0.6)';
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(obs.leftX, obs.y);
-      ctx.quadraticCurveTo((obs.leftX + obs.rightX) / 2, obs.y + 12, obs.rightX, obs.y);
-      ctx.stroke();
-
-      ctx.restore();
+      drawGamanGate(ctx, obs);
     }
   }
 }
