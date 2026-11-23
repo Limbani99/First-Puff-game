@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
+import AnimalAvatar from "../component/AnimalAvatar";
 
 const MASCOT_EMOJIS = {
   hippo: "🦛",
@@ -116,8 +117,8 @@ export default function Profile() {
       >
         {/* Profile Card */}
         <div className="bg-gradient-to-br from-slate-800 to-sky-950 rounded-3xl p-5 border border-white/15 shadow-xl flex items-center gap-4">
-          <div className="w-16 h-16 rounded-2xl bg-amber-400 flex items-center justify-center text-3xl shadow-lg border-2 border-white/40">
-            {MASCOT_EMOJIS[user?.avatar] || "🦛"}
+          <div className="w-16 h-16 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 flex items-center justify-center shadow-lg border-2 border-white/40 p-1">
+            <AnimalAvatar crew={user?.avatar || "hippo"} size={52} />
           </div>
 
           <div className="flex-1 overflow-hidden">
@@ -267,8 +268,8 @@ export default function Profile() {
                       {rankMedals[idx] || `#${idx + 1}`}
                     </span>
 
-                    <div className="w-10 h-10 rounded-xl bg-amber-400 flex items-center justify-center text-xl shadow-md shrink-0 border border-white/30">
-                      {MASCOT_EMOJIS[player.avatar] || "🦛"}
+                    <div className="w-10 h-10 rounded-xl bg-gradient-to-tr from-amber-400 to-yellow-300 flex items-center justify-center shadow-md shrink-0 border border-white/30 p-0.5">
+                      <AnimalAvatar crew={player.avatar || "hippo"} size={32} />
                     </div>
 
                     <div className="truncate min-w-0">

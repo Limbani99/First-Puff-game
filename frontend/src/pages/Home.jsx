@@ -5,6 +5,7 @@ import { useGame } from '../context/GameContext';
 import { useData } from '../context/DataProvider';
 import { soundManager } from '../game/sound';
 import Raft from '../component/Raft';
+import AnimalAvatar from '../component/AnimalAvatar';
 
 export default function Home() {
   const navigate = useNavigate();
@@ -97,11 +98,19 @@ export default function Home() {
         </div>
 
         {/* Crew preview chips */}
-        <div className="flex items-center gap-2 mt-3 sm:mt-5 bg-slate-900/50 backdrop-blur-sm px-4 py-1.5 rounded-2xl border border-white/10">
-          <span className="text-2xl" title="Hippo: Forward">🦛</span>
-          <span className="text-2xl" title="Frog: Right">🐸</span>
-          <span className="text-2xl" title="Pig: Left">🐷</span>
-          <span className="text-2xl" title="Penguin: Brake">🐧</span>
+        <div className="flex items-center gap-2.5 mt-3 sm:mt-5 bg-slate-900/50 backdrop-blur-sm px-4 py-1.5 rounded-2xl border border-white/10 shadow-lg">
+          <button type="button" onClick={() => soundManager.playPuff('hippo', 0.6)} title="Hippo: Forward Propulsion" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="hippo" size={26} />
+          </button>
+          <button type="button" onClick={() => soundManager.playPuff('frog', 0.6)} title="Frog: Steer Right" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="frog" size={26} />
+          </button>
+          <button type="button" onClick={() => soundManager.playPuff('pig', 0.6)} title="Pig: Steer Left" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="pig" size={26} />
+          </button>
+          <button type="button" onClick={() => soundManager.playPuff('penguin', 0.6)} title="Penguin: Brake Shield" className="hover:scale-115 active:scale-95 transition-transform">
+            <AnimalAvatar crew="penguin" size={26} />
+          </button>
         </div>
       </div>
 

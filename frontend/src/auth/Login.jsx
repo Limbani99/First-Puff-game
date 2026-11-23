@@ -7,6 +7,7 @@ import { ArrowLeft, Lock, Mail } from "lucide-react";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
+import AnimalAvatar from "../component/AnimalAvatar";
 
 export default function Login() {
   const [form, setForm] = useState({ email: "", password: "" });
@@ -84,8 +85,8 @@ export default function Login() {
         className="w-full max-w-sm my-auto bg-slate-900/85 backdrop-blur-xl rounded-3xl p-6 border border-white/20 shadow-2xl z-10"
       >
         <div className="text-center mb-6">
-          <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 flex items-center justify-center text-3xl shadow-lg border-2 border-white/40">
-            🦛
+          <div className="w-16 h-16 mx-auto mb-3 rounded-2xl bg-gradient-to-tr from-amber-400 to-yellow-300 flex items-center justify-center shadow-lg border-2 border-white/40 p-1">
+            <AnimalAvatar crew="hippo" size={48} />
           </div>
           <h2 className="text-2xl font-black text-amber-300 uppercase tracking-wide">
             Player Login

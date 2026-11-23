@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { soundManager } from '../game/sound';
+import AnimalAvatar from './AnimalAvatar';
 
 /**
  * Thumb-friendly Gas Button for First Puff
@@ -170,10 +171,13 @@ export default function CrewButton({
           )}
         </svg>
 
-        {/* Crew Emoji Avatar */}
-        <span className={`text-2xl sm:text-3xl transition-transform ${isCharging ? 'scale-115' : ''}`}>
-          {crew.avatar}
-        </span>
+        {/* Crew Vector Avatar */}
+        <AnimalAvatar
+          crew={crew.id}
+          size={34}
+          isPuffing={isCharging}
+          className="sm:w-9 sm:h-9"
+        />
 
         {/* Push Direction Label */}
         <span className="text-[10px] sm:text-[11px] font-black text-white uppercase tracking-tight drop-shadow-md -mt-0.5">

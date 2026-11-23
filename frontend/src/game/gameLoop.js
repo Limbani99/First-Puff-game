@@ -424,54 +424,336 @@ function drawRaft(ctx, raft, unlockedCrew = []) {
 
   // Hippo (Back)
   if (unlockedCrew.includes('hippo')) {
-    drawCrewEmoji(ctx, '🦛', 0, r * 0.52, raft.activePuffCrew === 'hippo', '#8b5cf6');
+    drawCrewAnimal(ctx, 'hippo', 0, r * 0.52, raft.activePuffCrew === 'hippo');
   }
 
   // Penguin (Front / Brake)
   if (unlockedCrew.includes('penguin')) {
-    drawCrewEmoji(ctx, '🐧', 0, -r * 0.52, raft.activePuffCrew === 'penguin', '#06b6d4');
+    drawCrewAnimal(ctx, 'penguin', 0, -r * 0.52, raft.activePuffCrew === 'penguin');
   }
 
   // Frog (Left side)
   if (unlockedCrew.includes('frog')) {
-    drawCrewEmoji(ctx, '🐸', -r * 0.52, 0, raft.activePuffCrew === 'frog', '#22c55e');
+    drawCrewAnimal(ctx, 'frog', -r * 0.52, 0, raft.activePuffCrew === 'frog');
   }
 
   // Pig (Right side)
   if (unlockedCrew.includes('pig')) {
-    drawCrewEmoji(ctx, '🐷', r * 0.52, 0, raft.activePuffCrew === 'pig', '#ec4899');
+    drawCrewAnimal(ctx, 'pig', r * 0.52, 0, raft.activePuffCrew === 'pig');
   }
 
   ctx.restore();
 }
 
-function drawCrewEmoji(ctx, emoji, x, y, isPuffing, glowColor) {
+/**
+ * High-definition Canvas 2D Cartoon Animal Vector Renderer
+ * Replaces blurry emoji text with crisp, animated cartoon character faces
+ */
+function drawCrewAnimal(ctx, crewId, x, y, isPuffing) {
   ctx.save();
   ctx.translate(x, y);
 
   if (isPuffing) {
-    // Excited jump / pop scale on puff
-    ctx.scale(1.25, 1.25);
-
-    // Glowing aura
-    ctx.fillStyle = glowColor;
-    ctx.globalAlpha = 0.45;
-    ctx.beginPath();
-    ctx.arc(0, 0, 16, 0, Math.PI * 2);
-    ctx.fill();
-    ctx.globalAlpha = 1.0;
+    // Excited pop scale on puff
+    ctx.scale(1.22, 1.22);
   }
 
-  // Cute pedestal cushion
-  ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+  // Pedestal cushion shadow
+  ctx.fillStyle = 'rgba(0, 0, 0, 0.25)';
   ctx.beginPath();
-  ctx.ellipse(0, 3, 10, 6, 0, 0, Math.PI * 2);
+  ctx.ellipse(0, 5, 12, 5, 0, 0, Math.PI * 2);
   ctx.fill();
 
-  ctx.font = '18px system-ui, apple color emoji, segoe ui emoji, sans-serif';
-  ctx.textAlign = 'center';
-  ctx.textBaseline = 'middle';
-  ctx.fillText(emoji, 0, -1);
+  // White pedestal cushion
+  ctx.fillStyle = 'rgba(255, 255, 255, 0.75)';
+  ctx.beginPath();
+  ctx.ellipse(0, 3, 11, 5, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  if (crewId === 'hippo') {
+    // === HIPPO: Purple Chubby Mascot ===
+    if (isPuffing) {
+      ctx.fillStyle = 'rgba(168, 85, 247, 0.45)';
+      ctx.beginPath();
+      ctx.arc(0, 0, 16, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Ears
+    ctx.fillStyle = '#7c3aed';
+    ctx.beginPath();
+    ctx.arc(-7, -7, 3.5, 0, Math.PI * 2);
+    ctx.arc(7, -7, 3.5, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#f472b6';
+    ctx.beginPath();
+    ctx.arc(-7, -7, 1.8, 0, Math.PI * 2);
+    ctx.arc(7, -7, 1.8, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Head
+    ctx.fillStyle = '#8b5cf6';
+    ctx.beginPath();
+    ctx.arc(0, -1, 9.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Blushing cheeks
+    ctx.fillStyle = 'rgba(244, 114, 182, 0.6)';
+    ctx.beginPath();
+    ctx.ellipse(-6.5, 0.5, 2.2, 1.5, 0, 0, Math.PI * 2);
+    ctx.ellipse(6.5, 0.5, 2.2, 1.5, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Big Chubby Snout
+    ctx.fillStyle = '#a855f7';
+    ctx.beginPath();
+    ctx.ellipse(0, 3.5, 7.5, 5, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Eyes
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.ellipse(-3.2, -2.5, 2.2, 2.8, 0, 0, Math.PI * 2);
+    ctx.ellipse(3.2, -2.5, 2.2, 2.8, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = '#1e1b4b';
+    ctx.beginPath();
+    ctx.arc(-3.2, -2.2, 1.4, 0, Math.PI * 2);
+    ctx.arc(3.2, -2.2, 1.4, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Eye highlights
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(-3.8, -2.8, 0.6, 0, Math.PI * 2);
+    ctx.arc(2.6, -2.8, 0.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Nostrils
+    ctx.fillStyle = '#4c1d95';
+    ctx.beginPath();
+    ctx.ellipse(-2.5, 3.5, 1.2, 1.6, 0, 0, Math.PI * 2);
+    ctx.ellipse(2.5, 3.5, 1.2, 1.6, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Smile
+    ctx.strokeStyle = '#4c1d95';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(0, 5, 2, 0.1 * Math.PI, 0.9 * Math.PI);
+    ctx.stroke();
+
+  } else if (crewId === 'frog') {
+    // === FROG: Emerald Green Smiling Ribbit ===
+    if (isPuffing) {
+      ctx.fillStyle = 'rgba(34, 197, 94, 0.45)';
+      ctx.beginPath();
+      ctx.arc(0, 0, 16, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Bulging Eye domes on top
+    ctx.fillStyle = '#22c55e';
+    ctx.beginPath();
+    ctx.arc(-5, -5, 4.5, 0, Math.PI * 2);
+    ctx.arc(5, -5, 4.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Head base
+    ctx.fillStyle = '#16a34a';
+    ctx.beginPath();
+    ctx.ellipse(0, 1, 9.5, 8, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Pale lime chin
+    ctx.fillStyle = '#bef264';
+    ctx.beginPath();
+    ctx.ellipse(0, 3.5, 6, 4, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Eye whites
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(-5, -5, 3.4, 0, Math.PI * 2);
+    ctx.arc(5, -5, 3.4, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Pupils
+    ctx.fillStyle = '#0f172a';
+    ctx.beginPath();
+    ctx.ellipse(-4.8, -4.8, 1.8, 2.2, 0, 0, Math.PI * 2);
+    ctx.ellipse(5.2, -4.8, 1.8, 2.2, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Eye sparkles
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(-5.4, -5.5, 0.8, 0, Math.PI * 2);
+    ctx.arc(4.6, -5.5, 0.8, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Rosy Cheeks
+    ctx.fillStyle = 'rgba(248, 113, 113, 0.55)';
+    ctx.beginPath();
+    ctx.arc(-6.5, 2, 2, 0, Math.PI * 2);
+    ctx.arc(6.5, 2, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Cheerful wide mouth
+    ctx.strokeStyle = '#14532d';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(0, 2, 4.5, 0.15 * Math.PI, 0.85 * Math.PI);
+    ctx.stroke();
+
+  } else if (crewId === 'pig') {
+    // === PIG: Cute Pink Snout ===
+    if (isPuffing) {
+      ctx.fillStyle = 'rgba(244, 114, 182, 0.45)';
+      ctx.beginPath();
+      ctx.arc(0, 0, 16, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Floppy ears
+    ctx.fillStyle = '#ec4899';
+    ctx.beginPath();
+    ctx.moveTo(-6, -4);
+    ctx.lineTo(-10, -9);
+    ctx.lineTo(-3, -8);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(6, -4);
+    ctx.lineTo(10, -9);
+    ctx.lineTo(3, -8);
+    ctx.closePath();
+    ctx.fill();
+
+    // Inner ear
+    ctx.fillStyle = '#be185d';
+    ctx.beginPath();
+    ctx.moveTo(-6, -5);
+    ctx.lineTo(-8.5, -8);
+    ctx.lineTo(-4, -7.5);
+    ctx.closePath();
+    ctx.fill();
+
+    ctx.beginPath();
+    ctx.moveTo(6, -5);
+    ctx.lineTo(8.5, -8);
+    ctx.lineTo(4, -7.5);
+    ctx.closePath();
+    ctx.fill();
+
+    // Head
+    ctx.fillStyle = '#f472b6';
+    ctx.beginPath();
+    ctx.arc(0, 0, 9.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Rosy Cheeks
+    ctx.fillStyle = 'rgba(225, 29, 72, 0.45)';
+    ctx.beginPath();
+    ctx.arc(-6.5, 1.5, 2, 0, Math.PI * 2);
+    ctx.arc(6.5, 1.5, 2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Sparkling Eyes
+    ctx.fillStyle = '#1e1b4b';
+    ctx.beginPath();
+    ctx.arc(-3.5, -2, 1.6, 0, Math.PI * 2);
+    ctx.arc(3.5, -2, 1.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(-4, -2.5, 0.6, 0, Math.PI * 2);
+    ctx.arc(3, -2.5, 0.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Pig Snout Oval
+    ctx.fillStyle = '#fb7185';
+    ctx.beginPath();
+    ctx.ellipse(0, 3, 5.2, 3.6, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Snout Nostrils
+    ctx.fillStyle = '#881337';
+    ctx.beginPath();
+    ctx.ellipse(-1.8, 3, 1, 1.4, 0, 0, Math.PI * 2);
+    ctx.ellipse(1.8, 3, 1, 1.4, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Smile
+    ctx.strokeStyle = '#9d174d';
+    ctx.lineWidth = 1;
+    ctx.beginPath();
+    ctx.arc(0, 5, 2.2, 0.2 * Math.PI, 0.8 * Math.PI);
+    ctx.stroke();
+
+  } else if (crewId === 'penguin') {
+    // === PENGUIN: Dapper Tuxedo Brake ===
+    if (isPuffing) {
+      ctx.fillStyle = 'rgba(6, 182, 212, 0.45)';
+      ctx.beginPath();
+      ctx.arc(0, 0, 16, 0, Math.PI * 2);
+      ctx.fill();
+    }
+
+    // Dark Tuxedo Head
+    ctx.fillStyle = '#1e293b';
+    ctx.beginPath();
+    ctx.arc(0, 0, 9.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    // White Tuxedo Face Patch
+    ctx.fillStyle = '#f8fafc';
+    ctx.beginPath();
+    ctx.ellipse(-2.5, 0, 4, 6, 0, 0, Math.PI * 2);
+    ctx.ellipse(2.5, 0, 4, 6, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Rosy Cheeks
+    ctx.fillStyle = 'rgba(251, 113, 133, 0.45)';
+    ctx.beginPath();
+    ctx.arc(-5.5, 1.5, 1.8, 0, Math.PI * 2);
+    ctx.arc(5.5, 1.5, 1.8, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Eyes
+    ctx.fillStyle = '#0f172a';
+    ctx.beginPath();
+    ctx.arc(-2.5, -1.2, 1.5, 0, Math.PI * 2);
+    ctx.arc(2.5, -1.2, 1.5, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(-2.9, -1.7, 0.6, 0, Math.PI * 2);
+    ctx.arc(2.1, -1.7, 0.6, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Orange Beak
+    ctx.fillStyle = '#f59e0b';
+    ctx.beginPath();
+    ctx.moveTo(-2.5, 1.2);
+    ctx.lineTo(2.5, 1.2);
+    ctx.lineTo(0, 5);
+    ctx.closePath();
+    ctx.fill();
+
+    // Beak shine
+    ctx.fillStyle = '#fef08a';
+    ctx.beginPath();
+    ctx.moveTo(-1.8, 1.2);
+    ctx.lineTo(1.8, 1.2);
+    ctx.lineTo(0, 2.5);
+    ctx.closePath();
+    ctx.fill();
+  }
 
   ctx.restore();
 }

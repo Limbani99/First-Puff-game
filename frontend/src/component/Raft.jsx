@@ -1,4 +1,5 @@
 import React from 'react';
+import AnimalAvatar from './AnimalAvatar';
 
 /**
  * Raft icon / cartoon preview with crew members
@@ -21,26 +22,34 @@ export default function Raft({ activeCrew = ['hippo', 'frog', 'pig', 'penguin'],
 
         {/* Penguin at Front/Top */}
         <div className="w-full flex justify-center z-10">
-          <span className="text-2xl drop-shadow filter">
-            {activeCrew.includes('penguin') ? '🐧' : '💤'}
-          </span>
+          {activeCrew.includes('penguin') ? (
+            <AnimalAvatar crew="penguin" size={30} className="filter drop-shadow" />
+          ) : (
+            <span className="text-xl">💤</span>
+          )}
         </div>
 
         {/* Middle row: Frog (left) & Pig (right) */}
         <div className="w-full flex justify-between px-1 z-10">
-          <span className="text-2xl drop-shadow filter">
-            {activeCrew.includes('frog') ? '🐸' : '💤'}
-          </span>
-          <span className="text-2xl drop-shadow filter">
-            {activeCrew.includes('pig') ? '🐷' : '💤'}
-          </span>
+          {activeCrew.includes('frog') ? (
+            <AnimalAvatar crew="frog" size={30} className="filter drop-shadow" />
+          ) : (
+            <span className="text-xl">💤</span>
+          )}
+          {activeCrew.includes('pig') ? (
+            <AnimalAvatar crew="pig" size={30} className="filter drop-shadow" />
+          ) : (
+            <span className="text-xl">💤</span>
+          )}
         </div>
 
         {/* Hippo at Back/Bottom */}
         <div className="w-full flex justify-center z-10">
-          <span className="text-2xl drop-shadow filter">
-            {activeCrew.includes('hippo') ? '🦛' : '💤'}
-          </span>
+          {activeCrew.includes('hippo') ? (
+            <AnimalAvatar crew="hippo" size={32} className="filter drop-shadow" />
+          ) : (
+            <span className="text-xl">💤</span>
+          )}
         </div>
       </div>
     </div>

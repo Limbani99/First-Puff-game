@@ -7,6 +7,7 @@ import { ArrowLeft, Lock, Mail, User as UserIcon } from "lucide-react";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
+import AnimalAvatar from "../component/AnimalAvatar";
 
 const CREW_CHOICES = [
   { id: "hippo", emoji: "🦛", name: "Hippo", role: "Forward Engine" },
@@ -125,7 +126,7 @@ export default function Register() {
                       : "bg-slate-800 hover:bg-slate-700 text-white border border-white/10"
                   }`}
                 >
-                  <span className="text-2xl">{crew.emoji}</span>
+                  <AnimalAvatar crew={crew.id} size={32} />
                   <span className="text-[10px] font-black mt-1 uppercase">{crew.name}</span>
                 </button>
               );

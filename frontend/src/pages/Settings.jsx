@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Volume2, VolumeX, Smartphone, RotateCcw, Info } from 'lucide-react';
 import { useGame } from '../context/GameContext';
 import { soundManager } from '../game/sound';
+import AnimalAvatar from '../component/AnimalAvatar';
 
 export default function Settings() {
   const navigate = useNavigate();
@@ -149,17 +150,21 @@ export default function Settings() {
             <Info size={16} />
             <span>HOW TO PLAY</span>
           </div>
-          <p>
-            <strong>🦛 Hippo:</strong> Sits in the back, pushes raft <em>forward</em>.
+          <p className="flex items-center gap-2">
+            <AnimalAvatar crew="hippo" size={20} />
+            <span><strong>Hippo:</strong> Sits in the back, pushes raft <em>forward</em>.</span>
           </p>
-          <p>
-            <strong>🐧 Penguin:</strong> Sits in front, acts as a <em>brake</em>.
+          <p className="flex items-center gap-2">
+            <AnimalAvatar crew="penguin" size={20} />
+            <span><strong>Penguin:</strong> Sits in front, acts as a <em>brake</em>.</span>
           </p>
-          <p>
-            <strong>🐸 Frog:</strong> Sits on the left, pushes raft <em>right</em>.
+          <p className="flex items-center gap-2">
+            <AnimalAvatar crew="frog" size={20} />
+            <span><strong>Frog:</strong> Sits on the left, pushes raft <em>right</em>.</span>
           </p>
-          <p>
-            <strong>🐷 Pig:</strong> Sits on the right, pushes raft <em>left</em>.
+          <p className="flex items-center gap-2">
+            <AnimalAvatar crew="pig" size={20} />
+            <span><strong>Pig:</strong> Sits on the right, pushes raft <em>left</em>.</span>
           </p>
           <p className="pt-2 text-slate-400 border-t border-white/10 text-[11px]">
             Hold buttons down to charge up a mighty puff! Release two buttons together for diagonal maneuvers.
