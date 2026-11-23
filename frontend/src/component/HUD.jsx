@@ -23,7 +23,7 @@ export default function HUD({
           <span className="px-2.5 py-0.5 rounded-full bg-sky-600/90 text-white font-extrabold text-xs shadow-md border border-sky-400/40">
             Level {level.id}
           </span>
-          <span className="text-white font-black text-sm drop-shadow-md truncate max-w-[130px]">
+          <span className="text-white font-black text-sm drop-shadow-md truncate max-w-[160px]">
             {level.name}
           </span>
         </div>

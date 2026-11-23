@@ -345,7 +345,7 @@ export const LEVELS = [
           "y": 768,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 102,
           "maxX": 255,
           "speed": 50,
           "x": 240,
@@ -412,7 +412,7 @@ export const LEVELS = [
           "width": 78,
           "height": 24,
           "minX": 85,
-          "maxX": 275,
+          "maxX": 244,
           "speed": 44,
           "x": 95,
           "dir": 1
@@ -478,7 +478,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 95,
-          "maxX": 255,
+          "maxX": 245,
           "speed": 45,
           "x": 240,
           "dir": -1
@@ -487,8 +487,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 658,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 106,
+          "rightX": 222,
           "postRadius": 16
         },
         {
@@ -580,8 +580,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 581,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 134,
+          "rightX": 250,
           "postRadius": 16
         },
         {
@@ -651,7 +651,7 @@ export const LEVELS = [
           "y": 685,
           "width": 77,
           "height": 24,
-          "minX": 85,
+          "minX": 113,
           "maxX": 275,
           "speed": 50,
           "x": 265,
@@ -717,10 +717,10 @@ export const LEVELS = [
           "y": 938,
           "width": 77,
           "height": 24,
-          "minX": 85,
+          "minX": 123,
           "maxX": 275,
           "speed": 52,
-          "x": 95,
+          "x": 123,
           "dir": 1
         },
         {
@@ -736,8 +736,8 @@ export const LEVELS = [
           "y": 459,
           "width": 77,
           "height": 24,
-          "minX": 85,
-          "maxX": 275,
+          "minX": 94,
+          "maxX": 271,
           "speed": 52,
           "x": 265,
           "dir": -1
@@ -793,8 +793,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 1007,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 137,
+          "rightX": 253,
           "postRadius": 16
         },
         {
@@ -813,8 +813,8 @@ export const LEVELS = [
           "id": "gate2",
           "type": "gate",
           "y": 614,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 108,
+          "rightX": 224,
           "postRadius": 16
         },
         {
@@ -878,7 +878,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 95,
-          "maxX": 255,
+          "maxX": 252,
           "speed": 52,
           "x": 105,
           "dir": 1
@@ -951,9 +951,9 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 95,
-          "maxX": 255,
+          "maxX": 237,
           "speed": 52,
-          "x": 240,
+          "x": 237,
           "dir": -1
         },
         {
@@ -1059,10 +1059,10 @@ export const LEVELS = [
           "y": 859,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 108,
           "maxX": 255,
           "speed": 44,
-          "x": 105,
+          "x": 108,
           "dir": 1
         },
         {
@@ -1078,7 +1078,7 @@ export const LEVELS = [
           "y": 433,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 117,
           "maxX": 255,
           "speed": 44,
           "x": 240,
@@ -1149,7 +1149,7 @@ export const LEVELS = [
           "y": 948,
           "width": 77,
           "height": 24,
-          "minX": 85,
+          "minX": 124,
           "maxX": 275,
           "speed": 46,
           "x": 265,
@@ -1168,10 +1168,10 @@ export const LEVELS = [
           "y": 584,
           "width": 77,
           "height": 24,
-          "minX": 85,
-          "maxX": 275,
+          "minX": 109,
+          "maxX": 274,
           "speed": 46,
-          "x": 95,
+          "x": 109,
           "dir": 1
         },
         {
@@ -1239,10 +1239,10 @@ export const LEVELS = [
           "y": 1179,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 136,
           "maxX": 255,
           "speed": 46,
-          "x": 105,
+          "x": 136,
           "dir": 1
         },
         {
@@ -1256,8 +1256,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 859,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 132,
+          "rightX": 248,
           "postRadius": 16
         },
         {
@@ -1286,7 +1286,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 95,
-          "maxX": 255,
+          "maxX": 224,
           "speed": 46,
           "x": 105,
           "dir": 1
@@ -1356,10 +1356,10 @@ export const LEVELS = [
           "y": 984,
           "width": 77,
           "height": 24,
-          "minX": 85,
-          "maxX": 275,
+          "minX": 97,
+          "maxX": 250,
           "speed": 50,
-          "x": 265,
+          "x": 250,
           "dir": -1
         },
         {
@@ -1376,7 +1376,7 @@ export const LEVELS = [
           "width": 77,
           "height": 24,
           "minX": 85,
-          "maxX": 275,
+          "maxX": 228,
           "speed": 50,
           "x": 95,
           "dir": 1
@@ -1384,7 +1384,7 @@ export const LEVELS = [
         {
           "id": "rock5",
           "type": "rock",
-          "x": 249,
+          "x": 244,
           "y": 411,
           "radius": 26
         }
@@ -1454,7 +1454,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 95,
-          "maxX": 255,
+          "maxX": 242,
           "speed": 50,
           "x": 105,
           "dir": 1
@@ -1463,8 +1463,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 807,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 86,
+          "rightX": 202,
           "postRadius": 16
         },
         {
@@ -1480,7 +1480,7 @@ export const LEVELS = [
           "y": 416,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 102,
           "maxX": 255,
           "speed": 50,
           "x": 240,
@@ -1552,9 +1552,9 @@ export const LEVELS = [
           "width": 76,
           "height": 24,
           "minX": 85,
-          "maxX": 275,
+          "maxX": 235,
           "speed": 54,
-          "x": 265,
+          "x": 235,
           "dir": -1
         },
         {
@@ -1570,8 +1570,8 @@ export const LEVELS = [
           "y": 820,
           "width": 76,
           "height": 24,
-          "minX": 85,
-          "maxX": 275,
+          "minX": 91,
+          "maxX": 263,
           "speed": 54,
           "x": 95,
           "dir": 1
@@ -1589,7 +1589,7 @@ export const LEVELS = [
           "y": 520,
           "width": 76,
           "height": 24,
-          "minX": 85,
+          "minX": 123,
           "maxX": 275,
           "speed": 54,
           "x": 265,
@@ -1665,8 +1665,8 @@ export const LEVELS = [
           "id": "gate1",
           "type": "gate",
           "y": 1140,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 116,
+          "rightX": 232,
           "postRadius": 16
         },
         {
@@ -1675,18 +1675,18 @@ export const LEVELS = [
           "y": 987,
           "width": 74,
           "height": 22,
-          "minX": 95,
+          "minX": 110,
           "maxX": 255,
           "speed": 52,
-          "x": 105,
+          "x": 110,
           "dir": 1
         },
         {
           "id": "gate2",
           "type": "gate",
           "y": 834,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 157,
+          "rightX": 273,
           "postRadius": 16
         },
         {
@@ -1700,8 +1700,8 @@ export const LEVELS = [
           "id": "gate3",
           "type": "gate",
           "y": 527,
-          "leftX": 105,
-          "rightX": 255,
+          "leftX": 150,
+          "rightX": 266,
           "postRadius": 16
         },
         {
@@ -1786,7 +1786,7 @@ export const LEVELS = [
           "y": 1328,
           "width": 74,
           "height": 22,
-          "minX": 114,
+          "minX": 133,
           "maxX": 214,
           "speed": 90,
           "x": 214,
@@ -1813,7 +1813,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 132,
-          "maxX": 228,
+          "maxX": 227,
           "speed": 83,
           "x": 132,
           "dir": 1
@@ -1829,8 +1829,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 825,
-          "leftX": 144,
-          "rightX": 236,
+          "leftX": 145,
+          "rightX": 251,
           "postRadius": 11
         },
         {
@@ -1839,7 +1839,7 @@ export const LEVELS = [
           "y": 724,
           "width": 74,
           "height": 22,
-          "minX": 131,
+          "minX": 133,
           "maxX": 223,
           "speed": 96,
           "x": 223,
@@ -1848,7 +1848,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 234,
+          "x": 220,
           "y": 623,
           "radius": 23
         },
@@ -1865,10 +1865,10 @@ export const LEVELS = [
           "y": 422,
           "width": 74,
           "height": 22,
-          "minX": 120,
+          "minX": 135,
           "maxX": 214,
           "speed": 89,
-          "x": 120,
+          "x": 135,
           "dir": 1
         },
         {
@@ -1960,7 +1960,7 @@ export const LEVELS = [
           "y": 1273,
           "width": 74,
           "height": 22,
-          "minX": 91,
+          "minX": 115,
           "maxX": 186,
           "speed": 90,
           "x": 186,
@@ -1987,7 +1987,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 165,
-          "maxX": 253,
+          "maxX": 240,
           "speed": 83,
           "x": 165,
           "dir": 1
@@ -1996,14 +1996,14 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 890,
-          "leftX": 157,
-          "rightX": 249,
+          "leftX": 169,
+          "rightX": 275,
           "postRadius": 11
         },
         {
           "id": "rock_9",
           "type": "rock",
-          "x": 261,
+          "x": 252,
           "y": 794,
           "radius": 23
         },
@@ -2027,7 +2027,7 @@ export const LEVELS = [
           "y": 507,
           "width": 74,
           "height": 22,
-          "minX": 113,
+          "minX": 118,
           "maxX": 202,
           "speed": 96,
           "x": 202,
@@ -2036,7 +2036,7 @@ export const LEVELS = [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 115,
+          "x": 130,
           "y": 411,
           "radius": 23
         },
@@ -2144,15 +2144,15 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 130,
-          "maxX": 217,
+          "maxX": 207,
           "speed": 90,
-          "x": 217,
+          "x": 207,
           "dir": -1
         },
         {
           "id": "rock_8",
           "type": "rock",
-          "x": 235,
+          "x": 234,
           "y": 1083,
           "radius": 23
         },
@@ -2167,8 +2167,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 910,
-          "leftX": 141,
-          "rightX": 233,
+          "leftX": 152,
+          "rightX": 258,
           "postRadius": 11
         },
         {
@@ -2192,7 +2192,7 @@ export const LEVELS = [
           "width": 72,
           "height": 22,
           "minX": 128,
-          "maxX": 212,
+          "maxX": 204,
           "speed": 83,
           "x": 128,
           "dir": 1
@@ -2300,7 +2300,7 @@ export const LEVELS = [
           "y": 1442,
           "width": 74,
           "height": 22,
-          "minX": 128,
+          "minX": 146,
           "maxX": 218,
           "speed": 95,
           "x": 218,
@@ -2320,7 +2320,7 @@ export const LEVELS = [
           "width": 74,
           "height": 22,
           "minX": 118,
-          "maxX": 206,
+          "maxX": 199,
           "speed": 88,
           "x": 118,
           "dir": 1
@@ -2343,8 +2343,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 972,
-          "leftX": 146,
-          "rightX": 238,
+          "leftX": 148,
+          "rightX": 254,
           "postRadius": 11
         },
         {
@@ -2361,9 +2361,9 @@ export const LEVELS = [
           "width": 72,
           "height": 22,
           "minX": 155,
-          "maxX": 239,
+          "maxX": 225,
           "speed": 101,
-          "x": 239,
+          "x": 225,
           "dir": -1
         },
         {
@@ -2373,7 +2373,7 @@ export const LEVELS = [
           "width": 72,
           "height": 22,
           "minX": 126,
-          "maxX": 210,
+          "maxX": 206,
           "speed": 94,
           "x": 126,
           "dir": 1
@@ -2398,7 +2398,7 @@ export const LEVELS = [
           "y": 408,
           "width": 74,
           "height": 22,
-          "minX": 143,
+          "minX": 147,
           "maxX": 230,
           "speed": 87,
           "x": 230,
@@ -2407,7 +2407,7 @@ export const LEVELS = [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 143,
+          "x": 150,
           "y": 314,
           "radius": 23
         }
@@ -2491,8 +2491,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1372,
-          "leftX": 90,
-          "rightX": 182,
+          "leftX": 119,
+          "rightX": 225,
           "postRadius": 11
         },
         {
@@ -2525,8 +2525,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 988,
-          "leftX": 183,
-          "rightX": 275,
+          "leftX": 151,
+          "rightX": 257,
           "postRadius": 11
         },
         {
@@ -2536,7 +2536,7 @@ export const LEVELS = [
           "width": 73,
           "height": 22,
           "minX": 163,
-          "maxX": 247,
+          "maxX": 246,
           "speed": 88,
           "x": 163,
           "dir": 1
@@ -2544,7 +2544,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 249,
+          "x": 238,
           "y": 796,
           "radius": 23
         },
@@ -2559,7 +2559,7 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 604,
-          "leftX": 111,
+          "leftX": 97,
           "rightX": 203,
           "postRadius": 11
         },
@@ -2576,7 +2576,7 @@ export const LEVELS = [
           "y": 412,
           "width": 73,
           "height": 22,
-          "minX": 126,
+          "minX": 149,
           "maxX": 212,
           "speed": 101,
           "x": 212,
@@ -2585,7 +2585,7 @@ export const LEVELS = [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 146,
+          "x": 155,
           "y": 316,
           "radius": 23
         }
@@ -2671,7 +2671,7 @@ export const LEVELS = [
           "y": 1439,
           "width": 74,
           "height": 22,
-          "minX": 113,
+          "minX": 130,
           "maxX": 213,
           "speed": 97,
           "x": 213,
@@ -2688,8 +2688,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1265,
-          "leftX": 102,
-          "rightX": 194,
+          "leftX": 95,
+          "rightX": 201,
           "postRadius": 11
         },
         {
@@ -2705,10 +2705,10 @@ export const LEVELS = [
           "y": 1091,
           "width": 74,
           "height": 22,
-          "minX": 132,
+          "minX": 139,
           "maxX": 228,
           "speed": 90,
-          "x": 132,
+          "x": 139,
           "dir": 1
         },
         {
@@ -2731,7 +2731,7 @@ export const LEVELS = [
           "y": 829,
           "width": 74,
           "height": 22,
-          "minX": 129,
+          "minX": 140,
           "maxX": 221,
           "speed": 103,
           "x": 221,
@@ -2748,14 +2748,14 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 655,
-          "leftX": 130,
-          "rightX": 222,
+          "leftX": 95,
+          "rightX": 201,
           "postRadius": 11
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 94,
+          "x": 100,
           "y": 568,
           "radius": 23
         },
@@ -2765,10 +2765,10 @@ export const LEVELS = [
           "y": 481,
           "width": 74,
           "height": 22,
-          "minX": 120,
+          "minX": 132,
           "maxX": 215,
           "speed": 96,
-          "x": 120,
+          "x": 132,
           "dir": 1
         },
         {
@@ -2860,7 +2860,7 @@ export const LEVELS = [
           "y": 1552,
           "width": 74,
           "height": 22,
-          "minX": 139,
+          "minX": 154,
           "maxX": 224,
           "speed": 100,
           "x": 224,
@@ -2879,10 +2879,10 @@ export const LEVELS = [
           "y": 1375,
           "width": 74,
           "height": 22,
-          "minX": 109,
+          "minX": 121,
           "maxX": 194,
           "speed": 93,
-          "x": 109,
+          "x": 121,
           "dir": 1
         },
         {
@@ -2906,17 +2906,17 @@ export const LEVELS = [
           "width": 71,
           "height": 22,
           "minX": 156,
-          "maxX": 238,
+          "maxX": 227,
           "speed": 106,
-          "x": 238,
+          "x": 227,
           "dir": -1
         },
         {
           "id": "gate_1",
           "type": "gate",
           "y": 1019,
-          "leftX": 146,
-          "rightX": 238,
+          "leftX": 149,
+          "rightX": 255,
           "postRadius": 11
         },
         {
@@ -2933,7 +2933,7 @@ export const LEVELS = [
           "width": 70,
           "height": 22,
           "minX": 153,
-          "maxX": 234,
+          "maxX": 226,
           "speed": 99,
           "x": 153,
           "dir": 1
@@ -2958,7 +2958,7 @@ export const LEVELS = [
           "y": 575,
           "width": 70,
           "height": 22,
-          "minX": 114,
+          "minX": 122,
           "maxX": 196,
           "speed": 92,
           "x": 196,
@@ -2967,7 +2967,7 @@ export const LEVELS = [
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 124,
+          "x": 126,
           "y": 486,
           "radius": 23
         },
@@ -2977,10 +2977,10 @@ export const LEVELS = [
           "y": 398,
           "width": 72,
           "height": 22,
-          "minX": 144,
+          "minX": 154,
           "maxX": 227,
           "speed": 105,
-          "x": 144,
+          "x": 154,
           "dir": 1
         },
         {
@@ -3072,7 +3072,7 @@ export const LEVELS = [
           "y": 1534,
           "width": 74,
           "height": 22,
-          "minX": 132,
+          "minX": 146,
           "maxX": 217,
           "speed": 100,
           "x": 217,
@@ -3091,10 +3091,10 @@ export const LEVELS = [
           "y": 1369,
           "width": 73,
           "height": 22,
-          "minX": 105,
+          "minX": 106,
           "maxX": 190,
           "speed": 93,
-          "x": 105,
+          "x": 106,
           "dir": 1
         },
         {
@@ -3108,8 +3108,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1205,
-          "leftX": 99,
-          "rightX": 191,
+          "leftX": 118,
+          "rightX": 224,
           "postRadius": 11
         },
         {
@@ -3133,9 +3133,9 @@ export const LEVELS = [
           "width": 70,
           "height": 22,
           "minX": 171,
-          "maxX": 252,
+          "maxX": 251,
           "speed": 106,
-          "x": 252,
+          "x": 251,
           "dir": -1
         },
         {
@@ -3151,10 +3151,10 @@ export const LEVELS = [
           "y": 795,
           "width": 70,
           "height": 22,
-          "minX": 129,
+          "minX": 130,
           "maxX": 210,
           "speed": 99,
-          "x": 129,
+          "x": 130,
           "dir": 1
         },
         {
@@ -3168,8 +3168,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 631,
-          "leftX": 126,
-          "rightX": 218,
+          "leftX": 96,
+          "rightX": 202,
           "postRadius": 11
         },
         {
@@ -3192,7 +3192,7 @@ export const LEVELS = [
           "y": 384,
           "width": 72,
           "height": 22,
-          "minX": 149,
+          "minX": 165,
           "maxX": 234,
           "speed": 92,
           "x": 234,
@@ -3287,7 +3287,7 @@ export const LEVELS = [
           "y": 1545,
           "width": 71,
           "height": 22,
-          "minX": 124,
+          "minX": 143,
           "maxX": 207,
           "speed": 100,
           "x": 207,
@@ -3311,8 +3311,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1280,
-          "leftX": 101,
-          "rightX": 193,
+          "leftX": 107,
+          "rightX": 213,
           "postRadius": 11
         },
         {
@@ -3322,7 +3322,7 @@ export const LEVELS = [
           "width": 70,
           "height": 22,
           "minX": 139,
-          "maxX": 219,
+          "maxX": 218,
           "speed": 93,
           "x": 139,
           "dir": 1
@@ -3354,7 +3354,7 @@ export const LEVELS = [
           "y": 838,
           "width": 68,
           "height": 22,
-          "minX": 136,
+          "minX": 139,
           "maxX": 214,
           "speed": 106,
           "x": 214,
@@ -3364,8 +3364,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 750,
-          "leftX": 129,
-          "rightX": 221,
+          "leftX": 107,
+          "rightX": 213,
           "postRadius": 11
         },
         {
@@ -3388,10 +3388,10 @@ export const LEVELS = [
           "y": 485,
           "width": 69,
           "height": 22,
-          "minX": 129,
+          "minX": 144,
           "maxX": 209,
           "speed": 99,
-          "x": 129,
+          "x": 144,
           "dir": 1
         },
         {
@@ -3483,7 +3483,7 @@ export const LEVELS = [
           "y": 1669,
           "width": 71,
           "height": 22,
-          "minX": 142,
+          "minX": 160,
           "maxX": 225,
           "speed": 105,
           "x": 225,
@@ -3502,10 +3502,10 @@ export const LEVELS = [
           "y": 1499,
           "width": 71,
           "height": 22,
-          "minX": 111,
+          "minX": 130,
           "maxX": 194,
           "speed": 98,
-          "x": 111,
+          "x": 130,
           "dir": 1
         },
         {
@@ -3519,8 +3519,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1328,
-          "leftX": 103,
-          "rightX": 195,
+          "leftX": 105,
+          "rightX": 211,
           "postRadius": 11
         },
         {
@@ -3537,9 +3537,9 @@ export const LEVELS = [
           "width": 69,
           "height": 22,
           "minX": 157,
-          "maxX": 236,
+          "maxX": 228,
           "speed": 111,
-          "x": 236,
+          "x": 228,
           "dir": -1
         },
         {
@@ -3563,7 +3563,7 @@ export const LEVELS = [
           "width": 68,
           "height": 22,
           "minX": 154,
-          "maxX": 232,
+          "maxX": 227,
           "speed": 104,
           "x": 154,
           "dir": 1
@@ -3579,8 +3579,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 732,
-          "leftX": 132,
-          "rightX": 224,
+          "leftX": 105,
+          "rightX": 211,
           "postRadius": 11
         },
         {
@@ -3589,7 +3589,7 @@ export const LEVELS = [
           "y": 646,
           "width": 68,
           "height": 22,
-          "minX": 117,
+          "minX": 118,
           "maxX": 196,
           "speed": 97,
           "x": 196,
@@ -3598,7 +3598,7 @@ export const LEVELS = [
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 109,
+          "x": 121,
           "y": 561,
           "radius": 23
         },
@@ -3615,10 +3615,10 @@ export const LEVELS = [
           "y": 391,
           "width": 70,
           "height": 22,
-          "minX": 147,
+          "minX": 160,
           "maxX": 228,
           "speed": 110,
-          "x": 147,
+          "x": 160,
           "dir": 1
         },
         {
@@ -3710,7 +3710,7 @@ export const LEVELS = [
           "y": 1631,
           "width": 69,
           "height": 22,
-          "minX": 124,
+          "minX": 153,
           "maxX": 204,
           "speed": 105,
           "x": 204,
@@ -3727,8 +3727,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1465,
-          "leftX": 89,
-          "rightX": 181,
+          "leftX": 102,
+          "rightX": 208,
           "postRadius": 11
         },
         {
@@ -3745,7 +3745,7 @@ export const LEVELS = [
           "width": 68,
           "height": 22,
           "minX": 141,
-          "maxX": 218,
+          "maxX": 202,
           "speed": 98,
           "x": 141,
           "dir": 1
@@ -3768,8 +3768,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1050,
-          "leftX": 188,
-          "rightX": 280,
+          "leftX": 167,
+          "rightX": 273,
           "postRadius": 11
         },
         {
@@ -3785,7 +3785,7 @@ export const LEVELS = [
           "y": 884,
           "width": 66,
           "height": 22,
-          "minX": 137,
+          "minX": 145,
           "maxX": 212,
           "speed": 111,
           "x": 212,
@@ -3801,7 +3801,7 @@ export const LEVELS = [
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 198,
+          "x": 197,
           "y": 718,
           "radius": 18
         },
@@ -3809,8 +3809,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 635,
-          "leftX": 110,
-          "rightX": 202,
+          "leftX": 102,
+          "rightX": 208,
           "postRadius": 11
         },
         {
@@ -3826,10 +3826,10 @@ export const LEVELS = [
           "y": 469,
           "width": 67,
           "height": 22,
-          "minX": 131,
+          "minX": 153,
           "maxX": 207,
           "speed": 104,
-          "x": 131,
+          "x": 153,
           "dir": 1
         },
         {
@@ -3918,7 +3918,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 156,
+          "x": 162,
           "y": 1741,
           "radius": 23
         },
@@ -3926,8 +3926,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1657,
-          "leftX": 108,
-          "rightX": 200,
+          "leftX": 141,
+          "rightX": 247,
           "postRadius": 11
         },
         {
@@ -3936,7 +3936,7 @@ export const LEVELS = [
           "y": 1572,
           "width": 69,
           "height": 22,
-          "minX": 117,
+          "minX": 134,
           "maxX": 197,
           "speed": 107,
           "x": 197,
@@ -3963,7 +3963,7 @@ export const LEVELS = [
           "width": 68,
           "height": 22,
           "minX": 133,
-          "maxX": 211,
+          "maxX": 201,
           "speed": 100,
           "x": 133,
           "dir": 1
@@ -3972,8 +3972,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1234,
-          "leftX": 155,
-          "rightX": 247,
+          "leftX": 129,
+          "rightX": 235,
           "postRadius": 11
         },
         {
@@ -4001,8 +4001,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 896,
-          "leftX": 134,
-          "rightX": 226,
+          "leftX": 129,
+          "rightX": 235,
           "postRadius": 11
         },
         {
@@ -4012,9 +4012,9 @@ export const LEVELS = [
           "width": 66,
           "height": 22,
           "minX": 130,
-          "maxX": 205,
+          "maxX": 200,
           "speed": 113,
-          "x": 205,
+          "x": 200,
           "dir": -1
         },
         {
@@ -4037,18 +4037,18 @@ export const LEVELS = [
           "y": 558,
           "width": 67,
           "height": 22,
-          "minX": 124,
+          "minX": 135,
           "maxX": 200,
           "speed": 106,
-          "x": 124,
+          "x": 135,
           "dir": 1
         },
         {
           "id": "gate_4",
           "type": "gate",
           "y": 474,
-          "leftX": 113,
-          "rightX": 205,
+          "leftX": 141,
+          "rightX": 247,
           "postRadius": 11
         },
         {
@@ -4130,7 +4130,7 @@ export const LEVELS = [
         {
           "id": "rock_8",
           "type": "rock",
-          "x": 266,
+          "x": 262,
           "y": 1862,
           "radius": 21
         },
@@ -4147,7 +4147,7 @@ export const LEVELS = [
           "y": 1705,
           "width": 69,
           "height": 22,
-          "minX": 138,
+          "minX": 157,
           "maxX": 218,
           "speed": 107,
           "x": 218,
@@ -4163,7 +4163,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 96,
+          "x": 113,
           "y": 1549,
           "radius": 21
         },
@@ -4183,8 +4183,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1393,
-          "leftX": 100,
-          "rightX": 192,
+          "leftX": 101,
+          "rightX": 207,
           "postRadius": 11
         },
         {
@@ -4214,7 +4214,7 @@ export const LEVELS = [
           "y": 1080,
           "width": 66,
           "height": 22,
-          "minX": 171,
+          "minX": 178,
           "maxX": 246,
           "speed": 113,
           "x": 246,
@@ -4240,10 +4240,10 @@ export const LEVELS = [
           "y": 845,
           "width": 66,
           "height": 22,
-          "minX": 131,
+          "minX": 132,
           "maxX": 206,
           "speed": 106,
-          "x": 131,
+          "x": 132,
           "dir": 1
         },
         {
@@ -4264,14 +4264,14 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 611,
-          "leftX": 128,
-          "rightX": 220,
+          "leftX": 113,
+          "rightX": 219,
           "postRadius": 11
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 125,
+          "x": 127,
           "y": 533,
           "radius": 18
         },
@@ -4281,7 +4281,7 @@ export const LEVELS = [
           "y": 455,
           "width": 68,
           "height": 22,
-          "minX": 153,
+          "minX": 157,
           "maxX": 231,
           "speed": 99,
           "x": 231,
@@ -4366,7 +4366,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 258,
+          "x": 256,
           "y": 1900,
           "radius": 21
         },
@@ -4376,7 +4376,7 @@ export const LEVELS = [
           "y": 1820,
           "width": 67,
           "height": 22,
-          "minX": 153,
+          "minX": 169,
           "maxX": 230,
           "speed": 110,
           "x": 230,
@@ -4402,10 +4402,10 @@ export const LEVELS = [
           "y": 1580,
           "width": 67,
           "height": 22,
-          "minX": 125,
+          "minX": 130,
           "maxX": 202,
           "speed": 103,
-          "x": 125,
+          "x": 130,
           "dir": 1
         },
         {
@@ -4419,8 +4419,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1420,
-          "leftX": 102,
-          "rightX": 194,
+          "leftX": 105,
+          "rightX": 211,
           "postRadius": 11
         },
         {
@@ -4430,9 +4430,9 @@ export const LEVELS = [
           "width": 66,
           "height": 22,
           "minX": 143,
-          "maxX": 217,
+          "maxX": 208,
           "speed": 116,
-          "x": 217,
+          "x": 208,
           "dir": -1
         },
         {
@@ -4455,10 +4455,10 @@ export const LEVELS = [
           "y": 1100,
           "width": 64,
           "height": 22,
-          "minX": 171,
+          "minX": 174,
           "maxX": 244,
           "speed": 109,
-          "x": 171,
+          "x": 174,
           "dir": 1
         },
         {
@@ -4471,7 +4471,7 @@ export const LEVELS = [
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 131,
+          "x": 139,
           "y": 940,
           "radius": 23
         },
@@ -4481,7 +4481,7 @@ export const LEVELS = [
           "y": 860,
           "width": 64,
           "height": 22,
-          "minX": 133,
+          "minX": 135,
           "maxX": 205,
           "speed": 102,
           "x": 205,
@@ -4491,8 +4491,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 780,
-          "leftX": 128,
-          "rightX": 220,
+          "leftX": 105,
+          "rightX": 211,
           "postRadius": 11
         },
         {
@@ -4508,10 +4508,10 @@ export const LEVELS = [
           "y": 620,
           "width": 64,
           "height": 22,
-          "minX": 122,
+          "minX": 131,
           "maxX": 195,
           "speed": 115,
-          "x": 122,
+          "x": 131,
           "dir": 1
         },
         {
@@ -4534,7 +4534,7 @@ export const LEVELS = [
           "y": 380,
           "width": 67,
           "height": 22,
-          "minX": 164,
+          "minX": 170,
           "maxX": 240,
           "speed": 108,
           "x": 240,
@@ -4612,7 +4612,7 @@ export const LEVELS = [
         {
           "id": "rock_8",
           "type": "rock",
-          "x": 272,
+          "x": 268,
           "y": 1932,
           "radius": 21
         },
@@ -4629,7 +4629,7 @@ export const LEVELS = [
           "y": 1777,
           "width": 67,
           "height": 22,
-          "minX": 141,
+          "minX": 167,
           "maxX": 218,
           "speed": 110,
           "x": 218,
@@ -4645,7 +4645,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 97,
+          "x": 116,
           "y": 1621,
           "radius": 21
         },
@@ -4655,16 +4655,16 @@ export const LEVELS = [
           "y": 1543,
           "width": 67,
           "height": 22,
-          "minX": 104,
+          "minX": 109,
           "maxX": 180,
           "speed": 103,
-          "x": 104,
+          "x": 109,
           "dir": 1
         },
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 192,
+          "x": 188,
           "y": 1465,
           "radius": 23
         },
@@ -4672,8 +4672,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1387,
-          "leftX": 94,
-          "rightX": 186,
+          "leftX": 106,
+          "rightX": 212,
           "postRadius": 11
         },
         {
@@ -4704,9 +4704,9 @@ export const LEVELS = [
           "width": 64,
           "height": 22,
           "minX": 181,
-          "maxX": 253,
+          "maxX": 252,
           "speed": 116,
-          "x": 253,
+          "x": 252,
           "dir": -1
         },
         {
@@ -4727,8 +4727,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 843,
-          "leftX": 118,
-          "rightX": 210,
+          "leftX": 106,
+          "rightX": 212,
           "postRadius": 11
         },
         {
@@ -4738,7 +4738,7 @@ export const LEVELS = [
           "width": 64,
           "height": 22,
           "minX": 128,
-          "maxX": 200,
+          "maxX": 175,
           "speed": 109,
           "x": 128,
           "dir": 1
@@ -4753,7 +4753,7 @@ export const LEVELS = [
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 106,
+          "x": 116,
           "y": 609,
           "radius": 18
         },
@@ -4770,7 +4770,7 @@ export const LEVELS = [
           "y": 453,
           "width": 66,
           "height": 22,
-          "minX": 159,
+          "minX": 168,
           "maxX": 234,
           "speed": 102,
           "x": 234,
@@ -4855,7 +4855,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 267,
+          "x": 262,
           "y": 1964,
           "radius": 21
         },
@@ -4872,7 +4872,7 @@ export const LEVELS = [
           "y": 1813,
           "width": 67,
           "height": 22,
-          "minX": 151,
+          "minX": 167,
           "maxX": 228,
           "speed": 113,
           "x": 228,
@@ -4884,10 +4884,10 @@ export const LEVELS = [
           "y": 1737,
           "width": 67,
           "height": 22,
-          "minX": 127,
+          "minX": 150,
           "maxX": 204,
           "speed": 106,
-          "x": 127,
+          "x": 150,
           "dir": 1
         },
         {
@@ -4901,8 +4901,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1585,
-          "leftX": 91,
-          "rightX": 183,
+          "leftX": 104,
+          "rightX": 210,
           "postRadius": 11
         },
         {
@@ -4933,9 +4933,9 @@ export const LEVELS = [
           "width": 65,
           "height": 22,
           "minX": 164,
-          "maxX": 237,
+          "maxX": 225,
           "speed": 119,
-          "x": 237,
+          "x": 225,
           "dir": -1
         },
         {
@@ -4949,8 +4949,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1130,
-          "leftX": 185,
-          "rightX": 277,
+          "leftX": 167,
+          "rightX": 273,
           "postRadius": 11
         },
         {
@@ -4967,7 +4967,7 @@ export const LEVELS = [
           "width": 64,
           "height": 22,
           "minX": 160,
-          "maxX": 232,
+          "maxX": 224,
           "speed": 112,
           "x": 160,
           "dir": 1
@@ -4975,7 +4975,7 @@ export const LEVELS = [
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 230,
+          "x": 222,
           "y": 903,
           "radius": 18
         },
@@ -4997,8 +4997,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 675,
-          "leftX": 112,
-          "rightX": 204,
+          "leftX": 104,
+          "rightX": 210,
           "postRadius": 11
         },
         {
@@ -5014,7 +5014,7 @@ export const LEVELS = [
           "y": 523,
           "width": 65,
           "height": 22,
-          "minX": 132,
+          "minX": 151,
           "maxX": 206,
           "speed": 105,
           "x": 206,
@@ -5026,10 +5026,10 @@ export const LEVELS = [
           "y": 448,
           "width": 66,
           "height": 22,
-          "minX": 156,
+          "minX": 167,
           "maxX": 231,
           "speed": 118,
-          "x": 156,
+          "x": 167,
           "dir": 1
         },
         {
@@ -5111,7 +5111,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 265,
+          "x": 261,
           "y": 2006,
           "radius": 21
         },
@@ -5128,7 +5128,7 @@ export const LEVELS = [
           "y": 1857,
           "width": 65,
           "height": 22,
-          "minX": 153,
+          "minX": 172,
           "maxX": 227,
           "speed": 115,
           "x": 227,
@@ -5147,10 +5147,10 @@ export const LEVELS = [
           "y": 1708,
           "width": 65,
           "height": 22,
-          "minX": 128,
+          "minX": 139,
           "maxX": 202,
           "speed": 108,
-          "x": 128,
+          "x": 139,
           "dir": 1
         },
         {
@@ -5165,7 +5165,7 @@ export const LEVELS = [
           "type": "gate",
           "y": 1559,
           "leftX": 91,
-          "rightX": 183,
+          "rightX": 197,
           "postRadius": 11
         },
         {
@@ -5202,7 +5202,7 @@ export const LEVELS = [
           "y": 1187,
           "width": 63,
           "height": 22,
-          "minX": 166,
+          "minX": 179,
           "maxX": 236,
           "speed": 121,
           "x": 236,
@@ -5212,8 +5212,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1113,
-          "leftX": 184,
-          "rightX": 276,
+          "leftX": 161,
+          "rightX": 267,
           "postRadius": 11
         },
         {
@@ -5222,16 +5222,16 @@ export const LEVELS = [
           "y": 1038,
           "width": 62,
           "height": 22,
-          "minX": 162,
+          "minX": 163,
           "maxX": 231,
           "speed": 114,
-          "x": 162,
+          "x": 163,
           "dir": 1
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 242,
+          "x": 229,
           "y": 964,
           "radius": 18
         },
@@ -5260,8 +5260,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 666,
-          "leftX": 111,
-          "rightX": 203,
+          "leftX": 107,
+          "rightX": 213,
           "postRadius": 11
         },
         {
@@ -5270,7 +5270,7 @@ export const LEVELS = [
           "y": 592,
           "width": 63,
           "height": 22,
-          "minX": 134,
+          "minX": 140,
           "maxX": 205,
           "speed": 107,
           "x": 205,
@@ -5289,10 +5289,10 @@ export const LEVELS = [
           "y": 443,
           "width": 64,
           "height": 22,
-          "minX": 158,
+          "minX": 172,
           "maxX": 231,
           "speed": 120,
-          "x": 158,
+          "x": 172,
           "dir": 1
         },
         {
@@ -5374,7 +5374,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 268,
+          "x": 262,
           "y": 2047,
           "radius": 21
         },
@@ -5391,7 +5391,7 @@ export const LEVELS = [
           "y": 1901,
           "width": 65,
           "height": 22,
-          "minX": 163,
+          "minX": 177,
           "maxX": 237,
           "speed": 115,
           "x": 237,
@@ -5410,10 +5410,10 @@ export const LEVELS = [
           "y": 1755,
           "width": 65,
           "height": 22,
-          "minX": 127,
+          "minX": 143,
           "maxX": 201,
           "speed": 108,
-          "x": 127,
+          "x": 143,
           "dir": 1
         },
         {
@@ -5427,14 +5427,14 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1608,
-          "leftX": 89,
-          "rightX": 181,
+          "leftX": 93,
+          "rightX": 199,
           "postRadius": 11
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 189,
+          "x": 187,
           "y": 1535,
           "radius": 23
         },
@@ -5452,9 +5452,9 @@ export const LEVELS = [
           "width": 63,
           "height": 22,
           "minX": 143,
-          "maxX": 215,
+          "maxX": 211,
           "speed": 121,
-          "x": 215,
+          "x": 211,
           "dir": -1
         },
         {
@@ -5471,7 +5471,7 @@ export const LEVELS = [
           "width": 62,
           "height": 22,
           "minX": 180,
-          "maxX": 250,
+          "maxX": 243,
           "speed": 114,
           "x": 180,
           "dir": 1
@@ -5479,7 +5479,7 @@ export const LEVELS = [
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 175,
+          "x": 183,
           "y": 1170,
           "radius": 23
         },
@@ -5487,14 +5487,14 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1097,
-          "leftX": 187,
-          "rightX": 279,
+          "leftX": 155,
+          "rightX": 261,
           "postRadius": 11
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 243,
+          "x": 239,
           "y": 1024,
           "radius": 18
         },
@@ -5512,9 +5512,9 @@ export const LEVELS = [
           "width": 62,
           "height": 22,
           "minX": 128,
-          "maxX": 197,
+          "maxX": 192,
           "speed": 107,
-          "x": 197,
+          "x": 192,
           "dir": -1
         },
         {
@@ -5530,16 +5530,16 @@ export const LEVELS = [
           "y": 732,
           "width": 62,
           "height": 22,
-          "minX": 108,
+          "minX": 111,
           "maxX": 178,
           "speed": 120,
-          "x": 108,
+          "x": 111,
           "dir": 1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 99,
+          "x": 114,
           "y": 658,
           "radius": 18
         },
@@ -5547,8 +5547,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 585,
-          "leftX": 110,
-          "rightX": 202,
+          "leftX": 127,
+          "rightX": 233,
           "postRadius": 11
         },
         {
@@ -5571,7 +5571,7 @@ export const LEVELS = [
           "y": 366,
           "width": 65,
           "height": 22,
-          "minX": 179,
+          "minX": 185,
           "maxX": 252,
           "speed": 113,
           "x": 252,
@@ -5649,7 +5649,7 @@ export const LEVELS = [
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 260,
+          "x": 257,
           "y": 2085,
           "radius": 21
         },
@@ -5666,7 +5666,7 @@ export const LEVELS = [
           "y": 1936,
           "width": 65,
           "height": 22,
-          "minX": 154,
+          "minX": 172,
           "maxX": 228,
           "speed": 117,
           "x": 228,
@@ -5685,10 +5685,10 @@ export const LEVELS = [
           "y": 1787,
           "width": 65,
           "height": 22,
-          "minX": 130,
+          "minX": 143,
           "maxX": 204,
           "speed": 110,
-          "x": 130,
+          "x": 143,
           "dir": 1
         },
         {
@@ -5702,8 +5702,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1638,
-          "leftX": 94,
-          "rightX": 186,
+          "leftX": 99,
+          "rightX": 205,
           "postRadius": 11
         },
         {
@@ -5734,9 +5734,9 @@ export const LEVELS = [
           "width": 63,
           "height": 22,
           "minX": 163,
-          "maxX": 234,
+          "maxX": 225,
           "speed": 123,
-          "x": 234,
+          "x": 225,
           "dir": -1
         },
         {
@@ -5757,8 +5757,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1115,
-          "leftX": 181,
-          "rightX": 273,
+          "leftX": 151,
+          "rightX": 257,
           "postRadius": 11
         },
         {
@@ -5768,7 +5768,7 @@ export const LEVELS = [
           "width": 62,
           "height": 22,
           "minX": 160,
-          "maxX": 229,
+          "maxX": 224,
           "speed": 116,
           "x": 160,
           "dir": 1
@@ -5798,14 +5798,14 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 742,
-          "leftX": 114,
-          "rightX": 206,
+          "leftX": 99,
+          "rightX": 205,
           "postRadius": 11
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 213,
+          "x": 212,
           "y": 668,
           "radius": 21
         },
@@ -5815,7 +5815,7 @@ export const LEVELS = [
           "y": 593,
           "width": 63,
           "height": 22,
-          "minX": 135,
+          "minX": 144,
           "maxX": 206,
           "speed": 109,
           "x": 206,
@@ -5834,10 +5834,10 @@ export const LEVELS = [
           "y": 444,
           "width": 64,
           "height": 22,
-          "minX": 158,
+          "minX": 172,
           "maxX": 231,
           "speed": 122,
-          "x": 158,
+          "x": 172,
           "dir": 1
         },
         {
@@ -5919,7 +5919,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 256,
+          "x": 252,
           "y": 2121,
           "radius": 21
         },
@@ -5929,7 +5929,7 @@ export const LEVELS = [
           "y": 2042,
           "width": 63,
           "height": 22,
-          "minX": 166,
+          "minX": 177,
           "maxX": 237,
           "speed": 120,
           "x": 237,
@@ -5955,16 +5955,16 @@ export const LEVELS = [
           "y": 1804,
           "width": 63,
           "height": 22,
-          "minX": 137,
+          "minX": 143,
           "maxX": 208,
           "speed": 113,
-          "x": 137,
+          "x": 143,
           "dir": 1
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 106,
+          "x": 118,
           "y": 1725,
           "radius": 21
         },
@@ -5972,14 +5972,14 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1646,
-          "leftX": 103,
-          "rightX": 195,
+          "leftX": 98,
+          "rightX": 204,
           "postRadius": 11
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 209,
+          "x": 197,
           "y": 1566,
           "radius": 23
         },
@@ -5990,9 +5990,9 @@ export const LEVELS = [
           "width": 62,
           "height": 22,
           "minX": 135,
-          "maxX": 204,
+          "maxX": 202,
           "speed": 126,
-          "x": 204,
+          "x": 202,
           "dir": -1
         },
         {
@@ -6008,10 +6008,10 @@ export const LEVELS = [
           "y": 1329,
           "width": 61,
           "height": 22,
-          "minX": 160,
+          "minX": 161,
           "maxX": 227,
           "speed": 119,
-          "x": 160,
+          "x": 161,
           "dir": 1
         },
         {
@@ -6024,7 +6024,7 @@ export const LEVELS = [
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 162,
+          "x": 168,
           "y": 1170,
           "radius": 23
         },
@@ -6034,7 +6034,7 @@ export const LEVELS = [
           "y": 1091,
           "width": 60,
           "height": 22,
-          "minX": 157,
+          "minX": 161,
           "maxX": 223,
           "speed": 112,
           "x": 223,
@@ -6053,10 +6053,10 @@ export const LEVELS = [
           "y": 933,
           "width": 60,
           "height": 22,
-          "minX": 133,
+          "minX": 134,
           "maxX": 199,
           "speed": 125,
-          "x": 133,
+          "x": 134,
           "dir": 1
         },
         {
@@ -6070,8 +6070,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 774,
-          "leftX": 118,
-          "rightX": 210,
+          "leftX": 98,
+          "rightX": 203,
           "postRadius": 11
         },
         {
@@ -6087,7 +6087,7 @@ export const LEVELS = [
           "y": 616,
           "width": 61,
           "height": 22,
-          "minX": 141,
+          "minX": 144,
           "maxX": 210,
           "speed": 118,
           "x": 210,
@@ -6096,7 +6096,7 @@ export const LEVELS = [
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 135,
+          "x": 144,
           "y": 537,
           "radius": 18
         },
@@ -6113,10 +6113,10 @@ export const LEVELS = [
           "y": 378,
           "width": 63,
           "height": 22,
-          "minX": 170,
+          "minX": 177,
           "maxX": 240,
           "speed": 111,
-          "x": 170,
+          "x": 177,
           "dir": 1
         },
         {
@@ -6191,7 +6191,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 261,
+          "x": 257,
           "y": 2162,
           "radius": 21
         },
@@ -6208,7 +6208,7 @@ export const LEVELS = [
           "y": 2007,
           "width": 63,
           "height": 22,
-          "minX": 158,
+          "minX": 178,
           "maxX": 229,
           "speed": 120,
           "x": 229,
@@ -6218,8 +6218,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1929,
-          "leftX": 117,
-          "rightX": 209,
+          "leftX": 144,
+          "rightX": 250,
           "postRadius": 11
         },
         {
@@ -6232,7 +6232,7 @@ export const LEVELS = [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 108,
+          "x": 119,
           "y": 1774,
           "radius": 21
         },
@@ -6242,16 +6242,16 @@ export const LEVELS = [
           "y": 1696,
           "width": 63,
           "height": 22,
-          "minX": 109,
+          "minX": 114,
           "maxX": 180,
           "speed": 113,
-          "x": 109,
+          "x": 114,
           "dir": 1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 188,
+          "x": 186,
           "y": 1618,
           "radius": 23
         },
@@ -6266,8 +6266,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1463,
-          "leftX": 147,
-          "rightX": 239,
+          "leftX": 121,
+          "rightX": 227,
           "postRadius": 11
         },
         {
@@ -6283,7 +6283,7 @@ export const LEVELS = [
           "y": 1308,
           "width": 61,
           "height": 22,
-          "minX": 166,
+          "minX": 173,
           "maxX": 233,
           "speed": 126,
           "x": 233,
@@ -6292,7 +6292,7 @@ export const LEVELS = [
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 180,
+          "x": 182,
           "y": 1230,
           "radius": 23
         },
@@ -6310,7 +6310,7 @@ export const LEVELS = [
           "width": 60,
           "height": 22,
           "minX": 163,
-          "maxX": 229,
+          "maxX": 223,
           "speed": 119,
           "x": 163,
           "dir": 1
@@ -6319,8 +6319,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 997,
-          "leftX": 133,
-          "rightX": 225,
+          "leftX": 122,
+          "rightX": 226,
           "postRadius": 11
         },
         {
@@ -6352,7 +6352,7 @@ export const LEVELS = [
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 116,
+          "x": 119,
           "y": 686,
           "radius": 18
         },
@@ -6360,8 +6360,8 @@ export const LEVELS = [
           "id": "gate_4",
           "type": "gate",
           "y": 608,
-          "leftX": 123,
-          "rightX": 215,
+          "leftX": 128,
+          "rightX": 234,
           "postRadius": 11
         },
         {
@@ -6377,10 +6377,10 @@ export const LEVELS = [
           "y": 453,
           "width": 62,
           "height": 22,
-          "minX": 162,
+          "minX": 178,
           "maxX": 232,
           "speed": 125,
-          "x": 162,
+          "x": 178,
           "dir": 1
         },
         {
@@ -6462,7 +6462,7 @@ export const LEVELS = [
         {
           "id": "rock_9",
           "type": "rock",
-          "x": 256,
+          "x": 253,
           "y": 2204,
           "radius": 21
         },
@@ -6486,7 +6486,7 @@ export const LEVELS = [
           "y": 1975,
           "width": 63,
           "height": 22,
-          "minX": 148,
+          "minX": 163,
           "maxX": 219,
           "speed": 120,
           "x": 219,
@@ -6495,7 +6495,7 @@ export const LEVELS = [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 125,
+          "x": 138,
           "y": 1899,
           "radius": 21
         },
@@ -6503,8 +6503,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1822,
-          "leftX": 99,
-          "rightX": 191,
+          "leftX": 117,
+          "rightX": 223,
           "postRadius": 11
         },
         {
@@ -6521,7 +6521,7 @@ export const LEVELS = [
           "width": 63,
           "height": 22,
           "minX": 118,
-          "maxX": 188,
+          "maxX": 178,
           "speed": 113,
           "x": 118,
           "dir": 1
@@ -6550,7 +6550,7 @@ export const LEVELS = [
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 252,
+          "x": 243,
           "y": 1364,
           "radius": 18
         },
@@ -6558,8 +6558,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1288,
-          "leftX": 178,
-          "rightX": 270,
+          "leftX": 159,
+          "rightX": 263,
           "postRadius": 11
         },
         {
@@ -6568,7 +6568,7 @@ export const LEVELS = [
           "y": 1212,
           "width": 60,
           "height": 22,
-          "minX": 173,
+          "minX": 178,
           "maxX": 239,
           "speed": 126,
           "x": 239,
@@ -6591,7 +6591,7 @@ export const LEVELS = [
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 123,
+          "x": 124,
           "y": 983,
           "radius": 18
         },
@@ -6602,7 +6602,7 @@ export const LEVELS = [
           "width": 60,
           "height": 22,
           "minX": 126,
-          "maxX": 192,
+          "maxX": 188,
           "speed": 119,
           "x": 126,
           "dir": 1
@@ -6610,7 +6610,7 @@ export const LEVELS = [
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 190,
+          "x": 185,
           "y": 830,
           "radius": 21
         },
@@ -6625,8 +6625,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 678,
-          "leftX": 115,
-          "rightX": 207,
+          "leftX": 117,
+          "rightX": 223,
           "postRadius": 11
         },
         {
@@ -6642,7 +6642,7 @@ export const LEVELS = [
           "y": 525,
           "width": 62,
           "height": 22,
-          "minX": 162,
+          "minX": 163,
           "maxX": 231,
           "speed": 112,
           "x": 231,
@@ -6651,7 +6651,7 @@ export const LEVELS = [
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 153,
+          "x": 166,
           "y": 449,
           "radius": 21
         },
@@ -6734,7 +6734,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 256,
+          "x": 252,
           "y": 2233,
           "radius": 21
         },
@@ -6751,7 +6751,7 @@ export const LEVELS = [
           "y": 2078,
           "width": 61,
           "height": 22,
-          "minX": 167,
+          "minX": 180,
           "maxX": 235,
           "speed": 125,
           "x": 235,
@@ -6767,7 +6767,7 @@ export const LEVELS = [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 124,
+          "x": 141,
           "y": 1923,
           "radius": 21
         },
@@ -6777,18 +6777,18 @@ export const LEVELS = [
           "y": 1846,
           "width": 61,
           "height": 22,
-          "minX": 133,
+          "minX": 136,
           "maxX": 201,
           "speed": 118,
-          "x": 133,
+          "x": 136,
           "dir": 1
         },
         {
           "id": "gate_1",
           "type": "gate",
           "y": 1768,
-          "leftX": 101,
-          "rightX": 193,
+          "leftX": 102,
+          "rightX": 208,
           "postRadius": 11
         },
         {
@@ -6812,9 +6812,9 @@ export const LEVELS = [
           "width": 59,
           "height": 22,
           "minX": 144,
-          "maxX": 211,
+          "maxX": 202,
           "speed": 131,
-          "x": 211,
+          "x": 202,
           "dir": -1
         },
         {
@@ -6831,7 +6831,7 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 180,
-          "maxX": 243,
+          "maxX": 231,
           "speed": 124,
           "x": 180,
           "dir": 1
@@ -6847,14 +6847,14 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1226,
-          "leftX": 178,
-          "rightX": 270,
+          "leftX": 163,
+          "rightX": 262,
           "postRadius": 11
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 249,
+          "x": 241,
           "y": 1149,
           "radius": 18
         },
@@ -6879,9 +6879,9 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 133,
-          "maxX": 196,
+          "maxX": 186,
           "speed": 117,
-          "x": 196,
+          "x": 186,
           "dir": -1
         },
         {
@@ -6897,18 +6897,18 @@ export const LEVELS = [
           "y": 762,
           "width": 58,
           "height": 22,
-          "minX": 118,
+          "minX": 123,
           "maxX": 181,
           "speed": 130,
-          "x": 118,
+          "x": 123,
           "dir": 1
         },
         {
           "id": "gate_3",
           "type": "gate",
           "y": 684,
-          "leftX": 114,
-          "rightX": 206,
+          "leftX": 119,
+          "rightX": 221,
           "postRadius": 11
         },
         {
@@ -6938,7 +6938,7 @@ export const LEVELS = [
           "y": 375,
           "width": 61,
           "height": 22,
-          "minX": 180,
+          "minX": 182,
           "maxX": 248,
           "speed": 123,
           "x": 248,
@@ -7016,7 +7016,7 @@ export const LEVELS = [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 254,
+          "x": 250,
           "y": 2264,
           "radius": 21
         },
@@ -7026,7 +7026,7 @@ export const LEVELS = [
           "y": 2189,
           "width": 61,
           "height": 22,
-          "minX": 171,
+          "minX": 179,
           "maxX": 239,
           "speed": 125,
           "x": 239,
@@ -7052,16 +7052,16 @@ export const LEVELS = [
           "y": 1961,
           "width": 61,
           "height": 22,
-          "minX": 139,
+          "minX": 153,
           "maxX": 207,
           "speed": 118,
-          "x": 139,
+          "x": 153,
           "dir": 1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 125,
+          "x": 130,
           "y": 1886,
           "radius": 21
         },
@@ -7069,8 +7069,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1810,
-          "leftX": 102,
-          "rightX": 194,
+          "leftX": 107,
+          "rightX": 213,
           "postRadius": 11
         },
         {
@@ -7087,9 +7087,9 @@ export const LEVELS = [
           "width": 60,
           "height": 22,
           "minX": 128,
-          "maxX": 195,
+          "maxX": 185,
           "speed": 131,
-          "x": 195,
+          "x": 185,
           "dir": -1
         },
         {
@@ -7113,7 +7113,7 @@ export const LEVELS = [
           "width": 59,
           "height": 22,
           "minX": 162,
-          "maxX": 227,
+          "maxX": 224,
           "speed": 124,
           "x": 162,
           "dir": 1
@@ -7129,7 +7129,7 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1280,
-          "leftX": 176,
+          "leftX": 169,
           "rightX": 268,
           "postRadius": 11
         },
@@ -7146,7 +7146,7 @@ export const LEVELS = [
           "y": 1129,
           "width": 58,
           "height": 22,
-          "minX": 159,
+          "minX": 160,
           "maxX": 222,
           "speed": 117,
           "x": 222,
@@ -7165,10 +7165,10 @@ export const LEVELS = [
           "y": 977,
           "width": 58,
           "height": 22,
-          "minX": 127,
+          "minX": 133,
           "maxX": 190,
           "speed": 130,
-          "x": 127,
+          "x": 133,
           "dir": 1
         },
         {
@@ -7189,8 +7189,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 750,
-          "leftX": 115,
-          "rightX": 207,
+          "leftX": 110,
+          "rightX": 211,
           "postRadius": 11
         },
         {
@@ -7206,7 +7206,7 @@ export const LEVELS = [
           "y": 599,
           "width": 59,
           "height": 22,
-          "minX": 143,
+          "minX": 154,
           "maxX": 209,
           "speed": 123,
           "x": 209,
@@ -7232,10 +7232,10 @@ export const LEVELS = [
           "y": 371,
           "width": 60,
           "height": 22,
-          "minX": 175,
+          "minX": 179,
           "maxX": 243,
           "speed": 116,
-          "x": 175,
+          "x": 179,
           "dir": 1
         },
         {
@@ -7310,7 +7310,7 @@ export const LEVELS = [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 259,
+          "x": 254,
           "y": 2303,
           "radius": 21
         },
@@ -7327,7 +7327,7 @@ export const LEVELS = [
           "y": 2149,
           "width": 61,
           "height": 22,
-          "minX": 170,
+          "minX": 187,
           "maxX": 238,
           "speed": 127,
           "x": 238,
@@ -7346,16 +7346,16 @@ export const LEVELS = [
           "y": 1994,
           "width": 61,
           "height": 22,
-          "minX": 131,
+          "minX": 155,
           "maxX": 199,
           "speed": 120,
-          "x": 131,
+          "x": 155,
           "dir": 1
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 122,
+          "x": 130,
           "y": 1917,
           "radius": 21
         },
@@ -7363,8 +7363,8 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1840,
-          "leftX": 99,
-          "rightX": 191,
+          "leftX": 104,
+          "rightX": 210,
           "postRadius": 11
         },
         {
@@ -7394,7 +7394,7 @@ export const LEVELS = [
           "y": 1531,
           "width": 59,
           "height": 22,
-          "minX": 143,
+          "minX": 144,
           "maxX": 210,
           "speed": 133,
           "x": 210,
@@ -7414,7 +7414,7 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 184,
-          "maxX": 248,
+          "maxX": 241,
           "speed": 126,
           "x": 184,
           "dir": 1
@@ -7423,14 +7423,14 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1300,
-          "leftX": 182,
-          "rightX": 274,
+          "leftX": 176,
+          "rightX": 275,
           "postRadius": 11
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 253,
+          "x": 251,
           "y": 1223,
           "radius": 18
         },
@@ -7455,9 +7455,9 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 131,
-          "maxX": 194,
+          "maxX": 192,
           "speed": 119,
-          "x": 194,
+          "x": 192,
           "dir": -1
         },
         {
@@ -7480,10 +7480,10 @@ export const LEVELS = [
           "y": 760,
           "width": 58,
           "height": 22,
-          "minX": 115,
+          "minX": 125,
           "maxX": 179,
           "speed": 132,
-          "x": 115,
+          "x": 125,
           "dir": 1
         },
         {
@@ -7497,8 +7497,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 606,
-          "leftX": 112,
-          "rightX": 204,
+          "leftX": 137,
+          "rightX": 241,
           "postRadius": 11
         },
         {
@@ -7514,7 +7514,7 @@ export const LEVELS = [
           "y": 451,
           "width": 61,
           "height": 22,
-          "minX": 185,
+          "minX": 187,
           "maxX": 253,
           "speed": 125,
           "x": 253,
@@ -7530,7 +7530,7 @@ export const LEVELS = [
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 256,
+          "x": 252,
           "y": 297,
           "radius": 23
         }
@@ -7599,7 +7599,7 @@ export const LEVELS = [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 256,
+          "x": 252,
           "y": 2334,
           "radius": 21
         },
@@ -7614,14 +7614,14 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 2183,
-          "leftX": 135,
-          "rightX": 227,
+          "leftX": 167,
+          "rightX": 273,
           "postRadius": 11
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 205,
+          "x": 159,
           "y": 2108,
           "radius": 18
         },
@@ -7631,7 +7631,7 @@ export const LEVELS = [
           "y": 2032,
           "width": 61,
           "height": 22,
-          "minX": 146,
+          "minX": 157,
           "maxX": 214,
           "speed": 130,
           "x": 214,
@@ -7640,7 +7640,7 @@ export const LEVELS = [
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 123,
+          "x": 134,
           "y": 1957,
           "radius": 21
         },
@@ -7650,10 +7650,10 @@ export const LEVELS = [
           "y": 1881,
           "width": 61,
           "height": 22,
-          "minX": 112,
+          "minX": 128,
           "maxX": 180,
           "speed": 123,
-          "x": 112,
+          "x": 128,
           "dir": 1
         },
         {
@@ -7674,7 +7674,7 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1655,
-          "leftX": 117,
+          "leftX": 104,
           "rightX": 209,
           "postRadius": 11
         },
@@ -7692,9 +7692,9 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 166,
-          "maxX": 232,
+          "maxX": 219,
           "speed": 136,
-          "x": 232,
+          "x": 219,
           "dir": -1
         },
         {
@@ -7708,8 +7708,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 1353,
-          "leftX": 174,
-          "rightX": 266,
+          "leftX": 165,
+          "rightX": 265,
           "postRadius": 11
         },
         {
@@ -7733,7 +7733,7 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 164,
-          "maxX": 227,
+          "maxX": 217,
           "speed": 129,
           "x": 164,
           "dir": 1
@@ -7756,8 +7756,8 @@ export const LEVELS = [
           "id": "gate_4",
           "type": "gate",
           "y": 900,
-          "leftX": 99,
-          "rightX": 191,
+          "leftX": 93,
+          "rightX": 192,
           "postRadius": 11
         },
         {
@@ -7773,7 +7773,7 @@ export const LEVELS = [
           "y": 749,
           "width": 58,
           "height": 22,
-          "minX": 118,
+          "minX": 130,
           "maxX": 182,
           "speed": 122,
           "x": 182,
@@ -7792,18 +7792,18 @@ export const LEVELS = [
           "y": 598,
           "width": 59,
           "height": 22,
-          "minX": 151,
+          "minX": 158,
           "maxX": 217,
           "speed": 135,
-          "x": 151,
+          "x": 158,
           "dir": 1
         },
         {
           "id": "gate_5",
           "type": "gate",
           "y": 522,
-          "leftX": 157,
-          "rightX": 249,
+          "leftX": 153,
+          "rightX": 259,
           "postRadius": 11
         },
         {
@@ -7823,7 +7823,7 @@ export const LEVELS = [
         {
           "id": "rock_28",
           "type": "rock",
-          "x": 254,
+          "x": 250,
           "y": 296,
           "radius": 23
         }
@@ -7892,7 +7892,7 @@ export const LEVELS = [
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 256,
+          "x": 251,
           "y": 2363,
           "radius": 21
         },
@@ -7902,7 +7902,7 @@ export const LEVELS = [
           "y": 2287,
           "width": 59,
           "height": 22,
-          "minX": 179,
+          "minX": 185,
           "maxX": 244,
           "speed": 133,
           "x": 244,
@@ -7921,10 +7921,10 @@ export const LEVELS = [
           "y": 2134,
           "width": 59,
           "height": 22,
-          "minX": 156,
+          "minX": 176,
           "maxX": 221,
           "speed": 126,
-          "x": 156,
+          "x": 176,
           "dir": 1
         },
         {
@@ -7938,14 +7938,14 @@ export const LEVELS = [
           "id": "gate_1",
           "type": "gate",
           "y": 1981,
-          "leftX": 124,
-          "rightX": 216,
+          "leftX": 126,
+          "rightX": 228,
           "postRadius": 11
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 119,
+          "x": 121,
           "y": 1904,
           "radius": 21
         },
@@ -7963,9 +7963,9 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 125,
-          "maxX": 190,
+          "maxX": 172,
           "speed": 139,
-          "x": 190,
+          "x": 172,
           "dir": -1
         },
         {
@@ -7979,8 +7979,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1598,
-          "leftX": 142,
-          "rightX": 234,
+          "leftX": 121,
+          "rightX": 221,
           "postRadius": 11
         },
         {
@@ -7996,10 +7996,10 @@ export const LEVELS = [
           "y": 1445,
           "width": 57,
           "height": 22,
-          "minX": 165,
+          "minX": 170,
           "maxX": 229,
           "speed": 132,
-          "x": 165,
+          "x": 170,
           "dir": 1
         },
         {
@@ -8022,7 +8022,7 @@ export const LEVELS = [
           "y": 1215,
           "width": 57,
           "height": 22,
-          "minX": 162,
+          "minX": 171,
           "maxX": 224,
           "speed": 125,
           "x": 224,
@@ -8039,8 +8039,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 1062,
-          "leftX": 132,
-          "rightX": 224,
+          "leftX": 122,
+          "rightX": 219,
           "postRadius": 11
         },
         {
@@ -8057,7 +8057,7 @@ export const LEVELS = [
           "width": 57,
           "height": 22,
           "minX": 122,
-          "maxX": 184,
+          "maxX": 170,
           "speed": 138,
           "x": 122,
           "dir": 1
@@ -8065,7 +8065,7 @@ export const LEVELS = [
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 101,
+          "x": 104,
           "y": 832,
           "radius": 18
         },
@@ -8080,8 +8080,8 @@ export const LEVELS = [
           "id": "gate_4",
           "type": "gate",
           "y": 679,
-          "leftX": 129,
-          "rightX": 221,
+          "leftX": 127,
+          "rightX": 227,
           "postRadius": 11
         },
         {
@@ -8099,7 +8099,7 @@ export const LEVELS = [
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 168,
+          "x": 170,
           "y": 526,
           "radius": 23
         },
@@ -8116,10 +8116,10 @@ export const LEVELS = [
           "y": 373,
           "width": 59,
           "height": 22,
-          "minX": 183,
+          "minX": 185,
           "maxX": 248,
           "speed": 124,
-          "x": 183,
+          "x": 185,
           "dir": 1
         },
         {
@@ -8194,7 +8194,7 @@ export const LEVELS = [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 258,
+          "x": 252,
           "y": 2407,
           "radius": 21
         },
@@ -8220,7 +8220,7 @@ export const LEVELS = [
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 218,
+          "x": 259,
           "y": 2188,
           "radius": 18
         },
@@ -8230,24 +8230,24 @@ export const LEVELS = [
           "y": 2115,
           "width": 59,
           "height": 22,
-          "minX": 156,
+          "minX": 167,
           "maxX": 221,
           "speed": 128,
-          "x": 156,
+          "x": 167,
           "dir": 1
         },
         {
           "id": "gate_1",
           "type": "gate",
           "y": 2043,
-          "leftX": 124,
-          "rightX": 216,
+          "leftX": 133,
+          "rightX": 235,
           "postRadius": 11
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 125,
+          "x": 127,
           "y": 1970,
           "radius": 21
         },
@@ -8265,9 +8265,9 @@ export const LEVELS = [
           "width": 59,
           "height": 22,
           "minX": 108,
-          "maxX": 172,
+          "maxX": 170,
           "speed": 141,
-          "x": 172,
+          "x": 170,
           "dir": -1
         },
         {
@@ -8284,7 +8284,7 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 139,
-          "maxX": 203,
+          "maxX": 190,
           "speed": 134,
           "x": 139,
           "dir": 1
@@ -8292,7 +8292,7 @@ export const LEVELS = [
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 217,
+          "x": 214,
           "y": 1605,
           "radius": 21
         },
@@ -8300,8 +8300,8 @@ export const LEVELS = [
           "id": "gate_2",
           "type": "gate",
           "y": 1532,
-          "leftX": 142,
-          "rightX": 234,
+          "leftX": 140,
+          "rightX": 239,
           "postRadius": 11
         },
         {
@@ -8314,7 +8314,7 @@ export const LEVELS = [
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 267,
+          "x": 262,
           "y": 1386,
           "radius": 18
         },
@@ -8325,9 +8325,9 @@ export const LEVELS = [
           "width": 57,
           "height": 22,
           "minX": 190,
-          "maxX": 252,
+          "maxX": 251,
           "speed": 127,
-          "x": 252,
+          "x": 251,
           "dir": -1
         },
         {
@@ -8344,7 +8344,7 @@ export const LEVELS = [
           "width": 57,
           "height": 22,
           "minX": 159,
-          "maxX": 221,
+          "maxX": 220,
           "speed": 140,
           "x": 159,
           "dir": 1
@@ -8353,8 +8353,8 @@ export const LEVELS = [
           "id": "gate_3",
           "type": "gate",
           "y": 1095,
-          "leftX": 132,
-          "rightX": 224,
+          "leftX": 125,
+          "rightX": 222,
           "postRadius": 11
         },
         {
@@ -8378,9 +8378,9 @@ export const LEVELS = [
           "width": 57,
           "height": 22,
           "minX": 108,
-          "maxX": 170,
+          "maxX": 168,
           "speed": 133,
-          "x": 170,
+          "x": 168,
           "dir": -1
         },
         {
@@ -8397,7 +8397,7 @@ export const LEVELS = [
           "width": 58,
           "height": 22,
           "minX": 138,
-          "maxX": 201,
+          "maxX": 200,
           "speed": 126,
           "x": 138,
           "dir": 1
@@ -8413,21 +8413,21 @@ export const LEVELS = [
           "id": "gate_4",
           "type": "gate",
           "y": 585,
-          "leftX": 130,
-          "rightX": 222,
+          "leftX": 149,
+          "rightX": 249,
           "postRadius": 11
         },
         {
           "id": "rock_28",
           "type": "rock",
-          "x": 218,
+          "x": 258,
           "y": 512,
           "radius": 18
         },
         {
           "id": "rock_29",
           "type": "rock",
-          "x": 185,
+          "x": 186,
           "y": 439,
           "radius": 21
         },
@@ -8438,15 +8438,15 @@ export const LEVELS = [
           "width": 59,
           "height": 22,
           "minX": 192,
-          "maxX": 257,
+          "maxX": 252,
           "speed": 139,
-          "x": 257,
+          "x": 252,
           "dir": -1
         },
         {
           "id": "rock_30",
           "type": "rock",
-          "x": 256,
+          "x": 250,
           "y": 293,
           "radius": 23
         }
