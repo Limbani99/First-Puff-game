@@ -44,6 +44,11 @@ export function renderGame(ctx, canvasWidth, canvasHeight, world, raft, particle
   // 6. Draw Particles (water ripples, puff clouds)
   particleSystem.draw(ctx, cameraY, canvasHeight);
 
+  // 6.5 Draw Submerged Crew Members (swimming in river water)
+  if (raft.crew) {
+    drawSubmergedCrew(ctx, raft.crew, unlockedCrew, cameraY, canvasHeight);
+  }
+
   // 7. Draw the Raft and Crew
   drawRaft(ctx, raft, unlockedCrew);
 
@@ -416,33 +421,173 @@ function drawRaft(ctx, raft, unlockedCrew = []) {
     ctx.stroke();
   }
 
-  // 4. Crew Members on Raft
-  // 🦛 Hippo: Back (y > 0)
-  // 🐧 Penguin: Front (y < 0)
-  // 🐸 Frog: Left (x < 0)
-  // 🐷 Pig: Right (x > 0)
-
-  // Hippo (Back)
-  if (unlockedCrew.includes('hippo')) {
-    drawCrewEmoji(ctx, '🦛', 0, r * 0.52, raft.activePuffCrew === 'hippo', '#8b5cf6');
-  }
-
-  // Penguin (Front / Brake)
-  if (unlockedCrew.includes('penguin')) {
-    drawCrewEmoji(ctx, '🐧', 0, -r * 0.52, raft.activePuffCrew === 'penguin', '#06b6d4');
-  }
-
-  // Frog (Left side)
-  if (unlockedCrew.includes('frog')) {
-    drawCrewEmoji(ctx, '🐸', -r * 0.52, 0, raft.activePuffCrew === 'frog', '#22c55e');
-  }
-
-  // Pig (Right side)
-  if (unlockedCrew.includes('pig')) {
-    drawCrewEmoji(ctx, '🐷', r * 0.52, 0, raft.activePuffCrew === 'pig', '#ec4899');
+  // 4. Dynamic Crew Members on Raft with Anti-Gravity Full-Body Physics
+  if (raft.crew) {
+    const crewOrder = ['hippo', 'frog', 'pig', 'penguin'];
+    for (const id of crewOrder) {
+      if (!unlockedCrew.includes(id)) continue;
+      const member = raft.crew[id];
+      if (member && member.isOnRaft) {
+        drawDynamicCrewMember(ctx, member, raft.activePuffCrew === id);
+      }
+    }
+  } else {
+    // Fallback if legacy raft
+    if (unlockedCrew.includes('hippo')) drawCrewEmoji(ctx, '🦛', 0, r * 0.52, raft.activePuffCrew === 'hippo', '#8b5cf6');
+    if (unlockedCrew.includes('penguin')) drawCrewEmoji(ctx, '🐧', 0, -r * 0.52, raft.activePuffCrew === 'penguin', '#06b6d4');
+    if (unlockedCrew.includes('frog')) drawCrewEmoji(ctx, '🐸', -r * 0.52, 0, raft.activePuffCrew === 'frog', '#22c55e');
+    if (unlockedCrew.includes('pig')) drawCrewEmoji(ctx, '🐷', r * 0.52, 0, raft.activePuffCrew === 'pig', '#ec4899');
   }
 
   ctx.restore();
+}
+
+// Render dynamic crew member on the raft with anti-gravity body elevation & physics
+function drawDynamicCrewMember(ctx, member, isPuffing) {
+  ctx.save();
+
+  const z = member.z || 0;
+  const isFloating = z > 1.8;
+
+  // 1. Dynamic deck shadow under character (reacts to anti-gravity elevation)
+  const shadowScale = Math.max(0.35, 1 - z / 22);
+  const shadowAlpha = Math.max(0.1, 0.35 * (1 - z / 25));
+
+  ctx.fillStyle = `rgba(15, 23, 42, ${shadowAlpha})`;
+  ctx.beginPath();
+  ctx.ellipse(
+    member.offsetX,
+    member.offsetY + 3,
+    9 * shadowScale,
+    5 * shadowScale,
+    0,
+    0,
+    Math.PI * 2
+  );
+  ctx.fill();
+
+  // 2. Translate to dynamic character body position (incorporating anti-gravity float elevation Z)
+  ctx.translate(member.offsetX, member.offsetY - z);
+
+  // 3. Body lean tilt & anti-gravity tumble
+  ctx.rotate(member.tilt || 0);
+
+  // 4. Dynamic Squash and Stretch body deformation
+  const sx = (member.squashX || 1.0) * (isPuffing ? 1.25 : 1.0);
+  const sy = (member.squashY || 1.0) * (isPuffing ? 1.25 : 1.0);
+  ctx.scale(sx, sy);
+
+  // 5. Anti-gravity glow or puffing effect
+  if (isPuffing) {
+    ctx.fillStyle = member.color;
+    ctx.globalAlpha = 0.5;
+    ctx.beginPath();
+    ctx.arc(0, 0, 16, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.globalAlpha = 1.0;
+  } else if (isFloating) {
+    // Zero-gravity float sparkle
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.4)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(0, 0, 13, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // 6. Cute pedestal cushion when touching raft
+  if (z < 2.0) {
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.65)';
+    ctx.beginPath();
+    ctx.ellipse(0, 3, 9, 5, 0, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 7. Render cute character emoji
+  ctx.font = '18px system-ui, apple color emoji, segoe ui emoji, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText(member.emoji, 0, -1);
+
+  ctx.restore();
+}
+
+// Render submerged crew members swimming in the river water
+function drawSubmergedCrew(ctx, crew, unlockedCrew = [], cameraY = 0, canvasHeight = 800) {
+  if (!crew) return;
+
+  for (const member of Object.values(crew)) {
+    if (!member.inWater || !unlockedCrew.includes(member.id)) continue;
+
+    const wx = member.worldX;
+    const wy = member.worldY;
+
+    // Viewport frustum culling
+    if (wy < cameraY - 60 || wy > cameraY + canvasHeight + 60) continue;
+
+    ctx.save();
+    ctx.translate(wx, wy);
+
+    const bobY = Math.sin(member.waterBobPhase) * 2.5;
+
+    // 1. Water ripple disturbance around swimming character
+    const ripplePulse = Math.sin(member.waterBobPhase * 2) * 2;
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.65)';
+    ctx.lineWidth = 2.0;
+    ctx.beginPath();
+    ctx.ellipse(0, bobY + 4, 15 + ripplePulse, 7 + ripplePulse * 0.4, 0, 0, Math.PI * 2);
+    ctx.stroke();
+
+    // 2. White foam wake from paddling
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.4)';
+    ctx.beginPath();
+    ctx.ellipse(0, bobY + 6, 12, 5, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // 3. Swimming paddle rotation
+    ctx.rotate(member.tilt || 0);
+
+    // Subtle swimming squash & stretch
+    const paddleSquash = Math.sin(member.waterBobPhase * 2.5) * 0.08;
+    ctx.scale(1.0 + paddleSquash, 1.0 - paddleSquash);
+
+    // 4. Character emoji bobbing in water
+    ctx.font = '18px system-ui, apple color emoji, segoe ui emoji, sans-serif';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(member.emoji, 0, bobY - 1);
+
+    // 5. Water submergence layer (translucent blue river water covering lower body)
+    ctx.fillStyle = 'rgba(14, 165, 233, 0.62)';
+    ctx.beginPath();
+    ctx.ellipse(0, bobY + 4, 13, 6, 0, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Waterline highlight
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.85)';
+    ctx.lineWidth = 1.5;
+    ctx.beginPath();
+    ctx.arc(0, bobY + 3, 11, 0.15, Math.PI - 0.15);
+    ctx.stroke();
+
+    // 6. Cartoon air bubbles rising from submergence
+    const bPhase = member.waterBobPhase;
+    const bubbles = [
+      { ox: -10, oy: -8 + ((bPhase * 18) % 24), r: 2.5 },
+      { ox: 9, oy: -14 + (((bPhase + 2) * 16) % 22), r: 2.0 },
+      { ox: -4, oy: -18 + (((bPhase + 4) * 14) % 26), r: 1.8 }
+    ];
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.8)';
+    for (const b of bubbles) {
+      if (b.oy > -26 && b.oy < 10) {
+        ctx.beginPath();
+        ctx.arc(b.ox, bobY + b.oy, b.r, 0, Math.PI * 2);
+        ctx.fill();
+      }
+    }
+
+    ctx.restore();
+  }
 }
 
 function drawCrewEmoji(ctx, emoji, x, y, isPuffing, glowColor) {
