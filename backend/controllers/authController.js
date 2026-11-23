@@ -37,6 +37,9 @@ const register = async (req, res) => {
     const validAvatars = ["hippo", "frog", "pig", "penguin"];
     const chosenAvatar = validAvatars.includes(avatar) ? avatar : "hippo";
 
+    const initialStars = gameSave?.stars && typeof gameSave.stars === "object" ? gameSave.stars : {};
+    const totalStars = Object.values(initialStars).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+
     // Create user with any existing offline progress
     const user = await User.create({
       username,
@@ -45,7 +48,8 @@ const register = async (req, res) => {
       role: "player",
       avatar: chosenAvatar,
       unlockedLevel: gameSave?.unlockedLevel || 1,
-      stars: gameSave?.stars || {},
+      totalStars,
+      stars: initialStars,
       bestTimes: gameSave?.bestTimes || {},
       settings: gameSave?.settings || { sound: true, vibration: true },
     });
@@ -55,6 +59,8 @@ const register = async (req, res) => {
     // Sanitize user object for response
     const userData = user.toObject();
     delete userData.password;
+    userData.totalStars = totalStars;
+    userData.stars = initialStars;
 
     res.status(201).json({
       message: "Welcome aboard! Account created and saved to DB 🦛💨",
@@ -90,6 +96,9 @@ const login = async (req, res) => {
         finalUsername = `${generatedUsername}_${Math.floor(100 + Math.random() * 900)}`;
       }
 
+      const initialStars = gameSave?.stars && typeof gameSave.stars === "object" ? gameSave.stars : {};
+      const totalStars = Object.values(initialStars).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+
       user = await User.create({
         username: finalUsername,
         email: email.toLowerCase(),
@@ -97,7 +106,8 @@ const login = async (req, res) => {
         role: "player",
         avatar: "hippo",
         unlockedLevel: gameSave?.unlockedLevel || 1,
-        stars: gameSave?.stars || {},
+        totalStars,
+        stars: initialStars,
         bestTimes: gameSave?.bestTimes || {},
         settings: gameSave?.settings || { sound: true, vibration: true },
       });
@@ -105,6 +115,8 @@ const login = async (req, res) => {
       const token = createToken(user);
       const userData = user.toObject();
       delete userData.password;
+      userData.totalStars = totalStars;
+      userData.stars = initialStars;
 
       return res.status(200).json({
         message: "New account created and game data added to DB! 🎉",
@@ -152,13 +164,20 @@ const login = async (req, res) => {
           vibration: gameSave.settings.vibration ?? user.settings?.vibration ?? true,
         };
       }
-
-      await user.save();
     }
+
+    // Always compute current total stars on login
+    const starsObj = user.stars instanceof Map ? Object.fromEntries(user.stars) : (user.stars || {});
+    user.totalStars = Object.values(starsObj).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+
+    await user.save();
 
     const token = createToken(user);
     const userData = user.toObject();
     delete userData.password;
+    userData.stars = starsObj;
+    userData.bestTimes = user.bestTimes instanceof Map ? Object.fromEntries(user.bestTimes) : (user.bestTimes || {});
+    userData.totalStars = user.totalStars;
 
     res.status(200).json({
       message: "Logged in and game data synced to DB 🎉",
@@ -178,7 +197,13 @@ const getProfile = async (req, res) => {
     if (!user) {
       return res.status(404).json({ message: "User not found" });
     }
-    res.status(200).json({ user });
+    const userData = user.toObject();
+    const starsObj = userData.stars instanceof Map ? Object.fromEntries(userData.stars) : (userData.stars || {});
+    const bestTimesObj = userData.bestTimes instanceof Map ? Object.fromEntries(userData.bestTimes) : (userData.bestTimes || {});
+    userData.stars = starsObj;
+    userData.bestTimes = bestTimesObj;
+    userData.totalStars = Object.values(starsObj).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+    res.status(200).json({ user: userData });
   } catch (err) {
     res.status(500).json({ message: "Failed to fetch profile", error: err.message });
   }

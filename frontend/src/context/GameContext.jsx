@@ -1,5 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { soundManager } from '../game/sound';
+import { useData } from './DataProvider';
 
 const STORAGE_KEY = 'first_puff_save';
 
@@ -24,6 +25,8 @@ export const useGame = () => {
 };
 
 export default function GameProvider({ children }) {
+  const { user, token, isLoggedIn, updateUserProgress } = useData();
+
   const [gameState, setGameState] = useState(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -54,11 +57,53 @@ export default function GameProvider({ children }) {
   // Save to localStorage on state changes
   useEffect(() => {
     try {
-      localStorage.setItem(STORAGE_KEY, JSON.stringify(gameState));
+      if (isLoggedIn) {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(gameState));
+      }
     } catch {
       // Ignore quota errors
     }
-  }, [gameState]);
+  }, [gameState, isLoggedIn]);
+
+  // Synchronize progress with logged-in user profile, or clear on logout
+  useEffect(() => {
+    if (isLoggedIn && user) {
+      setGameState((prev) => {
+        const userStars = user.stars || {};
+        const userTimes = user.bestTimes || {};
+        const mergedUnlocked = Math.max(prev.unlockedLevel || 1, user.unlockedLevel || 1);
+        const mergedStars = { ...(prev.stars || {}), ...userStars };
+        const mergedTimes = { ...(prev.bestTimes || {}), ...userTimes };
+
+        const updated = {
+          ...prev,
+          unlockedLevel: mergedUnlocked,
+          stars: mergedStars,
+          bestTimes: mergedTimes,
+          settings: user.settings || prev.settings,
+        };
+        try {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+        } catch {}
+        return updated;
+      });
+    } else if (!isLoggedIn) {
+      // User logged out: wipe synced progress from memory and storage, resetting UI
+      const cleanState = {
+        unlockedLevel: 1,
+        stars: {},
+        bestTimes: {},
+        settings: {
+          sound: true,
+          vibration: true,
+        },
+      };
+      setGameState(cleanState);
+      try {
+        localStorage.removeItem(STORAGE_KEY);
+      } catch {}
+    }
+  }, [isLoggedIn, user]);
 
   const updateSettings = (newSettings) => {
     setGameState((prev) => ({
@@ -111,16 +156,16 @@ export default function GameProvider({ children }) {
       };
     });
 
-    // Background cloud sync if online player account is active
+    // Background cloud sync to user profile if online player account is active
     try {
-      const token = localStorage.getItem('first_puff_token');
-      if (token) {
+      const currentToken = token || localStorage.getItem('first_puff_token');
+      if (currentToken) {
         const apiUrl = import.meta.env.VITE_API_URL || "https://first-puff.onrender.com";
         fetch(`${apiUrl}/api/game/save`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
-            Authorization: `Bearer ${token}`
+            Authorization: `Bearer ${currentToken}`
           },
           body: JSON.stringify({
             levelId: numId,
@@ -128,7 +173,19 @@ export default function GameProvider({ children }) {
             bumps,
             stars: earnedStars
           })
-        }).catch(() => {});
+        })
+          .then((res) => res.json())
+          .then((data) => {
+            if (data && updateUserProgress) {
+              updateUserProgress({
+                unlockedLevel: data.unlockedLevel,
+                totalStars: data.totalStars,
+                stars: data.stars,
+                bestTimes: data.bestTimes
+              });
+            }
+          })
+          .catch(() => {});
       }
     } catch {}
 
@@ -150,13 +207,51 @@ export default function GameProvider({ children }) {
     }
   };
 
+  const clearProgress = () => {
+    const cleanState = {
+      unlockedLevel: 1,
+      stars: {},
+      bestTimes: {},
+      settings: {
+        sound: true,
+        vibration: true,
+      },
+    };
+    setGameState(cleanState);
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch {}
+  };
+
+  const syncFromUser = (userData) => {
+    if (!userData) return;
+    setGameState((prev) => {
+      const mergedUnlocked = Math.max(prev.unlockedLevel || 1, userData.unlockedLevel || 1);
+      const mergedStars = { ...(prev.stars || {}), ...(userData.stars || {}) };
+      const mergedTimes = { ...(prev.bestTimes || {}), ...(userData.bestTimes || {}) };
+      const updated = {
+        ...prev,
+        unlockedLevel: mergedUnlocked,
+        stars: mergedStars,
+        bestTimes: mergedTimes,
+        settings: userData.settings || prev.settings,
+      };
+      try {
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
+      } catch {}
+      return updated;
+    });
+  };
+
   return (
     <GameContext.Provider
       value={{
         ...gameState,
         updateSettings,
         completeLevel,
-        resetProgress
+        resetProgress,
+        clearProgress,
+        syncFromUser
       }}
     >
       {children}

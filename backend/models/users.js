@@ -41,6 +41,12 @@ const userSchema = new mongoose.Schema(
       min: 1,
       max: 10,
     },
+    totalStars: {
+      type: Number,
+      default: 0,
+      min: 0,
+      max: 30,
+    },
     stars: {
       type: Map,
       of: Number,

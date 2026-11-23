@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { ArrowLeft, Lock, Mail } from "lucide-react";
 import { useData } from "../context/DataProvider";
+import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
 
 export default function Login() {
@@ -12,6 +13,7 @@ export default function Login() {
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
   const { login, apiBaseUrl } = useData();
+  const { syncFromUser } = useGame();
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -38,22 +40,9 @@ export default function Login() {
 
       login(data.user, data.token);
 
-      // Merge backend progress into local save
+      // Sync backend user progress (stars & unlockedLevel) into game state
       if (data.user) {
-        try {
-          const localSave = JSON.parse(localStorage.getItem("first_puff_save") || "{}");
-          const mergedUnlocked = Math.max(localSave.unlockedLevel || 1, data.user.unlockedLevel || 1);
-          const mergedStars = { ...(localSave.stars || {}), ...(data.user.stars || {}) };
-          const mergedTimes = { ...(localSave.bestTimes || {}), ...(data.user.bestTimes || {}) };
-
-          localStorage.setItem("first_puff_save", JSON.stringify({
-            ...localSave,
-            unlockedLevel: mergedUnlocked,
-            stars: mergedStars,
-            bestTimes: mergedTimes,
-            settings: data.user.settings || localSave.settings || { sound: true, vibration: true }
-          }));
-        } catch {}
+        syncFromUser(data.user);
       }
 
       toast.success(data.message || "Logged in & data saved to DB 🎉");

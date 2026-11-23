@@ -48,12 +48,17 @@ const saveProgress = async (req, res) => {
       user.unlockedLevel = numLevel + 1;
     }
 
+    // Recalculate total stars for user profile
+    const starsObj = Object.fromEntries(user.stars);
+    user.totalStars = Object.values(starsObj).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+
     await user.save();
 
     res.status(200).json({
       message: "Progress saved 🎉",
       unlockedLevel: user.unlockedLevel,
-      stars: Object.fromEntries(user.stars),
+      totalStars: user.totalStars,
+      stars: starsObj,
       bestTimes: Object.fromEntries(user.bestTimes),
     });
   } catch (err) {
@@ -104,12 +109,17 @@ const syncProgress = async (req, res) => {
       };
     }
 
+    // Recalculate total stars for user profile
+    const starsObj = Object.fromEntries(user.stars);
+    user.totalStars = Object.values(starsObj).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
+
     await user.save();
 
     res.status(200).json({
       message: "Progress synced successfully ☁️",
       unlockedLevel: user.unlockedLevel,
-      stars: Object.fromEntries(user.stars),
+      totalStars: user.totalStars,
+      stars: starsObj,
       bestTimes: Object.fromEntries(user.bestTimes),
       settings: user.settings,
     });

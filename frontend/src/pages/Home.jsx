@@ -2,12 +2,14 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Play, Grid, Settings as SettingsIcon, User as UserIcon } from 'lucide-react';
 import { useGame } from '../context/GameContext';
+import { useData } from '../context/DataProvider';
 import { soundManager } from '../game/sound';
 import Raft from '../component/Raft';
 
 export default function Home() {
   const navigate = useNavigate();
   const { unlockedLevel, stars } = useGame();
+  const { isLoggedIn } = useData();
 
   // Count total stars
   const totalStars = Object.values(stars).reduce((acc, curr) => acc + (curr || 0), 0);
@@ -28,7 +30,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-between items-center pt-4 sm:pt-6 pb-2 px-5 bg-gradient-to-b from-sky-400 via-sky-600 to-sky-900 select-none overflow-y-auto sm:overflow-hidden">
+    <div className="relative w-full h-full flex flex-col justify-between items-center py-8 px-6 bg-gradient-to-b from-sky-400 via-sky-600 to-sky-900 select-none overflow-hidden">
       {/* Decorative River Water Ripples in background */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full border-4 border-white animate-ping" />
@@ -43,16 +45,30 @@ export default function Home() {
         </div>
 
         <div className="flex items-center gap-2">
-          <button
-            onClick={() => {
-              soundManager.playClick();
-              navigate('/profile');
-            }}
-            className="w-10 h-10 rounded-full bg-slate-900/60 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-lg transition-transform"
-            aria-label="Profile and Online Sync"
-          >
-            <UserIcon size={20} />
-          </button>
+          {!isLoggedIn ? (
+            <button
+              onClick={() => {
+                soundManager.playClick();
+                navigate('/login');
+              }}
+              className="px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs flex items-center gap-1 shadow-md border border-white/30 transition-transform"
+              aria-label="Log In"
+            >
+              <UserIcon size={14} />
+              <span>LOG IN</span>
+            </button>
+          ) : (
+            <button
+              onClick={() => {
+                soundManager.playClick();
+                navigate('/profile');
+              }}
+              className="w-10 h-10 rounded-full bg-slate-900/60 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-lg transition-transform"
+              aria-label="Profile and Online Sync"
+            >
+              <UserIcon size={20} />
+            </button>
+          )}
 
           <button
             onClick={handleSettings}
@@ -65,7 +81,7 @@ export default function Home() {
       </div>
 
       {/* Hero Title & Bobbing Raft */}
-      <div className="flex flex-col items-center my-auto z-10 scale-[0.82] sm:scale-100 origin-center transition-transform py-1">
+      <div className="flex flex-col items-center my-auto z-10 scale-90 sm:scale-100 transition-transform">
         <div className="flex flex-col items-center mb-2 sm:mb-5">
           <h1 className="text-3xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans">
             First Puff
@@ -90,9 +106,9 @@ export default function Home() {
       </div>
 
       {/* Bottom Main Action Buttons (Positioned with safe clearance above mobile system navigation bar) */}
-      <div 
-        className="w-full flex flex-col gap-2.5 max-w-[280px] z-10 shrink-0"
-        style={{ marginBottom: 'max(4.25rem, calc(env(safe-area-inset-bottom, 0px) + 3.75rem))' }}
+      <div
+        className="w-full flex flex-col gap-2.5 max-w-[280px] z-10"
+        style={{ paddingBottom: 'max(2.5rem, calc(env(safe-area-inset-bottom, 0px) + 2rem))' }}
       >
         <button
           onClick={handlePlay}

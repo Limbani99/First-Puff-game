@@ -12,7 +12,7 @@ export const DataProvider = ({ children }) => {
   const [token, setToken] = useState(null);
   const [authChecked, setAuthChecked] = useState(false);
 
-  // Check login state on initial mount
+  // Check login state on initial mount & fetch latest profile from backend
   useEffect(() => {
     try {
       const savedToken = localStorage.getItem("first_puff_token");
@@ -24,6 +24,21 @@ export const DataProvider = ({ children }) => {
         setRole(parsed.role || "player");
         setToken(savedToken);
         setIsLoggedIn(true);
+
+        // Fetch fresh profile with synced totalStars & unlockedLevel
+        axios
+          .get(`${API_BASE_URL}/api/users/profile`, {
+            headers: { Authorization: `Bearer ${savedToken}` },
+          })
+          .then((res) => {
+            if (res.data?.user) {
+              setUser(res.data.user);
+              localStorage.setItem("first_puff_user", JSON.stringify(res.data.user));
+            }
+          })
+          .catch(() => {
+            // Keep cached user if offline or network unavailable
+          });
       }
     } catch (e) {
       console.warn("Failed to parse saved user", e);
@@ -60,10 +75,33 @@ export const DataProvider = ({ children }) => {
   const logout = () => {
     localStorage.removeItem("first_puff_token");
     localStorage.removeItem("first_puff_user");
+    localStorage.removeItem("first_puff_save");
     setUser(null);
     setRole(null);
     setToken(null);
     setIsLoggedIn(false);
+  };
+
+  // Update progress fields in current user profile
+  const updateUserProgress = (progress) => {
+    setUser((prev) => {
+      if (!prev) return null;
+      const starsObj = { ...(prev.stars || {}), ...(progress.stars || {}) };
+      const totalStars =
+        progress.totalStars !== undefined
+          ? progress.totalStars
+          : Object.values(starsObj).reduce((a, b) => a + (Number(b) || 0), 0);
+
+      const updated = {
+        ...prev,
+        unlockedLevel: Math.max(prev.unlockedLevel || 1, progress.unlockedLevel || 1),
+        totalStars,
+        stars: starsObj,
+        bestTimes: { ...(prev.bestTimes || {}), ...(progress.bestTimes || {}) },
+      };
+      localStorage.setItem("first_puff_user", JSON.stringify(updated));
+      return updated;
+    });
   };
 
   // Sync offline localStorage progress to the backend account
@@ -71,6 +109,14 @@ export const DataProvider = ({ children }) => {
     if (!token) return null;
     try {
       const res = await axios.post(`${API_BASE_URL}/api/game/sync`, offlineSave);
+      if (res.data) {
+        updateUserProgress({
+          unlockedLevel: res.data.unlockedLevel,
+          totalStars: res.data.totalStars,
+          stars: res.data.stars,
+          bestTimes: res.data.bestTimes,
+        });
+      }
       return res.data;
     } catch (err) {
       console.error("Cloud sync failed (offline or network error):", err.message);
@@ -87,6 +133,7 @@ export const DataProvider = ({ children }) => {
     authChecked,
     login,
     logout,
+    updateUserProgress,
     syncWithCloud,
     apiBaseUrl: API_BASE_URL,
   };

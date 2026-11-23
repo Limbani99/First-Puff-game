@@ -16,7 +16,7 @@ const MASCOT_EMOJIS = {
 export default function Profile() {
   const navigate = useNavigate();
   const { user, isLoggedIn, logout, syncWithCloud } = useData();
-  const { unlockedLevel, stars, bestTimes, settings } = useGame();
+  const { unlockedLevel, stars, bestTimes, settings, clearProgress } = useGame();
   const [syncing, setSyncing] = useState(false);
 
   const totalStars = Object.values(stars).reduce((acc, curr) => acc + (curr || 0), 0);
@@ -44,8 +44,9 @@ export default function Profile() {
   const handleLogout = () => {
     soundManager.playClick();
     logout();
-    toast.success("Logged out successfully");
-    navigate("/home");
+    clearProgress();
+    toast.success("Logged out. Player data cleared from this device.");
+    navigate("/login");
   };
 
   return (
@@ -160,24 +161,36 @@ export default function Profile() {
             </div>
           </div>
         ) : (
-          <div className="bg-gradient-to-br from-indigo-900/60 to-purple-900/60 rounded-2xl p-4 border border-indigo-500/30 shadow-md text-center space-y-3">
-            <div className="text-2xl">☁️</div>
-            <h3 className="font-extrabold text-white text-base">Want to save across devices?</h3>
-            <p className="text-xs text-sky-200">
-              Create a free player profile or log in to sync your stars and challenge friends!
-            </p>
-            <div className="flex gap-2">
+          <div className="bg-gradient-to-br from-indigo-950 via-slate-900 to-sky-950 rounded-3xl p-5 border-2 border-indigo-500/40 shadow-xl text-center space-y-4">
+            <div className="w-14 h-14 mx-auto rounded-2xl bg-indigo-500/20 text-indigo-300 flex items-center justify-center text-3xl border border-indigo-400/30">
+              ☁️
+            </div>
+            <div>
+              <h3 className="font-black text-white text-lg uppercase tracking-wide">
+                Sign In To Sync Progress
+              </h3>
+              <p className="text-xs text-sky-200 mt-1 leading-relaxed">
+                Log in to automatically save your total stars, unlocked levels, and river best times across all your devices!
+              </p>
+            </div>
+            <div className="flex flex-col gap-2.5 pt-1">
               <button
-                onClick={() => navigate("/login")}
-                className="flex-1 py-2.5 rounded-xl bg-amber-400 hover:bg-amber-300 active:scale-95 text-sky-950 font-black text-xs shadow-md transition"
+                onClick={() => {
+                  soundManager.playClick();
+                  navigate("/login");
+                }}
+                className="w-full py-3 rounded-2xl bg-gradient-to-r from-amber-400 to-yellow-500 hover:brightness-110 active:scale-95 text-sky-950 font-black text-sm uppercase shadow-lg border border-white/30 transition-transform"
               >
                 Log In
               </button>
               <button
-                onClick={() => navigate("/register")}
-                className="flex-1 py-2.5 rounded-xl bg-sky-700 hover:bg-sky-600 active:scale-95 text-white font-bold text-xs border border-white/20 transition"
+                onClick={() => {
+                  soundManager.playClick();
+                  navigate("/register");
+                }}
+                className="w-full py-2.5 rounded-2xl bg-sky-800/80 hover:bg-sky-700/80 active:scale-95 text-white font-extrabold text-xs uppercase border border-white/20 transition-transform"
               >
-                Register
+                Create Player Profile
               </button>
             </div>
           </div>

@@ -5,6 +5,7 @@ import axios from "axios";
 import { toast } from "react-hot-toast";
 import { ArrowLeft, Lock, Mail, User as UserIcon } from "lucide-react";
 import { useData } from "../context/DataProvider";
+import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
 
 const CREW_CHOICES = [
@@ -17,6 +18,7 @@ const CREW_CHOICES = [
 export default function Register() {
   const navigate = useNavigate();
   const { login, apiBaseUrl } = useData();
+  const { syncFromUser } = useGame();
 
   const [form, setForm] = useState({
     username: "",
@@ -55,6 +57,7 @@ export default function Register() {
 
       if (data.token && data.user) {
         login(data.user, data.token);
+        syncFromUser(data.user);
       }
       toast.success(data.message || "Registration Successful 🎉");
       soundManager.playWin();
