@@ -36,8 +36,22 @@ app.use(express.urlencoded({ extended: true }));
 // Serve static uploaded avatars / images
 app.use("/uploads", express.static(path.join(__dirname, "uploads")));
 
+// Public Health check route (includes database status)
+app.get("/api/health", (req, res) => {
+  const isConnected = mongoose.connection.readyState === 1;
+  res.status(isConnected ? 200 : 503).json({
+    status: isConnected ? "healthy" : "database_disconnected",
+    database: isConnected ? "connected" : "disconnected",
+    readyState: mongoose.connection.readyState,
+    hint: isConnected
+      ? "Database is connected and ready."
+      : "Please configure MONGO_URI in Render dashboard with a valid MongoDB Atlas connection string.",
+  });
+});
+
 // Check MongoDB connection state before database requests
 app.use("/api", (req, res, next) => {
+  if (req.path === "/health") return next();
   if (mongoose.connection.readyState !== 1) {
     return res.status(503).json({
       message: "Database is not connected. Please make sure MongoDB is running or check your MONGO_URI.",
@@ -52,14 +66,17 @@ app.use("/api/game", require("./routers/game"));
 
 // Root / Health check route for Render
 app.get("/", (req, res) => {
+  const isConnected = mongoose.connection.readyState === 1;
   res.json({
     name: "First Puff Game API",
     status: "healthy",
+    database: isConnected ? "connected" : "disconnected (add MONGO_URI in Render dashboard)",
     environment: process.env.NODE_ENV || "development",
     version: "1.0.0",
     docs: {
       auth: "/api/users",
       game: "/api/game",
+      health: "/api/health",
     },
   });
 });
@@ -67,7 +84,9 @@ app.get("/", (req, res) => {
 // MongoDB Connection
 const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/first_puff";
 mongoose
-  .connect(MONGO_URI)
+  .connect(MONGO_URI, {
+    serverSelectionTimeoutMS: 5000,
+  })
   .then(() => {
     console.log("MongoDB connected successfully for First Puff 🦛💨");
   })
