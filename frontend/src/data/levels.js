@@ -567,7 +567,7 @@ export const LEVELS = [
   {
     "id": 8,
     "name": "Kamariya Fever",
-    "targetTime": 65,
+    "targetTime": 98,
     "hint": "Penguin brakes the raft. Stop on the flag!",
     "crewUnlocked": [
       "hippo",
@@ -578,26 +578,26 @@ export const LEVELS = [
     "teaches": "Using the brake",
     "world": {
       "width": 360,
-      "height": 2127,
+      "height": 2800,
       "startX": 180,
-      "startY": 1977,
+      "startY": 2650,
       "finishX": 205,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.978,
       "waypoints": [
         {
-          "y": 2127,
+          "y": 2800,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1417,
+          "y": 1865,
           "cx": 167,
           "width": 270
         },
         {
-          "y": 710,
+          "y": 935,
           "cx": 154,
           "width": 270
         },
@@ -609,9 +609,21 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_8",
+          "type": "log",
+          "x": 174,
+          "y": 2366,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 114,
+          "maxX": 234
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1626,
+          "y": 2140,
           "leftX": 116,
           "rightX": 226,
           "postRadius": 14
@@ -620,25 +632,25 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 167,
-          "y": 1405,
+          "y": 1850,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 107,
-          "maxX": 227
+          "minX": 102,
+          "maxX": 232
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 218,
-          "y": 1184,
+          "y": 1559,
           "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 963,
+          "y": 1268,
           "leftX": 104,
           "rightX": 214,
           "postRadius": 14
@@ -646,12 +658,12 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 817,
+          "y": 1076,
           "width": 78,
           "height": 24,
           "minX": 91,
           "maxX": 221,
-          "speed": 44,
+          "speed": 26,
           "x": 95,
           "dir": 1
         },
@@ -659,13 +671,20 @@ export const LEVELS = [
           "id": "log_2",
           "type": "log",
           "x": 161,
-          "y": 521,
+          "y": 686,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 101,
-          "maxX": 221
+          "minX": 96,
+          "maxX": 226
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 112,
+          "y": 454,
+          "radius": 22
         }
       ]
     },
@@ -674,7 +693,7 @@ export const LEVELS = [
   {
     "id": 9,
     "name": "Muchho No Val",
-    "targetTime": 83,
+    "targetTime": 125,
     "hint": "Line up before the gate.",
     "crewUnlocked": [
       "hippo",
@@ -685,26 +704,26 @@ export const LEVELS = [
     "teaches": "Lining up through gaps",
     "world": {
       "width": 360,
-      "height": 2171,
+      "height": 2845,
       "startX": 180,
-      "startY": 2021,
+      "startY": 2695,
       "finishX": 155,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2171,
+          "y": 2845,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1447,
+          "y": 1896,
           "cx": 151,
           "width": 270
         },
         {
-          "y": 724,
+          "y": 949,
           "cx": 177,
           "width": 270
         },
@@ -716,50 +735,85 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2408,
+          "leftX": 112,
+          "rightX": 222,
+          "postRadius": 14
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 161,
+          "y": 2230,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 101,
+          "maxX": 221
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 215,
-          "y": 1567,
+          "x": 211,
+          "y": 2053,
           "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 1326,
+          "y": 1738,
           "width": 74,
           "height": 22,
           "minX": 90,
           "maxX": 220,
-          "speed": 45,
+          "speed": 26,
           "x": 220,
           "dir": -1
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1086,
+          "y": 1423,
           "leftX": 109,
           "rightX": 219,
-          "postRadius": 16
+          "postRadius": 14
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 845,
+          "y": 1107,
           "width": 74,
           "height": 22,
           "minX": 108,
           "maxX": 238,
-          "speed": 45,
+          "speed": 26,
           "x": 108,
           "dir": 1
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 130,
-          "y": 604,
+          "x": 122,
+          "y": 792,
           "radius": 22
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 123,
+          "y": 635,
+          "radius": 22
+        },
+        {
+          "id": "gate_6",
+          "type": "gate",
+          "y": 457,
+          "leftX": 124,
+          "rightX": 234,
+          "postRadius": 14
         }
       ]
     },
@@ -768,7 +822,7 @@ export const LEVELS = [
   {
     "id": 10,
     "name": "Dayra No Dhamako",
-    "targetTime": 102,
+    "targetTime": 153,
     "hint": "Use all four crew members together!",
     "crewUnlocked": [
       "hippo",
@@ -779,26 +833,26 @@ export const LEVELS = [
     "teaches": "Zone 1 Grand Finale",
     "world": {
       "width": 360,
-      "height": 2216,
+      "height": 2890,
       "startX": 180,
-      "startY": 2066,
+      "startY": 2740,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.98,
       "waypoints": [
         {
-          "y": 2216,
+          "y": 2890,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1477,
+          "y": 1926,
           "cx": 164,
           "width": 270
         },
         {
-          "y": 739,
+          "y": 964,
           "cx": 204,
           "width": 270
         },
@@ -810,50 +864,85 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2449,
+          "leftX": 118,
+          "rightX": 228,
+          "postRadius": 14
+        },
+        {
           "id": "log_5",
           "type": "log",
           "x": 169,
-          "y": 1702,
+          "y": 2220,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 109,
-          "maxX": 229
+          "minX": 104,
+          "maxX": 234
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1554,
+          "y": 2027,
           "width": 70,
           "height": 22,
           "minX": 101,
           "maxX": 231,
-          "speed": 42,
+          "speed": 26,
           "x": 120,
           "dir": 1
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 235,
-          "y": 1257,
-          "radius": 20
+          "x": 231,
+          "y": 1639,
+          "radius": 22
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 959,
+          "y": 1251,
           "leftX": 137,
           "rightX": 247,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 202,
+          "y": 1003,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 142,
+          "maxX": 262
         },
         {
           "id": "rock3",
           "type": "rock",
-          "x": 135,
-          "y": 662,
-          "radius": 20
+          "x": 146,
+          "y": 863,
+          "radius": 22
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 141,
+          "y": 642,
+          "radius": 22
+        },
+        {
+          "id": "gate_6",
+          "type": "gate",
+          "y": 461,
+          "leftX": 136,
+          "rightX": 246,
+          "postRadius": 14
         }
       ]
     },
@@ -862,7 +951,7 @@ export const LEVELS = [
   {
     "id": 11,
     "name": "Sher Ne Mathe Savva Sher",
-    "targetTime": 61,
+    "targetTime": 97,
     "hint": "Stay centered in the narrow stream.",
     "crewUnlocked": [
       "hippo",
@@ -873,26 +962,26 @@ export const LEVELS = [
     "teaches": "Stream centering",
     "world": {
       "width": 360,
-      "height": 2124,
+      "height": 2935,
       "startX": 180,
-      "startY": 1974,
+      "startY": 2785,
       "finishX": 205,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.981,
       "waypoints": [
         {
-          "y": 2124,
+          "y": 2935,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1415,
+          "y": 1955,
           "cx": 194,
           "width": 270
         },
         {
-          "y": 709,
+          "y": 980,
           "cx": 208,
           "width": 270
         },
@@ -904,49 +993,91 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 241,
+          "y": 2491,
+          "radius": 22
+        },
+        {
           "id": "log_5",
           "type": "log",
           "x": 189,
-          "y": 1672,
+          "y": 2310,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 129,
-          "maxX": 249
+          "minX": 124,
+          "maxX": 254
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2122,
+          "leftX": 137,
+          "rightX": 247,
+          "postRadius": 14
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 215,
-          "y": 1423,
+          "x": 249,
+          "y": 1966,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 197,
+          "y": 1754,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 137,
+          "maxX": 257
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1062,
+          "y": 1468,
           "width": 77,
           "height": 24,
           "minX": 136,
           "maxX": 266,
-          "speed": 50,
+          "speed": 26,
           "x": 265,
           "dir": -1
         },
         {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 150,
+          "y": 1201,
+          "radius": 22
+        },
+        {
           "id": "rock3",
           "type": "rock",
-          "x": 128,
-          "y": 702,
-          "radius": 24
+          "x": 153,
+          "y": 970,
+          "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 254,
-          "y": 472,
+          "y": 652,
           "radius": 22
+        },
+        {
+          "id": "gate_6",
+          "type": "gate",
+          "y": 464,
+          "leftX": 138,
+          "rightX": 248,
+          "postRadius": 14
         }
       ]
     },
@@ -955,7 +1086,7 @@ export const LEVELS = [
   {
     "id": 12,
     "name": "Raaj To Amaru J",
-    "targetTime": 61,
+    "targetTime": 97,
     "hint": "Stages ahead! Gentle puffs are key.",
     "crewUnlocked": [
       "hippo",
@@ -966,26 +1097,26 @@ export const LEVELS = [
     "teaches": "Micro-steering",
     "world": {
       "width": 360,
-      "height": 2165,
+      "height": 2980,
       "startX": 180,
-      "startY": 2015,
+      "startY": 2830,
       "finishX": 155,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.978,
       "waypoints": [
         {
-          "y": 2165,
+          "y": 2980,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1443,
+          "y": 1986,
           "cx": 212,
           "width": 270
         },
         {
-          "y": 722,
+          "y": 994,
           "cx": 183,
           "width": 270
         },
@@ -997,45 +1128,79 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 249,
+          "y": 2532,
+          "radius": 22
+        },
+        {
           "id": "log_5",
           "type": "log",
           "x": 200,
-          "y": 1709,
+          "y": 2352,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 140,
-          "maxX": 260
+          "minX": 135,
+          "maxX": 265
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2157,
+          "leftX": 151,
+          "rightX": 261,
+          "postRadius": 14
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1454,
+          "y": 2001,
           "width": 77,
           "height": 24,
           "minX": 147,
           "maxX": 277,
-          "speed": 52,
+          "speed": 26,
           "x": 147,
           "dir": 1
         },
         {
+          "id": "log_8",
+          "type": "log",
+          "x": 206,
+          "y": 1782,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 146,
+          "maxX": 266
+        },
+        {
           "id": "rock3",
           "type": "rock",
-          "x": 215,
-          "y": 1083,
+          "x": 253,
+          "y": 1491,
+          "radius": 22
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 135,
+          "y": 1218,
           "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 711,
+          "y": 979,
           "width": 77,
           "height": 24,
           "minX": 118,
           "maxX": 248,
-          "speed": 52,
+          "speed": 26,
           "x": 248,
           "dir": -1
         },
@@ -1043,8 +1208,16 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 237,
-          "y": 476,
+          "y": 655,
           "radius": 22
+        },
+        {
+          "id": "gate_6",
+          "type": "gate",
+          "y": 468,
+          "leftX": 126,
+          "rightX": 236,
+          "postRadius": 14
         }
       ]
     },
@@ -1053,7 +1226,7 @@ export const LEVELS = [
   {
     "id": 13,
     "name": "Moje Moj Roje Roj",
-    "targetTime": 69,
+    "targetTime": 109,
     "hint": "Pass cleanly through two wooden gates.",
     "crewUnlocked": [
       "hippo",
@@ -1064,26 +1237,26 @@ export const LEVELS = [
     "teaches": "Successive gate navigation",
     "world": {
       "width": 360,
-      "height": 2207,
+      "height": 3025,
       "startX": 180,
-      "startY": 2057,
+      "startY": 2875,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2207,
+          "y": 3025,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1471,
+          "y": 2016,
           "cx": 197,
           "width": 270
         },
         {
-          "y": 736,
+          "y": 1009,
           "cx": 153,
           "width": 270
         },
@@ -1095,9 +1268,16 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 243,
+          "y": 2574,
+          "radius": 22
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1746,
+          "y": 2393,
           "leftX": 136,
           "rightX": 246,
           "postRadius": 14
@@ -1105,49 +1285,76 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1561,
+          "y": 2140,
           "leftX": 140,
           "rightX": 250,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2000,
+          "leftX": 141,
+          "rightX": 251,
+          "postRadius": 14
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 1255,
+          "y": 1720,
           "width": 74,
           "height": 22,
           "minX": 119,
           "maxX": 249,
-          "speed": 50,
+          "speed": 26,
           "x": 119,
           "dir": 1
         },
         {
           "id": "gate2",
           "type": "gate",
-          "y": 952,
+          "y": 1305,
           "leftX": 111,
           "rightX": 221,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 155,
+          "y": 1045,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 95,
+          "maxX": 215
         },
         {
           "id": "rock4",
           "type": "rock",
-          "x": 135,
-          "y": 646,
+          "x": 101,
+          "y": 885,
           "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 162,
-          "y": 481,
+          "y": 659,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 102,
-          "maxX": 222
+          "minX": 97,
+          "maxX": 227
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 112,
+          "y": 471,
+          "radius": 22
         }
       ]
     },
@@ -1156,7 +1363,7 @@ export const LEVELS = [
   {
     "id": 14,
     "name": "Santhal Ni Sarkar",
-    "targetTime": 69,
+    "targetTime": 108,
     "hint": "Watch both logs move before puffing.",
     "crewUnlocked": [
       "hippo",
@@ -1167,26 +1374,26 @@ export const LEVELS = [
     "teaches": "Double moving obstacles",
     "world": {
       "width": 360,
-      "height": 2249,
+      "height": 3070,
       "startX": 180,
-      "startY": 2099,
+      "startY": 2920,
       "finishX": 205,
       "finishY": 130,
       "finishRadius": 38,
       "drag": 0.98,
       "waypoints": [
         {
-          "y": 2249,
+          "y": 3070,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1499,
+          "y": 2046,
           "cx": 164,
           "width": 270
         },
         {
-          "y": 750,
+          "y": 1024,
           "cx": 149,
           "width": 270
         },
@@ -1198,40 +1405,59 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 173,
+          "y": 2615,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 113,
+          "maxX": 233
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 170,
-          "y": 1784,
+          "y": 2435,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 110,
-          "maxX": 230
+          "minX": 105,
+          "maxX": 235
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 111,
-          "y": 1598,
+          "y": 2181,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 219,
+          "y": 2032,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1386,
+          "y": 1892,
           "width": 74,
           "height": 22,
           "minX": 97,
           "maxX": 227,
-          "speed": 52,
+          "speed": 26,
           "x": 105,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1227,
+          "y": 1675,
           "leftX": 104,
           "rightX": 214,
           "postRadius": 14
@@ -1240,34 +1466,42 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 155,
-          "y": 1042,
+          "y": 1422,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 95,
-          "maxX": 215
+          "minX": 90,
+          "maxX": 220
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 215,
-          "y": 863,
+          "x": 206,
+          "y": 1178,
           "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 207,
-          "y": 671,
+          "y": 916,
           "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 485,
+          "y": 662,
           "leftX": 105,
           "rightX": 215,
+          "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 475,
+          "leftX": 111,
+          "rightX": 221,
           "postRadius": 14
         }
       ]
@@ -1277,7 +1511,7 @@ export const LEVELS = [
   {
     "id": 15,
     "name": "Sinh Ne Kaun Roke",
-    "targetTime": 78,
+    "targetTime": 122,
     "hint": "A long right turn then hard left bend.",
     "crewUnlocked": [
       "hippo",
@@ -1288,26 +1522,26 @@ export const LEVELS = [
     "teaches": "Long sweeping turns",
     "world": {
       "width": 360,
-      "height": 2291,
+      "height": 3115,
       "startX": 180,
-      "startY": 2141,
+      "startY": 2965,
       "finishX": 155,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.981,
       "waypoints": [
         {
-          "y": 2291,
+          "y": 3115,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1527,
+          "y": 2076,
           "cx": 145,
           "width": 270
         },
         {
-          "y": 764,
+          "y": 1039,
           "cx": 177,
           "width": 270
         },
@@ -1319,61 +1553,88 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2657,
+          "leftX": 110,
+          "rightX": 220,
+          "postRadius": 14
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 215,
-          "y": 1721,
+          "x": 209,
+          "y": 2340,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1490,
+          "y": 2026,
           "width": 74,
           "height": 22,
           "minX": 82,
           "maxX": 212,
-          "speed": 52,
+          "speed": 26,
           "x": 212,
           "dir": -1
         },
         {
+          "id": "log_8",
+          "type": "log",
+          "x": 152,
+          "y": 1865,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 92,
+          "maxX": 212
+        },
+        {
           "id": "rock5",
           "type": "rock",
-          "x": 128,
-          "y": 1260,
+          "x": 101,
+          "y": 1713,
           "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 1031,
+          "y": 1402,
           "width": 74,
           "height": 22,
           "minX": 101,
           "maxX": 231,
-          "speed": 52,
+          "speed": 26,
           "x": 105,
           "dir": 1
         },
         {
           "id": "rock6",
           "type": "rock",
-          "x": 235,
-          "y": 801,
+          "x": 230,
+          "y": 1089,
           "radius": 22
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 570,
+          "y": 775,
           "width": 74,
           "height": 22,
           "minX": 113,
           "maxX": 243,
-          "speed": 52,
+          "speed": 26,
           "x": 240,
           "dir": -1
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 124,
+          "y": 478,
+          "radius": 22
         }
       ]
     },
@@ -1382,7 +1643,7 @@ export const LEVELS = [
   {
     "id": 16,
     "name": "Bhaibandhi Zindabad",
-    "targetTime": 69,
+    "targetTime": 107,
     "hint": "Alternate left and right between boulders.",
     "crewUnlocked": [
       "hippo",
@@ -1393,31 +1654,31 @@ export const LEVELS = [
     "teaches": "Slalom maneuvers",
     "world": {
       "width": 360,
-      "height": 2333,
+      "height": 3150,
       "startX": 180,
-      "startY": 2183,
+      "startY": 3000,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.978,
       "waypoints": [
         {
-          "y": 2333,
+          "y": 3150,
           "cx": 180,
           "width": 264
         },
         {
-          "y": 1750,
+          "y": 2363,
           "cx": 161,
           "width": 264
         },
         {
-          "y": 1167,
+          "y": 1576,
           "cx": 209,
           "width": 264
         },
         {
-          "y": 583,
+          "y": 787,
           "cx": 203,
           "width": 264
         },
@@ -1429,9 +1690,21 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 170,
+          "y": 2727,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 110,
+          "maxX": 230
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1858,
+          "y": 2509,
           "leftX": 110,
           "rightX": 220,
           "postRadius": 14
@@ -1439,38 +1712,65 @@ export const LEVELS = [
         {
           "id": "rock3",
           "type": "rock",
-          "x": 215,
-          "y": 1662,
+          "x": 223,
+          "y": 2244,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 234,
+          "y": 2074,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1332,
+          "y": 1798,
           "width": 74,
           "height": 22,
           "minX": 130,
           "maxX": 260,
-          "speed": 44,
+          "speed": 26,
           "x": 130,
           "dir": 1
         },
         {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1585,
+          "leftX": 153,
+          "rightX": 263,
+          "postRadius": 14
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 128,
-          "y": 1001,
+          "x": 152,
+          "y": 1352,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 205,
+          "y": 1096,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 145,
+          "maxX": 265
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 671,
+          "y": 906,
           "width": 74,
           "height": 22,
           "minX": 139,
           "maxX": 269,
-          "speed": 44,
+          "speed": 26,
           "x": 240,
           "dir": -1
         },
@@ -1478,13 +1778,20 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 200,
-          "y": 495,
+          "y": 668,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 140,
-          "maxX": 260
+          "minX": 135,
+          "maxX": 265
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 138,
+          "y": 443,
+          "radius": 22
         }
       ]
     },
@@ -1493,7 +1800,7 @@ export const LEVELS = [
   {
     "id": 17,
     "name": "Khokhra Maheman",
-    "targetTime": 61,
+    "targetTime": 94,
     "hint": "Charge Hippo to speed through straightaways.",
     "crewUnlocked": [
       "hippo",
@@ -1504,31 +1811,31 @@ export const LEVELS = [
     "teaches": "High-speed cruising",
     "world": {
       "width": 360,
-      "height": 2375,
+      "height": 3180,
       "startX": 180,
-      "startY": 2225,
+      "startY": 3030,
       "finishX": 205,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2375,
+          "y": 3180,
           "cx": 180,
           "width": 258
         },
         {
-          "y": 1781,
+          "y": 2385,
           "cx": 198,
           "width": 258
         },
         {
-          "y": 1188,
+          "y": 1591,
           "cx": 214,
           "width": 258
         },
         {
-          "y": 594,
+          "y": 795,
           "cx": 167,
           "width": 258
         },
@@ -1540,9 +1847,21 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 190,
+          "y": 2755,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 130,
+          "maxX": 250
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1896,
+          "y": 2539,
           "leftX": 140,
           "rightX": 250,
           "postRadius": 14
@@ -1550,47 +1869,81 @@ export const LEVELS = [
         {
           "id": "rock3",
           "type": "rock",
-          "x": 215,
-          "y": 1752,
+          "x": 254,
+          "y": 2346,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1470,
+          "y": 1968,
           "width": 77,
           "height": 24,
           "minX": 141,
           "maxX": 271,
-          "speed": 46,
+          "speed": 26,
           "x": 265,
           "dir": -1
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 265,
+          "y": 1765,
+          "radius": 22
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 128,
-          "y": 1188,
-          "radius": 24
+          "x": 159,
+          "y": 1591,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1435,
+          "leftX": 150,
+          "rightX": 260,
+          "postRadius": 14
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 905,
+          "y": 1212,
           "width": 77,
           "height": 24,
           "minX": 127,
           "maxX": 257,
-          "speed": 46,
+          "speed": 26,
           "x": 127,
           "dir": 1
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 249,
-          "y": 623,
-          "radius": 26
+          "x": 224,
+          "y": 834,
+          "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 170,
+          "y": 610,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 110,
+          "maxX": 230
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 118,
+          "y": 445,
+          "radius": 22
         }
       ]
     },
@@ -1599,7 +1952,7 @@ export const LEVELS = [
   {
     "id": 18,
     "name": "Meldi Maano Khamkaro",
-    "targetTime": 78,
+    "targetTime": 119,
     "hint": "Logs moving in opposite directions!",
     "crewUnlocked": [
       "hippo",
@@ -1610,31 +1963,31 @@ export const LEVELS = [
     "teaches": "Opposing log timing",
     "world": {
       "width": 360,
-      "height": 2416,
+      "height": 3210,
       "startX": 180,
-      "startY": 2266,
+      "startY": 3060,
       "finishX": 155,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.98,
       "waypoints": [
         {
-          "y": 2416,
+          "y": 3210,
           "cx": 180,
           "width": 252
         },
         {
-          "y": 1812,
+          "y": 2408,
           "cx": 218,
           "width": 252
         },
         {
-          "y": 1209,
+          "y": 1606,
           "cx": 183,
           "width": 252
         },
         {
-          "y": 604,
+          "y": 803,
           "cx": 142,
           "width": 252
         },
@@ -1646,62 +1999,143 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "gate_15",
+          "type": "gate",
+          "y": 2783,
+          "leftX": 145,
+          "rightX": 255,
+          "postRadius": 14
+        },
+        {
+          "id": "log_14",
+          "type": "log",
+          "x": 208,
+          "y": 2616,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 148,
+          "maxX": 268
+        },
+        {
           "id": "log2",
           "type": "log",
-          "y": 1827,
+          "y": 2427,
           "width": 74,
           "height": 22,
           "minX": 152,
           "maxX": 282,
-          "speed": 46,
+          "speed": 26,
           "x": 152,
           "dir": 1
         },
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 158,
+          "y": 2283,
+          "radius": 22
+        },
+        {
           "id": "rock5",
           "type": "rock",
-          "x": 215,
-          "y": 1579,
+          "x": 259,
+          "y": 2098,
           "radius": 22
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 1949,
+          "leftX": 143,
+          "rightX": 253,
+          "postRadius": 14
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1331,
+          "y": 1768,
           "leftX": 135,
           "rightX": 245,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 183,
+          "y": 1615,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 123,
+          "maxX": 243
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 1085,
+          "y": 1442,
           "width": 74,
           "height": 22,
           "minX": 110,
           "maxX": 240,
-          "speed": 46,
+          "speed": 26,
           "x": 240,
           "dir": -1
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 221,
+          "y": 1281,
+          "radius": 22
+        },
+        {
           "id": "rock6",
           "type": "rock",
-          "x": 128,
-          "y": 837,
+          "x": 103,
+          "y": 1112,
           "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 948,
+          "leftX": 94,
+          "rightX": 204,
+          "postRadius": 14
         },
         {
           "id": "log4",
           "type": "log",
-          "y": 589,
+          "y": 783,
           "width": 74,
           "height": 22,
           "minX": 78,
           "maxX": 208,
-          "speed": 46,
+          "speed": 26,
           "x": 105,
           "dir": 1
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 151,
+          "y": 614,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 91,
+          "maxX": 211
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 104,
+          "y": 447,
+          "radius": 22
         }
       ]
     },
@@ -1710,7 +2144,7 @@ export const LEVELS = [
   {
     "id": 19,
     "name": "Khovai Gayo Khavad",
-    "targetTime": 69,
+    "targetTime": 105,
     "hint": "River narrows as you approach the flag.",
     "crewUnlocked": [
       "hippo",
@@ -1721,31 +2155,31 @@ export const LEVELS = [
     "teaches": "Funnel compression",
     "world": {
       "width": 360,
-      "height": 2458,
+      "height": 3240,
       "startX": 180,
-      "startY": 2308,
+      "startY": 3090,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.981,
       "waypoints": [
         {
-          "y": 2458,
+          "y": 3240,
           "cx": 180,
           "width": 246
         },
         {
-          "y": 1844,
+          "y": 2431,
           "cx": 200,
           "width": 246
         },
         {
-          "y": 1229,
+          "y": 1620,
           "cx": 148,
           "width": 246
         },
         {
-          "y": 615,
+          "y": 811,
           "cx": 155,
           "width": 246
         },
@@ -1757,9 +2191,21 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 191,
+          "y": 2811,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 131,
+          "maxX": 251
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1969,
+          "y": 2595,
           "leftX": 141,
           "rightX": 251,
           "postRadius": 14
@@ -1767,47 +2213,81 @@ export const LEVELS = [
         {
           "id": "rock3",
           "type": "rock",
-          "x": 215,
-          "y": 1821,
+          "x": 253,
+          "y": 2400,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1525,
+          "y": 2010,
           "width": 77,
           "height": 24,
           "minX": 108,
           "maxX": 238,
-          "speed": 50,
+          "speed": 26,
           "x": 238,
           "dir": -1
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 214,
+          "y": 1799,
+          "radius": 22
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 128,
-          "y": 1229,
-          "radius": 24
+          "x": 93,
+          "y": 1620,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1461,
+          "leftX": 94,
+          "rightX": 204,
+          "postRadius": 14
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 933,
+          "y": 1230,
           "width": 77,
           "height": 24,
           "minX": 86,
           "maxX": 216,
-          "speed": 50,
+          "speed": 26,
           "x": 95,
           "dir": 1
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 244,
-          "y": 637,
-          "radius": 26
+          "x": 210,
+          "y": 840,
+          "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 161,
+          "y": 618,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 101,
+          "maxX": 221
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 111,
+          "y": 449,
+          "radius": 22
         }
       ]
     },
@@ -1816,7 +2296,7 @@ export const LEVELS = [
   {
     "id": 20,
     "name": "Duniya Jhukegi Boss",
-    "targetTime": 95,
+    "targetTime": 143,
     "hint": "Zone 2 finale! Combine every skill.",
     "crewUnlocked": [
       "hippo",
@@ -1827,31 +2307,31 @@ export const LEVELS = [
     "teaches": "Zone 2 Grand Finale",
     "world": {
       "width": 360,
-      "height": 2500,
+      "height": 3270,
       "startX": 180,
-      "startY": 2350,
+      "startY": 3120,
       "finishX": 205,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.978,
       "waypoints": [
         {
-          "y": 2500,
+          "y": 3270,
           "cx": 180,
           "width": 270
         },
         {
-          "y": 1875,
+          "y": 2453,
           "cx": 161,
           "width": 270
         },
         {
-          "y": 1251,
+          "y": 1636,
           "cx": 144,
           "width": 270
         },
         {
-          "y": 625,
+          "y": 818,
           "cx": 194,
           "width": 270
         },
@@ -1863,9 +2343,21 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 170,
+          "y": 2839,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 110,
+          "maxX": 230
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 2007,
+          "y": 2625,
           "leftX": 110,
           "rightX": 220,
           "postRadius": 14
@@ -1873,48 +2365,82 @@ export const LEVELS = [
         {
           "id": "rock4",
           "type": "rock",
-          "x": 215,
-          "y": 1857,
+          "x": 216,
+          "y": 2429,
           "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 1553,
+          "y": 2031,
           "width": 74,
           "height": 22,
           "minX": 87,
           "maxX": 217,
-          "speed": 50,
+          "speed": 26,
           "x": 105,
           "dir": 1
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 203,
+          "y": 1816,
+          "radius": 22
+        },
+        {
           "id": "gate1",
           "type": "gate",
-          "y": 1251,
+          "y": 1636,
           "leftX": 89,
           "rightX": 199,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1474,
+          "leftX": 99,
+          "rightX": 209,
+          "postRadius": 14
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 128,
-          "y": 947,
+          "x": 113,
+          "y": 1239,
           "radius": 22
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 645,
+          "y": 844,
           "width": 74,
           "height": 22,
           "minX": 127,
           "maxX": 257,
-          "speed": 50,
+          "speed": 26,
           "x": 240,
           "dir": -1
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 191,
+          "y": 621,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 131,
+          "maxX": 251
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 133,
+          "y": 451,
+          "radius": 22
         }
       ]
     },
@@ -1923,7 +2449,7 @@ export const LEVELS = [
   {
     "id": 21,
     "name": "Tera Zikr",
-    "targetTime": 69,
+    "targetTime": 103,
     "hint": "Winding river with grassy shores.",
     "crewUnlocked": [
       "hippo",
@@ -1934,31 +2460,31 @@ export const LEVELS = [
     "teaches": "Smooth bank drifting",
     "world": {
       "width": 360,
-      "height": 2542,
+      "height": 3300,
       "startX": 180,
-      "startY": 2392,
+      "startY": 3150,
       "finishX": 155,
       "finishY": 130,
       "finishRadius": 38,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2542,
+          "y": 3300,
           "cx": 180,
           "width": 264
         },
         {
-          "y": 1907,
+          "y": 2476,
           "cx": 139,
           "width": 264
         },
         {
-          "y": 1271,
+          "y": 1650,
           "cx": 177,
           "width": 264
         },
         {
-          "y": 636,
+          "y": 826,
           "cx": 221,
           "width": 264
         },
@@ -1970,68 +2496,88 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 2868,
+          "leftX": 104,
+          "rightX": 214,
+          "postRadius": 14
+        },
+        {
           "id": "rock4",
           "type": "rock",
-          "x": 215,
-          "y": 1969,
+          "x": 198,
+          "y": 2556,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1736,
+          "y": 2254,
           "width": 76,
           "height": 24,
           "minX": 84,
           "maxX": 214,
-          "speed": 54,
+          "speed": 26,
           "x": 214,
           "dir": -1
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 128,
-          "y": 1504,
-          "radius": 24
+          "x": 108,
+          "y": 1952,
+          "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 1271,
+          "y": 1650,
           "width": 76,
           "height": 24,
           "minX": 112,
           "maxX": 242,
-          "speed": 54,
+          "speed": 26,
           "x": 112,
           "dir": 1
         },
         {
           "id": "rock6",
           "type": "rock",
-          "x": 249,
-          "y": 1039,
-          "radius": 26
+          "x": 248,
+          "y": 1349,
+          "radius": 22
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 806,
+          "y": 1046,
           "width": 76,
           "height": 24,
           "minX": 144,
           "maxX": 274,
-          "speed": 54,
+          "speed": 26,
           "x": 265,
           "dir": -1
         },
         {
           "id": "rock7",
           "type": "rock",
-          "x": 139,
-          "y": 574,
+          "x": 162,
+          "y": 745,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 202,
+          "y": 453,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 142,
+          "maxX": 262
         }
       ]
     },
@@ -2040,7 +2586,7 @@ export const LEVELS = [
   {
     "id": 22,
     "name": "Darshan Weds Dharal",
-    "targetTime": 78,
+    "targetTime": 116,
     "hint": "Three gates in a row. Maintain your line.",
     "crewUnlocked": [
       "hippo",
@@ -2051,31 +2597,31 @@ export const LEVELS = [
     "teaches": "Linear precision",
     "world": {
       "width": 360,
-      "height": 2584,
+      "height": 3330,
       "startX": 180,
-      "startY": 2434,
+      "startY": 3180,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.98,
       "waypoints": [
         {
-          "y": 2584,
+          "y": 3330,
           "cx": 180,
           "width": 258
         },
         {
-          "y": 1938,
+          "y": 2498,
           "cx": 159,
           "width": 258
         },
         {
-          "y": 1293,
+          "y": 1666,
           "cx": 215,
           "width": 258
         },
         {
-          "y": 646,
+          "y": 833,
           "cx": 206,
           "width": 258
         },
@@ -2087,61 +2633,88 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 224,
+          "y": 2896,
+          "radius": 22
+        },
+        {
           "id": "rock5",
           "type": "rock",
-          "x": 215,
-          "y": 2006,
+          "x": 216,
+          "y": 2585,
           "radius": 22
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1767,
+          "y": 2277,
           "leftX": 119,
           "rightX": 229,
-          "postRadius": 16
+          "postRadius": 14
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 1530,
+          "y": 1972,
           "width": 74,
           "height": 22,
           "minX": 129,
           "maxX": 259,
-          "speed": 52,
+          "speed": 26,
           "x": 129,
           "dir": 1
         },
         {
           "id": "gate2",
           "type": "gate",
-          "y": 1293,
+          "y": 1666,
           "leftX": 160,
           "rightX": 270,
-          "postRadius": 16
+          "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1501,
+          "leftX": 158,
+          "rightX": 268,
+          "postRadius": 14
         },
         {
           "id": "rock6",
           "type": "rock",
-          "x": 128,
-          "y": 1054,
+          "x": 157,
+          "y": 1358,
           "radius": 22
         },
         {
           "id": "gate3",
           "type": "gate",
-          "y": 817,
+          "y": 1053,
           "leftX": 153,
           "rightX": 263,
-          "postRadius": 16
+          "postRadius": 14
         },
         {
           "id": "rock7",
           "type": "rock",
-          "x": 235,
-          "y": 578,
+          "x": 258,
+          "y": 745,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 194,
+          "y": 454,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 134,
+          "maxX": 254
         }
       ]
     },
@@ -2150,7 +2723,7 @@ export const LEVELS = [
   {
     "id": 23,
     "name": "Blue Family Army",
-    "targetTime": 92,
+    "targetTime": 160,
     "hint": "Steer across the river bend from right to left!",
     "crewUnlocked": [
       "hippo",
@@ -2161,57 +2734,84 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 23",
     "world": {
       "width": 360,
-      "height": 2228,
-      "startY": 2078,
+      "height": 3360,
+      "startY": 3210,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2228,
+          "y": 3360,
           "cx": 245,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1485,
+          "y": 2239,
           "cx": 245,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1073,
+          "y": 1618,
           "cx": 115,
-          "width": 205
+          "width": 250
         },
         {
           "y": 0,
           "cx": 115,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 190,
+          "y": 2924,
+          "radius": 22
+        },
+        {
           "id": "rock_7",
           "type": "rock",
           "x": 190,
-          "y": 1798,
+          "y": 2712,
           "radius": 22
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2571,
+          "leftX": 190,
+          "rightX": 300,
+          "postRadius": 14
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1568,
+          "y": 2365,
           "width": 62,
           "height": 22,
           "minX": 180,
           "maxX": 310,
-          "speed": 38,
+          "speed": 26,
           "x": 230,
           "dir": 1
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 241,
+          "y": 2219,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 181,
+          "maxX": 301
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1349,
+          "y": 2034,
           "leftX": 147,
           "rightX": 257,
           "postRadius": 14
@@ -2219,26 +2819,41 @@ export const LEVELS = [
         {
           "id": "rock1",
           "type": "rock",
-          "x": 220,
-          "y": 1188,
-          "radius": 18
+          "x": 206,
+          "y": 1792,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 170,
+          "y": 1514,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 115,
-          "y": 899,
+          "y": 1356,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 55,
-          "maxX": 175
+          "minX": 50,
+          "maxX": 180
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1161,
+          "leftX": 60,
+          "rightX": 170,
+          "postRadius": 14
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 627,
+          "y": 946,
           "leftX": 60,
           "rightX": 170,
           "postRadius": 14
@@ -2247,8 +2862,20 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 170,
-          "y": 450,
+          "y": 679,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 115,
+          "y": 456,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 55,
+          "maxX": 175
         }
       ],
       "startX": 245,
@@ -2259,7 +2886,7 @@ export const LEVELS = [
   {
     "id": 24,
     "name": "Hawa Banke Aaya",
-    "targetTime": 90,
+    "targetTime": 162,
     "hint": "Glide gently into the right bay and back out.",
     "crewUnlocked": [
       "hippo",
@@ -2270,86 +2897,106 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 24",
     "world": {
       "width": 360,
-      "height": 2170,
-      "startY": 2020,
+      "height": 3390,
+      "startY": 3240,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2170,
+          "y": 3390,
           "cx": 135,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1628,
+          "y": 2543,
           "cx": 135,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1318,
+          "y": 2059,
           "cx": 240,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1008,
+          "y": 1575,
           "cx": 240,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 698,
+          "y": 1090,
           "cx": 135,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 135,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2952,
+          "leftX": 80,
+          "rightX": 190,
+          "postRadius": 14
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 135,
-          "y": 1745,
+          "y": 2726,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 75,
-          "maxX": 195
+          "minX": 70,
+          "maxX": 200
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 145,
-          "y": 1550,
-          "radius": 18
+          "x": 106,
+          "y": 2421,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 201,
+          "y": 2239,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 141,
+          "maxX": 261
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 185,
-          "y": 1312,
+          "y": 2050,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1163,
+          "y": 1817,
           "width": 62,
           "height": 22,
           "minX": 175,
           "maxX": 305,
-          "speed": 40,
+          "speed": 26,
           "x": 220,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1023,
+          "y": 1598,
           "leftX": 185,
           "rightX": 295,
           "postRadius": 14
@@ -2358,25 +3005,40 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 196,
-          "y": 878,
+          "y": 1372,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 136,
-          "maxX": 256
+          "minX": 131,
+          "maxX": 261
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 202,
-          "y": 734,
+          "y": 1147,
           "radius": 22
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 558,
+          "y": 872,
+          "leftX": 80,
+          "rightX": 190,
+          "postRadius": 14
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 190,
+          "y": 636,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 458,
           "leftX": 80,
           "rightX": 190,
           "postRadius": 14
@@ -2390,7 +3052,7 @@ export const LEVELS = [
   {
     "id": 25,
     "name": "Dharal Sang Pyar",
-    "targetTime": 95,
+    "targetTime": 161,
     "hint": "Three gentle steps up and to the right!",
     "crewUnlocked": [
       "hippo",
@@ -2401,48 +3063,56 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 25",
     "world": {
       "width": 360,
-      "height": 2325,
-      "startY": 2175,
+      "height": 3420,
+      "startY": 3270,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2325,
+          "y": 3420,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1783,
+          "y": 2623,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1473,
+          "y": 2167,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1008,
+          "y": 1483,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 698,
+          "y": 1027,
           "cx": 260,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 260,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2980,
+          "leftX": 45,
+          "rightX": 155,
+          "postRadius": 14
+        },
+        {
           "id": "gate_9",
           "type": "gate",
-          "y": 1886,
+          "y": 2774,
           "leftX": 45,
           "rightX": 155,
           "postRadius": 14
@@ -2450,32 +3120,44 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1705,
+          "y": 2508,
           "leftX": 65,
           "rightX": 175,
           "postRadius": 14
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 164,
+          "y": 2260,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 104,
+          "maxX": 224
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 180,
-          "y": 1410,
+          "y": 2074,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 120,
-          "maxX": 240
+          "minX": 115,
+          "maxX": 245
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1240,
+          "y": 1824,
           "width": 64,
           "height": 22,
           "minX": 115,
           "maxX": 245,
-          "speed": 38,
+          "speed": 26,
           "x": 170,
           "dir": -1
         },
@@ -2483,13 +3165,13 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 125,
-          "y": 1093,
+          "y": 1608,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 935,
+          "y": 1375,
           "leftX": 144,
           "rightX": 254,
           "postRadius": 14
@@ -2498,26 +3180,33 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 240,
-          "y": 776,
+          "y": 1141,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 180,
-          "maxX": 300
+          "minX": 175,
+          "maxX": 305
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 250,
-          "y": 620,
-          "radius": 18
+          "x": 205,
+          "y": 912,
+          "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 315,
-          "y": 459,
+          "y": 675,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 315,
+          "y": 460,
           "radius": 22
         }
       ],
@@ -2529,7 +3218,7 @@ export const LEVELS = [
   {
     "id": 26,
     "name": "Bhula Dunga",
-    "targetTime": 95,
+    "targetTime": 162,
     "hint": "Step left as you ascend the river terrace.",
     "crewUnlocked": [
       "hippo",
@@ -2540,48 +3229,56 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 26",
     "world": {
       "width": 360,
-      "height": 2325,
-      "startY": 2175,
+      "height": 3450,
+      "startY": 3300,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2325,
+          "y": 3450,
           "cx": 260,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1783,
+          "y": 2646,
           "cx": 260,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1473,
+          "y": 2186,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1008,
+          "y": 1496,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 698,
+          "y": 1036,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 100,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3008,
+          "leftX": 205,
+          "rightX": 315,
+          "postRadius": 14
+        },
+        {
           "id": "gate_9",
           "type": "gate",
-          "y": 1886,
+          "y": 2799,
           "leftX": 205,
           "rightX": 315,
           "postRadius": 14
@@ -2589,32 +3286,44 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1705,
+          "y": 2530,
           "leftX": 185,
           "rightX": 295,
           "postRadius": 14
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 197,
+          "y": 2281,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 137,
+          "maxX": 257
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 180,
-          "y": 1410,
+          "y": 2092,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 120,
-          "maxX": 240
+          "minX": 115,
+          "maxX": 245
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1240,
+          "y": 1840,
           "width": 64,
           "height": 22,
           "minX": 115,
           "maxX": 245,
-          "speed": 38,
+          "speed": 26,
           "x": 170,
           "dir": 1
         },
@@ -2622,13 +3331,13 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 125,
-          "y": 1093,
+          "y": 1622,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 935,
+          "y": 1387,
           "leftX": 106,
           "rightX": 216,
           "postRadius": 14
@@ -2637,26 +3346,33 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 120,
-          "y": 776,
+          "y": 1151,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 60,
-          "maxX": 180
+          "minX": 55,
+          "maxX": 185
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 110,
-          "y": 620,
-          "radius": 18
+          "x": 155,
+          "y": 920,
+          "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 155,
-          "y": 459,
+          "y": 681,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 155,
+          "y": 462,
           "radius": 22
         }
       ],
@@ -2668,7 +3384,7 @@ export const LEVELS = [
   {
     "id": 27,
     "name": "Mehndi No Rang",
-    "targetTime": 101,
+    "targetTime": 163,
     "hint": "Use Frog and Pig to smoothly weave each bend.",
     "crewUnlocked": [
       "hippo",
@@ -2679,86 +3395,105 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 27",
     "world": {
       "width": 360,
-      "height": 2480,
-      "startY": 2330,
+      "height": 3480,
+      "startY": 3330,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2480,
+          "y": 3480,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 2015,
+          "y": 2828,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1628,
+          "y": 2284,
           "cx": 250,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1163,
+          "y": 1632,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 698,
+          "y": 979,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 250,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
-          "id": "log_8",
+          "id": "log_11",
           "type": "log",
           "x": 110,
-          "y": 2027,
+          "y": 3036,
           "width": 76,
           "height": 20,
           "speed": 24,
-          "dir": 1,
+          "dir": -1,
           "minX": 50,
           "maxX": 170
         },
         {
+          "id": "log_8",
+          "type": "log",
+          "x": 110,
+          "y": 2844,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 45,
+          "maxX": 175
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 120,
-          "y": 1860,
-          "radius": 18
+          "x": 111,
+          "y": 2610,
+          "radius": 22
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 175,
-          "y": 1682,
+          "y": 2360,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 269,
+          "y": 2118,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1395,
+          "y": 1958,
           "width": 62,
           "height": 22,
           "minX": 115,
           "maxX": 245,
-          "speed": 36,
+          "speed": 26,
           "x": 180,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1164,
+          "y": 1633,
           "leftX": 55,
           "rightX": 165,
           "postRadius": 14
@@ -2766,26 +3501,34 @@ export const LEVELS = [
         {
           "id": "rock2",
           "type": "rock",
-          "x": 110,
-          "y": 1008,
-          "radius": 18
+          "x": 102,
+          "y": 1414,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 214,
-          "y": 818,
+          "y": 1148,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 154,
-          "maxX": 274
+          "minX": 149,
+          "maxX": 279
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 543,
+          "y": 762,
+          "leftX": 195,
+          "rightX": 305,
+          "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 464,
           "leftX": 195,
           "rightX": 305,
           "postRadius": 14
@@ -2799,7 +3542,7 @@ export const LEVELS = [
   {
     "id": 28,
     "name": "Kathiyawadi Crush",
-    "targetTime": 101,
+    "targetTime": 164,
     "hint": "Gentle sinusoidal waves guide your raft.",
     "crewUnlocked": [
       "hippo",
@@ -2810,79 +3553,87 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 28",
     "world": {
       "width": 360,
-      "height": 2480,
-      "startY": 2330,
+      "height": 3510,
+      "startY": 3360,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2480,
+          "y": 3510,
           "cx": 130,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 2093,
+          "y": 2962,
           "cx": 230,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1705,
+          "y": 2413,
           "cx": 130,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1318,
+          "y": 1865,
           "cx": 230,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 930,
+          "y": 1316,
           "cx": 130,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 543,
+          "y": 769,
           "cx": 230,
-          "width": 205
+          "width": 250
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 205
+          "width": 250
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3064,
+          "leftX": 156,
+          "rightX": 266,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 190,
-          "y": 1938,
-          "radius": 18
+          "x": 135,
+          "y": 2743,
+          "radius": 22
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 81,
-          "y": 1682,
+          "y": 2381,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1519,
+          "y": 2150,
           "width": 60,
           "height": 22,
           "minX": 113,
           "maxX": 243,
-          "speed": 36,
+          "speed": 26,
           "x": 175,
           "dir": -1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1336,
+          "y": 1891,
           "leftX": 170,
           "rightX": 280,
           "postRadius": 14
@@ -2890,29 +3641,68 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1085,
+          "y": 1536,
           "leftX": 115,
           "rightX": 225,
           "postRadius": 14
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 144,
+          "y": 1394,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 84,
+          "maxX": 204
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 205,
+          "y": 1208,
+          "radius": 22
+        },
+        {
           "id": "rock2",
           "type": "rock",
-          "x": 140,
-          "y": 698,
-          "radius": 18
+          "x": 135,
+          "y": 988,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 837,
+          "leftX": 163,
+          "rightX": 273,
+          "postRadius": 14
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 224,
-          "y": 473,
+          "y": 669,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 164,
-          "maxX": 284
+          "minX": 158,
+          "maxX": 288
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 210,
+          "y": 466,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 150,
+          "maxX": 270
         }
       ],
       "startX": 190,
@@ -2923,7 +3713,7 @@ export const LEVELS = [
   {
     "id": 29,
     "name": "Tu Mileya To Dil Khilya",
-    "targetTime": 94,
+    "targetTime": 165,
     "hint": "Cross the central channel into the right stream.",
     "crewUnlocked": [
       "hippo",
@@ -2934,70 +3724,109 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 29",
     "world": {
       "width": 360,
-      "height": 2325,
-      "startY": 2175,
+      "height": 3540,
+      "startY": 3390,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2325,
+          "y": 3540,
           "cx": 105,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1705,
+          "y": 2596,
           "cx": 105,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1318,
+          "y": 2007,
           "cx": 180,
-          "width": 210
+          "width": 255
         },
         {
-          "y": 852,
+          "y": 1297,
           "cx": 255,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 255,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "log_14",
+          "type": "log",
+          "x": 105,
+          "y": 3093,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 45,
+          "maxX": 165
+        },
+        {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 50,
+          "y": 2905,
+          "radius": 22
+        },
+        {
           "id": "gate1",
           "type": "gate",
-          "y": 1783,
+          "y": 2715,
           "leftX": 50,
           "rightX": 160,
+          "postRadius": 14
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2530,
+          "leftX": 58,
+          "rightX": 168,
           "postRadius": 14
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 76,
-          "y": 1569,
+          "y": 2389,
           "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 161,
+          "y": 2155,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 101,
+          "maxX": 221
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1318,
+          "y": 2007,
           "width": 64,
           "height": 22,
           "minX": 115,
           "maxX": 245,
-          "speed": 38,
+          "speed": 26,
           "x": 180,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1093,
+          "y": 1664,
           "leftX": 161,
           "rightX": 271,
           "postRadius": 14
@@ -3006,27 +3835,54 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 242,
-          "y": 935,
+          "y": 1424,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 182,
-          "maxX": 302
+          "minX": 177,
+          "maxX": 307
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 310,
+          "y": 1218,
+          "radius": 22
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 240,
-          "y": 698,
-          "radius": 18
+          "x": 200,
+          "y": 1063,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 843,
+          "leftX": 200,
+          "rightX": 310,
+          "postRadius": 14
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 310,
-          "y": 459,
+          "y": 699,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 255,
+          "y": 468,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 195,
+          "maxX": 315
         }
       ],
       "startX": 105,
@@ -3037,7 +3893,7 @@ export const LEVELS = [
   {
     "id": 30,
     "name": "Saari Ki Saari 2.0",
-    "targetTime": 104,
+    "targetTime": 167,
     "hint": "Left, right, left, and center - stay steady!",
     "crewUnlocked": [
       "hippo",
@@ -3048,86 +3904,93 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 30",
     "world": {
       "width": 360,
-      "height": 2558,
-      "startY": 2408,
+      "height": 3570,
+      "startY": 3420,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2558,
+          "y": 3570,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 2015,
+          "y": 2812,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1473,
+          "y": 2056,
           "cx": 250,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 930,
+          "y": 1298,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 465,
+          "y": 649,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 205
+          "width": 250
         }
       ],
       "obstacles": [
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 194,
+          "y": 3121,
+          "radius": 22
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 121,
-          "y": 2098,
+          "y": 2928,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 61,
-          "maxX": 181
+          "minX": 56,
+          "maxX": 186
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 130,
-          "y": 1938,
-          "radius": 18
+          "x": 185,
+          "y": 2705,
+          "radius": 22
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 126,
-          "y": 1739,
+          "y": 2427,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1473,
+          "y": 2056,
           "width": 62,
           "height": 22,
           "minX": 185,
           "maxX": 315,
-          "speed": 38,
+          "speed": 26,
           "x": 240,
           "dir": -1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1199,
+          "y": 1673,
           "leftX": 124,
           "rightX": 234,
           "postRadius": 14
@@ -3135,7 +3998,7 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1008,
+          "y": 1407,
           "leftX": 75,
           "rightX": 185,
           "postRadius": 14
@@ -3144,20 +4007,28 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 124,
-          "y": 839,
+          "y": 1171,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 64,
-          "maxX": 184
+          "minX": 59,
+          "maxX": 189
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 180,
-          "y": 543,
-          "radius": 18
+          "x": 223,
+          "y": 758,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 469,
+          "leftX": 125,
+          "rightX": 235,
+          "postRadius": 14
         }
       ],
       "startX": 150,
@@ -3168,7 +4039,7 @@ export const LEVELS = [
   {
     "id": 31,
     "name": "Coke Studio Champion",
-    "targetTime": 97,
+    "targetTime": 162,
     "hint": "Climb diagonally across four gentle river terraces.",
     "crewUnlocked": [
       "hippo",
@@ -3179,62 +4050,82 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 31",
     "world": {
       "width": 360,
-      "height": 2403,
-      "startY": 2253,
+      "height": 3500,
+      "startY": 3350,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2403,
+          "y": 3500,
           "cx": 95,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1860,
+          "y": 2709,
           "cx": 135,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1318,
+          "y": 1920,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 853,
+          "y": 1242,
           "cx": 225,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 265,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3084,
+          "leftX": 61,
+          "rightX": 171,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 115,
-          "y": 1938,
-          "radius": 18
+          "x": 74,
+          "y": 2823,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 140,
+          "y": 2617,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 80,
+          "maxX": 200
         },
         {
           "id": "log_8",
           "type": "log",
           "x": 151,
-          "y": 1667,
+          "y": 2428,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 91,
-          "maxX": 211
+          "minX": 86,
+          "maxX": 216
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1395,
+          "y": 2032,
           "leftX": 119,
           "rightX": 229,
           "postRadius": 14
@@ -3243,25 +4134,32 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 135,
-          "y": 1212,
+          "y": 1765,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 261,
+          "y": 1526,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 930,
+          "y": 1355,
           "width": 62,
           "height": 22,
           "minX": 153,
           "maxX": 283,
-          "speed": 38,
+          "speed": 26,
           "x": 220,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 756,
+          "y": 1101,
           "leftX": 175,
           "rightX": 285,
           "postRadius": 14
@@ -3270,20 +4168,28 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 237,
-          "y": 604,
+          "y": 880,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 177,
-          "maxX": 297
+          "minX": 172,
+          "maxX": 302
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 299,
-          "y": 452,
+          "y": 658,
           "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 436,
+          "leftX": 196,
+          "rightX": 306,
+          "postRadius": 14
         }
       ],
       "startX": 112,
@@ -3294,7 +4200,7 @@ export const LEVELS = [
   {
     "id": 32,
     "name": "Sahebo Re Govaliyo",
-    "targetTime": 101,
+    "targetTime": 165,
     "hint": "Step steadily right to left down the great terrace.",
     "crewUnlocked": [
       "hippo",
@@ -3305,89 +4211,116 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 32",
     "world": {
       "width": 360,
-      "height": 2480,
-      "startY": 2330,
+      "height": 3530,
+      "startY": 3380,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2480,
+          "y": 3530,
           "cx": 260,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1938,
+          "y": 2759,
           "cx": 215,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1473,
+          "y": 2097,
           "cx": 170,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 930,
+          "y": 1324,
           "cx": 125,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 100,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3113,
+          "leftX": 181,
+          "rightX": 291,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 235,
-          "y": 2015,
-          "radius": 18
+          "x": 276,
+          "y": 2868,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 207,
+          "y": 2641,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 147,
+          "maxX": 267
         },
         {
           "id": "log_8",
           "type": "log",
           "x": 194,
-          "y": 1725,
+          "y": 2455,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 134,
-          "maxX": 254
+          "minX": 129,
+          "maxX": 259
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1519,
+          "y": 2162,
           "leftX": 119,
           "rightX": 229,
           "postRadius": 14
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 220,
+          "y": 2011,
+          "radius": 22
+        },
+        {
           "id": "rock_7",
           "type": "rock",
-          "x": 97,
-          "y": 1250,
+          "x": 96,
+          "y": 1779,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1008,
+          "y": 1435,
           "width": 62,
           "height": 22,
           "minX": 66,
           "maxX": 196,
-          "speed": 36,
+          "speed": 26,
           "x": 130,
           "dir": -1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 775,
+          "y": 1103,
           "leftX": 66,
           "rightX": 176,
           "postRadius": 14
@@ -3396,20 +4329,28 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 117,
-          "y": 617,
+          "y": 878,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 57,
-          "maxX": 177
+          "minX": 52,
+          "maxX": 182
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 167,
-          "y": 458,
+          "y": 652,
           "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 437,
+          "leftX": 53,
+          "rightX": 163,
+          "postRadius": 14
         }
       ],
       "startX": 241,
@@ -3420,7 +4361,7 @@ export const LEVELS = [
   {
     "id": 33,
     "name": "Nagar Nandji Na Laal",
-    "targetTime": 94,
+    "targetTime": 166,
     "hint": "Sail through the twin wooden gates in succession.",
     "crewUnlocked": [
       "hippo",
@@ -3431,43 +4372,62 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 33",
     "world": {
       "width": 360,
-      "height": 2325,
-      "startY": 2175,
+      "height": 3560,
+      "startY": 3410,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2325,
+          "y": 3560,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1783,
+          "y": 2730,
           "cx": 250,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1163,
+          "y": 1781,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 620,
+          "y": 949,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 250,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 181,
+          "y": 3141,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 121,
+          "maxX": 241
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 262,
+          "y": 2982,
+          "radius": 22
+        },
+        {
           "id": "gate1",
           "type": "gate",
-          "y": 1783,
+          "y": 2730,
           "leftX": 195,
           "rightX": 305,
           "postRadius": 14
@@ -3476,37 +4436,37 @@ export const LEVELS = [
           "id": "log_8",
           "type": "log",
           "x": 211,
-          "y": 1609,
+          "y": 2464,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 151,
-          "maxX": 271
+          "minX": 146,
+          "maxX": 276
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 123,
-          "y": 1463,
+          "y": 2240,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1240,
+          "y": 1899,
           "width": 62,
           "height": 22,
           "minX": 62,
           "maxX": 192,
-          "speed": 38,
+          "speed": 26,
           "x": 120,
           "dir": 1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1027,
+          "y": 1573,
           "leftX": 90,
           "rightX": 200,
           "postRadius": 14
@@ -3515,18 +4475,18 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 182,
-          "y": 882,
+          "y": 1351,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 122,
-          "maxX": 242
+          "minX": 117,
+          "maxX": 247
         },
         {
           "id": "gate2",
           "type": "gate",
-          "y": 620,
+          "y": 949,
           "leftX": 195,
           "rightX": 305,
           "postRadius": 14
@@ -3535,8 +4495,16 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 305,
-          "y": 445,
+          "y": 681,
           "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 439,
+          "leftX": 195,
+          "rightX": 305,
+          "postRadius": 14
         }
       ],
       "startX": 170,
@@ -3547,7 +4515,7 @@ export const LEVELS = [
   {
     "id": 34,
     "name": "Vhala Vhala Kanha",
-    "targetTime": 87,
+    "targetTime": 166,
     "hint": "Follow the triangular corridor up to the summit.",
     "crewUnlocked": [
       "hippo",
@@ -3558,78 +4526,66 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 34",
     "world": {
       "width": 360,
-      "height": 2170,
-      "startY": 2020,
+      "height": 3590,
+      "startY": 3440,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2170,
+          "y": 3590,
           "cx": 180,
           "width": 250
         },
         {
-          "y": 1473,
+          "y": 2437,
           "cx": 180,
           "width": 230
         },
         {
-          "y": 853,
+          "y": 1411,
           "cx": 180,
-          "width": 195
+          "width": 240
         },
         {
-          "y": 310,
+          "y": 513,
           "cx": 180,
-          "width": 170
+          "width": 215
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 180
+          "width": 225
         }
       ],
       "obstacles": [
         {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 125,
-          "y": 1758,
-          "radius": 22
-        },
-        {
-          "id": "rock1",
-          "type": "rock",
-          "x": 150,
-          "y": 1550,
-          "radius": 18
-        },
-        {
-          "id": "gate_6",
+          "id": "gate_12",
           "type": "gate",
-          "y": 1228,
+          "y": 3169,
           "leftX": 125,
           "rightX": 235,
           "postRadius": 14
         },
         {
-          "id": "log1",
-          "type": "log",
-          "y": 1085,
-          "width": 58,
-          "height": 22,
-          "minX": 115,
-          "maxX": 245,
-          "speed": 36,
-          "x": 180,
-          "dir": 1
+          "id": "rock_7",
+          "type": "rock",
+          "x": 125,
+          "y": 2908,
+          "radius": 22
         },
         {
-          "id": "log_5",
+          "id": "rock1",
+          "type": "rock",
+          "x": 125,
+          "y": 2564,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
           "type": "log",
           "x": 180,
-          "y": 830,
+          "y": 2367,
           "width": 76,
           "height": 20,
           "speed": 24,
@@ -3638,9 +4594,56 @@ export const LEVELS = [
           "maxX": 240
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 235,
+          "y": 2206,
+          "radius": 22
+        },
+        {
+          "id": "gate_6",
+          "type": "gate",
+          "y": 2032,
+          "leftX": 125,
+          "rightX": 235,
+          "postRadius": 14
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 1795,
+          "width": 58,
+          "height": 22,
+          "minX": 115,
+          "maxX": 245,
+          "speed": 26,
+          "x": 180,
+          "dir": 1
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1564,
+          "leftX": 125,
+          "rightX": 235,
+          "postRadius": 14
+        },
+        {
+          "id": "log_5",
+          "type": "log",
+          "x": 180,
+          "y": 1373,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 115,
+          "maxX": 245
+        },
+        {
           "id": "gate1",
           "type": "gate",
-          "y": 620,
+          "y": 1026,
           "leftX": 125,
           "rightX": 235,
           "postRadius": 14
@@ -3649,8 +4652,20 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 235,
-          "y": 433,
+          "y": 716,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 180,
+          "y": 441,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 120,
+          "maxX": 240
         }
       ],
       "startX": 180,
@@ -3661,7 +4676,7 @@ export const LEVELS = [
   {
     "id": 35,
     "name": "Dandiya King Aditya",
-    "targetTime": 90,
+    "targetTime": 173,
     "hint": "Three gentle shelves climbing from right to left.",
     "crewUnlocked": [
       "hippo",
@@ -3672,58 +4687,85 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 35",
     "world": {
       "width": 360,
-      "height": 2170,
-      "startY": 2020,
+      "height": 3620,
+      "startY": 3470,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2170,
+          "y": 3620,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1550,
+          "y": 2586,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1163,
+          "y": 1940,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 620,
+          "y": 1034,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 110,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 195,
-          "y": 1758,
-          "radius": 22
-        },
-        {
-          "id": "gate1",
+          "id": "gate_12",
           "type": "gate",
-          "y": 1550,
+          "y": 3198,
           "leftX": 195,
           "rightX": 305,
           "postRadius": 14
         },
         {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 195,
+          "y": 2933,
+          "radius": 22
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 2586,
+          "leftX": 195,
+          "rightX": 305,
+          "postRadius": 14
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 228,
+          "y": 2387,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 168,
+          "maxX": 288
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 266,
+          "y": 2225,
+          "radius": 22
+        },
+        {
           "id": "gate_6",
           "type": "gate",
-          "y": 1228,
+          "y": 2049,
           "leftX": 137,
           "rightX": 247,
           "postRadius": 14
@@ -3731,40 +4773,60 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 1085,
+          "y": 1810,
           "width": 62,
           "height": 22,
           "minX": 105,
           "maxX": 235,
-          "speed": 38,
+          "speed": 26,
           "x": 180,
           "dir": -1
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1577,
+          "leftX": 97,
+          "rightX": 207,
+          "postRadius": 14
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 137,
-          "y": 830,
+          "y": 1385,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 77,
-          "maxX": 197
+          "minX": 72,
+          "maxX": 202
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 110,
-          "y": 589,
-          "radius": 18
+          "x": 165,
+          "y": 983,
+          "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 165,
-          "y": 433,
+          "y": 722,
           "radius": 22
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 110,
+          "y": 442,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 50,
+          "maxX": 170
         }
       ],
       "startX": 250,
@@ -3775,7 +4837,7 @@ export const LEVELS = [
   {
     "id": 36,
     "name": "Moti Verana Chokma",
-    "targetTime": 90,
+    "targetTime": 174,
     "hint": "Follow the bold diagonal slash across the river.",
     "crewUnlocked": [
       "hippo",
@@ -3786,45 +4848,72 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 36",
     "world": {
       "width": 360,
-      "height": 2170,
-      "startY": 2020,
+      "height": 3650,
+      "startY": 3500,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2170,
+          "y": 3650,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1163,
+          "y": 1956,
           "cx": 260,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 620,
+          "y": 1043,
           "cx": 130,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 130,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 85,
+          "y": 3226,
+          "radius": 22
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3063,
+          "leftX": 100,
+          "rightX": 210,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 120,
-          "y": 1705,
-          "radius": 18
+          "x": 119,
+          "y": 2868,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 202,
+          "y": 2572,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 142,
+          "maxX": 262
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1360,
+          "y": 2288,
           "leftX": 174,
           "rightX": 284,
           "postRadius": 14
@@ -3832,12 +4921,12 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 1163,
+          "y": 1956,
           "width": 62,
           "height": 22,
           "minX": 195,
           "maxX": 325,
-          "speed": 38,
+          "speed": 26,
           "x": 250,
           "dir": 1
         },
@@ -3845,28 +4934,62 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 212,
-          "y": 963,
+          "y": 1620,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 152,
-          "maxX": 272
+          "minX": 147,
+          "maxX": 277
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 240,
+          "y": 1426,
+          "radius": 22
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 204,
-          "y": 698,
+          "y": 1174,
           "radius": 22
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 543,
+          "y": 913,
           "leftX": 75,
           "rightX": 185,
           "postRadius": 14
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 771,
+          "leftX": 75,
+          "rightX": 185,
+          "postRadius": 14
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 130,
+          "y": 607,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 70,
+          "maxX": 190
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 75,
+          "y": 444,
+          "radius": 22
         }
       ],
       "startX": 137,
@@ -3877,7 +5000,7 @@ export const LEVELS = [
   {
     "id": 37,
     "name": "Charan Kavi No Saad",
-    "targetTime": 101,
+    "targetTime": 178,
     "hint": "A grand rectangular loop: across, up, and back!",
     "crewUnlocked": [
       "hippo",
@@ -3888,57 +5011,72 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 37",
     "world": {
       "width": 360,
-      "height": 2403,
-      "startY": 2253,
+      "height": 3680,
+      "startY": 3530,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2403,
+          "y": 3680,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1860,
+          "y": 2848,
           "cx": 260,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 930,
+          "y": 1424,
           "cx": 260,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 543,
+          "y": 832,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 100,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 127,
+          "y": 3255,
+          "radius": 22
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3089,
+          "leftX": 159,
+          "rightX": 269,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 240,
-          "y": 1860,
-          "radius": 18
+          "x": 205,
+          "y": 2848,
+          "radius": 22
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 205,
-          "y": 1667,
+          "y": 2553,
           "radius": 22
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1395,
+          "y": 2136,
           "leftX": 205,
           "rightX": 315,
           "postRadius": 14
@@ -3946,20 +5084,32 @@ export const LEVELS = [
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1212,
+          "y": 1856,
           "leftX": 205,
           "rightX": 315,
           "postRadius": 14
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 260,
+          "y": 1602,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 200,
+          "maxX": 320
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 930,
+          "y": 1424,
           "width": 62,
           "height": 22,
           "minX": 195,
           "maxX": 325,
-          "speed": 38,
+          "speed": 26,
           "x": 250,
           "dir": -1
         },
@@ -3967,20 +5117,47 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 188,
-          "y": 756,
+          "y": 1158,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 128,
-          "maxX": 248
+          "minX": 123,
+          "maxX": 253
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 184,
+          "y": 941,
+          "radius": 22
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 110,
-          "y": 496,
-          "radius": 18
+          "x": 155,
+          "y": 760,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 611,
+          "leftX": 45,
+          "rightX": 155,
+          "postRadius": 14
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 100,
+          "y": 445,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 40,
+          "maxX": 160
         }
       ],
       "startX": 169,
@@ -3991,7 +5168,7 @@ export const LEVELS = [
   {
     "id": 38,
     "name": "Lok Dayro Rockstars",
-    "targetTime": 104,
+    "targetTime": 179,
     "hint": "Weave the double S-curves like a graceful snake.",
     "crewUnlocked": [
       "hippo",
@@ -4002,82 +5179,109 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 38",
     "world": {
       "width": 360,
-      "height": 2480,
-      "startY": 2330,
+      "height": 3710,
+      "startY": 3560,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2480,
+          "y": 3710,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1705,
+          "y": 2551,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1163,
+          "y": 1740,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 620,
+          "y": 927,
           "cx": 250,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 233,
+          "y": 349,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 110,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3283,
+          "leftX": 195,
+          "rightX": 305,
+          "postRadius": 14
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 250,
+          "y": 3116,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 190,
+          "maxX": 310
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 245,
-          "y": 1938,
-          "radius": 18
+          "x": 195,
+          "y": 2899,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
           "x": 250,
-          "y": 1725,
+          "y": 2581,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 190,
-          "maxX": 310
+          "minX": 185,
+          "maxX": 315
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 159,
-          "y": 1567,
+          "y": 2344,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1408,
+          "y": 2106,
           "leftX": 118,
           "rightX": 228,
           "postRadius": 14
         },
         {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 201,
+          "y": 1948,
+          "radius": 22
+        },
+        {
           "id": "gate1",
           "type": "gate",
-          "y": 1163,
+          "y": 1740,
           "leftX": 55,
           "rightX": 165,
           "postRadius": 14
@@ -4086,23 +5290,23 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 169,
-          "y": 933,
+          "y": 1396,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 109,
-          "maxX": 229
+          "minX": 104,
+          "maxX": 234
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 698,
+          "y": 1044,
           "width": 62,
           "height": 22,
           "minX": 165,
           "maxX": 295,
-          "speed": 38,
+          "speed": 26,
           "x": 240,
           "dir": 1
         },
@@ -4110,8 +5314,16 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 246,
-          "y": 458,
+          "y": 685,
           "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 447,
+          "leftX": 79,
+          "rightX": 189,
+          "postRadius": 14
         }
       ],
       "startX": 250,
@@ -4122,7 +5334,7 @@ export const LEVELS = [
   {
     "id": 39,
     "name": "Dakla No Dhabkaro",
-    "targetTime": 94,
+    "targetTime": 174,
     "hint": "Up the left leg, cross diagonally, up the right leg!",
     "crewUnlocked": [
       "hippo",
@@ -4133,50 +5345,65 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 39",
     "world": {
       "width": 360,
-      "height": 2325,
-      "startY": 2175,
+      "height": 3740,
+      "startY": 3590,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2325,
+          "y": 3740,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1550,
+          "y": 2493,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 930,
+          "y": 1496,
           "cx": 260,
-          "width": 205
+          "width": 250
         },
         {
           "y": 0,
           "cx": 260,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 45,
+          "y": 3312,
+          "radius": 22
+        },
+        {
           "id": "log_8",
           "type": "log",
           "x": 100,
-          "y": 1900,
+          "y": 3056,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 40,
-          "maxX": 160
+          "minX": 35,
+          "maxX": 165
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2806,
+          "leftX": 45,
+          "rightX": 155,
+          "postRadius": 14
         },
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1628,
+          "y": 2619,
           "leftX": 45,
           "rightX": 155,
           "postRadius": 14
@@ -4185,26 +5412,38 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 67,
-          "y": 1463,
+          "y": 2353,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1318,
+          "y": 2120,
           "leftX": 105,
           "rightX": 215,
           "postRadius": 14
         },
         {
+          "id": "log_11",
+          "type": "log",
+          "x": 185,
+          "y": 1964,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 125,
+          "maxX": 245
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 1085,
+          "y": 1745,
           "width": 62,
           "height": 22,
           "minX": 155,
           "maxX": 285,
-          "speed": 38,
+          "speed": 26,
           "x": 215,
           "dir": 1
         },
@@ -4212,27 +5451,42 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 260,
-          "y": 882,
+          "y": 1419,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 200,
-          "maxX": 320
+          "minX": 195,
+          "maxX": 325
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 315,
-          "y": 736,
+          "y": 1184,
           "radius": 22
         },
         {
           "id": "rock1",
           "type": "rock",
-          "x": 250,
-          "y": 543,
-          "radius": 18
+          "x": 205,
+          "y": 873,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 315,
+          "y": 617,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 448,
+          "leftX": 205,
+          "rightX": 315,
+          "postRadius": 14
         }
       ],
       "startX": 100,
@@ -4243,7 +5497,7 @@ export const LEVELS = [
   {
     "id": 40,
     "name": "Garvi Gujarat No Gaurav",
-    "targetTime": 90,
+    "targetTime": 180,
     "hint": "Angle smoothly down into the apex and out to glory.",
     "crewUnlocked": [
       "hippo",
@@ -4254,40 +5508,79 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 40",
     "world": {
       "width": 360,
-      "height": 2170,
-      "startY": 2020,
+      "height": 3770,
+      "startY": 3620,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2170,
+          "y": 3770,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1163,
+          "y": 2021,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
           "y": 0,
           "cx": 260,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "log_14",
+          "type": "log",
+          "x": 120,
+          "y": 3340,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 60,
+          "maxX": 180
+        },
+        {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 72,
+          "y": 3170,
+          "radius": 22
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3000,
+          "leftX": 80,
+          "rightX": 190,
+          "postRadius": 14
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 120,
-          "y": 1628,
-          "radius": 18
+          "x": 88,
+          "y": 2828,
+          "radius": 22
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 151,
+          "y": 2660,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 91,
+          "maxX": 211
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1360,
+          "y": 2363,
           "leftX": 109,
           "rightX": 219,
           "postRadius": 14
@@ -4295,32 +5588,59 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1163,
+          "y": 2021,
           "leftX": 125,
           "rightX": 235,
+          "postRadius": 14
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 243,
+          "y": 1810,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 1640,
+          "leftX": 140,
+          "rightX": 250,
           "postRadius": 14
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 203,
-          "y": 830,
+          "y": 1442,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 143,
-          "maxX": 263
+          "minX": 138,
+          "maxX": 268
+        },
+        {
+          "id": "log_8",
+          "type": "log",
+          "x": 209,
+          "y": 1300,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 149,
+          "maxX": 269
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 620,
+          "y": 1077,
           "width": 60,
           "height": 22,
           "minX": 152,
           "maxX": 282,
-          "speed": 38,
+          "speed": 26,
           "x": 215,
           "dir": -1
         },
@@ -4328,7 +5648,14 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 285,
-          "y": 433,
+          "y": 752,
+          "radius": 22
+        },
+        {
+          "id": "rock_7",
+          "type": "rock",
+          "x": 187,
+          "y": 450,
           "radius": 22
         }
       ],
@@ -4340,7 +5667,7 @@ export const LEVELS = [
   {
     "id": 41,
     "name": "Devayat vs Gaman Maha Dayro",
-    "targetTime": 104,
+    "targetTime": 178,
     "hint": "Full-width sweeping maneuvers from bank to bank.",
     "crewUnlocked": [
       "hippo",
@@ -4351,43 +5678,51 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 41",
     "world": {
       "width": 360,
-      "height": 2558,
-      "startY": 2408,
+      "height": 3800,
+      "startY": 3650,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2558,
+          "y": 3800,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1938,
+          "y": 2879,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1318,
+          "y": 1958,
           "cx": 260,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 698,
+          "y": 1037,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 110,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 3368,
+          "leftX": 87,
+          "rightX": 197,
+          "postRadius": 14
+        },
+        {
           "id": "gate_9",
           "type": "gate",
-          "y": 2113,
+          "y": 3139,
           "leftX": 68,
           "rightX": 178,
           "postRadius": 14
@@ -4395,31 +5730,43 @@ export const LEVELS = [
         {
           "id": "rock1",
           "type": "rock",
-          "x": 115,
-          "y": 1860,
-          "radius": 18
+          "x": 65,
+          "y": 2763,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
           "x": 182,
-          "y": 1619,
+          "y": 2405,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 122,
-          "maxX": 242
+          "minX": 117,
+          "maxX": 247
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 224,
+          "y": 2167,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 164,
+          "maxX": 284
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1318,
+          "y": 1958,
           "width": 62,
           "height": 22,
           "minX": 195,
           "maxX": 325,
-          "speed": 38,
+          "speed": 26,
           "x": 250,
           "dir": 1
         },
@@ -4427,13 +5774,13 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 155,
-          "y": 1124,
+          "y": 1670,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 959,
+          "y": 1425,
           "leftX": 112,
           "rightX": 222,
           "postRadius": 14
@@ -4441,7 +5788,7 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 775,
+          "y": 1151,
           "leftX": 65,
           "rightX": 175,
           "postRadius": 14
@@ -4450,19 +5797,26 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 101,
-          "y": 630,
+          "y": 936,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 41,
-          "maxX": 161
+          "minX": 36,
+          "maxX": 166
         },
         {
           "id": "rock_4",
           "type": "rock",
           "x": 158,
-          "y": 465,
+          "y": 691,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 161,
+          "y": 452,
           "radius": 22
         }
       ],
@@ -4474,7 +5828,7 @@ export const LEVELS = [
   {
     "id": 42,
     "name": "Aditya & Darshan Jugalbandi",
-    "targetTime": 104,
+    "targetTime": 179,
     "hint": "Follow the keyhole turns through the golden canyons.",
     "crewUnlocked": [
       "hippo",
@@ -4485,48 +5839,60 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 42",
     "world": {
       "width": 360,
-      "height": 2558,
-      "startY": 2408,
+      "height": 3830,
+      "startY": 3680,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2558,
+          "y": 3830,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 2015,
+          "y": 3017,
           "cx": 110,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 1550,
+          "y": 2321,
           "cx": 250,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1085,
+          "y": 1625,
           "cx": 110,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 620,
+          "y": 928,
           "cx": 250,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 110,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "log_14",
+          "type": "log",
+          "x": 175,
+          "y": 3397,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 115,
+          "maxX": 235
+        },
+        {
           "id": "gate_9",
           "type": "gate",
-          "y": 2113,
+          "y": 3164,
           "leftX": 80,
           "rightX": 190,
           "postRadius": 14
@@ -4534,7 +5900,7 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1938,
+          "y": 2902,
           "leftX": 78,
           "rightX": 188,
           "postRadius": 14
@@ -4543,67 +5909,101 @@ export const LEVELS = [
           "id": "log_8",
           "type": "log",
           "x": 180,
-          "y": 1784,
+          "y": 2671,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 120,
-          "maxX": 240
+          "minX": 115,
+          "maxX": 245
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 174,
-          "y": 1619,
+          "y": 2424,
           "radius": 22
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1473,
+          "y": 2205,
           "width": 62,
           "height": 22,
           "minX": 162,
           "maxX": 292,
-          "speed": 38,
+          "speed": 26,
           "x": 240,
           "dir": -1
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1289,
+          "y": 1930,
           "leftX": 116,
           "rightX": 226,
           "postRadius": 14
         },
         {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 63,
+          "y": 1665,
+          "radius": 22
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 120,
-          "y": 1008,
-          "radius": 18
+          "x": 78,
+          "y": 1509,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
           "x": 197,
-          "y": 795,
+          "y": 1190,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 137,
-          "maxX": 257
+          "minX": 132,
+          "maxX": 262
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 973,
+          "leftX": 186,
+          "rightX": 296,
+          "postRadius": 14
         },
         {
           "id": "gate2",
           "type": "gate",
-          "y": 543,
+          "y": 813,
           "leftX": 178,
           "rightX": 288,
           "postRadius": 14
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 204,
+          "y": 626,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 144,
+          "maxX": 264
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 233,
+          "y": 453,
+          "radius": 22
         }
       ],
       "startX": 190,
@@ -4614,7 +6014,7 @@ export const LEVELS = [
   {
     "id": 43,
     "name": "Rupiyo Nathi Joito Prem Jove",
-    "targetTime": 108,
+    "targetTime": 182,
     "hint": "A magnificent W-shaped river course to triumph!",
     "crewUnlocked": [
       "hippo",
@@ -4625,72 +6025,107 @@ export const LEVELS = [
     "teaches": "Handcrafted Pattern 43",
     "world": {
       "width": 360,
-      "height": 2635,
-      "startY": 2485,
+      "height": 3860,
+      "startY": 3710,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.979,
       "waypoints": [
         {
-          "y": 2635,
+          "y": 3860,
           "cx": 100,
-          "width": 200
+          "width": 245
         },
         {
-          "y": 2093,
+          "y": 3066,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1550,
+          "y": 2271,
           "cx": 100,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 1007,
+          "y": 1475,
           "cx": 180,
-          "width": 205
+          "width": 250
         },
         {
-          "y": 543,
+          "y": 795,
           "cx": 260,
-          "width": 200
+          "width": 245
         },
         {
           "y": 0,
           "cx": 260,
-          "width": 200
+          "width": 245
         }
       ],
       "obstacles": [
         {
+          "id": "gate_15",
+          "type": "gate",
+          "y": 3425,
+          "leftX": 89,
+          "rightX": 199,
+          "postRadius": 14
+        },
+        {
+          "id": "log_14",
+          "type": "log",
+          "x": 161,
+          "y": 3251,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": 1,
+          "minX": 101,
+          "maxX": 221
+        },
+        {
           "id": "rock1",
           "type": "rock",
-          "x": 130,
-          "y": 2093,
-          "radius": 18
+          "x": 125,
+          "y": 3066,
+          "radius": 22
+        },
+        {
+          "id": "rock_13",
+          "type": "rock",
+          "x": 108,
+          "y": 2901,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
           "x": 143,
-          "y": 1841,
+          "y": 2697,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": 1,
-          "minX": 83,
-          "maxX": 203
+          "minX": 78,
+          "maxX": 208
+        },
+        {
+          "id": "gate_12",
+          "type": "gate",
+          "y": 2552,
+          "leftX": 73,
+          "rightX": 183,
+          "postRadius": 14
         },
         {
           "id": "log1",
           "type": "log",
-          "y": 1550,
+          "y": 2271,
           "width": 62,
           "height": 22,
           "minX": 35,
           "maxX": 165,
-          "speed": 36,
+          "speed": 26,
           "x": 120,
           "dir": 1
         },
@@ -4698,13 +6133,13 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 78,
-          "y": 1328,
+          "y": 1945,
           "radius": 22
         },
         {
           "id": "gate_6",
           "type": "gate",
-          "y": 1156,
+          "y": 1693,
           "leftX": 103,
           "rightX": 213,
           "postRadius": 14
@@ -4712,7 +6147,7 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 1007,
+          "y": 1475,
           "leftX": 125,
           "rightX": 235,
           "postRadius": 14
@@ -4721,20 +6156,47 @@ export const LEVELS = [
           "id": "log_5",
           "type": "log",
           "x": 213,
-          "y": 814,
+          "y": 1192,
           "width": 76,
           "height": 20,
           "speed": 24,
           "dir": -1,
-          "minX": 153,
-          "maxX": 273
+          "minX": 148,
+          "maxX": 278
+        },
+        {
+          "id": "log_11",
+          "type": "log",
+          "x": 238,
+          "y": 979,
+          "width": 76,
+          "height": 20,
+          "speed": 24,
+          "dir": -1,
+          "minX": 178,
+          "maxX": 298
         },
         {
           "id": "rock2",
           "type": "rock",
-          "x": 240,
-          "y": 543,
-          "radius": 18
+          "x": 205,
+          "y": 795,
+          "radius": 22
+        },
+        {
+          "id": "rock_10",
+          "type": "rock",
+          "x": 315,
+          "y": 629,
+          "radius": 22
+        },
+        {
+          "id": "gate_9",
+          "type": "gate",
+          "y": 455,
+          "leftX": 205,
+          "rightX": 315,
+          "postRadius": 14
         }
       ],
       "startX": 134,
@@ -4745,7 +6207,7 @@ export const LEVELS = [
   {
     "id": 44,
     "name": "Sinh Ni Dhadak",
-    "targetTime": 90,
+    "targetTime": 128,
     "hint": "A staggering stage labyrinth. Follow the open water seams; don't corner yourself.",
     "crewUnlocked": [
       "hippo",
@@ -4756,260 +6218,260 @@ export const LEVELS = [
     "teaches": "Labyrinth route planning",
     "world": {
       "width": 360,
-      "height": 3125,
+      "height": 3850,
       "startX": 180,
-      "startY": 2975,
+      "startY": 3700,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.99,
       "waypoints": [
         {
-          "y": 3125,
+          "y": 3850,
           "cx": 180,
-          "width": 180
+          "width": 225
         },
         {
-          "y": 2604,
+          "y": 3208,
           "cx": 218,
-          "width": 180
+          "width": 225
         },
         {
-          "y": 2084,
+          "y": 2567,
           "cx": 142,
-          "width": 180
+          "width": 225
         },
         {
-          "y": 1563,
+          "y": 1926,
           "cx": 218,
-          "width": 172
+          "width": 217
         },
         {
-          "y": 1041,
+          "y": 1283,
           "cx": 142,
-          "width": 172
+          "width": 217
         },
         {
-          "y": 521,
+          "y": 642,
           "cx": 218,
-          "width": 180
+          "width": 225
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 180
+          "width": 225
         }
       ],
       "obstacles": [
         {
           "id": "rock_9",
           "type": "rock",
-          "x": 253,
-          "y": 2755,
-          "radius": 21
+          "x": 262,
+          "y": 3394,
+          "radius": 22
         },
         {
           "id": "rock_10",
           "type": "rock",
-          "x": 184,
-          "y": 2659,
-          "radius": 23
+          "x": 159,
+          "y": 3276,
+          "radius": 22
         },
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 216,
-          "y": 2564,
-          "radius": 18
+          "x": 267,
+          "y": 3159,
+          "radius": 22
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2469,
+          "y": 3042,
           "width": 63,
           "height": 22,
           "minX": 133,
           "maxX": 263,
-          "speed": 120,
+          "speed": 26,
           "x": 219,
           "dir": -1
         },
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 138,
-          "y": 2374,
-          "radius": 21
+          "x": 129,
+          "y": 2925,
+          "radius": 22
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2278,
+          "y": 2806,
           "leftX": 115,
           "rightX": 225,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 190,
-          "y": 2183,
-          "radius": 23
+          "x": 211,
+          "y": 2689,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2088,
+          "y": 2572,
           "width": 63,
           "height": 22,
           "minX": 78,
           "maxX": 208,
-          "speed": 113,
+          "speed": 26,
           "x": 118,
           "dir": 1
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 129,
-          "y": 1991,
-          "radius": 18
+          "x": 101,
+          "y": 2453,
+          "radius": 22
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 194,
-          "y": 1896,
-          "radius": 21
+          "x": 224,
+          "y": 2336,
+          "radius": 22
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 153,
-          "y": 1801,
-          "radius": 23
+          "x": 128,
+          "y": 2219,
+          "radius": 22
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 243,
-          "y": 1705,
-          "radius": 18
+          "x": 252,
+          "y": 2101,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1610,
+          "y": 1984,
           "leftX": 156,
           "rightX": 266,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1515,
+          "y": 1866,
           "width": 60,
           "height": 22,
           "minX": 146,
           "maxX": 276,
-          "speed": 126,
+          "speed": 26,
           "x": 239,
           "dir": -1
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 181,
-          "y": 1420,
-          "radius": 21
+          "x": 142,
+          "y": 1749,
+          "radius": 22
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 213,
-          "y": 1324,
-          "radius": 23
+          "x": 238,
+          "y": 1631,
+          "radius": 22
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 124,
-          "y": 1229,
-          "radius": 18
+          "x": 114,
+          "y": 1514,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1134,
+          "y": 1397,
           "width": 60,
           "height": 22,
-          "minX": 91,
-          "maxX": 221,
-          "speed": 119,
+          "minX": 90,
+          "maxX": 220,
+          "speed": 26,
           "x": 126,
           "dir": 1
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 185,
-          "y": 1038,
-          "radius": 21
+          "x": 197,
+          "y": 1279,
+          "radius": 22
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 128,
-          "y": 942,
-          "radius": 23
+          "x": 101,
+          "y": 1161,
+          "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 848,
+          "y": 1045,
           "leftX": 115,
           "rightX": 225,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 197,
-          "y": 751,
-          "radius": 18
+          "x": 239,
+          "y": 925,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 656,
+          "y": 808,
           "width": 62,
           "height": 22,
           "minX": 133,
           "maxX": 263,
-          "speed": 112,
+          "speed": 26,
           "x": 231,
           "dir": -1
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 166,
-          "y": 561,
-          "radius": 21
+          "x": 157,
+          "y": 691,
+          "radius": 22
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 253,
-          "y": 466,
-          "radius": 23
+          "x": 269,
+          "y": 574,
+          "radius": 22
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 186,
-          "y": 370,
-          "radius": 18
+          "x": 152,
+          "y": 456,
+          "radius": 22
         }
       ]
     },
@@ -5018,7 +6480,7 @@ export const LEVELS = [
   {
     "id": 45,
     "name": "Dharal No Chamkaro",
-    "targetTime": 90,
+    "targetTime": 128,
     "hint": "Narrow flume with high drift. Logs sweep at 120 px/s! Time your Hippo boost.",
     "crewUnlocked": [
       "hippo",
@@ -5029,270 +6491,270 @@ export const LEVELS = [
     "teaches": "Flume blitzing",
     "world": {
       "width": 360,
-      "height": 3163,
+      "height": 3900,
       "startX": 180,
-      "startY": 3013,
+      "startY": 3750,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.99,
       "waypoints": [
         {
-          "y": 3163,
+          "y": 3900,
           "cx": 180,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2635,
+          "y": 3249,
           "cx": 220,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2109,
+          "y": 2600,
           "cx": 140,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 1582,
+          "y": 1951,
           "cx": 220,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 1054,
+          "y": 1300,
           "cx": 140,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 528,
+          "y": 651,
           "cx": 220,
-          "width": 175
+          "width": 220
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 175
+          "width": 220
         }
       ],
       "obstacles": [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 252,
-          "y": 2792,
-          "radius": 21
+          "x": 263,
+          "y": 3443,
+          "radius": 22
         },
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 181,
-          "y": 2694,
-          "radius": 23
+          "x": 161,
+          "y": 3322,
+          "radius": 22
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2598,
+          "y": 3203,
           "width": 61,
           "height": 22,
           "minX": 149,
           "maxX": 279,
-          "speed": 125,
+          "speed": 26,
           "x": 235,
           "dir": -1
         },
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 210,
-          "y": 2500,
-          "radius": 18
+          "x": 255,
+          "y": 3083,
+          "radius": 22
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 141,
-          "y": 2404,
-          "radius": 21
+          "x": 130,
+          "y": 2964,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2308,
+          "y": 2846,
           "width": 61,
           "height": 22,
           "minX": 105,
           "maxX": 235,
-          "speed": 118,
+          "speed": 26,
           "x": 136,
           "dir": 1
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2210,
+          "y": 2725,
           "leftX": 100,
           "rightX": 210,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 180,
-          "y": 2114,
-          "radius": 23
+          "x": 196,
+          "y": 2607,
+          "radius": 22
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 143,
-          "y": 2017,
-          "radius": 18
+          "x": 99,
+          "y": 2487,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1920,
+          "y": 2367,
           "width": 59,
           "height": 22,
           "minX": 104,
           "maxX": 234,
-          "speed": 131,
+          "speed": 26,
           "x": 202,
           "dir": -1
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 210,
-          "y": 1824,
-          "radius": 21
+          "x": 238,
+          "y": 2249,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1727,
+          "y": 2129,
           "width": 58,
           "height": 22,
           "minX": 133,
           "maxX": 263,
-          "speed": 124,
+          "speed": 26,
           "x": 180,
           "dir": 1
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 176,
-          "y": 1630,
-          "radius": 23
+          "x": 158,
+          "y": 2010,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1533,
+          "y": 1890,
           "leftX": 158,
           "rightX": 268,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 241,
-          "y": 1436,
-          "radius": 18
+          "x": 253,
+          "y": 1771,
+          "radius": 22
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 158,
-          "y": 1339,
-          "radius": 21
+          "x": 128,
+          "y": 1651,
+          "radius": 22
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 187,
-          "y": 1243,
-          "radius": 23
+          "x": 224,
+          "y": 1533,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1146,
+          "y": 1413,
           "width": 58,
           "height": 22,
           "minX": 89,
           "maxX": 219,
-          "speed": 117,
+          "speed": 26,
           "x": 186,
           "dir": -1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 103,
-          "y": 1049,
-          "radius": 18
+          "x": 86,
+          "y": 1293,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 953,
+          "y": 1175,
           "width": 58,
           "height": 22,
           "minX": 90,
           "maxX": 220,
-          "speed": 130,
+          "speed": 26,
           "x": 123,
           "dir": 1
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 855,
+          "y": 1054,
           "leftX": 115,
           "rightX": 225,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 208,
-          "y": 759,
-          "radius": 21
+          "x": 240,
+          "y": 936,
+          "radius": 22
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 166,
-          "y": 663,
-          "radius": 23
+          "x": 145,
+          "y": 817,
+          "radius": 22
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 233,
-          "y": 565,
-          "radius": 18
+          "x": 269,
+          "y": 697,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 469,
+          "y": 578,
           "width": 61,
           "height": 22,
           "minX": 151,
           "maxX": 281,
-          "speed": 123,
+          "speed": 26,
           "x": 248,
           "dir": -1
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 171,
-          "y": 371,
-          "radius": 21
+          "x": 153,
+          "y": 457,
+          "radius": 22
         }
       ]
     },
@@ -5301,7 +6763,7 @@ export const LEVELS = [
   {
     "id": 46,
     "name": "Khalasi On The River",
-    "targetTime": 91,
+    "targetTime": 129,
     "hint": "Three pairs of scissor logs patrolling in sync. Dash through the moment they cross!",
     "crewUnlocked": [
       "hippo",
@@ -5312,282 +6774,282 @@ export const LEVELS = [
     "teaches": "Extreme scissor synchronization",
     "world": {
       "width": 360,
-      "height": 3200,
+      "height": 3950,
       "startX": 180,
-      "startY": 3050,
+      "startY": 3800,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.99,
       "waypoints": [
         {
-          "y": 3200,
+          "y": 3950,
           "cx": 180,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2666,
+          "y": 3291,
           "cx": 218,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2134,
+          "y": 2634,
           "cx": 142,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 1600,
+          "y": 1975,
           "cx": 218,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 1066,
+          "y": 1316,
           "cx": 142,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 534,
+          "y": 659,
           "cx": 218,
-          "width": 175
+          "width": 220
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 175
+          "width": 220
         }
       ],
       "obstacles": [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 250,
-          "y": 2830,
-          "radius": 21
+          "x": 261,
+          "y": 3493,
+          "radius": 22
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2736,
+          "y": 3377,
           "width": 61,
           "height": 22,
           "minX": 148,
           "maxX": 278,
-          "speed": 125,
+          "speed": 26,
           "x": 239,
           "dir": -1
         },
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 180,
-          "y": 2641,
-          "radius": 23
+          "x": 159,
+          "y": 3260,
+          "radius": 22
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 210,
-          "y": 2546,
-          "radius": 18
+          "x": 256,
+          "y": 3143,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2451,
+          "y": 3025,
           "width": 61,
           "height": 22,
           "minX": 122,
           "maxX": 252,
-          "speed": 118,
+          "speed": 26,
           "x": 153,
           "dir": 1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 130,
-          "y": 2358,
-          "radius": 21
+          "x": 119,
+          "y": 2911,
+          "radius": 22
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2263,
+          "y": 2793,
           "leftX": 105,
           "rightX": 215,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 182,
-          "y": 2168,
-          "radius": 23
+          "x": 202,
+          "y": 2676,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2074,
+          "y": 2560,
           "width": 60,
           "height": 22,
           "minX": 86,
           "maxX": 216,
-          "speed": 131,
+          "speed": 26,
           "x": 185,
           "dir": -1
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 143,
-          "y": 1979,
-          "radius": 18
+          "x": 109,
+          "y": 2443,
+          "radius": 22
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 210,
-          "y": 1884,
-          "radius": 21
+          "x": 233,
+          "y": 2326,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1789,
+          "y": 2208,
           "width": 59,
           "height": 22,
           "minX": 126,
           "maxX": 256,
-          "speed": 124,
+          "speed": 26,
           "x": 162,
           "dir": 1
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 175,
-          "y": 1695,
-          "radius": 23
+          "x": 150,
+          "y": 2092,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1600,
+          "y": 1975,
           "leftX": 163,
           "rightX": 273,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 247,
-          "y": 1505,
-          "radius": 18
+          "x": 260,
+          "y": 1858,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1411,
+          "y": 1742,
           "width": 58,
           "height": 22,
           "minX": 126,
           "maxX": 256,
-          "speed": 117,
+          "speed": 26,
           "x": 222,
           "dir": -1
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 158,
-          "y": 1316,
-          "radius": 21
+          "x": 123,
+          "y": 1624,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1221,
+          "y": 1507,
           "width": 58,
           "height": 22,
           "minX": 99,
           "maxX": 229,
-          "speed": 130,
+          "speed": 26,
           "x": 133,
           "dir": 1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 187,
-          "y": 1126,
-          "radius": 23
+          "x": 206,
+          "y": 1390,
+          "radius": 22
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 105,
-          "y": 1033,
-          "radius": 18
+          "x": 92,
+          "y": 1275,
+          "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 938,
+          "y": 1158,
           "leftX": 105,
           "rightX": 215,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 209,
-          "y": 843,
-          "radius": 21
+          "x": 229,
+          "y": 1041,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 749,
+          "y": 925,
           "width": 59,
           "height": 22,
           "minX": 122,
           "maxX": 252,
-          "speed": 123,
+          "speed": 26,
           "x": 209,
           "dir": -1
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 165,
-          "y": 654,
-          "radius": 23
+          "x": 146,
+          "y": 807,
+          "radius": 22
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 232,
-          "y": 559,
-          "radius": 18
+          "x": 269,
+          "y": 690,
+          "radius": 22
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 464,
+          "y": 573,
           "width": 60,
           "height": 22,
           "minX": 148,
           "maxX": 278,
-          "speed": 116,
+          "speed": 26,
           "x": 179,
           "dir": 1
         },
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 169,
-          "y": 370,
-          "radius": 21
+          "x": 151,
+          "y": 457,
+          "radius": 22
         }
       ]
     },
@@ -5596,7 +7058,7 @@ export const LEVELS = [
   {
     "id": 47,
     "name": "Santhal No Sinh Mahuva",
-    "targetTime": 92,
+    "targetTime": 130,
     "hint": "River pinches to 135px with boulders pinching the channel. Perfect steering required.",
     "crewUnlocked": [
       "hippo",
@@ -5607,277 +7069,277 @@ export const LEVELS = [
     "teaches": "Extreme chokepoint navigation",
     "world": {
       "width": 360,
-      "height": 3250,
+      "height": 4000,
       "startX": 180,
-      "startY": 3100,
+      "startY": 3850,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.99,
       "waypoints": [
         {
-          "y": 3250,
+          "y": 4000,
           "cx": 180,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2709,
+          "y": 3334,
           "cx": 225,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2166,
+          "y": 2666,
           "cx": 135,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 1625,
+          "y": 2000,
           "cx": 225,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 1084,
+          "y": 1334,
           "cx": 135,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 541,
+          "y": 666,
           "cx": 225,
-          "width": 175
+          "width": 220
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 175
+          "width": 220
         }
       ],
       "obstacles": [
         {
           "id": "rock_11",
           "type": "rock",
-          "x": 254,
-          "y": 2879,
-          "radius": 21
+          "x": 266,
+          "y": 3543,
+          "radius": 22
         },
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 188,
-          "y": 2783,
-          "radius": 23
+          "x": 164,
+          "y": 3425,
+          "radius": 22
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2686,
+          "y": 3306,
           "width": 61,
           "height": 22,
           "minX": 156,
           "maxX": 286,
-          "speed": 127,
+          "speed": 26,
           "x": 238,
           "dir": -1
         },
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 216,
-          "y": 2589,
-          "radius": 18
+          "x": 260,
+          "y": 3186,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2493,
+          "y": 3068,
           "width": 61,
           "height": 22,
           "minX": 124,
           "maxX": 254,
-          "speed": 120,
+          "speed": 26,
           "x": 155,
           "dir": 1
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 130,
-          "y": 2396,
-          "radius": 21
+          "x": 118,
+          "y": 2949,
+          "radius": 22
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2300,
+          "y": 2831,
           "leftX": 102,
           "rightX": 212,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 182,
-          "y": 2204,
-          "radius": 23
+          "x": 196,
+          "y": 2713,
+          "radius": 22
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 131,
-          "y": 2108,
-          "radius": 18
+          "x": 90,
+          "y": 2594,
+          "radius": 22
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 200,
-          "y": 2011,
-          "radius": 21
+          "x": 216,
+          "y": 2475,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1914,
+          "y": 2356,
           "width": 59,
           "height": 22,
           "minX": 112,
           "maxX": 242,
-          "speed": 133,
+          "speed": 26,
           "x": 210,
           "dir": -1
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 168,
-          "y": 1818,
-          "radius": 23
+          "x": 138,
+          "y": 2238,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1721,
+          "y": 2118,
           "width": 58,
           "height": 22,
           "minX": 144,
           "maxX": 274,
-          "speed": 126,
+          "speed": 26,
           "x": 184,
           "dir": 1
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1625,
+          "y": 2000,
           "leftX": 170,
           "rightX": 280,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 251,
-          "y": 1529,
-          "radius": 18
+          "x": 264,
+          "y": 1882,
+          "radius": 22
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 173,
-          "y": 1433,
-          "radius": 21
+          "x": 138,
+          "y": 1764,
+          "radius": 22
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 200,
-          "y": 1336,
-          "radius": 23
+          "x": 232,
+          "y": 1644,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1239,
+          "y": 1525,
           "width": 58,
           "height": 22,
           "minX": 96,
           "maxX": 226,
-          "speed": 119,
+          "speed": 26,
           "x": 192,
           "dir": -1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 107,
-          "y": 1143,
-          "radius": 18
+          "x": 90,
+          "y": 1407,
+          "radius": 22
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 181,
-          "y": 1046,
-          "radius": 21
+          "x": 196,
+          "y": 1287,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 950,
+          "y": 1169,
           "width": 58,
           "height": 22,
           "minX": 92,
           "maxX": 222,
-          "speed": 132,
+          "speed": 26,
           "x": 125,
           "dir": 1
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 147,
-          "y": 854,
-          "radius": 23
+          "x": 118,
+          "y": 1051,
+          "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 758,
+          "y": 933,
           "leftX": 134,
           "rightX": 244,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 216,
-          "y": 661,
-          "radius": 18
+          "x": 260,
+          "y": 814,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 564,
+          "y": 694,
           "width": 61,
           "height": 22,
           "minX": 156,
           "maxX": 286,
-          "speed": 125,
+          "speed": 26,
           "x": 253,
           "dir": -1
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 179,
-          "y": 468,
-          "radius": 21
+          "x": 164,
+          "y": 576,
+          "radius": 22
         },
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 252,
-          "y": 371,
-          "radius": 23
+          "x": 266,
+          "y": 457,
+          "radius": 22
         }
       ]
     },
@@ -5886,7 +7348,7 @@ export const LEVELS = [
   {
     "id": 48,
     "name": "Sher Aaya Sher!",
-    "targetTime": 94,
+    "targetTime": 133,
     "hint": "Five precision gates across 2600px of cascading river. Maintain calm under pressure.",
     "crewUnlocked": [
       "hippo",
@@ -5897,281 +7359,281 @@ export const LEVELS = [
     "teaches": "Five-gate grand slalom",
     "world": {
       "width": 360,
-      "height": 3288,
+      "height": 4050,
       "startX": 180,
-      "startY": 3138,
+      "startY": 3900,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.991,
       "waypoints": [
         {
-          "y": 3288,
+          "y": 4050,
           "cx": 180,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2740,
+          "y": 3375,
           "cx": 222,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 2192,
+          "y": 2700,
           "cx": 138,
-          "width": 175
+          "width": 220
         },
         {
-          "y": 1644,
+          "y": 2025,
           "cx": 222,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 1096,
+          "y": 1350,
           "cx": 138,
-          "width": 167
+          "width": 212
         },
         {
-          "y": 548,
+          "y": 675,
           "cx": 222,
-          "width": 175
+          "width": 220
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 175
+          "width": 220
         }
       ],
       "obstacles": [
         {
           "id": "rock_12",
           "type": "rock",
-          "x": 252,
-          "y": 2918,
-          "radius": 21
+          "x": 263,
+          "y": 3594,
+          "radius": 22
         },
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 187,
-          "y": 2824,
-          "radius": 23
+          "x": 161,
+          "y": 3478,
+          "radius": 22
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2729,
+          "y": 3361,
           "leftX": 165,
           "rightX": 275,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 159,
-          "y": 2635,
-          "radius": 18
+          "x": 151,
+          "y": 3246,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2540,
+          "y": 3129,
           "width": 61,
           "height": 22,
           "minX": 126,
           "maxX": 256,
-          "speed": 130,
+          "speed": 26,
           "x": 214,
           "dir": -1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 134,
-          "y": 2447,
-          "radius": 21
+          "x": 122,
+          "y": 3014,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 2352,
+          "y": 2897,
           "width": 61,
           "height": 22,
           "minX": 98,
           "maxX": 228,
-          "speed": 123,
+          "speed": 26,
           "x": 128,
           "dir": 1
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 185,
-          "y": 2258,
-          "radius": 23
+          "x": 203,
+          "y": 2781,
+          "radius": 22
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 121,
-          "y": 2163,
-          "radius": 18
+          "x": 87,
+          "y": 2664,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 2069,
+          "y": 2548,
           "leftX": 102,
           "rightX": 212,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 200,
-          "y": 1974,
-          "radius": 21
+          "x": 226,
+          "y": 2431,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1880,
+          "y": 2316,
           "width": 58,
           "height": 22,
           "minX": 121,
           "maxX": 251,
-          "speed": 136,
+          "speed": 26,
           "x": 219,
           "dir": -1
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 166,
-          "y": 1785,
-          "radius": 23
+          "x": 145,
+          "y": 2199,
+          "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1692,
+          "y": 2084,
           "leftX": 160,
           "rightX": 270,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 251,
-          "y": 1596,
-          "radius": 18
+          "x": 270,
+          "y": 1966,
+          "radius": 22
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 171,
-          "y": 1503,
-          "radius": 21
+          "x": 145,
+          "y": 1851,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1408,
+          "y": 1734,
           "width": 58,
           "height": 22,
           "minX": 121,
           "maxX": 251,
-          "speed": 129,
+          "speed": 26,
           "x": 164,
           "dir": 1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 200,
-          "y": 1314,
-          "radius": 23
+          "x": 226,
+          "y": 1619,
+          "radius": 22
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 119,
-          "y": 1219,
-          "radius": 18
+          "x": 102,
+          "y": 1502,
+          "radius": 22
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 1125,
+          "y": 1386,
           "leftX": 87,
           "rightX": 197,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 184,
-          "y": 1030,
-          "radius": 21
+          "x": 203,
+          "y": 1269,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 936,
+          "y": 1153,
           "width": 58,
           "height": 22,
           "minX": 98,
           "maxX": 228,
-          "speed": 122,
+          "speed": 26,
           "x": 182,
           "dir": -1
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 148,
-          "y": 841,
-          "radius": 23
+          "x": 122,
+          "y": 1036,
+          "radius": 22
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 748,
+          "y": 921,
           "width": 59,
           "height": 22,
           "minX": 126,
           "maxX": 256,
-          "speed": 135,
+          "speed": 26,
           "x": 158,
           "dir": 1
         },
         {
           "id": "gate_5",
           "type": "gate",
-          "y": 653,
+          "y": 804,
           "leftX": 151,
           "rightX": 261,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 228,
-          "y": 559,
-          "radius": 18
+          "x": 275,
+          "y": 689,
+          "radius": 22
         },
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 177,
-          "y": 464,
-          "radius": 21
+          "x": 161,
+          "y": 572,
+          "radius": 22
         },
         {
           "id": "rock_28",
           "type": "rock",
-          "x": 250,
-          "y": 370,
-          "radius": 23
+          "x": 263,
+          "y": 456,
+          "radius": 22
         }
       ]
     },
@@ -6180,7 +7642,7 @@ export const LEVELS = [
   {
     "id": 49,
     "name": "Chaar Superstar Ek Raft",
-    "targetTime": 95,
+    "targetTime": 135,
     "hint": "Penultimate challenge: 27 hazards, rapid current, and brutal scissor traps.",
     "crewUnlocked": [
       "hippo",
@@ -6191,290 +7653,290 @@ export const LEVELS = [
     "teaches": "Maelstrom approach mastery",
     "world": {
       "width": 360,
-      "height": 3325,
+      "height": 4100,
       "startX": 180,
-      "startY": 3175,
+      "startY": 3950,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.991,
       "waypoints": [
         {
-          "y": 3325,
+          "y": 4100,
           "cx": 180,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 2771,
+          "y": 3417,
           "cx": 225,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 2216,
+          "y": 2733,
           "cx": 135,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 1663,
+          "y": 2051,
           "cx": 225,
-          "width": 165
+          "width": 210
         },
         {
-          "y": 1109,
+          "y": 1367,
           "cx": 135,
-          "width": 165
+          "width": 210
         },
         {
-          "y": 554,
+          "y": 683,
           "cx": 225,
-          "width": 170
+          "width": 215
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 170
+          "width": 215
         }
       ],
       "obstacles": [
         {
           "id": "rock_13",
           "type": "rock",
-          "x": 251,
-          "y": 2954,
-          "radius": 21
+          "x": 265,
+          "y": 3643,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2859,
+          "y": 3525,
           "width": 59,
           "height": 22,
           "minX": 153,
           "maxX": 283,
-          "speed": 133,
+          "speed": 26,
           "x": 244,
           "dir": -1
         },
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 186,
-          "y": 2763,
-          "radius": 23
+          "x": 169,
+          "y": 3407,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2668,
+          "y": 3290,
           "width": 59,
           "height": 22,
           "minX": 143,
           "maxX": 273,
-          "speed": 126,
+          "speed": 26,
           "x": 176,
           "dir": 1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 212,
-          "y": 2571,
-          "radius": 18
+          "x": 248,
+          "y": 3170,
+          "radius": 22
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2476,
+          "y": 3053,
           "leftX": 122,
           "rightX": 232,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 121,
-          "y": 2380,
-          "radius": 21
+          "x": 107,
+          "y": 2935,
+          "radius": 22
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 173,
-          "y": 2285,
-          "radius": 23
+          "x": 201,
+          "y": 2818,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 2189,
+          "y": 2699,
           "width": 58,
           "height": 22,
           "minX": 74,
           "maxX": 204,
-          "speed": 139,
+          "speed": 26,
           "x": 172,
           "dir": -1
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 140,
-          "y": 2093,
-          "radius": 18
+          "x": 100,
+          "y": 2581,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1998,
+          "y": 2464,
           "leftX": 115,
           "rightX": 225,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 216,
-          "y": 1901,
-          "radius": 21
+          "x": 241,
+          "y": 2344,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1806,
+          "y": 2227,
           "width": 57,
           "height": 22,
           "minX": 137,
           "maxX": 267,
-          "speed": 132,
+          "speed": 26,
           "x": 170,
           "dir": 1
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 181,
-          "y": 1710,
-          "radius": 23
+          "x": 162,
+          "y": 2109,
+          "radius": 22
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 251,
-          "y": 1615,
-          "radius": 18
+          "x": 272,
+          "y": 1991,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1519,
+          "y": 1873,
           "width": 57,
           "height": 22,
           "minX": 137,
           "maxX": 267,
-          "speed": 125,
+          "speed": 26,
           "x": 224,
           "dir": -1
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 164,
-          "y": 1424,
-          "radius": 21
+          "x": 131,
+          "y": 1756,
+          "radius": 22
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1328,
+          "y": 1638,
           "leftX": 116,
           "rightX": 226,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 183,
-          "y": 1233,
-          "radius": 23
+          "x": 210,
+          "y": 1520,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 1136,
+          "y": 1401,
           "width": 57,
           "height": 22,
           "minX": 74,
           "maxX": 204,
-          "speed": 138,
+          "speed": 26,
           "x": 122,
           "dir": 1
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 104,
-          "y": 1040,
-          "radius": 18
+          "x": 91,
+          "y": 1282,
+          "radius": 22
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 200,
-          "y": 945,
-          "radius": 21
+          "x": 217,
+          "y": 1165,
+          "radius": 22
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 849,
+          "y": 1047,
           "leftX": 122,
           "rightX": 232,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 754,
+          "y": 930,
           "width": 58,
           "height": 22,
           "minX": 128,
           "maxX": 258,
-          "speed": 131,
+          "speed": 26,
           "x": 224,
           "dir": -1
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 170,
-          "y": 658,
-          "radius": 23
+          "x": 153,
+          "y": 811,
+          "radius": 22
         },
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 239,
-          "y": 563,
-          "radius": 18
+          "x": 279,
+          "y": 694,
+          "radius": 22
         },
         {
           "id": "log_12",
           "type": "log",
-          "y": 466,
+          "y": 575,
           "width": 59,
           "height": 22,
           "minX": 153,
           "maxX": 283,
-          "speed": 124,
+          "speed": 26,
           "x": 185,
           "dir": 1
         },
         {
           "id": "rock_28",
           "type": "rock",
-          "x": 176,
-          "y": 371,
-          "radius": 21
+          "x": 155,
+          "y": 457,
+          "radius": 22
         }
       ]
     },
@@ -6483,7 +7945,7 @@ export const LEVELS = [
   {
     "id": 50,
     "name": "Akhand Gujarati Mahadayro! 🏆",
-    "targetTime": 98,
+    "targetTime": 139,
     "hint": "The Ultimate Challenge! 29 obstacles across 2700px. Prove yourself as Grand Captain!",
     "crewUnlocked": [
       "hippo",
@@ -6494,309 +7956,309 @@ export const LEVELS = [
     "teaches": "Grand Captain animal crew mastery",
     "world": {
       "width": 360,
-      "height": 3375,
+      "height": 4150,
       "startX": 180,
-      "startY": 3225,
+      "startY": 4000,
       "finishX": 180,
       "finishY": 130,
       "finishRadius": 46,
       "drag": 0.991,
       "waypoints": [
         {
-          "y": 3375,
+          "y": 4150,
           "cx": 180,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 2813,
+          "y": 3459,
           "cx": 228,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 2250,
+          "y": 2767,
           "cx": 132,
-          "width": 170
+          "width": 215
         },
         {
-          "y": 1688,
+          "y": 2076,
           "cx": 228,
-          "width": 165
+          "width": 210
         },
         {
-          "y": 1125,
+          "y": 1383,
           "cx": 132,
-          "width": 165
+          "width": 210
         },
         {
-          "y": 563,
+          "y": 692,
           "cx": 228,
-          "width": 170
+          "width": 215
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 170
+          "width": 215
         }
       ],
       "obstacles": [
         {
           "id": "rock_14",
           "type": "rock",
-          "x": 252,
-          "y": 3009,
-          "radius": 21
+          "x": 266,
+          "y": 3700,
+          "radius": 22
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2918,
+          "y": 3588,
           "width": 59,
           "height": 22,
           "minX": 154,
           "maxX": 284,
-          "speed": 135,
+          "speed": 26,
           "x": 252,
           "dir": -1
         },
         {
           "id": "rock_15",
           "type": "rock",
-          "x": 192,
-          "y": 2826,
-          "radius": 23
+          "x": 172,
+          "y": 3475,
+          "radius": 22
         },
         {
           "id": "rock_16",
           "type": "rock",
-          "x": 259,
-          "y": 2735,
-          "radius": 18
+          "x": 270,
+          "y": 3363,
+          "radius": 22
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2644,
+          "y": 3251,
           "width": 59,
           "height": 22,
           "minX": 134,
           "maxX": 264,
-          "speed": 128,
+          "speed": 26,
           "x": 167,
           "dir": 1
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2554,
+          "y": 3140,
           "leftX": 129,
           "rightX": 239,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_17",
           "type": "rock",
-          "x": 127,
-          "y": 2463,
-          "radius": 21
+          "x": 113,
+          "y": 3029,
+          "radius": 22
         },
         {
           "id": "rock_18",
           "type": "rock",
-          "x": 178,
-          "y": 2371,
-          "radius": 23
+          "x": 208,
+          "y": 2915,
+          "radius": 22
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 2280,
+          "y": 2804,
           "width": 59,
           "height": 22,
           "minX": 72,
           "maxX": 202,
-          "speed": 141,
+          "speed": 26,
           "x": 170,
           "dir": -1
         },
         {
           "id": "rock_19",
           "type": "rock",
-          "x": 129,
-          "y": 2189,
-          "radius": 18
+          "x": 87,
+          "y": 2692,
+          "radius": 22
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 2098,
+          "y": 2580,
           "width": 58,
           "height": 22,
           "minX": 93,
           "maxX": 223,
-          "speed": 134,
+          "speed": 26,
           "x": 139,
           "dir": 1
         },
         {
           "id": "rock_20",
           "type": "rock",
-          "x": 214,
-          "y": 2006,
-          "radius": 21
+          "x": 229,
+          "y": 2467,
+          "radius": 22
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1915,
+          "y": 2355,
           "leftX": 134,
           "rightX": 244,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_21",
           "type": "rock",
-          "x": 171,
-          "y": 1824,
-          "radius": 23
+          "x": 150,
+          "y": 2243,
+          "radius": 22
         },
         {
           "id": "rock_22",
           "type": "rock",
-          "x": 262,
-          "y": 1733,
-          "radius": 18
+          "x": 275,
+          "y": 2131,
+          "radius": 22
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1643,
+          "y": 2020,
           "width": 57,
           "height": 22,
           "minX": 155,
           "maxX": 285,
-          "speed": 127,
+          "speed": 26,
           "x": 251,
           "dir": -1
         },
         {
           "id": "rock_23",
           "type": "rock",
-          "x": 174,
-          "y": 1551,
-          "radius": 21
+          "x": 150,
+          "y": 1907,
+          "radius": 22
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 1460,
+          "y": 1795,
           "width": 57,
           "height": 22,
           "minX": 124,
           "maxX": 254,
-          "speed": 140,
+          "speed": 26,
           "x": 159,
           "dir": 1
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1369,
+          "y": 1683,
           "leftX": 119,
           "rightX": 229,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_24",
           "type": "rock",
-          "x": 192,
-          "y": 1278,
-          "radius": 23
+          "x": 213,
+          "y": 1571,
+          "radius": 22
         },
         {
           "id": "rock_25",
           "type": "rock",
-          "x": 106,
-          "y": 1186,
-          "radius": 18
+          "x": 87,
+          "y": 1458,
+          "radius": 22
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 1095,
+          "y": 1346,
           "width": 57,
           "height": 22,
           "minX": 72,
           "maxX": 202,
-          "speed": 133,
+          "speed": 26,
           "x": 168,
           "dir": -1
         },
         {
           "id": "rock_26",
           "type": "rock",
-          "x": 178,
-          "y": 1004,
-          "radius": 21
+          "x": 208,
+          "y": 1235,
+          "radius": 22
         },
         {
           "id": "log_12",
           "type": "log",
-          "y": 913,
+          "y": 1123,
           "width": 58,
           "height": 22,
           "minX": 103,
           "maxX": 233,
-          "speed": 126,
+          "speed": 26,
           "x": 138,
           "dir": 1
         },
         {
           "id": "rock_27",
           "type": "rock",
-          "x": 148,
-          "y": 821,
-          "radius": 23
+          "x": 129,
+          "y": 1010,
+          "radius": 22
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 731,
+          "y": 899,
           "leftX": 144,
           "rightX": 254,
-          "postRadius": 11
+          "postRadius": 14
         },
         {
           "id": "rock_28",
           "type": "rock",
-          "x": 258,
-          "y": 640,
-          "radius": 18
+          "x": 270,
+          "y": 787,
+          "radius": 22
         },
         {
           "id": "rock_29",
           "type": "rock",
-          "x": 186,
-          "y": 549,
-          "radius": 21
+          "x": 172,
+          "y": 675,
+          "radius": 22
         },
         {
           "id": "log_13",
           "type": "log",
-          "y": 458,
+          "y": 563,
           "width": 59,
           "height": 22,
           "minX": 154,
           "maxX": 284,
-          "speed": 139,
+          "speed": 26,
           "x": 252,
           "dir": -1
         },
         {
           "id": "rock_30",
           "type": "rock",
-          "x": 250,
-          "y": 366,
-          "radius": 23
+          "x": 266,
+          "y": 450,
+          "radius": 22
         }
       ]
     },
