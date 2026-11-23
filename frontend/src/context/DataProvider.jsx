@@ -104,9 +104,9 @@ export const DataProvider = ({ children }) => {
     });
   };
 
-  // Sync offline localStorage progress to the backend account
+  // Sync offline localStorage progress to the backend account ONLY if user is logged in
   const syncWithCloud = async (offlineSave) => {
-    if (!token) return null;
+    if (!token || !isLoggedIn) return null;
     try {
       const res = await axios.post(`${API_BASE_URL}/api/game/sync`, offlineSave);
       if (res.data) {

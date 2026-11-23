@@ -54,18 +54,16 @@ export default function GameProvider({ children }) {
     soundManager.setVibration(gameState.settings.vibration);
   }, [gameState.settings]);
 
-  // Save to localStorage on state changes
+  // Save to localStorage on state changes (persists player progress on device for guests and logged-in users)
   useEffect(() => {
     try {
-      if (isLoggedIn) {
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(gameState));
-      }
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(gameState));
     } catch {
       // Ignore quota errors
     }
-  }, [gameState, isLoggedIn]);
+  }, [gameState]);
 
-  // Synchronize progress with logged-in user profile, or clear on logout
+  // Synchronize progress with logged-in user profile when logging in
   useEffect(() => {
     if (isLoggedIn && user) {
       setGameState((prev) => {
@@ -87,21 +85,6 @@ export default function GameProvider({ children }) {
         } catch {}
         return updated;
       });
-    } else if (!isLoggedIn) {
-      // User logged out: wipe synced progress from memory and storage, resetting UI
-      const cleanState = {
-        unlockedLevel: 1,
-        stars: {},
-        bestTimes: {},
-        settings: {
-          sound: true,
-          vibration: true,
-        },
-      };
-      setGameState(cleanState);
-      try {
-        localStorage.removeItem(STORAGE_KEY);
-      } catch {}
     }
   }, [isLoggedIn, user]);
 
@@ -156,10 +139,10 @@ export default function GameProvider({ children }) {
       };
     });
 
-    // Background cloud sync to user profile if online player account is active
+    // Background cloud sync to user profile ONLY if user is logged in
     try {
-      const currentToken = token || localStorage.getItem('first_puff_token');
-      if (currentToken) {
+      if (isLoggedIn && (token || localStorage.getItem('first_puff_token'))) {
+        const currentToken = token || localStorage.getItem('first_puff_token');
         const apiUrl = import.meta.env.VITE_API_URL || "https://first-puff.onrender.com";
         fetch(`${apiUrl}/api/game/save`, {
           method: 'POST',
