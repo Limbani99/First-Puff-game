@@ -121,7 +121,7 @@ export default function GameProvider({ children }) {
           : Number(timeNum.toFixed(1));
 
       const nextUnlocked =
-        numId >= prev.unlockedLevel && numId < 10
+        numId >= prev.unlockedLevel && numId < 50
           ? numId + 1
           : prev.unlockedLevel;
 

@@ -6,6 +6,7 @@ import { toast } from "react-hot-toast";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";
 import { soundManager } from "../game/sound";
+import { LEVELS } from "../data/levels";
 
 const MASCOT_EMOJIS = {
   hippo: "🦛",
@@ -23,6 +24,7 @@ export default function Profile() {
   const [loadingTop, setLoadingTop] = useState(true);
 
   const totalStars = Object.values(stars).reduce((acc, curr) => acc + (curr || 0), 0);
+  const maxStars = LEVELS.length * 3;
 
   // Fetch top 3 players from backend
   useEffect(() => {
@@ -144,7 +146,7 @@ export default function Profile() {
 
           <div className="grid grid-cols-2 gap-3 text-center">
             <div className="bg-slate-900/60 p-3 rounded-xl border border-white/5">
-              <div className="text-2xl font-black text-amber-400">⭐ {totalStars} / 30</div>
+              <div className="text-2xl font-black text-amber-400">⭐ {totalStars} / {maxStars}</div>
               <div className="text-[11px] text-slate-400 font-bold mt-0.5">Total Stars</div>
             </div>
 

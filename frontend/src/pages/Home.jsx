@@ -4,6 +4,7 @@ import { Play, Grid, Settings as SettingsIcon, User as UserIcon } from 'lucide-r
 import { useGame } from '../context/GameContext';
 import { useData } from '../context/DataProvider';
 import { soundManager } from '../game/sound';
+import { LEVELS } from '../data/levels';
 import Raft from '../component/Raft';
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
 
   // Count total stars
   const totalStars = Object.values(stars).reduce((acc, curr) => acc + (curr || 0), 0);
+  const maxStars = LEVELS.length * 3;
 
   const handlePlay = () => {
     soundManager.playClick();
@@ -41,7 +43,7 @@ export default function Home() {
       <div className="w-full flex items-center justify-between z-10">
         <div className="flex items-center gap-1.5 bg-slate-900/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
           <span className="text-amber-400 text-lg">⭐</span>
-          <span className="text-white font-black text-sm">{totalStars} / 30</span>
+          <span className="text-white font-black text-sm">{totalStars} / {maxStars}</span>
         </div>
 
         <div className="flex items-center gap-2">

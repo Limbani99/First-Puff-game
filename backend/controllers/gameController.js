@@ -43,8 +43,8 @@ const saveProgress = async (req, res) => {
       user.bestTimes.set(String(numLevel), numTime);
     }
 
-    // Unlock next level if applicable
-    if (numLevel >= user.unlockedLevel && user.unlockedLevel < 10) {
+    // Unlock next level if applicable (up to 50 levels)
+    if (numLevel >= user.unlockedLevel && user.unlockedLevel < 50) {
       user.unlockedLevel = numLevel + 1;
     }
 
