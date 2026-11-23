@@ -144,14 +144,21 @@ export default function Profile() {
           </div>
 
           <div className="grid grid-cols-2 gap-3 text-center">
-            <div className="bg-slate-900/60 p-3 rounded-xl border border-white/5">
-              <div className="text-2xl font-black text-amber-400">⭐ {totalStars} / 150</div>
-              <div className="text-[11px] text-slate-400 font-bold mt-0.5">Total Stars</div>
+            <div className="bg-slate-900/60 p-3 rounded-xl border border-white/5 flex flex-col items-center justify-center min-h-[74px]">
+              <div className="text-lg sm:text-xl font-black text-amber-400 whitespace-nowrap flex items-center justify-center gap-1">
+                <span>⭐</span>
+                <span>{totalStars}</span>
+                <span className="text-xs font-bold text-amber-400/60">/ 150</span>
+              </div>
+              <div className="text-[11px] text-slate-400 font-bold mt-1">Total Stars</div>
             </div>
 
-            <div className="bg-slate-900/60 p-3 rounded-xl border border-white/5">
-              <div className="text-2xl font-black text-emerald-400">Level {unlockedLevel} / 50</div>
-              <div className="text-[11px] text-slate-400 font-bold mt-0.5">Max Unlocked</div>
+            <div className="bg-slate-900/60 p-3 rounded-xl border border-white/5 flex flex-col items-center justify-center min-h-[74px]">
+              <div className="text-lg sm:text-xl font-black text-emerald-400 whitespace-nowrap flex items-center justify-center gap-1">
+                <span>Level {unlockedLevel}</span>
+                <span className="text-xs font-bold text-emerald-400/60">/ 50</span>
+              </div>
+              <div className="text-[11px] text-slate-400 font-bold mt-1">Max Unlocked</div>
             </div>
           </div>
         </div>
