@@ -4,7 +4,7 @@ import { Play, RotateCcw, Grid, Home as HomeIcon, ChevronRight } from 'lucide-re
 import { LEVELS, CREW_MEMBERS } from '../data/levels';
 import { useGame } from '../context/GameContext';
 import { soundManager } from '../game/sound';
-import { createRaftState, updatePhysics, applyPuffImpulse, applyImpactToCrew, ParticleSystem } from '../game/physics';
+import { createRaftState, updatePhysics, applyPuffImpulse, ParticleSystem } from '../game/physics';
 import { resolveCollisions, checkFinish } from '../game/collision';
 import { renderGame } from '../game/gameLoop';
 import HUD from '../component/HUD';
@@ -107,12 +107,11 @@ export default function Game() {
         totalElapsedRef.current += dt;
         setElapsedTime(totalElapsedRef.current);
 
-        // Update physics with anti-gravity crew dynamics and water submergence
-        updatePhysics(raft, world, dt, particles, soundManager);
+        // Update physics
+        updatePhysics(raft, world, dt);
 
-        // Resolve collisions and shock impulse to crew members
-        resolveCollisions(raft, world, (impactX, impactY) => {
-          applyImpactToCrew(raft, impactX, impactY);
+        // Resolve collisions
+        resolveCollisions(raft, world, () => {
           soundManager.playBump();
           shakeRef.current = 1.0;
           setBumps(raft.bumps);
