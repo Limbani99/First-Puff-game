@@ -7,21 +7,25 @@ const { GameProgress } = require("../models/gameProgress");
 const saveProgress = async (req, res) => {
   try {
     const userId = req.user.id;
-    const { levelId, time, bumps, stars } = req.body;
+    const { levelId, time, bumps, stars, unlockedLevel } = req.body;
 
     const numLevel = Number(levelId);
     const numTime = Number(Number(time).toFixed(1));
     const numBumps = Number(bumps) || 0;
     const numStars = Number(stars) || 1;
 
-    // Log the run in history
-    await GameProgress.create({
-      userId,
-      levelId: numLevel,
-      stars: numStars,
-      time: numTime,
-      bumps: numBumps,
-    });
+    // Log the run in history (non-blocking so profile progression always succeeds)
+    try {
+      await GameProgress.create({
+        userId,
+        levelId: numLevel,
+        stars: numStars,
+        time: numTime,
+        bumps: numBumps,
+      });
+    } catch (historyErr) {
+      console.warn("GameProgress history log error (proceeding with user save):", historyErr.message);
+    }
 
     // Update user bests and unlocked levels
     const user = await User.findById(userId);
@@ -43,10 +47,10 @@ const saveProgress = async (req, res) => {
       user.bestTimes.set(String(numLevel), numTime);
     }
 
-    // Unlock next level if applicable
-    if (numLevel >= user.unlockedLevel && user.unlockedLevel < 50) {
-      user.unlockedLevel = numLevel + 1;
-    }
+    // Unlock next level up to 50
+    const calculatedNext = numLevel < 50 ? numLevel + 1 : 50;
+    const incomingUnlocked = Number(unlockedLevel) || 1;
+    user.unlockedLevel = Math.min(50, Math.max(user.unlockedLevel || 1, calculatedNext, incomingUnlocked));
 
     // Recalculate total stars for user profile
     const starsObj = Object.fromEntries(user.stars);

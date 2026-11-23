@@ -144,6 +144,7 @@ export default function GameProvider({ children }) {
       if (isLoggedIn && (token || localStorage.getItem('first_puff_token'))) {
         const currentToken = token || localStorage.getItem('first_puff_token');
         const apiUrl = import.meta.env.VITE_API_URL || "https://first-puff.onrender.com";
+        const targetUnlocked = numId < 50 ? numId + 1 : 50;
         fetch(`${apiUrl}/api/game/save`, {
           method: 'POST',
           headers: {
@@ -154,12 +155,18 @@ export default function GameProvider({ children }) {
             levelId: numId,
             time: timeNum,
             bumps,
-            stars: earnedStars
+            stars: earnedStars,
+            unlockedLevel: targetUnlocked
           })
         })
-          .then((res) => res.json())
+          .then((res) => {
+            if (!res.ok) {
+              console.warn("Cloud save HTTP status:", res.status);
+            }
+            return res.json();
+          })
           .then((data) => {
-            if (data && updateUserProgress) {
+            if (data && data.unlockedLevel && updateUserProgress) {
               updateUserProgress({
                 unlockedLevel: data.unlockedLevel,
                 totalStars: data.totalStars,
@@ -168,7 +175,9 @@ export default function GameProvider({ children }) {
               });
             }
           })
-          .catch(() => {});
+          .catch((err) => {
+            console.warn("Cloud save network error:", err);
+          });
       }
     } catch {}
 
