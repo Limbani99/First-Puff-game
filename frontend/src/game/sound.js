@@ -19,13 +19,68 @@ function getAudioContext() {
 export const soundManager = {
   muted: false,
   vibrationEnabled: true,
+  currentMusic: null,
 
   setMuted(mute) {
     this.muted = mute;
+    if (mute) {
+      this.stopMusic();
+    }
   },
 
   setVibration(enable) {
     this.vibrationEnabled = enable;
+  },
+
+  // Play victory music from /music/win music.mp3 one time
+  playWinMusic() {
+    if (this.muted) return;
+    this.stopMusic();
+    try {
+      const audio = new Audio(encodeURI('/music/win music.mp3'));
+      audio.loop = false;
+      audio.volume = 0.75;
+      this.currentMusic = audio;
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.catch((err) => {
+          console.warn('Win music playback error:', err);
+        });
+      }
+    } catch (e) {
+      console.warn('Win music error:', e);
+    }
+  },
+
+  // Play loss music from /music/loss music.mp3 one time
+  playLossMusic() {
+    if (this.muted) return;
+    this.stopMusic();
+    try {
+      const audio = new Audio(encodeURI('/music/loss music.mp3'));
+      audio.loop = false;
+      audio.volume = 0.75;
+      this.currentMusic = audio;
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.catch((err) => {
+          console.warn('Loss music playback error:', err);
+        });
+      }
+    } catch (e) {
+      console.warn('Loss music error:', e);
+    }
+  },
+
+  // Stop currently playing win or loss music track
+  stopMusic() {
+    if (this.currentMusic) {
+      try {
+        this.currentMusic.pause();
+        this.currentMusic.currentTime = 0;
+      } catch {}
+      this.currentMusic = null;
+    }
   },
 
   vibrate(ms = 35) {

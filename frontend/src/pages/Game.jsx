@@ -44,6 +44,7 @@ export default function Game() {
 
   // Initialize or restart level
   const resetGame = useCallback(() => {
+    soundManager.stopMusic();
     raftRef.current = createRaftState(currentLevel.world.startX, currentLevel.world.startY);
     worldRef.current = JSON.parse(JSON.stringify(currentLevel.world));
     particlesRef.current = new ParticleSystem();
@@ -62,6 +63,9 @@ export default function Game() {
 
   useEffect(() => {
     resetGame();
+    return () => {
+      soundManager.stopMusic();
+    };
   }, [resetGame]);
 
   // Handle Crew Puff action
@@ -121,6 +125,7 @@ export default function Game() {
             timerRunningRef.current = false;
             setIsGameOver(true);
             soundManager.playGameOver();
+            soundManager.playLossMusic();
           }
         });
 
@@ -140,6 +145,7 @@ export default function Game() {
           setEarnedStars(stars);
 
           soundManager.playWin();
+          soundManager.playWinMusic();
           particles.spawnConfetti(raft.x, raft.y);
         }
       }
@@ -217,6 +223,7 @@ export default function Game() {
   };
 
   const handleResumeGameOver = () => {
+    soundManager.stopMusic();
     soundManager.playClick();
     setIsGameOver(false);
     // Reset collisions so player can continue their run
@@ -231,6 +238,7 @@ export default function Game() {
   };
 
   const handleNextLevel = () => {
+    soundManager.stopMusic();
     soundManager.playClick();
     if (currentLevel.id < 50) {
       navigate(`/play/${currentLevel.id + 1}`);
@@ -240,11 +248,13 @@ export default function Game() {
   };
 
   const handleLevelSelect = () => {
+    soundManager.stopMusic();
     soundManager.playClick();
     navigate('/levels');
   };
 
   const handleHome = () => {
+    soundManager.stopMusic();
     soundManager.playClick();
     navigate('/home');
   };
