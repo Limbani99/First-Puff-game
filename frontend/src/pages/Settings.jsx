@@ -50,7 +50,10 @@ export default function Settings() {
       </div>
 
       {/* Settings Options */}
-      <div className="flex-1 overflow-y-auto p-4 space-y-4">
+      <div 
+        className="flex-1 overflow-y-auto p-4 space-y-4"
+        style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
+      >
         {/* Audio Toggle */}
         <div className="bg-slate-800/70 rounded-2xl p-4 border border-white/10 flex items-center justify-between shadow-md">
           <div className="flex items-center gap-3">

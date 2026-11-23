@@ -28,7 +28,7 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-between items-center py-8 px-6 bg-gradient-to-b from-sky-400 via-sky-600 to-sky-900 select-none overflow-hidden">
+    <div className="relative w-full h-full flex flex-col justify-between items-center pt-4 sm:pt-6 pb-2 px-5 bg-gradient-to-b from-sky-400 via-sky-600 to-sky-900 select-none overflow-y-auto sm:overflow-hidden">
       {/* Decorative River Water Ripples in background */}
       <div className="absolute inset-0 pointer-events-none opacity-20">
         <div className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full border-4 border-white animate-ping" />
@@ -65,12 +65,12 @@ export default function Home() {
       </div>
 
       {/* Hero Title & Bobbing Raft */}
-      <div className="flex flex-col items-center my-auto z-10">
-        <div className="flex flex-col items-center mb-6">
-          <h1 className="text-4xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans">
+      <div className="flex flex-col items-center my-auto z-10 scale-[0.82] sm:scale-100 origin-center transition-transform py-1">
+        <div className="flex flex-col items-center mb-2 sm:mb-5">
+          <h1 className="text-3xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans">
             First Puff
           </h1>
-          <p className="text-sky-100 font-bold text-xs sm:text-sm mt-1 drop-shadow text-center max-w-[280px]">
+          <p className="text-sky-100 font-bold text-xs sm:text-sm mt-0.5 drop-shadow text-center max-w-[280px]">
             Four silly animal friends, one raft, infinite gas power!
           </p>
         </div>
@@ -81,7 +81,7 @@ export default function Home() {
         </div>
 
         {/* Crew preview chips */}
-        <div className="flex items-center gap-2 mt-6 bg-slate-900/50 backdrop-blur-sm px-4 py-2 rounded-2xl border border-white/10">
+        <div className="flex items-center gap-2 mt-3 sm:mt-5 bg-slate-900/50 backdrop-blur-sm px-4 py-1.5 rounded-2xl border border-white/10">
           <span className="text-2xl" title="Hippo: Forward">🦛</span>
           <span className="text-2xl" title="Frog: Right">🐸</span>
           <span className="text-2xl" title="Pig: Left">🐷</span>
@@ -89,19 +89,22 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Bottom Main Action Buttons */}
-      <div className="w-full flex flex-col gap-3 max-w-[280px] z-10">
+      {/* Bottom Main Action Buttons (Positioned with safe clearance above mobile system navigation bar) */}
+      <div 
+        className="w-full flex flex-col gap-2.5 max-w-[280px] z-10 shrink-0"
+        style={{ marginBottom: 'max(4.25rem, calc(env(safe-area-inset-bottom, 0px) + 3.75rem))' }}
+      >
         <button
           onClick={handlePlay}
-          className="w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-500 hover:brightness-110 active:scale-95 text-white font-black text-xl shadow-xl border-2 border-white/60 flex items-center justify-center gap-3 transition-transform"
+          className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-500 hover:brightness-110 active:scale-95 text-white font-black text-lg sm:text-xl shadow-xl border-2 border-white/60 flex items-center justify-center gap-3 transition-transform"
         >
-          <Play fill="white" size={24} />
+          <Play fill="white" size={22} />
           {unlockedLevel === 1 ? 'START ADVENTURE' : `PLAY LEVEL ${unlockedLevel}`}
         </button>
 
         <button
           onClick={handleLevels}
-          className="w-full py-3.5 px-6 rounded-2xl bg-sky-800/80 hover:bg-sky-700/80 active:scale-95 text-white font-extrabold text-base shadow-lg border border-white/20 flex items-center justify-center gap-2 transition-transform"
+          className="w-full py-3 px-6 rounded-2xl bg-sky-800/80 hover:bg-sky-700/80 active:scale-95 text-white font-extrabold text-sm sm:text-base shadow-lg border border-white/20 flex items-center justify-center gap-2 transition-transform"
         >
           <Grid size={18} />
           SELECT LEVEL

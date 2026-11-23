@@ -246,10 +246,13 @@ export default function Game() {
         className="w-full h-full flex-1 touch-none block"
       />
 
-      {/* Thumb Controls Zone Overlay (Fixed at bottom) */}
-      <div className="absolute bottom-4 left-0 right-0 px-4 flex items-end justify-between pointer-events-none z-20">
+      {/* Thumb Controls Zone Overlay (Lifted safely above mobile OS navigation bar) */}
+      <div 
+        className="absolute left-0 right-0 px-3 flex items-end justify-between pointer-events-none z-20"
+        style={{ bottom: 'max(4.25rem, calc(env(safe-area-inset-bottom, 0px) + 3.75rem))' }}
+      >
         {/* Left Thumb Controls: Steering (Frog = Right, Pig = Left) */}
-        <div className="flex items-center gap-3 pointer-events-auto">
+        <div className="flex items-center gap-2 pointer-events-auto">
           {/* Pig (Starboard: Pushes Left) */}
           <CrewButton
             crew={CREW_MEMBERS.pig}
@@ -268,7 +271,7 @@ export default function Game() {
         </div>
 
         {/* Right Thumb Controls: Acceleration (Hippo = Forward, Penguin = Brake) */}
-        <div className="flex items-center gap-3 pointer-events-auto">
+        <div className="flex items-center gap-2 pointer-events-auto">
           {/* Penguin (Bow: Brake / Backward) */}
           <CrewButton
             crew={CREW_MEMBERS.penguin}

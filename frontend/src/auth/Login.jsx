@@ -173,7 +173,10 @@ export default function Login() {
       </motion.div>
 
       {/* Offline Guest Option */}
-      <div className="w-full text-center mt-3 z-10">
+      <div 
+        className="w-full text-center mt-3 z-10"
+        style={{ paddingBottom: 'max(3.5rem, calc(env(safe-area-inset-bottom, 0px) + 2.5rem))' }}
+      >
         <button
           onClick={() => {
             soundManager.playClick();

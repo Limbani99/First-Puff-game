@@ -70,7 +70,10 @@ export default function Profile() {
         <div className="w-10" />
       </div>
 
-      <div className="flex-1 p-5 space-y-4">
+      <div 
+        className="flex-1 p-5 space-y-4"
+        style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
+      >
         {/* Profile Card */}
         <div className="bg-gradient-to-br from-slate-800 to-sky-950 rounded-3xl p-5 border border-white/15 shadow-xl flex items-center gap-4">
           <div className="w-16 h-16 rounded-2xl bg-amber-400 flex items-center justify-center text-3xl shadow-lg border-2 border-white/40">

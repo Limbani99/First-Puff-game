@@ -61,8 +61,11 @@ export default function Splash() {
         </div>
       </div>
 
-      {/* Loading Progress & Tap to Start */}
-      <div className="w-full flex flex-col items-center max-w-[260px] z-10 mb-4">
+      {/* Loading Progress & Tap to Start (safely elevated above mobile OS navigation bar) */}
+      <div 
+        className="w-full flex flex-col items-center max-w-[260px] z-10"
+        style={{ marginBottom: 'max(4.25rem, calc(env(safe-area-inset-bottom, 0px) + 3.75rem))' }}
+      >
         {progress < 100 ? (
           <div className="w-full">
             <div className="w-full h-3 bg-slate-900/70 rounded-full overflow-hidden border border-white/30 p-0.5">
