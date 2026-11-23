@@ -228,7 +228,7 @@ export const LEVELS = [
     "id": 5,
     "name": "Penguin Ni Panoti",
     "targetTime": 35,
-    "hint": "Rocks slow you down. Go around them.",
+    "hint": "Stages slow you down. Go around them.",
     "crewUnlocked": [
       "hippo",
       "frog",
@@ -689,7 +689,7 @@ export const LEVELS = [
     "id": 12,
     "name": "Pinku Bawaliyo",
     "targetTime": 35,
-    "hint": "Small rocks ahead! Gentle puffs are key.",
+    "hint": "Stages ahead! Gentle puffs are key.",
     "crewUnlocked": [
       "hippo",
       "frog",
@@ -3496,7 +3496,7 @@ export const LEVELS = [
     "id": 44,
     "name": "Gotalano Guru",
     "targetTime": 64,
-    "hint": "A staggering rock labyrinth. Follow the open water seams; don't corner yourself.",
+    "hint": "A staggering stage labyrinth. Follow the open water seams; don't corner yourself.",
     "crewUnlocked": [
       "hippo",
       "frog",

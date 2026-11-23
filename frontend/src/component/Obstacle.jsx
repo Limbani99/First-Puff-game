@@ -3,8 +3,8 @@ import React from 'react';
 export default function Obstacle({ type = 'rock' }) {
   if (type === 'rock') {
     return (
-      <div className="w-8 h-8 rounded-full bg-slate-600 border-2 border-slate-400 shadow-md flex items-center justify-center text-xs">
-        🪨
+      <div className="w-8 h-8 rounded-full bg-amber-900 border-2 border-amber-500 shadow-md flex items-center justify-center text-xs">
+        🎪
       </div>
     );
   }

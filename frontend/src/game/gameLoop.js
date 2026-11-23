@@ -32,14 +32,17 @@ export function renderGame(ctx, canvasWidth, canvasHeight, world, raft, particle
   // 2. Draw River Banks and Water Body
   drawRiver(ctx, world, canvasWidth, cameraY, canvasHeight);
 
-  // 3. Floating leaves
+  // 3. Draw Animated Spectator Crowd on the Green Riverbanks
+  drawCrowd(ctx, world, canvasWidth, cameraY, canvasHeight);
+
+  // 4. Floating leaves
   drawLeaves(ctx, world, cameraY, canvasHeight);
 
-  // 4. Finish Zone & Tea Stall
+  // 5. Finish Zone & Tea Stall
   drawFinishZone(ctx, world);
   drawTeaStall(ctx, world);
 
-  // 5. Draw Obstacles (Rocks, Logs, Gates)
+  // 6. Draw Obstacles (Stage, Logs, Gates)
   drawObstacles(ctx, world, cameraY, canvasHeight);
 
   // 6. Draw Particles (water ripples, puff clouds)
@@ -545,52 +548,601 @@ function drawTeaStall(ctx, world) {
   ctx.restore();
 }
 
+/**
+ * Stage Obstacle (replaces stone/rock)
+ * Floating performance stage / concert dais in the river with wooden timber deck,
+ * royal red velvet carpet, dual concert speakers, vintage microphone on chrome stand,
+ * 4 corner festival party lights, marigold toran flower garlands, and animated water ripples!
+ */
+function drawStageObstacle(ctx, obs) {
+  const { x, y, radius } = obs;
+  const r = radius || 22;
+  const time = performance.now() * 0.002;
+
+  ctx.save();
+
+  // 1. Water Ripple & Base Shadow under stage
+  ctx.fillStyle = 'rgba(15, 23, 42, 0.35)';
+  ctx.beginPath();
+  ctx.ellipse(x + 2, y + 4, r * 1.25, r * 0.95, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Water lap ripples
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.32)';
+  ctx.lineWidth = 1.2;
+  const rippleOffset = Math.sin(time * 2.5 + x) * 2;
+  ctx.beginPath();
+  ctx.ellipse(x, y + 3, r * 1.35 + rippleOffset, r * 1.05 + rippleOffset * 0.6, 0, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // 2. Heavy Timber Support Frame / Floating Base
+  const deckW = r * 2.3;
+  const deckH = r * 2.0;
+  const deckX = x - deckW / 2;
+  const deckY = y - deckH / 2;
+
+  // Dark timber rim
+  ctx.fillStyle = '#451a03';
+  fillSafeRoundRect(ctx, deckX - 2, deckY - 1, deckW + 4, deckH + 5, 8);
+
+  // Wooden platform planks
+  ctx.fillStyle = '#78350f';
+  fillSafeRoundRect(ctx, deckX, deckY, deckW, deckH, 6);
+
+  // Planks border / gold trim edge
+  ctx.strokeStyle = '#b45309';
+  ctx.lineWidth = 2;
+  strokeSafeRoundRect(ctx, deckX, deckY, deckW, deckH, 6);
+
+  // Vertical wood plank lines
+  ctx.strokeStyle = '#451a03';
+  ctx.lineWidth = 1;
+  for (let px = deckX + 6; px < deckX + deckW - 4; px += 8) {
+    ctx.beginPath();
+    ctx.moveTo(px, deckY + 2);
+    ctx.lineTo(px, deckY + deckH - 2);
+    ctx.stroke();
+  }
+
+  // 3. Royal Crimson Carpet / Velvet Dais in center
+  const carpetW = deckW * 0.72;
+  const carpetH = deckH * 0.7;
+  const carpetX = x - carpetW / 2;
+  const carpetY = y - carpetH / 2;
+
+  // Royal Red carpet gradient
+  const carpetGrad = ctx.createLinearGradient(carpetX, carpetY, carpetX, carpetY + carpetH);
+  carpetGrad.addColorStop(0, '#dc2626');
+  carpetGrad.addColorStop(1, '#991b1b');
+  ctx.fillStyle = carpetGrad;
+  fillSafeRoundRect(ctx, carpetX, carpetY, carpetW, carpetH, 4);
+
+  // Gold embroidered border on carpet
+  ctx.strokeStyle = '#facc15';
+  ctx.lineWidth = 1.5;
+  strokeSafeRoundRect(ctx, carpetX + 1.5, carpetY + 1.5, carpetW - 3, carpetH - 3, 3);
+
+  // Inner festive carpet mandala diamond
+  ctx.strokeStyle = 'rgba(250, 204, 21, 0.4)';
+  ctx.lineWidth = 1;
+  ctx.beginPath();
+  ctx.moveTo(x, carpetY + 4);
+  ctx.lineTo(carpetX + carpetW - 4, y);
+  ctx.lineTo(x, carpetY + carpetH - 4);
+  ctx.lineTo(carpetX + 4, y);
+  ctx.closePath();
+  ctx.stroke();
+
+  // 4. Dual Concert Stage Speakers on sides
+  const spkW = r * 0.36;
+  const spkH = r * 0.52;
+  const spkLeftX = deckX + 3;
+  const spkRightX = deckX + deckW - spkW - 3;
+  const spkY = y - spkH / 2 - 2;
+
+  for (const sx of [spkLeftX, spkRightX]) {
+    ctx.fillStyle = '#0f172a';
+    fillSafeRoundRect(ctx, sx, spkY, spkW, spkH, 2);
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(sx + 1, spkY + 1, spkW - 2, spkH - 2);
+
+    // Speaker cone driver
+    ctx.fillStyle = '#334155';
+    ctx.beginPath();
+    ctx.arc(sx + spkW / 2, spkY + spkH * 0.45, spkW * 0.32, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.fillStyle = '#64748b';
+    ctx.beginPath();
+    ctx.arc(sx + spkW / 2, spkY + spkH * 0.45, spkW * 0.14, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Tweeter
+    ctx.fillStyle = '#facc15';
+    ctx.beginPath();
+    ctx.arc(sx + spkW / 2, spkY + spkH * 0.82, 1.2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 5. Center Microphone & Chrome Stand
+  const micX = x;
+  const micY = y + r * 0.12;
+  // Chrome round base
+  ctx.fillStyle = '#94a3b8';
+  ctx.beginPath();
+  ctx.ellipse(micX, micY + 5, 4, 2, 0, 0, Math.PI * 2);
+  ctx.fill();
+  // Chrome vertical pole
+  ctx.strokeStyle = '#e2e8f0';
+  ctx.lineWidth = 1.6;
+  ctx.beginPath();
+  ctx.moveTo(micX, micY + 5);
+  ctx.lineTo(micX, micY - 5);
+  ctx.stroke();
+  // Vintage mic head
+  ctx.fillStyle = '#f8fafc';
+  ctx.beginPath();
+  ctx.arc(micX, micY - 6.5, 2.8, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#475569';
+  ctx.fillRect(micX - 1.5, micY - 5.5, 3, 2);
+
+  // 6. Corner Stage Lighting Pillars & Glowing Party Bulbs
+  const corners = [
+    { cx: deckX + 3.5, cy: deckY + 3.5, color: 'rgba(244, 63, 94, 0.9)' }, // Ruby Pink
+    { cx: deckX + deckW - 3.5, cy: deckY + 3.5, color: 'rgba(6, 182, 212, 0.9)' }, // Cyan
+    { cx: deckX + 3.5, cy: deckY + deckH - 3.5, color: 'rgba(250, 204, 21, 0.9)' }, // Golden
+    { cx: deckX + deckW - 3.5, cy: deckY + deckH - 3.5, color: 'rgba(16, 185, 129, 0.9)' } // Emerald
+  ];
+
+  for (let i = 0; i < corners.length; i++) {
+    const c = corners[i];
+    ctx.fillStyle = '#1e293b';
+    ctx.fillRect(c.cx - 1.5, c.cy - 1.5, 3, 3);
+
+    // Glowing party light bulb
+    const glowGrad = ctx.createRadialGradient(c.cx, c.cy, 1, c.cx, c.cy, 7);
+    glowGrad.addColorStop(0, c.color);
+    glowGrad.addColorStop(1, 'rgba(0, 0, 0, 0)');
+    ctx.fillStyle = glowGrad;
+    ctx.beginPath();
+    ctx.arc(c.cx, c.cy, 7, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Bulb center
+    ctx.fillStyle = '#ffffff';
+    ctx.beginPath();
+    ctx.arc(c.cx, c.cy, 1.8, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 7. Festive Marigold Flower Garland (Genda Phool Toran) along front
+  const garlandY = deckY + deckH - 2;
+  const flowerCount = 7;
+  for (let f = 0; f < flowerCount; f++) {
+    const fx = deckX + 5 + (f * (deckW - 10)) / (flowerCount - 1);
+    const drop = Math.sin((f / (flowerCount - 1)) * Math.PI) * 3;
+    ctx.fillStyle = f % 2 === 0 ? '#f59e0b' : '#ea580c'; // Yellow & Saffron
+    ctx.beginPath();
+    ctx.arc(fx, garlandY + drop, 2.2, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 8. Front Stage Badge
+  ctx.fillStyle = '#fef08a';
+  ctx.font = 'bold 7px "Segoe UI", Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('★ STAGE ★', x, deckY + deckH + 2);
+
+  ctx.restore();
+}
+
+/**
+ * Deterministic pseudo-random number generator for crowd attributes
+ */
+function seededRandom(seed) {
+  const x = Math.sin(seed * 12.9898) * 43758.5453;
+  return x - Math.floor(x);
+}
+
+/**
+ * Cache crowd data per level world so it renders at 60fps without GC stutter
+ */
+function getCrowd(world) {
+  if (world._crowd) return world._crowd;
+
+  const waypoints = world.waypoints || [
+    { y: world.height, cx: 180, width: 260 },
+    { y: 0, cx: 180, width: 260 }
+  ];
+
+  const crowd = [];
+  const startY = 80;
+  const endY = Math.max(100, (world.height || 2000) - 60);
+  const step = 38;
+
+  const turbanColors = [
+    '#ea580c', // Saffron
+    '#dc2626', // Crimson Red
+    '#facc15', // Golden Yellow
+    '#ec4899', // Festival Pink
+    '#f8fafc', // Gandhi Topi (White)
+    '#0284c7', // Royal Cyan
+    null       // Stylish Hair
+  ];
+
+  const kurtaColors = [
+    '#f97316', // Saffron
+    '#2563eb', // Royal Blue
+    '#16a34a', // Emerald Green
+    '#dc2626', // Red
+    '#9333ea', // Purple
+    '#ca8a04', // Mustard Gold
+    '#f8fafc', // White Kurta
+    '#0d9488'  // Teal
+  ];
+
+  const cheerPhrases = [
+    'હા મોજ હા!',
+    'દોડો!',
+    'વાહ!',
+    'જય હો!',
+    '🔥',
+    '🚩',
+    '👏',
+    '🎉',
+    '⭐',
+    '🏆'
+  ];
+
+  let idCounter = 0;
+
+  for (let y = startY; y <= endY; y += step) {
+    // Left bank spectators (x < b.leftBank - 12)
+    const leftCount = 1 + Math.floor(seededRandom(y * 1.3) * 2.8); // 1 to 3
+    for (let c = 0; c < leftCount; c++) {
+      idCounter++;
+      const distFromBank = 18 + c * 15 + seededRandom(idCounter * 7.91) * 12;
+      const yJitter = y + (seededRandom(idCounter * 3.17) - 0.5) * 16;
+      const hasCheer = seededRandom(idCounter * 11.23) > 0.82;
+
+      crowd.push({
+        id: idCounter,
+        side: 'left',
+        baseXOffset: distFromBank,
+        y: yJitter,
+        scale: 0.9 + seededRandom(idCounter * 5.41) * 0.2,
+        turbanColor: turbanColors[Math.floor(seededRandom(idCounter * 2.13) * turbanColors.length)],
+        kurtaColor: kurtaColors[Math.floor(seededRandom(idCounter * 4.29) * kurtaColors.length)],
+        flagColor: ['#f97316', '#ef4444', '#10b981', '#facc15'][Math.floor(seededRandom(idCounter * 6.31) * 4)],
+        action: Math.floor(seededRandom(idCounter * 9.11) * 3), // 0: wave arms, 1: wave flag, 2: point/clap
+        cheer: hasCheer ? cheerPhrases[Math.floor(seededRandom(idCounter * 13.57) * cheerPhrases.length)] : null,
+        seed: idCounter * 1.47
+      });
+    }
+
+    // Right bank spectators (x > b.rightBank + 12)
+    const rightCount = 1 + Math.floor(seededRandom(y * 2.7) * 2.8); // 1 to 3
+    for (let c = 0; c < rightCount; c++) {
+      idCounter++;
+      const distFromBank = 18 + c * 15 + seededRandom(idCounter * 7.91) * 12;
+      const yJitter = y + (seededRandom(idCounter * 3.17) - 0.5) * 16;
+      const hasCheer = seededRandom(idCounter * 11.23) > 0.82;
+
+      crowd.push({
+        id: idCounter,
+        side: 'right',
+        baseXOffset: distFromBank,
+        y: yJitter,
+        scale: 0.9 + seededRandom(idCounter * 5.41) * 0.2,
+        turbanColor: turbanColors[Math.floor(seededRandom(idCounter * 2.13) * turbanColors.length)],
+        kurtaColor: kurtaColors[Math.floor(seededRandom(idCounter * 4.29) * kurtaColors.length)],
+        flagColor: ['#f97316', '#ef4444', '#10b981', '#facc15'][Math.floor(seededRandom(idCounter * 6.31) * 4)],
+        action: Math.floor(seededRandom(idCounter * 9.11) * 3),
+        cheer: hasCheer ? cheerPhrases[Math.floor(seededRandom(idCounter * 13.57) * cheerPhrases.length)] : null,
+        seed: idCounter * 1.47
+      });
+    }
+  }
+
+  world._crowd = crowd;
+  return crowd;
+}
+
+/**
+ * Animated Spectator Crowd along the Green Riverbanks
+ * Desi fans in colorful pagdis, kurtas, waving flags, cheering, and clapping!
+ */
+function drawCrowd(ctx, world, canvasWidth, cameraY, canvasHeight) {
+  const crowd = getCrowd(world);
+  if (!crowd || crowd.length === 0) return;
+
+  const time = performance.now() * 0.0025;
+  const startY = cameraY - 40;
+  const endY = cameraY + canvasHeight + 40;
+
+  // Draw Shoreline Festoon Fence along the edge of the riverbank
+  drawShorelineFence(ctx, world, cameraY, canvasHeight, time);
+
+  for (let i = 0; i < crowd.length; i++) {
+    const p = crowd[i];
+    if (p.y < startY || p.y > endY) continue;
+
+    const b = getRiverBounds(world.waypoints, p.y);
+    const x = p.side === 'left' ? b.leftBank - p.baseXOffset : b.rightBank + p.baseXOffset;
+
+    drawSpectator(ctx, p, x, p.y, time);
+  }
+}
+
+/**
+ * Draw Individual Spectator in the Green Area
+ */
+function drawSpectator(ctx, p, x, y, time) {
+  ctx.save();
+
+  const scale = p.scale || 1.0;
+  // Bobbing animation
+  const bob = Math.sin(time * 3.5 + p.seed) * 2.2;
+  const py = y - bob;
+
+  // 1. Shadow beneath spectator feet
+  ctx.fillStyle = 'rgba(15, 23, 42, 0.22)';
+  ctx.beginPath();
+  ctx.ellipse(x, y + 6 * scale, 7 * scale, 3.5 * scale, 0, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 2. Torso wearing colorful Kurta
+  ctx.fillStyle = p.kurtaColor;
+  fillSafeRoundRect(ctx, x - 6 * scale, py - 3 * scale, 12 * scale, 9 * scale, 3 * scale);
+  ctx.strokeStyle = 'rgba(0, 0, 0, 0.15)';
+  ctx.lineWidth = 1;
+  strokeSafeRoundRect(ctx, x - 6 * scale, py - 3 * scale, 12 * scale, 9 * scale, 3 * scale);
+
+  // 3. Head & Cheerful Face
+  ctx.fillStyle = '#fed7aa'; // warm skin tone
+  ctx.beginPath();
+  ctx.arc(x, py - 6 * scale, 4.8 * scale, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Eyes
+  ctx.fillStyle = '#0f172a';
+  const faceDir = p.side === 'left' ? 1 : -1;
+  ctx.beginPath();
+  ctx.arc(x + faceDir * 1.5 * scale, py - 6.5 * scale, 0.9 * scale, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Smile / Cheering mouth
+  ctx.strokeStyle = '#9a3412';
+  ctx.lineWidth = 0.8;
+  ctx.beginPath();
+  ctx.arc(x + faceDir * 1.8 * scale, py - 5.2 * scale, 1.4 * scale, 0.1 * Math.PI, 0.9 * Math.PI);
+  ctx.stroke();
+
+  // 4. Headwear (Gujarati Pagdi / Safa or Gandhi Topi or Hair)
+  if (p.turbanColor) {
+    // Turban dome
+    ctx.fillStyle = p.turbanColor;
+    ctx.beginPath();
+    ctx.arc(x, py - 7.5 * scale, 5.5 * scale, Math.PI * 0.85, Math.PI * 2.15);
+    ctx.fill();
+
+    // Kalgi / brooch or turban knot in center
+    ctx.fillStyle = '#fef08a';
+    ctx.beginPath();
+    ctx.arc(x, py - 9.8 * scale, 1.5 * scale, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Turban side fold tail
+    ctx.fillStyle = p.turbanColor;
+    ctx.fillRect(x + (p.side === 'left' ? 2.5 : -4.5) * scale, py - 7 * scale, 2 * scale, 4.5 * scale);
+  } else {
+    // Stylish black / dark hair
+    ctx.fillStyle = '#1e293b';
+    ctx.beginPath();
+    ctx.arc(x, py - 7.2 * scale, 5.2 * scale, Math.PI * 0.85, Math.PI * 2.15);
+    ctx.fill();
+  }
+
+  // 5. Cheering Arms & Actions
+  if (p.action === 0) {
+    // Both arms raised high waving (\o/)
+    const armWave = Math.sin(time * 5 + p.seed) * 2.8;
+    ctx.strokeStyle = p.kurtaColor;
+    ctx.lineWidth = 2.2 * scale;
+    ctx.lineCap = 'round';
+
+    // Left arm
+    ctx.beginPath();
+    ctx.moveTo(x - 4.5 * scale, py - 1);
+    ctx.lineTo(x - 7.5 * scale, py - 8 * scale + armWave);
+    ctx.stroke();
+    ctx.fillStyle = '#fed7aa';
+    ctx.beginPath();
+    ctx.arc(x - 7.5 * scale, py - 8 * scale + armWave, 1.6 * scale, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Right arm
+    ctx.beginPath();
+    ctx.moveTo(x + 4.5 * scale, py - 1);
+    ctx.lineTo(x + 7.5 * scale, py - 8 * scale - armWave);
+    ctx.stroke();
+    ctx.fillStyle = '#fed7aa';
+    ctx.beginPath();
+    ctx.arc(x + 7.5 * scale, py - 8 * scale - armWave, 1.6 * scale, 0, Math.PI * 2);
+    ctx.fill();
+  } else if (p.action === 1) {
+    // Waving a festival flag on a stick!
+    const flagAngle = (p.side === 'left' ? 0.35 : -0.35) + Math.sin(time * 4.5 + p.seed) * 0.3;
+    const handX = x + (p.side === 'left' ? 5 : -5) * scale;
+    const handY = py - 3 * scale;
+
+    ctx.save();
+    ctx.translate(handX, handY);
+    ctx.rotate(flagAngle);
+
+    // Bamboo flagpole
+    ctx.strokeStyle = '#78350f';
+    ctx.lineWidth = 1.4;
+    ctx.beginPath();
+    ctx.moveTo(0, 3);
+    ctx.lineTo(0, -16);
+    ctx.stroke();
+
+    // Fluttering triangular flag
+    ctx.fillStyle = p.flagColor;
+    const flutter = Math.sin(time * 6 + p.seed) * 1.8;
+    ctx.beginPath();
+    ctx.moveTo(0, -16);
+    ctx.lineTo(p.side === 'left' ? 10 : -10, -12 + flutter);
+    ctx.lineTo(0, -7);
+    ctx.closePath();
+    ctx.fill();
+    ctx.restore();
+
+    // Hand holding stick
+    ctx.fillStyle = '#fed7aa';
+    ctx.beginPath();
+    ctx.arc(handX, handY, 1.6 * scale, 0, Math.PI * 2);
+    ctx.fill();
+  } else {
+    // Pointing / clapping toward river
+    const pointDir = p.side === 'left' ? 1 : -1;
+    ctx.strokeStyle = p.kurtaColor;
+    ctx.lineWidth = 2.2 * scale;
+    ctx.lineCap = 'round';
+    ctx.beginPath();
+    ctx.moveTo(x, py - 1);
+    ctx.lineTo(x + pointDir * 7 * scale, py - 3 * scale);
+    ctx.stroke();
+    ctx.fillStyle = '#fed7aa';
+    ctx.beginPath();
+    ctx.arc(x + pointDir * 7 * scale, py - 3 * scale, 1.7 * scale, 0, Math.PI * 2);
+    ctx.fill();
+  }
+
+  // 6. Speech bubble / Cheer reaction
+  if (p.cheer) {
+    const cheerBob = Math.sin(time * 2.5 + p.seed) * 1.5;
+    const cy = py - 16 * scale + cheerBob;
+    const txt = p.cheer;
+    ctx.font = 'bold 7.5px "Segoe UI", Arial, sans-serif';
+    const tw = ctx.measureText(txt).width;
+    const pad = 3.5;
+
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+    fillSafeRoundRect(ctx, x - tw / 2 - pad, cy - 6, tw + pad * 2, 11, 3.5);
+    ctx.strokeStyle = '#f59e0b';
+    ctx.lineWidth = 1;
+    strokeSafeRoundRect(ctx, x - tw / 2 - pad, cy - 6, tw + pad * 2, 11, 3.5);
+
+    // Pointer tail
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.95)';
+    ctx.beginPath();
+    ctx.moveTo(x - 2, cy + 5);
+    ctx.lineTo(x + 2, cy + 5);
+    ctx.lineTo(x, cy + 7.5);
+    ctx.closePath();
+    ctx.fill();
+
+    // Text
+    ctx.fillStyle = '#0f172a';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText(txt, x, cy - 0.5);
+  }
+
+  ctx.restore();
+}
+
+/**
+ * Shoreline Fence & Festive Buntings separating green area crowd from river
+ */
+function drawShorelineFence(ctx, world, cameraY, canvasHeight, time) {
+  const waypoints = world.waypoints || [
+    { y: world.height, cx: 180, width: 260 },
+    { y: 0, cx: 180, width: 260 }
+  ];
+
+  const fenceStep = 32;
+  const startY = Math.max(0, Math.floor((cameraY - 40) / fenceStep) * fenceStep);
+  const endY = Math.min(world.height, Math.ceil((cameraY + canvasHeight + 40) / fenceStep) * fenceStep);
+
+  const flagColors = ['#f97316', '#dc2626', '#facc15', '#10b981', '#3b82f6'];
+
+  for (let y = startY; y <= endY; y += fenceStep) {
+    const b1 = getRiverBounds(waypoints, y);
+    const b2 = getRiverBounds(waypoints, y + fenceStep);
+
+    // Left bank fence
+    const lx1 = b1.leftBank - 11;
+    const lx2 = b2.leftBank - 11;
+
+    // Right bank fence
+    const rx1 = b1.rightBank + 11;
+    const rx2 = b2.rightBank + 11;
+
+    // Fence rope connecting posts
+    ctx.strokeStyle = '#d97706';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.moveTo(lx1, y);
+    ctx.quadraticCurveTo((lx1 + lx2) / 2, y + fenceStep / 2 + 2, lx2, y + fenceStep);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(rx1, y);
+    ctx.quadraticCurveTo((rx1 + rx2) / 2, y + fenceStep / 2 + 2, rx2, y + fenceStep);
+    ctx.stroke();
+
+    // Triangular bunting flags hanging on the rope
+    const midY = y + fenceStep / 2;
+    const colorIdx = Math.floor(y / fenceStep) % flagColors.length;
+
+    // Left bunting
+    ctx.fillStyle = flagColors[colorIdx];
+    ctx.beginPath();
+    ctx.moveTo((lx1 + lx2) / 2 - 3, midY);
+    ctx.lineTo((lx1 + lx2) / 2 + 3, midY);
+    ctx.lineTo((lx1 + lx2) / 2, midY + 4);
+    ctx.closePath();
+    ctx.fill();
+
+    // Right bunting
+    ctx.fillStyle = flagColors[(colorIdx + 2) % flagColors.length];
+    ctx.beginPath();
+    ctx.moveTo((rx1 + rx2) / 2 - 3, midY);
+    ctx.lineTo((rx1 + rx2) / 2 + 3, midY);
+    ctx.lineTo((rx1 + rx2) / 2, midY + 4);
+    ctx.closePath();
+    ctx.fill();
+
+    // Wooden fence posts at (lx1, y) and (rx1, y)
+    for (const px of [lx1, rx1]) {
+      // Post shadow
+      ctx.fillStyle = 'rgba(15, 23, 42, 0.2)';
+      ctx.fillRect(px - 1.5, y + 4, 3, 2);
+
+      // Wooden stake
+      ctx.fillStyle = '#78350f';
+      ctx.fillRect(px - 1.5, y - 5, 3, 9);
+
+      // Gold post top
+      ctx.fillStyle = '#facc15';
+      ctx.beginPath();
+      ctx.arc(px, y - 5, 2, 0, Math.PI * 2);
+      ctx.fill();
+    }
+  }
+}
+
 function drawObstacles(ctx, world, cameraY, canvasHeight) {
   if (!world.obstacles) return;
 
   for (const obs of world.obstacles) {
     if (obs.type === 'rock') {
       if (obs.y < cameraY - 50 || obs.y > cameraY + canvasHeight + 50) continue;
-
-      ctx.save();
-      // Rock shadow
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.25)';
-      ctx.beginPath();
-      ctx.ellipse(obs.x + 3, obs.y + 4, obs.radius * 1.05, obs.radius * 0.8, 0, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Rock body
-      const rockGrad = ctx.createRadialGradient(
-        obs.x - obs.radius * 0.3,
-        obs.y - obs.radius * 0.3,
-        obs.radius * 0.1,
-        obs.x,
-        obs.y,
-        obs.radius
-      );
-      rockGrad.addColorStop(0, '#94a3b8');
-      rockGrad.addColorStop(0.7, '#64748b');
-      rockGrad.addColorStop(1, '#475569');
-
-      ctx.fillStyle = rockGrad;
-      ctx.beginPath();
-      ctx.arc(obs.x, obs.y, obs.radius, 0, Math.PI * 2);
-      ctx.fill();
-
-      // Rock highlight
-      ctx.strokeStyle = '#cbd5e1';
-      ctx.lineWidth = 2.5;
-      ctx.beginPath();
-      ctx.arc(obs.x - obs.radius * 0.3, obs.y - obs.radius * 0.3, obs.radius * 0.45, Math.PI * 0.8, Math.PI * 1.7);
-      ctx.stroke();
-
-      // Moss patch
-      ctx.fillStyle = '#4ade80';
-      ctx.beginPath();
-      ctx.arc(obs.x + obs.radius * 0.35, obs.y - obs.radius * 0.2, obs.radius * 0.32, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.restore();
+      drawStageObstacle(ctx, obs);
     } else if (obs.type === 'log') {
       if (obs.y < cameraY - 50 || obs.y > cameraY + canvasHeight + 50) continue;
 
