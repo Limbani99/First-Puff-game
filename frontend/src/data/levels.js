@@ -2,7 +2,8 @@
 // Progressive river physics, challenging obstacles, and rewarding crew mechanics
 // 50 Levels total: 150 Stars possible (3 stars per level)
 // Levels 1-22: Progressive learning & river exploration
-// Levels 23-50: Hard rapids, counter-moving logs, tight slalom gates & boulder fields
+// Levels 23-43: Custom Handcrafted Artistic River Patterns (Not Hard)
+// Levels 44-50: The Grand Climax Rapids
 
 export const CREW_MEMBERS = {
   "hippo": {
@@ -1716,1333 +1717,639 @@ export const LEVELS = [
   },
   {
     "id": 23,
-    "name": "Timber Flume Extreme",
-    "targetTime": 42,
-    "hint": "Logs move fast here! Tap Penguin to brake before timing your dash.",
+    "name": "The Crank",
+    "targetTime": 50,
+    "hint": "Steer across the river bend from right to left!",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "High-speed log timing",
+    "teaches": "Handcrafted Pattern 23",
     "world": {
       "width": 360,
-      "height": 1750,
-      "startX": 180,
-      "startY": 1600,
-      "finishX": 180,
+      "height": 1350,
+      "startY": 1200,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.983,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1750,
-          "cx": 180,
-          "width": 190
+          "y": 1350,
+          "cx": 245,
+          "width": 170
         },
         {
-          "y": 1458,
-          "cx": 208,
-          "width": 190
+          "y": 900,
+          "cx": 245,
+          "width": 170
         },
         {
-          "y": 1167,
-          "cx": 152,
-          "width": 190
-        },
-        {
-          "y": 875,
-          "cx": 208,
-          "width": 182
-        },
-        {
-          "y": 583,
-          "cx": 152,
-          "width": 182
-        },
-        {
-          "y": 292,
-          "cx": 208,
-          "width": 190
+          "y": 650,
+          "cx": 115,
+          "width": 175
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 190
+          "cx": 115,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_6",
-          "type": "rock",
-          "x": 251,
-          "y": 1429,
-          "radius": 21
-        },
-        {
-          "id": "log_2",
+          "id": "log1",
           "type": "log",
-          "y": 1328,
-          "width": 74,
+          "y": 950,
+          "width": 62,
           "height": 22,
-          "minX": 133,
-          "maxX": 214,
-          "speed": 90,
-          "x": 214,
-          "dir": -1
-        },
-        {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 129,
-          "y": 1228,
-          "radius": 23
-        },
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 202,
-          "y": 1127,
-          "radius": 18
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1026,
-          "width": 74,
-          "height": 22,
-          "minX": 132,
-          "maxX": 227,
-          "speed": 83,
-          "x": 132,
+          "minX": 205,
+          "maxX": 275,
+          "speed": 38,
+          "x": 230,
           "dir": 1
         },
         {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 140,
-          "y": 925,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 825,
-          "leftX": 145,
-          "rightX": 251,
-          "postRadius": 11
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 724,
-          "width": 74,
-          "height": 22,
-          "minX": 133,
-          "maxX": 223,
-          "speed": 96,
-          "x": 223,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
+          "id": "rock1",
           "type": "rock",
           "x": 220,
-          "y": 623,
-          "radius": 23
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 138,
-          "y": 522,
+          "y": 720,
           "radius": 18
         },
         {
-          "id": "log_5",
-          "type": "log",
-          "y": 422,
-          "width": 74,
-          "height": 22,
-          "minX": 135,
-          "maxX": 214,
-          "speed": 89,
-          "x": 135,
-          "dir": 1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 214,
-          "y": 321,
-          "radius": 21
+          "id": "gate1",
+          "type": "gate",
+          "y": 380,
+          "leftX": 70,
+          "rightX": 160,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 245,
+      "finishX": 115
     }
   },
   {
     "id": 24,
-    "name": "Serpent Chicanes",
-    "targetTime": 44,
-    "hint": "Sharp bends ahead. Steer hard with Pig and Frog around the rock apex.",
+    "name": "River Pocket",
+    "targetTime": 52,
+    "hint": "Glide gently into the right bay and back out.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Apex cornering under pressure",
+    "teaches": "Handcrafted Pattern 24",
     "world": {
       "width": 360,
-      "height": 1780,
-      "startX": 180,
-      "startY": 1630,
-      "finishX": 180,
+      "height": 1400,
+      "startY": 1250,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.983,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1780,
-          "cx": 180,
-          "width": 185
+          "y": 1400,
+          "cx": 135,
+          "width": 170
         },
         {
-          "y": 1483,
-          "cx": 222,
-          "width": 185
+          "y": 1050,
+          "cx": 135,
+          "width": 170
         },
         {
-          "y": 1187,
-          "cx": 138,
-          "width": 185
+          "y": 850,
+          "cx": 240,
+          "width": 175
         },
         {
-          "y": 890,
-          "cx": 222,
-          "width": 177
+          "y": 650,
+          "cx": 240,
+          "width": 175
         },
         {
-          "y": 593,
-          "cx": 138,
-          "width": 177
-        },
-        {
-          "y": 297,
-          "cx": 222,
-          "width": 185
+          "y": 450,
+          "cx": 135,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 185
+          "cx": 135,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_5",
+          "id": "rock1",
           "type": "rock",
-          "x": 263,
-          "y": 1464,
-          "radius": 21
-        },
-        {
-          "id": "rock_6",
-          "type": "rock",
-          "x": 135,
-          "y": 1369,
-          "radius": 23
-        },
-        {
-          "id": "log_2",
-          "type": "log",
-          "y": 1273,
-          "width": 74,
-          "height": 22,
-          "minX": 115,
-          "maxX": 186,
-          "speed": 90,
-          "x": 186,
-          "dir": -1
-        },
-        {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 173,
-          "y": 1177,
+          "x": 145,
+          "y": 1000,
           "radius": 18
         },
         {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 133,
-          "y": 1081,
-          "radius": 21
-        },
-        {
-          "id": "log_3",
+          "id": "log1",
           "type": "log",
-          "y": 986,
-          "width": 74,
+          "y": 750,
+          "width": 62,
           "height": 22,
-          "minX": 165,
-          "maxX": 240,
-          "speed": 83,
-          "x": 165,
+          "minX": 195,
+          "maxX": 275,
+          "speed": 40,
+          "x": 220,
           "dir": 1
         },
         {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 890,
-          "leftX": 169,
-          "rightX": 275,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 252,
-          "y": 794,
-          "radius": 23
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 154,
-          "y": 699,
-          "radius": 18
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 170,
-          "y": 603,
-          "radius": 21
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 507,
-          "width": 74,
-          "height": 22,
-          "minX": 118,
-          "maxX": 202,
-          "speed": 96,
-          "x": 202,
-          "dir": -1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 130,
-          "y": 411,
-          "radius": 23
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 267,
-          "y": 316,
-          "radius": 18
+          "y": 360,
+          "leftX": 90,
+          "rightX": 180,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 135,
+      "finishX": 135
     }
   },
   {
     "id": 25,
-    "name": "The Boulder Gauntlet",
-    "targetTime": 45,
-    "hint": "14 boulders choke the river! Weave left and right without panicking.",
+    "name": "Staircase Rapids",
+    "targetTime": 55,
+    "hint": "Three gentle steps up and to the right!",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Dense boulder navigation",
+    "teaches": "Handcrafted Pattern 25",
     "world": {
       "width": 360,
-      "height": 1820,
-      "startX": 180,
-      "startY": 1670,
-      "finishX": 180,
+      "height": 1500,
+      "startY": 1350,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.984,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1820,
+          "y": 1500,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 1150,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 950,
           "cx": 180,
-          "width": 180
+          "width": 175
         },
         {
-          "y": 1517,
-          "cx": 205,
-          "width": 180
+          "y": 650,
+          "cx": 180,
+          "width": 175
         },
         {
-          "y": 1213,
-          "cx": 155,
-          "width": 180
-        },
-        {
-          "y": 910,
-          "cx": 205,
-          "width": 172
-        },
-        {
-          "y": 607,
-          "cx": 155,
-          "width": 172
-        },
-        {
-          "y": 303,
-          "cx": 205,
-          "width": 180
+          "y": 450,
+          "cx": 260,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 180
+          "cx": 260,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_4",
-          "type": "rock",
-          "x": 257,
-          "y": 1514,
-          "radius": 21
+          "id": "gate1",
+          "type": "gate",
+          "y": 1100,
+          "leftX": 55,
+          "rightX": 145,
+          "postRadius": 14
         },
         {
-          "id": "rock_5",
-          "type": "rock",
-          "x": 154,
-          "y": 1428,
-          "radius": 23
-        },
-        {
-          "id": "rock_6",
-          "type": "rock",
-          "x": 188,
-          "y": 1341,
-          "radius": 18
-        },
-        {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 108,
-          "y": 1255,
-          "radius": 21
-        },
-        {
-          "id": "log_2",
+          "id": "log1",
           "type": "log",
-          "y": 1169,
-          "width": 74,
+          "y": 800,
+          "width": 64,
           "height": 22,
-          "minX": 130,
-          "maxX": 207,
-          "speed": 90,
-          "x": 207,
+          "minX": 140,
+          "maxX": 220,
+          "speed": 38,
+          "x": 170,
           "dir": -1
         },
         {
-          "id": "rock_8",
+          "id": "rock1",
           "type": "rock",
-          "x": 234,
-          "y": 1083,
-          "radius": 23
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 176,
-          "y": 996,
-          "radius": 18
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 910,
-          "leftX": 152,
-          "rightX": 258,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 220,
-          "y": 824,
-          "radius": 21
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 123,
-          "y": 738,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 651,
-          "width": 72,
-          "height": 22,
-          "minX": 128,
-          "maxX": 204,
-          "speed": 83,
-          "x": 128,
-          "dir": 1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 220,
-          "y": 565,
-          "radius": 18
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 144,
-          "y": 479,
-          "radius": 21
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 206,
-          "y": 393,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 141,
-          "y": 306,
+          "x": 250,
+          "y": 400,
           "radius": 18
         }
-      ]
+      ],
+      "startX": 100,
+      "finishX": 260
     }
   },
   {
     "id": 26,
-    "name": "Twin Log Crossfire",
-    "targetTime": 46,
-    "hint": "Paired logs scissor across the river. Wait for them to open before bursting through.",
+    "name": "Step Cascade",
+    "targetTime": 55,
+    "hint": "Step left as you ascend the river terrace.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Scissor log evasion",
+    "teaches": "Handcrafted Pattern 26",
     "world": {
       "width": 360,
-      "height": 1850,
-      "startX": 180,
-      "startY": 1700,
-      "finishX": 180,
+      "height": 1500,
+      "startY": 1350,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.984,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1850,
+          "y": 1500,
+          "cx": 260,
+          "width": 170
+        },
+        {
+          "y": 1150,
+          "cx": 260,
+          "width": 170
+        },
+        {
+          "y": 950,
           "cx": 180,
-          "width": 180
+          "width": 175
         },
         {
-          "y": 1542,
-          "cx": 210,
-          "width": 180
+          "y": 650,
+          "cx": 180,
+          "width": 175
         },
         {
-          "y": 1233,
-          "cx": 150,
-          "width": 180
-        },
-        {
-          "y": 925,
-          "cx": 210,
-          "width": 172
-        },
-        {
-          "y": 617,
-          "cx": 150,
-          "width": 172
-        },
-        {
-          "y": 308,
-          "cx": 210,
-          "width": 180
+          "y": 450,
+          "cx": 100,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 180
+          "cx": 100,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 252,
-          "y": 1536,
-          "radius": 21
-        },
-        {
-          "id": "log_2",
-          "type": "log",
-          "y": 1442,
-          "width": 74,
-          "height": 22,
-          "minX": 146,
-          "maxX": 218,
-          "speed": 95,
-          "x": 218,
-          "dir": -1
-        },
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 136,
-          "y": 1348,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1254,
-          "width": 74,
-          "height": 22,
-          "minX": 118,
-          "maxX": 199,
-          "speed": 88,
-          "x": 118,
-          "dir": 1
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 190,
-          "y": 1160,
-          "radius": 18
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 144,
-          "y": 1066,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 972,
-          "leftX": 148,
-          "rightX": 254,
-          "postRadius": 11
+          "y": 1100,
+          "leftX": 215,
+          "rightX": 305,
+          "postRadius": 14
         },
         {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 247,
-          "y": 878,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
+          "id": "log1",
           "type": "log",
-          "y": 784,
-          "width": 72,
+          "y": 800,
+          "width": 64,
           "height": 22,
-          "minX": 155,
-          "maxX": 225,
-          "speed": 101,
-          "x": 225,
-          "dir": -1
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 690,
-          "width": 72,
-          "height": 22,
-          "minX": 126,
-          "maxX": 206,
-          "speed": 94,
-          "x": 126,
+          "minX": 140,
+          "maxX": 220,
+          "speed": 38,
+          "x": 170,
           "dir": 1
         },
         {
-          "id": "rock_12",
+          "id": "rock1",
           "type": "rock",
-          "x": 137,
-          "y": 596,
+          "x": 110,
+          "y": 400,
           "radius": 18
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 190,
-          "y": 502,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 408,
-          "width": 74,
-          "height": 22,
-          "minX": 147,
-          "maxX": 230,
-          "speed": 87,
-          "x": 230,
-          "dir": -1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 150,
-          "y": 314,
-          "radius": 23
         }
-      ]
+      ],
+      "startX": 260,
+      "finishX": 100
     }
   },
   {
     "id": 27,
-    "name": "Slalom Alley",
-    "targetTime": 48,
-    "hint": "Three offset gates in rapid succession. Keep your raft centered!",
+    "name": "Switchback Alley",
+    "targetTime": 58,
+    "hint": "Use Frog and Pig to smoothly weave each bend.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Triple gate slalom",
+    "teaches": "Handcrafted Pattern 27",
     "world": {
       "width": 360,
-      "height": 1880,
-      "startX": 180,
-      "startY": 1730,
-      "finishX": 180,
+      "height": 1600,
+      "startY": 1450,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.985,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1880,
-          "cx": 180,
-          "width": 180
+          "y": 1600,
+          "cx": 110,
+          "width": 170
         },
         {
-          "y": 1567,
-          "cx": 215,
-          "width": 180
+          "y": 1300,
+          "cx": 110,
+          "width": 170
         },
         {
-          "y": 1253,
-          "cx": 145,
-          "width": 180
+          "y": 1050,
+          "cx": 250,
+          "width": 175
         },
         {
-          "y": 940,
-          "cx": 215,
-          "width": 172
+          "y": 750,
+          "cx": 110,
+          "width": 175
         },
         {
-          "y": 627,
-          "cx": 145,
-          "width": 172
-        },
-        {
-          "y": 313,
-          "cx": 215,
-          "width": 180
+          "y": 450,
+          "cx": 250,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 180
+          "cx": 250,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_7",
+          "id": "rock1",
           "type": "rock",
-          "x": 255,
-          "y": 1564,
-          "radius": 21
-        },
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 139,
-          "y": 1468,
-          "radius": 23
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1372,
-          "leftX": 119,
-          "rightX": 225,
-          "postRadius": 11
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1276,
-          "width": 74,
-          "height": 22,
-          "minX": 105,
-          "maxX": 195,
-          "speed": 95,
-          "x": 195,
-          "dir": -1
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 188,
-          "y": 1180,
+          "x": 120,
+          "y": 1200,
           "radius": 18
         },
         {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 147,
-          "y": 1084,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 988,
-          "leftX": 151,
-          "rightX": 257,
-          "postRadius": 11
-        },
-        {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 892,
-          "width": 73,
+          "y": 900,
+          "width": 62,
           "height": 22,
-          "minX": 163,
-          "maxX": 246,
-          "speed": 88,
-          "x": 163,
+          "minX": 150,
+          "maxX": 225,
+          "speed": 36,
+          "x": 180,
           "dir": 1
         },
         {
-          "id": "rock_11",
+          "id": "rock2",
           "type": "rock",
-          "x": 238,
-          "y": 796,
-          "radius": 23
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 133,
-          "y": 700,
+          "x": 110,
+          "y": 650,
           "radius": 18
         },
         {
-          "id": "gate_3",
+          "id": "gate1",
           "type": "gate",
-          "y": 604,
-          "leftX": 97,
-          "rightX": 203,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 191,
-          "y": 508,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 412,
-          "width": 73,
-          "height": 22,
-          "minX": 149,
-          "maxX": 212,
-          "speed": 101,
-          "x": 212,
-          "dir": -1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 155,
-          "y": 316,
-          "radius": 23
+          "y": 350,
+          "leftX": 205,
+          "rightX": 295,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 110,
+      "finishX": 250
     }
   },
   {
     "id": 28,
-    "name": "Split Bayou",
-    "targetTime": 50,
-    "hint": "Island boulders divide the stream. Pick a side early and hold your line.",
+    "name": "Rolling Waves",
+    "targetTime": 58,
+    "hint": "Gentle sinusoidal waves guide your raft.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Forked channel commitment",
+    "teaches": "Handcrafted Pattern 28",
     "world": {
       "width": 360,
-      "height": 1920,
-      "startX": 180,
-      "startY": 1770,
-      "finishX": 180,
+      "height": 1600,
+      "startY": 1450,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.985,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1920,
-          "cx": 180,
-          "width": 190
-        },
-        {
           "y": 1600,
-          "cx": 215,
-          "width": 190
+          "cx": 130,
+          "width": 175
         },
         {
-          "y": 1280,
-          "cx": 145,
-          "width": 190
+          "y": 1350,
+          "cx": 230,
+          "width": 175
         },
         {
-          "y": 960,
-          "cx": 215,
-          "width": 182
+          "y": 1100,
+          "cx": 130,
+          "width": 175
         },
         {
-          "y": 640,
-          "cx": 145,
-          "width": 182
+          "y": 850,
+          "cx": 230,
+          "width": 175
         },
         {
-          "y": 320,
-          "cx": 215,
-          "width": 190
+          "y": 600,
+          "cx": 130,
+          "width": 175
+        },
+        {
+          "y": 350,
+          "cx": 230,
+          "width": 175
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 190
+          "width": 175
         }
       ],
       "obstacles": [
         {
-          "id": "rock_7",
+          "id": "rock1",
           "type": "rock",
-          "x": 268,
-          "y": 1613,
-          "radius": 21
-        },
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 147,
-          "y": 1526,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1439,
-          "width": 74,
-          "height": 22,
-          "minX": 130,
-          "maxX": 213,
-          "speed": 97,
-          "x": 213,
-          "dir": -1
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 170,
-          "y": 1352,
+          "x": 190,
+          "y": 1250,
           "radius": 18
         },
         {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1265,
-          "leftX": 95,
-          "rightX": 201,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 115,
-          "y": 1178,
-          "radius": 21
-        },
-        {
-          "id": "log_4",
+          "id": "log1",
           "type": "log",
-          "y": 1091,
-          "width": 74,
-          "height": 22,
-          "minX": 139,
-          "maxX": 228,
-          "speed": 90,
-          "x": 139,
-          "dir": 1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 260,
-          "y": 1004,
-          "radius": 23
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 172,
-          "y": 916,
-          "radius": 18
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 829,
-          "width": 74,
+          "y": 980,
+          "width": 60,
           "height": 22,
           "minX": 140,
-          "maxX": 221,
-          "speed": 103,
-          "x": 221,
+          "maxX": 215,
+          "speed": 36,
+          "x": 175,
           "dir": -1
         },
         {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 195,
-          "y": 742,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
+          "id": "gate1",
           "type": "gate",
-          "y": 655,
-          "leftX": 95,
-          "rightX": 201,
-          "postRadius": 11
+          "y": 700,
+          "leftX": 125,
+          "rightX": 215,
+          "postRadius": 14
         },
         {
-          "id": "rock_14",
+          "id": "rock2",
           "type": "rock",
-          "x": 100,
-          "y": 568,
-          "radius": 23
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 481,
-          "width": 74,
-          "height": 22,
-          "minX": 132,
-          "maxX": 215,
-          "speed": 96,
-          "x": 132,
-          "dir": 1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 242,
-          "y": 394,
+          "x": 140,
+          "y": 450,
           "radius": 18
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 186,
-          "y": 307,
-          "radius": 21
         }
-      ]
+      ],
+      "startX": 190,
+      "finishX": 199
     }
   },
   {
     "id": 29,
-    "name": "Log Scissor Trap",
-    "targetTime": 50,
-    "hint": "Double scissors! Reverse with Penguin if you mistime your entry.",
+    "name": "The Chasm Basin",
+    "targetTime": 54,
+    "hint": "Cross the central channel into the right stream.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Emergency reverse recovery",
+    "teaches": "Handcrafted Pattern 29",
     "world": {
       "width": 360,
-      "height": 1950,
-      "startX": 180,
-      "startY": 1800,
-      "finishX": 180,
+      "height": 1500,
+      "startY": 1350,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.985,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 1950,
+          "y": 1500,
+          "cx": 105,
+          "width": 170
+        },
+        {
+          "y": 1100,
+          "cx": 105,
+          "width": 170
+        },
+        {
+          "y": 850,
           "cx": 180,
-          "width": 175
+          "width": 180
         },
         {
-          "y": 1625,
-          "cx": 210,
-          "width": 175
-        },
-        {
-          "y": 1300,
-          "cx": 150,
-          "width": 175
-        },
-        {
-          "y": 975,
-          "cx": 210,
-          "width": 167
-        },
-        {
-          "y": 650,
-          "cx": 150,
-          "width": 167
-        },
-        {
-          "y": 325,
-          "cx": 210,
-          "width": 175
+          "y": 550,
+          "cx": 255,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 175
+          "cx": 255,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 255,
-          "y": 1641,
-          "radius": 21
-        },
-        {
-          "id": "log_2",
-          "type": "log",
-          "y": 1552,
-          "width": 74,
-          "height": 22,
-          "minX": 154,
-          "maxX": 224,
-          "speed": 100,
-          "x": 224,
-          "dir": -1
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 144,
-          "y": 1464,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1375,
-          "width": 74,
-          "height": 22,
-          "minX": 121,
-          "maxX": 194,
-          "speed": 93,
-          "x": 121,
-          "dir": 1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 180,
-          "y": 1286,
-          "radius": 18
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 133,
-          "y": 1197,
-          "radius": 21
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1108,
-          "width": 71,
-          "height": 22,
-          "minX": 156,
-          "maxX": 227,
-          "speed": 106,
-          "x": 227,
-          "dir": -1
-        },
-        {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 1019,
-          "leftX": 149,
-          "rightX": 255,
-          "postRadius": 11
+          "y": 1150,
+          "leftX": 60,
+          "rightX": 150,
+          "postRadius": 14
         },
         {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 250,
-          "y": 931,
-          "radius": 23
-        },
-        {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 842,
-          "width": 70,
+          "y": 850,
+          "width": 64,
           "height": 22,
-          "minX": 153,
-          "maxX": 226,
-          "speed": 99,
-          "x": 153,
+          "minX": 145,
+          "maxX": 215,
+          "speed": 38,
+          "x": 180,
           "dir": 1
         },
         {
-          "id": "rock_13",
+          "id": "rock1",
           "type": "rock",
-          "x": 154,
-          "y": 753,
-          "radius": 18
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 178,
-          "y": 664,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 575,
-          "width": 70,
-          "height": 22,
-          "minX": 122,
-          "maxX": 196,
-          "speed": 92,
-          "x": 196,
-          "dir": -1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 126,
-          "y": 486,
-          "radius": 23
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 398,
-          "width": 72,
-          "height": 22,
-          "minX": 154,
-          "maxX": 227,
-          "speed": 105,
-          "x": 154,
-          "dir": 1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 259,
-          "y": 309,
+          "x": 240,
+          "y": 450,
           "radius": 18
         }
-      ]
+      ],
+      "startX": 105,
+      "finishX": 255
     }
   },
   {
     "id": 30,
-    "name": "Bayou Final Rush",
-    "targetTime": 52,
-    "hint": "Zone 3 finale! 18 hazards stand between you and the canyon.",
+    "name": "Castle Battlement",
+    "targetTime": 60,
+    "hint": "Left, right, left, and center - stay steady!",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Bayou multi-hazard mastery",
+    "teaches": "Handcrafted Pattern 30",
     "world": {
       "width": 360,
-      "height": 2000,
-      "startX": 180,
-      "startY": 1850,
-      "finishX": 180,
+      "height": 1650,
+      "startY": 1500,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.986,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2000,
+          "y": 1650,
           "cx": 180,
           "width": 175
         },
         {
-          "y": 1667,
-          "cx": 220,
+          "y": 1300,
+          "cx": 110,
           "width": 175
         },
         {
-          "y": 1333,
-          "cx": 140,
+          "y": 950,
+          "cx": 250,
           "width": 175
         },
         {
-          "y": 1000,
-          "cx": 220,
-          "width": 167
+          "y": 600,
+          "cx": 110,
+          "width": 175
         },
         {
-          "y": 667,
-          "cx": 140,
-          "width": 167
-        },
-        {
-          "y": 333,
-          "cx": 220,
+          "y": 300,
+          "cx": 180,
           "width": 175
         },
         {
@@ -3053,3351 +2360,1087 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "rock_8",
+          "id": "rock1",
           "type": "rock",
-          "x": 268,
-          "y": 1698,
-          "radius": 21
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 153,
-          "y": 1616,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1534,
-          "width": 74,
-          "height": 22,
-          "minX": 146,
-          "maxX": 217,
-          "speed": 100,
-          "x": 217,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 175,
-          "y": 1452,
-          "radius": 18
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1369,
-          "width": 73,
-          "height": 22,
-          "minX": 106,
-          "maxX": 190,
-          "speed": 93,
-          "x": 106,
-          "dir": 1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 93,
-          "y": 1287,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1205,
-          "leftX": 118,
-          "rightX": 224,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 242,
-          "y": 1123,
-          "radius": 23
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 191,
-          "y": 1041,
-          "radius": 18
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 959,
-          "width": 70,
-          "height": 22,
-          "minX": 171,
-          "maxX": 251,
-          "speed": 106,
-          "x": 251,
-          "dir": -1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 213,
-          "y": 877,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 795,
-          "width": 70,
-          "height": 22,
-          "minX": 130,
-          "maxX": 210,
-          "speed": 99,
           "x": 130,
-          "dir": 1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 117,
-          "y": 713,
-          "radius": 23
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 631,
-          "leftX": 96,
-          "rightX": 202,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 209,
-          "y": 548,
+          "y": 1250,
           "radius": 18
         },
         {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 163,
-          "y": 466,
-          "radius": 21
-        },
-        {
-          "id": "log_7",
+          "id": "log1",
           "type": "log",
-          "y": 384,
-          "width": 72,
+          "y": 950,
+          "width": 62,
           "height": 22,
-          "minX": 165,
-          "maxX": 234,
-          "speed": 92,
-          "x": 234,
-          "dir": -1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 238,
-          "y": 302,
-          "radius": 23
-        }
-      ]
-    }
-  },
-  {
-    "id": 31,
-    "name": "Mist Canyon Run",
-    "targetTime": 52,
-    "hint": "Narrow canyon walls and faster current. Avoid bouncing into rock outcroppings.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "High-drift wall avoidance",
-    "world": {
-      "width": 360,
-      "height": 2030,
-      "startX": 180,
-      "startY": 1880,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.986,
-      "waypoints": [
-        {
-          "y": 2030,
-          "cx": 180,
-          "width": 170
-        },
-        {
-          "y": 1692,
-          "cx": 215,
-          "width": 170
-        },
-        {
-          "y": 1353,
-          "cx": 145,
-          "width": 170
-        },
-        {
-          "y": 1015,
-          "cx": 215,
-          "width": 162
-        },
-        {
-          "y": 677,
-          "cx": 145,
-          "width": 162
-        },
-        {
-          "y": 338,
-          "cx": 215,
-          "width": 170
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 170
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_7",
-          "type": "rock",
-          "x": 262,
-          "y": 1722,
-          "radius": 21
-        },
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 154,
-          "y": 1633,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1545,
-          "width": 71,
-          "height": 22,
-          "minX": 143,
-          "maxX": 207,
-          "speed": 100,
-          "x": 207,
-          "dir": -1
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 179,
-          "y": 1457,
-          "radius": 18
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 99,
-          "y": 1368,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1280,
-          "leftX": 107,
-          "rightX": 213,
-          "postRadius": 11
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1192,
-          "width": 70,
-          "height": 22,
-          "minX": 139,
-          "maxX": 218,
-          "speed": 93,
-          "x": 139,
-          "dir": 1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 238,
-          "y": 1103,
-          "radius": 23
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 186,
-          "y": 1015,
-          "radius": 18
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 211,
-          "y": 927,
-          "radius": 21
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 838,
-          "width": 68,
-          "height": 22,
-          "minX": 139,
-          "maxX": 214,
-          "speed": 106,
-          "x": 214,
-          "dir": -1
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 750,
-          "leftX": 107,
-          "rightX": 213,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 121,
-          "y": 662,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 210,
-          "y": 573,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 485,
-          "width": 69,
-          "height": 22,
-          "minX": 144,
-          "maxX": 209,
-          "speed": 99,
-          "x": 144,
-          "dir": 1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 163,
-          "y": 397,
-          "radius": 21
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 234,
-          "y": 308,
-          "radius": 23
-        }
-      ]
-    }
-  },
-  {
-    "id": 32,
-    "name": "Double Scissor Rapids",
-    "targetTime": 54,
-    "hint": "Scissor logs crossing at 100 px/s! Precision timing is mandatory.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "Fast scissor traversal",
-    "world": {
-      "width": 360,
-      "height": 2060,
-      "startX": 180,
-      "startY": 1910,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.986,
-      "waypoints": [
-        {
-          "y": 2060,
-          "cx": 180,
-          "width": 170
-        },
-        {
-          "y": 1717,
-          "cx": 210,
-          "width": 170
-        },
-        {
-          "y": 1373,
-          "cx": 150,
-          "width": 170
-        },
-        {
-          "y": 1030,
-          "cx": 210,
-          "width": 162
-        },
-        {
-          "y": 687,
-          "cx": 150,
-          "width": 162
-        },
-        {
-          "y": 343,
-          "cx": 210,
-          "width": 170
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 170
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 257,
-          "y": 1755,
-          "radius": 21
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1669,
-          "width": 71,
-          "height": 22,
-          "minX": 160,
-          "maxX": 225,
-          "speed": 105,
-          "x": 225,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 150,
-          "y": 1584,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1499,
-          "width": 71,
-          "height": 22,
-          "minX": 130,
-          "maxX": 194,
-          "speed": 98,
-          "x": 130,
-          "dir": 1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 176,
-          "y": 1414,
-          "radius": 18
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1328,
-          "leftX": 105,
-          "rightX": 211,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 124,
-          "y": 1243,
-          "radius": 21
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1158,
-          "width": 69,
-          "height": 22,
-          "minX": 157,
-          "maxX": 228,
-          "speed": 111,
-          "x": 228,
-          "dir": -1
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 247,
-          "y": 1073,
-          "radius": 23
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 169,
-          "y": 987,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 902,
-          "width": 68,
-          "height": 22,
-          "minX": 154,
-          "maxX": 227,
-          "speed": 104,
-          "x": 154,
-          "dir": 1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 195,
-          "y": 817,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 732,
-          "leftX": 105,
-          "rightX": 211,
-          "postRadius": 11
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 646,
-          "width": 68,
-          "height": 22,
-          "minX": 118,
-          "maxX": 196,
-          "speed": 97,
-          "x": 196,
-          "dir": -1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 121,
-          "y": 561,
-          "radius": 23
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 234,
-          "y": 476,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 391,
-          "width": 70,
-          "height": 22,
-          "minX": 160,
-          "maxX": 228,
-          "speed": 110,
-          "x": 160,
-          "dir": 1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 184,
-          "y": 305,
-          "radius": 21
-        }
-      ]
-    }
-  },
-  {
-    "id": 33,
-    "name": "The Needle's Eye",
-    "targetTime": 54,
-    "hint": "Razor-thin gates flanked by rocks. Micro-tap left and right to adjust.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "Micro-steering through gates",
-    "world": {
-      "width": 360,
-      "height": 2100,
-      "startX": 180,
-      "startY": 1950,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.987,
-      "waypoints": [
-        {
-          "y": 2100,
-          "cx": 180,
-          "width": 165
-        },
-        {
-          "y": 1750,
-          "cx": 220,
-          "width": 165
-        },
-        {
-          "y": 1400,
-          "cx": 140,
-          "width": 165
-        },
-        {
-          "y": 1050,
-          "cx": 220,
-          "width": 157
-        },
-        {
-          "y": 700,
-          "cx": 140,
-          "width": 157
-        },
-        {
-          "y": 350,
-          "cx": 220,
-          "width": 165
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 165
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 268,
-          "y": 1797,
-          "radius": 21
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 160,
-          "y": 1714,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1631,
-          "width": 69,
-          "height": 22,
-          "minX": 153,
-          "maxX": 204,
-          "speed": 105,
-          "x": 204,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 183,
-          "y": 1548,
-          "radius": 18
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1465,
-          "leftX": 102,
-          "rightX": 208,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 103,
-          "y": 1382,
-          "radius": 21
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1299,
-          "width": 68,
-          "height": 22,
-          "minX": 141,
-          "maxX": 202,
-          "speed": 98,
-          "x": 141,
-          "dir": 1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 226,
-          "y": 1216,
-          "radius": 23
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 187,
-          "y": 1133,
-          "radius": 18
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1050,
-          "leftX": 167,
-          "rightX": 273,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 229,
-          "y": 967,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 884,
-          "width": 66,
-          "height": 22,
-          "minX": 145,
-          "maxX": 212,
-          "speed": 111,
-          "x": 212,
-          "dir": -1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 127,
-          "y": 801,
-          "radius": 23
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 197,
-          "y": 718,
-          "radius": 18
-        },
-        {
-          "id": "gate_3",
-          "type": "gate",
-          "y": 635,
-          "leftX": 102,
-          "rightX": 208,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 141,
-          "y": 552,
-          "radius": 21
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 469,
-          "width": 67,
-          "height": 22,
-          "minX": 153,
-          "maxX": 207,
-          "speed": 104,
-          "x": 153,
-          "dir": 1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 214,
-          "y": 386,
-          "radius": 23
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 164,
-          "y": 303,
-          "radius": 18
-        }
-      ]
-    }
-  },
-  {
-    "id": 34,
-    "name": "Rapid Slalom Blitz",
-    "targetTime": 55,
-    "hint": "Four alternating gates! Don't let momentum slam you into the banks.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "Quad-gate rhythm",
-    "world": {
-      "width": 360,
-      "height": 2130,
-      "startX": 180,
-      "startY": 1980,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.987,
-      "waypoints": [
-        {
-          "y": 2130,
-          "cx": 180,
-          "width": 165
-        },
-        {
-          "y": 1775,
-          "cx": 222,
-          "width": 165
-        },
-        {
-          "y": 1420,
-          "cx": 138,
-          "width": 165
-        },
-        {
-          "y": 1065,
-          "cx": 222,
-          "width": 157
-        },
-        {
-          "y": 710,
-          "cx": 138,
-          "width": 157
-        },
-        {
-          "y": 355,
-          "cx": 222,
-          "width": 165
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 165
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 268,
-          "y": 1826,
-          "radius": 21
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 162,
-          "y": 1741,
-          "radius": 23
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1657,
-          "leftX": 141,
-          "rightX": 247,
-          "postRadius": 11
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1572,
-          "width": 69,
-          "height": 22,
-          "minX": 134,
-          "maxX": 197,
-          "speed": 107,
-          "x": 197,
-          "dir": -1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 175,
-          "y": 1488,
-          "radius": 18
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 112,
-          "y": 1403,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 1319,
-          "width": 68,
-          "height": 22,
-          "minX": 133,
-          "maxX": 201,
-          "speed": 100,
-          "x": 133,
-          "dir": 1
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1234,
-          "leftX": 129,
-          "rightX": 235,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 243,
-          "y": 1150,
-          "radius": 23
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 193,
-          "y": 1065,
-          "radius": 18
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 212,
-          "y": 981,
-          "radius": 21
-        },
-        {
-          "id": "gate_3",
-          "type": "gate",
-          "y": 896,
-          "leftX": 129,
-          "rightX": 235,
-          "postRadius": 11
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 812,
-          "width": 66,
-          "height": 22,
-          "minX": 130,
-          "maxX": 200,
-          "speed": 113,
-          "x": 200,
-          "dir": -1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 106,
-          "y": 727,
-          "radius": 23
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 204,
-          "y": 643,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 558,
-          "width": 67,
-          "height": 22,
-          "minX": 135,
-          "maxX": 200,
-          "speed": 106,
-          "x": 135,
-          "dir": 1
-        },
-        {
-          "id": "gate_4",
-          "type": "gate",
-          "y": 474,
-          "leftX": 141,
-          "rightX": 247,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 166,
-          "y": 389,
-          "radius": 21
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 242,
-          "y": 305,
-          "radius": 23
-        }
-      ]
-    }
-  },
-  {
-    "id": 35,
-    "name": "Whirlpool Rocks",
-    "targetTime": 56,
-    "hint": "Circular boulder clusters create vortex-like choke lanes. Thread through carefully.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "Navigating cluster bottlenecks",
-    "world": {
-      "width": 360,
-      "height": 2160,
-      "startX": 180,
-      "startY": 2010,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.987,
-      "waypoints": [
-        {
-          "y": 2160,
-          "cx": 180,
-          "width": 165
-        },
-        {
-          "y": 1800,
-          "cx": 215,
-          "width": 165
-        },
-        {
-          "y": 1440,
-          "cx": 145,
-          "width": 165
-        },
-        {
-          "y": 1080,
-          "cx": 215,
-          "width": 157
-        },
-        {
-          "y": 720,
-          "cx": 145,
-          "width": 157
-        },
-        {
-          "y": 360,
-          "cx": 215,
-          "width": 165
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 165
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_8",
-          "type": "rock",
-          "x": 262,
-          "y": 1862,
-          "radius": 21
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 167,
-          "y": 1784,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1705,
-          "width": 69,
-          "height": 22,
-          "minX": 157,
-          "maxX": 218,
-          "speed": 107,
-          "x": 218,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 197,
-          "y": 1627,
-          "radius": 18
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 113,
-          "y": 1549,
-          "radius": 21
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1471,
-          "width": 69,
-          "height": 22,
-          "minX": 112,
-          "maxX": 191,
-          "speed": 100,
-          "x": 112,
-          "dir": 1
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1393,
-          "leftX": 101,
-          "rightX": 207,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 219,
-          "y": 1315,
-          "radius": 23
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 162,
-          "y": 1236,
-          "radius": 18
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 229,
-          "y": 1158,
-          "radius": 21
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1080,
-          "width": 66,
-          "height": 22,
-          "minX": 178,
-          "maxX": 246,
-          "speed": 113,
-          "x": 246,
-          "dir": -1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 155,
-          "y": 1002,
-          "radius": 23
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 232,
-          "y": 924,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 845,
-          "width": 66,
-          "height": 22,
-          "minX": 132,
-          "maxX": 206,
-          "speed": 106,
-          "x": 132,
-          "dir": 1
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 143,
-          "y": 767,
-          "radius": 21
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 176,
-          "y": 689,
-          "radius": 23
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 611,
-          "leftX": 113,
-          "rightX": 219,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 127,
-          "y": 533,
-          "radius": 18
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 455,
-          "width": 68,
-          "height": 22,
-          "minX": 157,
-          "maxX": 231,
-          "speed": 99,
-          "x": 231,
-          "dir": -1
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 246,
-          "y": 376,
-          "radius": 21
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 188,
-          "y": 298,
-          "radius": 23
-        }
-      ]
-    }
-  },
-  {
-    "id": 36,
-    "name": "Timber Barrage",
-    "targetTime": 57,
-    "hint": "Six patrol logs across the gorge! Look ahead and plan your window.",
-    "crewUnlocked": [
-      "hippo",
-      "frog",
-      "pig",
-      "penguin"
-    ],
-    "teaches": "Anticipatory pathing",
-    "world": {
-      "width": 360,
-      "height": 2200,
-      "startX": 180,
-      "startY": 2050,
-      "finishX": 180,
-      "finishY": 130,
-      "finishRadius": 46,
-      "drag": 0.988,
-      "waypoints": [
-        {
-          "y": 2200,
-          "cx": 180,
-          "width": 160
-        },
-        {
-          "y": 1833,
-          "cx": 210,
-          "width": 160
-        },
-        {
-          "y": 1467,
-          "cx": 150,
-          "width": 160
-        },
-        {
-          "y": 1100,
-          "cx": 210,
-          "width": 152
-        },
-        {
-          "y": 733,
-          "cx": 150,
-          "width": 152
-        },
-        {
-          "y": 367,
-          "cx": 210,
-          "width": 160
-        },
-        {
-          "y": 0,
-          "cx": 180,
-          "width": 160
-        }
-      ],
-      "obstacles": [
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 256,
-          "y": 1900,
-          "radius": 21
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1820,
-          "width": 67,
-          "height": 22,
-          "minX": 169,
-          "maxX": 230,
-          "speed": 110,
-          "x": 230,
-          "dir": -1
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 160,
-          "y": 1740,
-          "radius": 23
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 189,
-          "y": 1660,
-          "radius": 18
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1580,
-          "width": 67,
-          "height": 22,
-          "minX": 130,
-          "maxX": 202,
-          "speed": 103,
-          "x": 130,
-          "dir": 1
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 108,
-          "y": 1500,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1420,
-          "leftX": 105,
-          "rightX": 211,
-          "postRadius": 11
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1340,
-          "width": 66,
-          "height": 22,
-          "minX": 143,
-          "maxX": 208,
-          "speed": 116,
-          "x": 208,
-          "dir": -1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 223,
-          "y": 1260,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 179,
-          "y": 1180,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 1100,
-          "width": 64,
-          "height": 22,
-          "minX": 174,
-          "maxX": 244,
-          "speed": 109,
-          "x": 174,
-          "dir": 1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 223,
-          "y": 1020,
-          "radius": 21
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 139,
-          "y": 940,
-          "radius": 23
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 860,
-          "width": 64,
-          "height": 22,
-          "minX": 135,
-          "maxX": 205,
-          "speed": 102,
-          "x": 205,
-          "dir": -1
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 780,
-          "leftX": 105,
-          "rightX": 211,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 203,
-          "y": 700,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 620,
-          "width": 64,
-          "height": 22,
-          "minX": 131,
-          "maxX": 195,
-          "speed": 115,
-          "x": 131,
-          "dir": 1
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 146,
-          "y": 540,
-          "radius": 21
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 212,
-          "y": 460,
-          "radius": 23
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 380,
-          "width": 67,
-          "height": 22,
-          "minX": 170,
-          "maxX": 240,
-          "speed": 108,
+          "minX": 205,
+          "maxX": 285,
+          "speed": 38,
           "x": 240,
           "dir": -1
         },
         {
-          "id": "rock_21",
+          "id": "gate1",
+          "type": "gate",
+          "y": 650,
+          "leftX": 65,
+          "rightX": 155,
+          "postRadius": 14
+        },
+        {
+          "id": "rock2",
           "type": "rock",
-          "x": 156,
-          "y": 300,
+          "x": 180,
+          "y": 350,
           "radius": 18
         }
-      ]
+      ],
+      "startX": 150,
+      "finishX": 180
     }
   },
   {
-    "id": 37,
-    "name": "Canyon Gauntlet",
-    "targetTime": 58,
-    "hint": "Serpentine S-bends through sheer stone walls. Use Hippo pulses wisely.",
+    "id": 31,
+    "name": "Diagonal Steps",
+    "targetTime": 56,
+    "hint": "Climb diagonally across four gentle river terraces.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Controlled pulse maneuvering",
+    "teaches": "Handcrafted Pattern 31",
     "world": {
       "width": 360,
-      "height": 2230,
-      "startX": 180,
-      "startY": 2080,
-      "finishX": 180,
+      "height": 1550,
+      "startY": 1400,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.988,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2230,
+          "y": 1550,
+          "cx": 95,
+          "width": 170
+        },
+        {
+          "y": 1200,
+          "cx": 135,
+          "width": 170
+        },
+        {
+          "y": 850,
           "cx": 180,
-          "width": 160
+          "width": 175
         },
         {
-          "y": 1858,
-          "cx": 226,
-          "width": 160
-        },
-        {
-          "y": 1487,
-          "cx": 134,
-          "width": 160
-        },
-        {
-          "y": 1115,
-          "cx": 226,
-          "width": 152
-        },
-        {
-          "y": 743,
-          "cx": 134,
-          "width": 152
-        },
-        {
-          "y": 372,
-          "cx": 226,
-          "width": 160
+          "y": 550,
+          "cx": 225,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 160
+          "cx": 265,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_8",
+          "id": "rock1",
           "type": "rock",
-          "x": 268,
-          "y": 1932,
-          "radius": 21
-        },
-        {
-          "id": "rock_9",
-          "type": "rock",
-          "x": 176,
-          "y": 1854,
-          "radius": 23
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 1777,
-          "width": 67,
-          "height": 22,
-          "minX": 167,
-          "maxX": 218,
-          "speed": 110,
-          "x": 218,
-          "dir": -1
-        },
-        {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 201,
-          "y": 1699,
+          "x": 115,
+          "y": 1250,
           "radius": 18
         },
         {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 116,
-          "y": 1621,
-          "radius": 21
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1543,
-          "width": 67,
-          "height": 22,
-          "minX": 109,
-          "maxX": 180,
-          "speed": 103,
-          "x": 109,
-          "dir": 1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 188,
-          "y": 1465,
-          "radius": 23
-        },
-        {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 1387,
-          "leftX": 106,
-          "rightX": 212,
-          "postRadius": 11
+          "y": 900,
+          "leftX": 135,
+          "rightX": 225,
+          "postRadius": 14
         },
         {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 153,
-          "y": 1310,
-          "radius": 18
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 223,
-          "y": 1232,
-          "radius": 21
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 178,
-          "y": 1154,
-          "radius": 23
-        },
-        {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 1076,
-          "width": 64,
+          "y": 600,
+          "width": 62,
           "height": 22,
-          "minX": 181,
-          "maxX": 252,
-          "speed": 116,
-          "x": 252,
-          "dir": -1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 246,
-          "y": 998,
-          "radius": 18
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 143,
-          "y": 920,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 843,
-          "leftX": 106,
-          "rightX": 212,
-          "postRadius": 11
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 765,
-          "width": 64,
-          "height": 22,
-          "minX": 128,
-          "maxX": 175,
-          "speed": 109,
-          "x": 128,
+          "minX": 185,
+          "maxX": 255,
+          "speed": 38,
+          "x": 220,
           "dir": 1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 163,
-          "y": 687,
-          "radius": 23
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 116,
-          "y": 609,
-          "radius": 18
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 225,
-          "y": 531,
-          "radius": 21
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 453,
-          "width": 66,
-          "height": 22,
-          "minX": 168,
-          "maxX": 234,
-          "speed": 102,
-          "x": 234,
-          "dir": -1
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 186,
-          "y": 376,
-          "radius": 23
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 247,
-          "y": 298,
-          "radius": 18
         }
-      ]
+      ],
+      "startX": 112,
+      "finishX": 256
     }
   },
   {
-    "id": 38,
-    "name": "Triple Gate Rush",
+    "id": 32,
+    "name": "Grand Terrace",
     "targetTime": 58,
-    "hint": "A fast moving log guards the exit of each gate! Clear gate then immediately brake.",
+    "hint": "Step steadily right to left down the great terrace.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Post-gate brake reflex",
+    "teaches": "Handcrafted Pattern 32",
     "world": {
       "width": 360,
-      "height": 2260,
-      "startX": 180,
-      "startY": 2110,
-      "finishX": 180,
+      "height": 1600,
+      "startY": 1450,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.988,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2260,
-          "cx": 180,
-          "width": 160
+          "y": 1600,
+          "cx": 260,
+          "width": 170
         },
         {
-          "y": 1883,
-          "cx": 220,
-          "width": 160
+          "y": 1250,
+          "cx": 215,
+          "width": 170
         },
         {
-          "y": 1507,
-          "cx": 140,
-          "width": 160
+          "y": 950,
+          "cx": 170,
+          "width": 175
         },
         {
-          "y": 1130,
-          "cx": 220,
-          "width": 152
-        },
-        {
-          "y": 753,
-          "cx": 140,
-          "width": 152
-        },
-        {
-          "y": 377,
-          "cx": 220,
-          "width": 160
+          "y": 600,
+          "cx": 125,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 160
+          "cx": 100,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_10",
+          "id": "rock1",
           "type": "rock",
-          "x": 262,
-          "y": 1964,
-          "radius": 21
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 171,
-          "y": 1888,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1813,
-          "width": 67,
-          "height": 22,
-          "minX": 167,
-          "maxX": 228,
-          "speed": 113,
-          "x": 228,
-          "dir": -1
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1737,
-          "width": 67,
-          "height": 22,
-          "minX": 150,
-          "maxX": 204,
-          "speed": 106,
-          "x": 150,
-          "dir": 1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 197,
-          "y": 1661,
+          "x": 235,
+          "y": 1300,
           "radius": 18
         },
         {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 1585,
-          "leftX": 104,
-          "rightX": 210,
-          "postRadius": 11
+          "y": 980,
+          "leftX": 125,
+          "rightX": 215,
+          "postRadius": 14
         },
         {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 95,
-          "y": 1509,
-          "radius": 21
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 204,
-          "y": 1433,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 162,
-          "y": 1358,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
+          "id": "log1",
           "type": "log",
-          "y": 1282,
-          "width": 65,
+          "y": 650,
+          "width": 62,
           "height": 22,
-          "minX": 164,
-          "maxX": 225,
-          "speed": 119,
-          "x": 225,
+          "minX": 95,
+          "maxX": 165,
+          "speed": 36,
+          "x": 130,
           "dir": -1
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 232,
-          "y": 1206,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1130,
-          "leftX": 167,
-          "rightX": 273,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 160,
-          "y": 1054,
-          "radius": 23
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 978,
-          "width": 64,
-          "height": 22,
-          "minX": 160,
-          "maxX": 224,
-          "speed": 112,
-          "x": 160,
-          "dir": 1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 222,
-          "y": 903,
-          "radius": 18
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 129,
-          "y": 827,
-          "radius": 21
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 173,
-          "y": 751,
-          "radius": 23
-        },
-        {
-          "id": "gate_3",
-          "type": "gate",
-          "y": 675,
-          "leftX": 104,
-          "rightX": 210,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 128,
-          "y": 599,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 523,
-          "width": 65,
-          "height": 22,
-          "minX": 151,
-          "maxX": 206,
-          "speed": 105,
-          "x": 206,
-          "dir": -1
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 448,
-          "width": 66,
-          "height": 22,
-          "minX": 167,
-          "maxX": 231,
-          "speed": 118,
-          "x": 167,
-          "dir": 1
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 248,
-          "y": 372,
-          "radius": 21
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 192,
-          "y": 296,
-          "radius": 23
         }
-      ]
+      ],
+      "startX": 241,
+      "finishX": 105
     }
   },
   {
-    "id": 39,
-    "name": "Devil's Churn",
-    "targetTime": 60,
-    "hint": "High river glide and narrow water. Remember: 10 bumps means Game Over!",
+    "id": 33,
+    "name": "Twin Arches",
+    "targetTime": 54,
+    "hint": "Sail through the twin wooden gates in succession.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Endurance hazard control",
+    "teaches": "Handcrafted Pattern 33",
     "world": {
       "width": 360,
-      "height": 2300,
-      "startX": 180,
-      "startY": 2150,
-      "finishX": 180,
+      "height": 1500,
+      "startY": 1350,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.989,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2300,
-          "cx": 180,
-          "width": 155
-        },
-        {
-          "y": 1917,
-          "cx": 222,
-          "width": 155
-        },
-        {
-          "y": 1533,
-          "cx": 138,
-          "width": 155
+          "y": 1500,
+          "cx": 110,
+          "width": 170
         },
         {
           "y": 1150,
-          "cx": 222,
-          "width": 147
+          "cx": 250,
+          "width": 175
         },
         {
-          "y": 767,
-          "cx": 138,
-          "width": 147
+          "y": 750,
+          "cx": 110,
+          "width": 175
         },
         {
-          "y": 383,
-          "cx": 222,
-          "width": 155
+          "y": 400,
+          "cx": 250,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 155
+          "cx": 250,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_10",
-          "type": "rock",
-          "x": 261,
-          "y": 2006,
-          "radius": 21
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 175,
-          "y": 1931,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1857,
-          "width": 65,
-          "height": 22,
-          "minX": 172,
-          "maxX": 227,
-          "speed": 115,
-          "x": 227,
-          "dir": -1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 202,
-          "y": 1782,
-          "radius": 18
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 1708,
-          "width": 65,
-          "height": 22,
-          "minX": 139,
-          "maxX": 202,
-          "speed": 108,
-          "x": 139,
-          "dir": 1
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 117,
-          "y": 1634,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 1559,
-          "leftX": 91,
-          "rightX": 197,
-          "postRadius": 11
+          "y": 1150,
+          "leftX": 205,
+          "rightX": 295,
+          "postRadius": 14
         },
         {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 191,
-          "y": 1485,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 152,
-          "y": 1410,
-          "radius": 18
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 221,
-          "y": 1336,
-          "radius": 21
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 173,
-          "y": 1262,
-          "radius": 23
-        },
-        {
-          "id": "log_6",
+          "id": "log1",
           "type": "log",
-          "y": 1187,
-          "width": 63,
-          "height": 22,
-          "minX": 179,
-          "maxX": 236,
-          "speed": 121,
-          "x": 236,
-          "dir": -1
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1113,
-          "leftX": 161,
-          "rightX": 267,
-          "postRadius": 11
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 1038,
+          "y": 800,
           "width": 62,
           "height": 22,
-          "minX": 163,
-          "maxX": 231,
-          "speed": 114,
-          "x": 163,
+          "minX": 85,
+          "maxX": 155,
+          "speed": 38,
+          "x": 120,
           "dir": 1
         },
         {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 229,
-          "y": 964,
-          "radius": 18
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 144,
-          "y": 890,
-          "radius": 21
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 171,
-          "y": 815,
-          "radius": 23
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 101,
-          "y": 741,
-          "radius": 18
-        },
-        {
-          "id": "gate_3",
+          "id": "gate2",
           "type": "gate",
-          "y": 666,
-          "leftX": 107,
-          "rightX": 213,
-          "postRadius": 11
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 592,
-          "width": 63,
-          "height": 22,
-          "minX": 140,
-          "maxX": 205,
-          "speed": 107,
-          "x": 205,
-          "dir": -1
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 224,
-          "y": 518,
-          "radius": 21
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 443,
-          "width": 64,
-          "height": 22,
-          "minX": 172,
-          "maxX": 231,
-          "speed": 120,
-          "x": 172,
-          "dir": 1
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 184,
-          "y": 369,
-          "radius": 23
-        },
-        {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 242,
-          "y": 294,
-          "radius": 18
+          "y": 400,
+          "leftX": 205,
+          "rightX": 295,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 170,
+      "finishX": 250
     }
   },
   {
-    "id": 40,
-    "name": "Mist River Climax",
-    "targetTime": 62,
-    "hint": "The Grand Canyon finale! 25 coordinated hazards testing all crew roles.",
+    "id": 34,
+    "name": "Pyramid Peak",
+    "targetTime": 50,
+    "hint": "Follow the triangular corridor up to the summit.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Mist river mastery",
+    "teaches": "Handcrafted Pattern 34",
     "world": {
       "width": 360,
-      "height": 2340,
-      "startX": 180,
-      "startY": 2190,
-      "finishX": 180,
+      "height": 1400,
+      "startY": 1250,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.989,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2340,
+          "y": 1400,
           "cx": 180,
-          "width": 155
+          "width": 250
         },
         {
-          "y": 1950,
-          "cx": 225,
-          "width": 155
+          "y": 950,
+          "cx": 180,
+          "width": 200
         },
         {
-          "y": 1560,
-          "cx": 135,
-          "width": 155
+          "y": 550,
+          "cx": 180,
+          "width": 165
         },
         {
-          "y": 1170,
-          "cx": 225,
-          "width": 147
-        },
-        {
-          "y": 780,
-          "cx": 135,
-          "width": 147
-        },
-        {
-          "y": 390,
-          "cx": 225,
-          "width": 155
+          "y": 200,
+          "cx": 180,
+          "width": 140
         },
         {
           "y": 0,
           "cx": 180,
-          "width": 155
+          "width": 150
         }
       ],
       "obstacles": [
         {
-          "id": "rock_11",
+          "id": "rock1",
           "type": "rock",
-          "x": 262,
-          "y": 2047,
-          "radius": 21
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 178,
-          "y": 1974,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1901,
-          "width": 65,
-          "height": 22,
-          "minX": 177,
-          "maxX": 237,
-          "speed": 115,
-          "x": 237,
-          "dir": -1
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 203,
-          "y": 1828,
+          "x": 150,
+          "y": 1000,
           "radius": 18
         },
         {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 1755,
-          "width": 65,
+          "y": 700,
+          "width": 58,
           "height": 22,
-          "minX": 143,
-          "maxX": 201,
-          "speed": 108,
-          "x": 143,
-          "dir": 1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 116,
-          "y": 1682,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1608,
-          "leftX": 93,
-          "rightX": 199,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 187,
-          "y": 1535,
-          "radius": 23
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 152,
-          "y": 1462,
-          "radius": 18
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 1389,
-          "width": 63,
-          "height": 22,
-          "minX": 143,
-          "maxX": 211,
-          "speed": 121,
-          "x": 211,
-          "dir": -1
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 222,
-          "y": 1316,
-          "radius": 21
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 1243,
-          "width": 62,
-          "height": 22,
-          "minX": 180,
-          "maxX": 243,
-          "speed": 114,
+          "minX": 145,
+          "maxX": 215,
+          "speed": 36,
           "x": 180,
           "dir": 1
         },
         {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 183,
-          "y": 1170,
-          "radius": 23
-        },
-        {
-          "id": "gate_2",
+          "id": "gate1",
           "type": "gate",
-          "y": 1097,
-          "leftX": 155,
-          "rightX": 261,
-          "postRadius": 11
+          "y": 400,
+          "leftX": 135,
+          "rightX": 225,
+          "postRadius": 14
+        }
+      ],
+      "startX": 180,
+      "finishX": 180
+    }
+  },
+  {
+    "id": 35,
+    "name": "Terrace Ridge",
+    "targetTime": 52,
+    "hint": "Three gentle shelves climbing from right to left.",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 35",
+    "world": {
+      "width": 360,
+      "height": 1400,
+      "startY": 1250,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1400,
+          "cx": 250,
+          "width": 170
         },
         {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 239,
-          "y": 1024,
-          "radius": 18
+          "y": 1000,
+          "cx": 250,
+          "width": 170
         },
         {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 143,
-          "y": 951,
-          "radius": 21
+          "y": 750,
+          "cx": 180,
+          "width": 175
         },
         {
-          "id": "log_8",
+          "y": 400,
+          "cx": 110,
+          "width": 170
+        },
+        {
+          "y": 0,
+          "cx": 110,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 1000,
+          "leftX": 205,
+          "rightX": 295,
+          "postRadius": 14
+        },
+        {
+          "id": "log1",
           "type": "log",
-          "y": 878,
+          "y": 700,
           "width": 62,
           "height": 22,
-          "minX": 128,
-          "maxX": 192,
-          "speed": 107,
-          "x": 192,
+          "minX": 145,
+          "maxX": 215,
+          "speed": 38,
+          "x": 180,
           "dir": -1
         },
         {
-          "id": "rock_21",
+          "id": "rock1",
           "type": "rock",
-          "x": 168,
-          "y": 805,
-          "radius": 23
+          "x": 110,
+          "y": 380,
+          "radius": 18
+        }
+      ],
+      "startX": 250,
+      "finishX": 110
+    }
+  },
+  {
+    "id": 36,
+    "name": "The Diagonal Y",
+    "targetTime": 52,
+    "hint": "Follow the bold diagonal slash across the river.",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 36",
+    "world": {
+      "width": 360,
+      "height": 1400,
+      "startY": 1250,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1400,
+          "cx": 100,
+          "width": 170
         },
         {
-          "id": "log_9",
+          "y": 750,
+          "cx": 260,
+          "width": 175
+        },
+        {
+          "y": 400,
+          "cx": 130,
+          "width": 170
+        },
+        {
+          "y": 0,
+          "cx": 130,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "rock1",
+          "type": "rock",
+          "x": 120,
+          "y": 1100,
+          "radius": 18
+        },
+        {
+          "id": "log1",
           "type": "log",
-          "y": 732,
+          "y": 750,
           "width": 62,
           "height": 22,
-          "minX": 111,
-          "maxX": 178,
-          "speed": 120,
-          "x": 111,
+          "minX": 215,
+          "maxX": 285,
+          "speed": 38,
+          "x": 250,
           "dir": 1
         },
         {
-          "id": "rock_22",
+          "id": "gate1",
+          "type": "gate",
+          "y": 350,
+          "leftX": 85,
+          "rightX": 175,
+          "postRadius": 14
+        }
+      ],
+      "startX": 137,
+      "finishX": 130
+    }
+  },
+  {
+    "id": 37,
+    "name": "Box Horseshoe",
+    "targetTime": 58,
+    "hint": "A grand rectangular loop: across, up, and back!",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 37",
+    "world": {
+      "width": 360,
+      "height": 1550,
+      "startY": 1400,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1550,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 1200,
+          "cx": 260,
+          "width": 175
+        },
+        {
+          "y": 600,
+          "cx": 260,
+          "width": 175
+        },
+        {
+          "y": 350,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 0,
+          "cx": 100,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "rock1",
           "type": "rock",
-          "x": 114,
-          "y": 658,
+          "x": 240,
+          "y": 1200,
           "radius": 18
         },
         {
-          "id": "gate_3",
+          "id": "gate1",
           "type": "gate",
-          "y": 585,
-          "leftX": 127,
-          "rightX": 233,
-          "postRadius": 11
+          "y": 900,
+          "leftX": 215,
+          "rightX": 305,
+          "postRadius": 14
         },
         {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 187,
-          "y": 512,
-          "radius": 23
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 224,
-          "y": 439,
-          "radius": 21
-        },
-        {
-          "id": "log_10",
+          "id": "log1",
           "type": "log",
-          "y": 366,
-          "width": 65,
+          "y": 600,
+          "width": 62,
           "height": 22,
-          "minX": 185,
-          "maxX": 252,
-          "speed": 113,
-          "x": 252,
+          "minX": 215,
+          "maxX": 285,
+          "speed": 38,
+          "x": 250,
           "dir": -1
         },
         {
-          "id": "rock_25",
+          "id": "rock2",
           "type": "rock",
-          "x": 245,
-          "y": 293,
+          "x": 110,
+          "y": 320,
           "radius": 18
         }
-      ]
+      ],
+      "startX": 169,
+      "finishX": 100
+    }
+  },
+  {
+    "id": 38,
+    "name": "The Serpentine 5",
+    "targetTime": 60,
+    "hint": "Weave the double S-curves like a graceful snake.",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 38",
+    "world": {
+      "width": 360,
+      "height": 1600,
+      "startY": 1450,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1600,
+          "cx": 250,
+          "width": 170
+        },
+        {
+          "y": 1100,
+          "cx": 250,
+          "width": 170
+        },
+        {
+          "y": 750,
+          "cx": 110,
+          "width": 175
+        },
+        {
+          "y": 400,
+          "cx": 250,
+          "width": 175
+        },
+        {
+          "y": 150,
+          "cx": 110,
+          "width": 170
+        },
+        {
+          "y": 0,
+          "cx": 110,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "rock1",
+          "type": "rock",
+          "x": 245,
+          "y": 1250,
+          "radius": 18
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 750,
+          "leftX": 65,
+          "rightX": 155,
+          "postRadius": 14
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 450,
+          "width": 62,
+          "height": 22,
+          "minX": 205,
+          "maxX": 275,
+          "speed": 38,
+          "x": 240,
+          "dir": 1
+        }
+      ],
+      "startX": 250,
+      "finishX": 110
+    }
+  },
+  {
+    "id": 39,
+    "name": "Letter N Channel",
+    "targetTime": 54,
+    "hint": "Up the left leg, cross diagonally, up the right leg!",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 39",
+    "world": {
+      "width": 360,
+      "height": 1500,
+      "startY": 1350,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1500,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 1000,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 600,
+          "cx": 260,
+          "width": 175
+        },
+        {
+          "y": 0,
+          "cx": 260,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 1050,
+          "leftX": 55,
+          "rightX": 145,
+          "postRadius": 14
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 700,
+          "width": 62,
+          "height": 22,
+          "minX": 180,
+          "maxX": 255,
+          "speed": 38,
+          "x": 215,
+          "dir": 1
+        },
+        {
+          "id": "rock1",
+          "type": "rock",
+          "x": 250,
+          "y": 350,
+          "radius": 18
+        }
+      ],
+      "startX": 100,
+      "finishX": 260
+    }
+  },
+  {
+    "id": 40,
+    "name": "The Flying V",
+    "targetTime": 52,
+    "hint": "Angle smoothly down into the apex and out to glory.",
+    "crewUnlocked": [
+      "hippo",
+      "frog",
+      "pig",
+      "penguin"
+    ],
+    "teaches": "Handcrafted Pattern 40",
+    "world": {
+      "width": 360,
+      "height": 1400,
+      "startY": 1250,
+      "finishY": 130,
+      "finishRadius": 46,
+      "drag": 0.979,
+      "waypoints": [
+        {
+          "y": 1400,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 750,
+          "cx": 180,
+          "width": 175
+        },
+        {
+          "y": 0,
+          "cx": 260,
+          "width": 170
+        }
+      ],
+      "obstacles": [
+        {
+          "id": "rock1",
+          "type": "rock",
+          "x": 120,
+          "y": 1050,
+          "radius": 18
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 750,
+          "leftX": 135,
+          "rightX": 225,
+          "postRadius": 14
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 400,
+          "width": 60,
+          "height": 22,
+          "minX": 180,
+          "maxX": 250,
+          "speed": 38,
+          "x": 215,
+          "dir": -1
+        }
+      ],
+      "startX": 118,
+      "finishX": 246
     }
   },
   {
     "id": 41,
-    "name": "Cascade Foothills",
+    "name": "Wide Slalom",
     "targetTime": 60,
-    "hint": "Welcome to Zone 5. Currents are swift and rock clusters leave razor margins.",
+    "hint": "Full-width sweeping maneuvers from bank to bank.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Cascade entry precision",
+    "teaches": "Handcrafted Pattern 41",
     "world": {
       "width": 360,
-      "height": 2380,
-      "startX": 180,
-      "startY": 2230,
-      "finishX": 180,
+      "height": 1650,
+      "startY": 1500,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.989,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2380,
+          "y": 1650,
           "cx": 180,
-          "width": 155
+          "width": 175
         },
         {
-          "y": 1983,
-          "cx": 218,
-          "width": 155
+          "y": 1250,
+          "cx": 100,
+          "width": 170
         },
         {
-          "y": 1587,
-          "cx": 142,
-          "width": 155
+          "y": 850,
+          "cx": 260,
+          "width": 175
         },
         {
-          "y": 1190,
-          "cx": 218,
-          "width": 147
-        },
-        {
-          "y": 793,
-          "cx": 142,
-          "width": 147
-        },
-        {
-          "y": 397,
-          "cx": 218,
-          "width": 155
+          "y": 450,
+          "cx": 100,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 155
+          "cx": 110,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_10",
+          "id": "rock1",
           "type": "rock",
-          "x": 257,
-          "y": 2085,
-          "radius": 21
-        },
-        {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 178,
-          "y": 2011,
-          "radius": 23
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1936,
-          "width": 65,
-          "height": 22,
-          "minX": 172,
-          "maxX": 228,
-          "speed": 117,
-          "x": 228,
-          "dir": -1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 208,
-          "y": 1862,
+          "x": 115,
+          "y": 1200,
           "radius": 18
         },
         {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 1787,
-          "width": 65,
-          "height": 22,
-          "minX": 143,
-          "maxX": 204,
-          "speed": 110,
-          "x": 143,
-          "dir": 1
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 119,
-          "y": 1712,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1638,
-          "leftX": 99,
-          "rightX": 205,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 188,
-          "y": 1563,
-          "radius": 23
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 144,
-          "y": 1488,
-          "radius": 18
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 210,
-          "y": 1414,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
-          "type": "log",
-          "y": 1339,
-          "width": 63,
-          "height": 22,
-          "minX": 163,
-          "maxX": 225,
-          "speed": 123,
-          "x": 225,
-          "dir": -1
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 170,
-          "y": 1265,
-          "radius": 23
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 253,
-          "y": 1190,
-          "radius": 18
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1115,
-          "leftX": 151,
-          "rightX": 257,
-          "postRadius": 11
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 1041,
+          "y": 850,
           "width": 62,
           "height": 22,
-          "minX": 160,
-          "maxX": 224,
-          "speed": 116,
-          "x": 160,
+          "minX": 215,
+          "maxX": 285,
+          "speed": 38,
+          "x": 250,
           "dir": 1
         },
         {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 158,
-          "y": 966,
-          "radius": 21
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 188,
-          "y": 892,
-          "radius": 23
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 99,
-          "y": 817,
-          "radius": 18
-        },
-        {
-          "id": "gate_3",
+          "id": "gate1",
           "type": "gate",
-          "y": 742,
-          "leftX": 99,
-          "rightX": 205,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 212,
-          "y": 668,
-          "radius": 21
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 593,
-          "width": 63,
-          "height": 22,
-          "minX": 144,
-          "maxX": 206,
-          "speed": 109,
-          "x": 206,
-          "dir": -1
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 164,
-          "y": 518,
-          "radius": 23
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 444,
-          "width": 64,
-          "height": 22,
-          "minX": 172,
-          "maxX": 231,
-          "speed": 122,
-          "x": 172,
-          "dir": 1
-        },
-        {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 230,
-          "y": 369,
-          "radius": 18
-        },
-        {
-          "id": "rock_25",
-          "type": "rock",
-          "x": 165,
-          "y": 295,
-          "radius": 21
+          "y": 500,
+          "leftX": 65,
+          "rightX": 155,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 150,
+      "finishX": 107
     }
   },
   {
     "id": 42,
-    "name": "The Log Matrix",
-    "targetTime": 62,
-    "hint": "Seven fast logs moving in alternating directions. Charge Hippo only during clear gaps.",
+    "name": "Canyon Key",
+    "targetTime": 60,
+    "hint": "Follow the keyhole turns through the golden canyons.",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Matrix log traversal",
+    "teaches": "Handcrafted Pattern 42",
     "world": {
       "width": 360,
-      "height": 2420,
-      "startX": 180,
-      "startY": 2270,
-      "finishX": 180,
+      "height": 1650,
+      "startY": 1500,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.989,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2420,
-          "cx": 180,
-          "width": 150
+          "y": 1650,
+          "cx": 250,
+          "width": 170
         },
         {
-          "y": 2017,
-          "cx": 215,
-          "width": 150
+          "y": 1300,
+          "cx": 110,
+          "width": 170
         },
         {
-          "y": 1613,
-          "cx": 145,
-          "width": 150
+          "y": 1000,
+          "cx": 250,
+          "width": 175
         },
         {
-          "y": 1210,
-          "cx": 215,
-          "width": 142
+          "y": 700,
+          "cx": 110,
+          "width": 175
         },
         {
-          "y": 807,
-          "cx": 145,
-          "width": 142
-        },
-        {
-          "y": 403,
-          "cx": 215,
-          "width": 150
+          "y": 400,
+          "cx": 250,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 150
+          "cx": 110,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 252,
-          "y": 2121,
-          "radius": 21
-        },
-        {
-          "id": "log_3",
-          "type": "log",
-          "y": 2042,
-          "width": 63,
-          "height": 22,
-          "minX": 177,
-          "maxX": 237,
-          "speed": 120,
-          "x": 237,
-          "dir": -1
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 171,
-          "y": 1962,
-          "radius": 23
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 200,
-          "y": 1883,
-          "radius": 18
-        },
-        {
-          "id": "log_4",
-          "type": "log",
-          "y": 1804,
-          "width": 63,
-          "height": 22,
-          "minX": 143,
-          "maxX": 208,
-          "speed": 113,
-          "x": 143,
-          "dir": 1
-        },
-        {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 118,
-          "y": 1725,
-          "radius": 21
-        },
-        {
-          "id": "gate_1",
+          "id": "gate1",
           "type": "gate",
-          "y": 1646,
-          "leftX": 98,
-          "rightX": 204,
-          "postRadius": 11
+          "y": 1250,
+          "leftX": 65,
+          "rightX": 155,
+          "postRadius": 14
         },
         {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 197,
-          "y": 1566,
-          "radius": 23
-        },
-        {
-          "id": "log_5",
+          "id": "log1",
           "type": "log",
-          "y": 1487,
+          "y": 950,
           "width": 62,
           "height": 22,
-          "minX": 135,
-          "maxX": 202,
-          "speed": 126,
-          "x": 202,
+          "minX": 205,
+          "maxX": 275,
+          "speed": 38,
+          "x": 240,
           "dir": -1
         },
         {
-          "id": "rock_16",
+          "id": "rock1",
           "type": "rock",
-          "x": 161,
-          "y": 1408,
+          "x": 120,
+          "y": 650,
           "radius": 18
         },
         {
-          "id": "log_6",
-          "type": "log",
-          "y": 1329,
-          "width": 61,
-          "height": 22,
-          "minX": 161,
-          "maxX": 227,
-          "speed": 119,
-          "x": 161,
-          "dir": 1
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 228,
-          "y": 1250,
-          "radius": 21
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 168,
-          "y": 1170,
-          "radius": 23
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 1091,
-          "width": 60,
-          "height": 22,
-          "minX": 161,
-          "maxX": 223,
-          "speed": 112,
-          "x": 223,
-          "dir": -1
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 224,
-          "y": 1012,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 933,
-          "width": 60,
-          "height": 22,
-          "minX": 134,
-          "maxX": 199,
-          "speed": 125,
-          "x": 134,
-          "dir": 1
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 141,
-          "y": 854,
-          "radius": 21
-        },
-        {
-          "id": "gate_2",
+          "id": "gate2",
           "type": "gate",
-          "y": 774,
-          "leftX": 98,
-          "rightX": 203,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 178,
-          "y": 695,
-          "radius": 23
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 616,
-          "width": 61,
-          "height": 22,
-          "minX": 144,
-          "maxX": 210,
-          "speed": 118,
-          "x": 210,
-          "dir": -1
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 144,
-          "y": 537,
-          "radius": 18
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 242,
-          "y": 458,
-          "radius": 21
-        },
-        {
-          "id": "log_10",
-          "type": "log",
-          "y": 378,
-          "width": 63,
-          "height": 22,
-          "minX": 177,
-          "maxX": 240,
-          "speed": 111,
-          "x": 177,
-          "dir": 1
-        },
-        {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 186,
-          "y": 299,
-          "radius": 23
+          "y": 350,
+          "leftX": 205,
+          "rightX": 295,
+          "postRadius": 14
         }
-      ]
+      ],
+      "startX": 190,
+      "finishX": 156
     }
   },
   {
     "id": 43,
-    "name": "Quad Slalom Cascade",
+    "name": "The Mighty W",
     "targetTime": 62,
-    "hint": "Four tight gates with logs patrolling right between them. Brake with Penguin to survive.",
+    "hint": "A magnificent W-shaped river course to triumph!",
     "crewUnlocked": [
       "hippo",
       "frog",
       "pig",
       "penguin"
     ],
-    "teaches": "Tight-quarter gate clearing",
+    "teaches": "Handcrafted Pattern 43",
     "world": {
       "width": 360,
-      "height": 2460,
-      "startX": 180,
-      "startY": 2310,
-      "finishX": 180,
+      "height": 1700,
+      "startY": 1550,
       "finishY": 130,
       "finishRadius": 46,
-      "drag": 0.99,
+      "drag": 0.979,
       "waypoints": [
         {
-          "y": 2460,
+          "y": 1700,
+          "cx": 100,
+          "width": 170
+        },
+        {
+          "y": 1350,
           "cx": 180,
-          "width": 150
+          "width": 175
         },
         {
-          "y": 2050,
-          "cx": 222,
-          "width": 150
+          "y": 1000,
+          "cx": 100,
+          "width": 175
         },
         {
-          "y": 1640,
-          "cx": 138,
-          "width": 150
+          "y": 650,
+          "cx": 180,
+          "width": 175
         },
         {
-          "y": 1230,
-          "cx": 222,
-          "width": 142
-        },
-        {
-          "y": 820,
-          "cx": 138,
-          "width": 142
-        },
-        {
-          "y": 410,
-          "cx": 222,
-          "width": 150
+          "y": 350,
+          "cx": 260,
+          "width": 170
         },
         {
           "y": 0,
-          "cx": 180,
-          "width": 150
+          "cx": 260,
+          "width": 170
         }
       ],
       "obstacles": [
         {
-          "id": "rock_11",
+          "id": "rock1",
           "type": "rock",
-          "x": 257,
-          "y": 2162,
-          "radius": 21
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 178,
-          "y": 2085,
-          "radius": 23
-        },
-        {
-          "id": "log_5",
-          "type": "log",
-          "y": 2007,
-          "width": 63,
-          "height": 22,
-          "minX": 178,
-          "maxX": 229,
-          "speed": 120,
-          "x": 229,
-          "dir": -1
-        },
-        {
-          "id": "gate_1",
-          "type": "gate",
-          "y": 1929,
-          "leftX": 144,
-          "rightX": 250,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_13",
-          "type": "rock",
-          "x": 189,
-          "y": 1852,
+          "x": 130,
+          "y": 1350,
           "radius": 18
         },
         {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 119,
-          "y": 1774,
-          "radius": 21
-        },
-        {
-          "id": "log_6",
+          "id": "log1",
           "type": "log",
-          "y": 1696,
-          "width": 63,
-          "height": 22,
-          "minX": 114,
-          "maxX": 180,
-          "speed": 113,
-          "x": 114,
-          "dir": 1
-        },
-        {
-          "id": "rock_15",
-          "type": "rock",
-          "x": 186,
-          "y": 1618,
-          "radius": 23
-        },
-        {
-          "id": "rock_16",
-          "type": "rock",
-          "x": 151,
-          "y": 1541,
-          "radius": 18
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1463,
-          "leftX": 121,
-          "rightX": 227,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 221,
-          "y": 1385,
-          "radius": 21
-        },
-        {
-          "id": "log_7",
-          "type": "log",
-          "y": 1308,
-          "width": 61,
-          "height": 22,
-          "minX": 173,
-          "maxX": 233,
-          "speed": 126,
-          "x": 233,
-          "dir": -1
-        },
-        {
-          "id": "rock_18",
-          "type": "rock",
-          "x": 182,
-          "y": 1230,
-          "radius": 23
-        },
-        {
-          "id": "rock_19",
-          "type": "rock",
-          "x": 239,
-          "y": 1152,
-          "radius": 18
-        },
-        {
-          "id": "log_8",
-          "type": "log",
-          "y": 1075,
-          "width": 60,
-          "height": 22,
-          "minX": 163,
-          "maxX": 223,
-          "speed": 119,
-          "x": 163,
-          "dir": 1
-        },
-        {
-          "id": "gate_3",
-          "type": "gate",
-          "y": 997,
-          "leftX": 122,
-          "rightX": 226,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 143,
-          "y": 919,
-          "radius": 21
-        },
-        {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 169,
-          "y": 842,
-          "radius": 23
-        },
-        {
-          "id": "log_9",
-          "type": "log",
-          "y": 764,
-          "width": 60,
-          "height": 22,
-          "minX": 116,
-          "maxX": 183,
-          "speed": 112,
-          "x": 183,
-          "dir": -1
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 119,
-          "y": 686,
-          "radius": 18
-        },
-        {
-          "id": "gate_4",
-          "type": "gate",
-          "y": 608,
-          "leftX": 128,
-          "rightX": 234,
-          "postRadius": 11
-        },
-        {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 231,
-          "y": 531,
-          "radius": 21
-        },
-        {
-          "id": "log_10",
-          "type": "log",
-          "y": 453,
+          "y": 1000,
           "width": 62,
           "height": 22,
-          "minX": 178,
-          "maxX": 232,
-          "speed": 125,
-          "x": 178,
+          "minX": 85,
+          "maxX": 155,
+          "speed": 36,
+          "x": 120,
           "dir": 1
         },
         {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 187,
-          "y": 375,
-          "radius": 23
+          "id": "gate1",
+          "type": "gate",
+          "y": 650,
+          "leftX": 135,
+          "rightX": 225,
+          "postRadius": 14
         },
         {
-          "id": "rock_25",
+          "id": "rock2",
           "type": "rock",
-          "x": 241,
-          "y": 298,
+          "x": 240,
+          "y": 350,
           "radius": 18
         }
-      ]
+      ],
+      "startX": 134,
+      "finishX": 260
     }
   },
   {
