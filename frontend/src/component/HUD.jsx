@@ -48,15 +48,18 @@ export default function HUD({
           ⏱️ {elapsedTime.toFixed(1)}s
         </div>
 
-        {/* Bumps counter */}
+        {/* Bumps / Collision counter (Limit: 10) */}
         <div
-          className={`px-2.5 py-1 rounded-xl font-black text-xs shadow-md border backdrop-blur-sm ${
-            bumps <= 2
+          className={`px-2.5 py-1 rounded-xl font-black text-xs shadow-md border backdrop-blur-sm transition-colors ${
+            bumps < 7
               ? 'bg-slate-900/70 text-sky-200 border-white/10'
-              : 'bg-rose-950/70 text-rose-300 border-rose-500/40'
+              : bumps < 10
+              ? 'bg-amber-950/80 text-amber-300 border-amber-500/50 animate-pulse'
+              : 'bg-rose-950/90 text-rose-300 border-rose-500/60 animate-bounce'
           }`}
+          title="Collisions (Game Over at 10)"
         >
-          💥 {bumps}
+          💥 {bumps}/10
         </div>
 
         {/* Pause Button */}

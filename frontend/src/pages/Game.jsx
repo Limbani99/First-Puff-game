@@ -25,6 +25,7 @@ export default function Game() {
 
   const [isPaused, setIsPaused] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
+  const [isGameOver, setIsGameOver] = useState(false);
   const [elapsedTime, setElapsedTime] = useState(0);
   const [bumps, setBumps] = useState(0);
   const [earnedStars, setEarnedStars] = useState(1);
@@ -56,6 +57,7 @@ export default function Game() {
     setBumps(0);
     setIsPaused(false);
     setIsCompleted(false);
+    setIsGameOver(false);
   }, [currentLevel]);
 
   useEffect(() => {
@@ -64,7 +66,7 @@ export default function Game() {
 
   // Handle Crew Puff action
   const handlePuff = (crewId, charge) => {
-    if (!timerRunningRef.current || isCompleted || isPaused) return;
+    if (!timerRunningRef.current || isCompleted || isPaused || isGameOver) return;
 
     const raft = raftRef.current;
     const puffData = applyPuffImpulse(raft, crewId, charge);
@@ -100,7 +102,7 @@ export default function Game() {
       const world = worldRef.current;
       const particles = particlesRef.current;
 
-      if (timerRunningRef.current && !isPaused && !isCompleted) {
+      if (timerRunningRef.current && !isPaused && !isCompleted && !isGameOver) {
         // Accumulate time
         totalElapsedRef.current += dt;
         setElapsedTime(totalElapsedRef.current);
@@ -113,6 +115,13 @@ export default function Game() {
           soundManager.playBump();
           shakeRef.current = 1.0;
           setBumps(raft.bumps);
+
+          // 10 Collisions Trigger Game Over Screen
+          if (raft.bumps >= 10) {
+            timerRunningRef.current = false;
+            setIsGameOver(true);
+            soundManager.playGameOver();
+          }
         });
 
         // Periodic small water ripples when moving
@@ -191,6 +200,7 @@ export default function Game() {
   }, []);
 
   const handlePause = () => {
+    if (isGameOver || isCompleted) return;
     setIsPaused(true);
   };
 
@@ -202,7 +212,22 @@ export default function Game() {
 
   const handleRestart = () => {
     soundManager.playClick();
+    setIsGameOver(false);
     resetGame();
+  };
+
+  const handleResumeGameOver = () => {
+    soundManager.playClick();
+    setIsGameOver(false);
+    // Reset collisions so player can continue their run
+    raftRef.current.bumps = 0;
+    setBumps(0);
+    // 1-second invulnerability cushion so raft doesn't immediately re-collide
+    raftRef.current.lastBumpTime = performance.now() + 1000;
+    raftRef.current.vx *= 0.2;
+    raftRef.current.vy *= 0.2;
+    lastTimeRef.current = performance.now();
+    timerRunningRef.current = true;
   };
 
   const handleNextLevel = () => {
@@ -258,7 +283,7 @@ export default function Game() {
             crew={CREW_MEMBERS.pig}
             isUnlocked={currentLevel.crewUnlocked.includes('pig')}
             onPuff={handlePuff}
-            disabled={isPaused || isCompleted}
+            disabled={isPaused || isCompleted || isGameOver}
           />
 
           {/* Frog (Port: Pushes Right) */}
@@ -266,7 +291,7 @@ export default function Game() {
             crew={CREW_MEMBERS.frog}
             isUnlocked={currentLevel.crewUnlocked.includes('frog')}
             onPuff={handlePuff}
-            disabled={isPaused || isCompleted}
+            disabled={isPaused || isCompleted || isGameOver}
           />
         </div>
 
@@ -277,7 +302,7 @@ export default function Game() {
             crew={CREW_MEMBERS.penguin}
             isUnlocked={currentLevel.crewUnlocked.includes('penguin')}
             onPuff={handlePuff}
-            disabled={isPaused || isCompleted}
+            disabled={isPaused || isCompleted || isGameOver}
           />
 
           {/* Hippo (Stern: Pushes Forward) */}
@@ -285,10 +310,61 @@ export default function Game() {
             crew={CREW_MEMBERS.hippo}
             isUnlocked={currentLevel.crewUnlocked.includes('hippo')}
             onPuff={handlePuff}
-            disabled={isPaused || isCompleted}
+            disabled={isPaused || isCompleted || isGameOver}
           />
         </div>
       </div>
+
+      {/* GAME OVER MODAL (Triggers when player collides with obstacles 10 times) */}
+      {isGameOver && (
+        <div className="absolute inset-0 bg-slate-950/85 backdrop-blur-md flex items-center justify-center p-6 z-50 animate-fadeIn select-none">
+          <div className="w-full max-w-[320px] bg-gradient-to-b from-rose-950 via-slate-900 to-sky-950 border-2 border-rose-500/70 rounded-3xl p-6 shadow-2xl flex flex-col items-center gap-3 text-white text-center">
+            <span className="text-5xl animate-bounce">💥</span>
+            <h2 className="text-3xl font-black text-rose-400 uppercase tracking-wider drop-shadow-md">
+              Game Over
+            </h2>
+            <p className="text-xs font-bold text-slate-300">
+              You collided with obstacles <span className="text-rose-400 font-extrabold">10 times</span>! Your raft sustained too much damage.
+            </p>
+
+            {/* Quick stats snapshot */}
+            <div className="w-full bg-slate-900/80 rounded-2xl p-3 border border-white/10 flex items-center justify-around text-xs my-1">
+              <div className="flex flex-col items-center">
+                <span className="text-slate-400 font-bold">⏱️ Time</span>
+                <span className="font-mono font-black text-amber-300 text-sm">
+                  {elapsedTime.toFixed(1)}s
+                </span>
+              </div>
+              <div className="h-6 w-px bg-white/10" />
+              <div className="flex flex-col items-center">
+                <span className="text-slate-400 font-bold">💥 Collisions</span>
+                <span className="font-mono font-black text-rose-400 text-sm">
+                  10 / 10
+                </span>
+              </div>
+            </div>
+
+            {/* Action Buttons: Resume and Restart */}
+            <div className="w-full flex flex-col gap-2.5 mt-2">
+              <button
+                onClick={handleResumeGameOver}
+                className="w-full py-3.5 px-4 rounded-2xl bg-gradient-to-r from-emerald-500 to-green-600 hover:brightness-110 active:scale-95 text-white font-black text-base uppercase shadow-lg flex items-center justify-center gap-2 border border-white/30 transition-transform"
+              >
+                <Play fill="white" size={18} />
+                Resume
+              </button>
+
+              <button
+                onClick={handleRestart}
+                className="w-full py-3 px-4 rounded-2xl bg-sky-800 hover:bg-sky-700 active:scale-95 text-white font-extrabold text-sm uppercase shadow flex items-center justify-center gap-2 border border-white/15 transition-transform"
+              >
+                <RotateCcw size={18} />
+                Restart
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* PAUSE MODAL */}
       {isPaused && (

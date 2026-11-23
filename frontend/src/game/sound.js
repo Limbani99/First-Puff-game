@@ -245,6 +245,46 @@ export const soundManager = {
     this.vibrate([40, 60, 40, 100]);
   },
 
+  // Cartoon Game Over sound (descending sad trombone chords)
+  playGameOver() {
+    if (this.muted) return;
+    const ctx = getAudioContext();
+    if (!ctx) return;
+
+    try {
+      const now = ctx.currentTime;
+      // Sad descending tones: F3, E3, Eb3, D3
+      const tones = [174.61, 164.81, 155.56, 146.83];
+      tones.forEach((freq, idx) => {
+        const osc = ctx.createOscillator();
+        const gain = ctx.createGain();
+        const filter = ctx.createBiquadFilter();
+
+        osc.type = 'sawtooth';
+        osc.frequency.setValueAtTime(freq, now + idx * 0.18);
+        osc.frequency.exponentialRampToValueAtTime(Math.max(30, freq * 0.88), now + idx * 0.18 + 0.24);
+
+        filter.type = 'lowpass';
+        filter.frequency.setValueAtTime(850, now + idx * 0.18);
+
+        gain.gain.setValueAtTime(0.01, now + idx * 0.18);
+        gain.gain.linearRampToValueAtTime(0.25, now + idx * 0.18 + 0.02);
+        gain.gain.exponentialRampToValueAtTime(0.001, now + idx * 0.18 + 0.26);
+
+        osc.connect(filter);
+        filter.connect(gain);
+        gain.connect(ctx.destination);
+
+        osc.start(now + idx * 0.18);
+        osc.stop(now + idx * 0.18 + 0.27);
+      });
+    } catch {
+      // Audio fallback
+    }
+
+    this.vibrate([100, 60, 200]);
+  },
+
   // Star sound (index: 1, 2, or 3)
   playStar(index = 1) {
     if (this.muted) return;
