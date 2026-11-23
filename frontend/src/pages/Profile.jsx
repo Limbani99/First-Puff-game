@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, User, LogOut, Cloud, Shield, Key, Trophy } from "lucide-react";
+import { ArrowLeft, LogOut, Cloud, Key, Trophy } from "lucide-react";
 import { toast } from "react-hot-toast";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";

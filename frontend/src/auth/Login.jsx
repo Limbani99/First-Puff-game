@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
 import { toast } from "react-hot-toast";
-import { ArrowLeft, Lock, Mail, Play } from "lucide-react";
+import { ArrowLeft, Lock, Mail } from "lucide-react";
 import { useData } from "../context/DataProvider";
 import { soundManager } from "../game/sound";
 

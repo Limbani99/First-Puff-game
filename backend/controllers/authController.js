@@ -251,8 +251,6 @@ const forgetPassword = async (req, res) => {
 
     res.status(200).json({
       message: "Password reset link sent to your email",
-      // Include token in development for easy testing
-      debugToken: process.env.NODE_ENV !== "production" ? resetToken : undefined,
     });
   } catch (err) {
     console.error("Forget password error:", err);

@@ -11,7 +11,6 @@ export default function ForgetPassword() {
   const [email, setEmail] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
-  const [devToken, setDevToken] = useState(null);
   const navigate = useNavigate();
   const { apiBaseUrl } = useData();
 
@@ -23,9 +22,6 @@ export default function ForgetPassword() {
     try {
       const { data } = await axios.post(`${apiBaseUrl}/api/users/forget-password`, { email });
       setSubmitted(true);
-      if (data.debugToken) {
-        setDevToken(data.debugToken);
-      }
       toast.success(data.message || "Reset link sent!");
     } catch (err) {
       soundManager.playBump();
@@ -105,18 +101,6 @@ export default function ForgetPassword() {
             <div className="p-4 rounded-2xl bg-emerald-900/50 border border-emerald-500/40 text-xs text-emerald-200">
               Reset instructions have been sent to <b>{email}</b>. Please check your inbox or spam folder.
             </div>
-
-            {devToken && (
-              <div className="p-3 rounded-xl bg-slate-800 border border-amber-400/30 text-[11px] text-amber-300 text-left">
-                <div className="font-bold mb-1">Development Quick Link:</div>
-                <Link
-                  to={`/reset-password/${devToken}`}
-                  className="text-sky-300 underline break-all font-mono"
-                >
-                  Click here to Reset Password now
-                </Link>
-              </div>
-            )}
 
             <button
               onClick={() => navigate("/login")}
