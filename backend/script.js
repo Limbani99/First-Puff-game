@@ -26,7 +26,7 @@ app.get("/", (req, res) => {
 
 // MongoDB Connection
 const DEFAULT_ATLAS_URI =
-  "mongodb+srv://patelmann2424_db_user:argMpoZzSVqoBOJP@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
+  "mongodb+srv://patelmann2424_db_user:mannnareshbhai@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
 
 let MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
 
