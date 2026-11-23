@@ -97,7 +97,15 @@ app.get("/", (req, res) => {
 
 // MongoDB Connection
 const DEFAULT_ATLAS_URI = "mongodb+srv://patelmann2424_db_user:argMpoZzSVqoBOJP@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
-const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
+let MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
+
+// If deployed on Render or production and MONGO_URI is pointing to localhost, automatically override with Atlas!
+if (MONGO_URI.includes("127.0.0.1") || MONGO_URI.includes("localhost")) {
+  if (process.env.RENDER || process.env.NODE_ENV === "production") {
+    console.log("Localhost URI detected in production/Render. Overriding with MongoDB Atlas URI.");
+    MONGO_URI = DEFAULT_ATLAS_URI;
+  }
+}
 
 const connectDB = async () => {
   try {
