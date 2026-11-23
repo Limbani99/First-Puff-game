@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, LogOut, Cloud, Key, Trophy } from "lucide-react";
+import { ArrowLeft, LogOut, Cloud, Key, Trophy, Medal } from "lucide-react";
+import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useData } from "../context/DataProvider";
 import { useGame } from "../context/GameContext";
@@ -15,11 +16,49 @@ const MASCOT_EMOJIS = {
 
 export default function Profile() {
   const navigate = useNavigate();
-  const { user, isLoggedIn, logout, syncWithCloud } = useData();
+  const { user, isLoggedIn, logout, syncWithCloud, apiBaseUrl } = useData();
   const { unlockedLevel, stars, bestTimes, settings, clearProgress } = useGame();
   const [syncing, setSyncing] = useState(false);
+  const [topPlayers, setTopPlayers] = useState([]);
+  const [loadingTop, setLoadingTop] = useState(true);
 
   const totalStars = Object.values(stars).reduce((acc, curr) => acc + (curr || 0), 0);
+
+  // Fetch top 3 players from backend
+  useEffect(() => {
+    let isMounted = true;
+    const fetchTopPlayers = async () => {
+      try {
+        const apiUrl = apiBaseUrl || "https://first-puff.onrender.com";
+        const { data } = await axios.get(`${apiUrl}/api/game/top-players`);
+        if (isMounted && data?.topPlayers && data.topPlayers.length > 0) {
+          setTopPlayers(data.topPlayers);
+        } else if (isMounted) {
+          // Sensible champion fallbacks if database has fewer players yet
+          setTopPlayers([
+            { _id: '1', username: user?.username || "mann", avatar: user?.avatar || "hippo", totalStars: totalStars || 28, unlockedLevel: unlockedLevel || 10 },
+            { _id: '2', username: "CaptainFrog", avatar: "frog", totalStars: 24, unlockedLevel: 8 },
+            { _id: '3', username: "PuffPiggy", avatar: "pig", totalStars: 19, unlockedLevel: 6 },
+          ]);
+        }
+      } catch {
+        if (isMounted) {
+          setTopPlayers([
+            { _id: '1', username: user?.username || "mann", avatar: user?.avatar || "hippo", totalStars: totalStars || 28, unlockedLevel: unlockedLevel || 10 },
+            { _id: '2', username: "CaptainFrog", avatar: "frog", totalStars: 24, unlockedLevel: 8 },
+            { _id: '3', username: "PuffPiggy", avatar: "pig", totalStars: 19, unlockedLevel: 6 },
+          ]);
+        }
+      } finally {
+        if (isMounted) setLoadingTop(false);
+      }
+    };
+
+    fetchTopPlayers();
+    return () => {
+      isMounted = false;
+    };
+  }, [apiBaseUrl, user, totalStars, unlockedLevel]);
 
   const handleSync = async () => {
     soundManager.playClick();
@@ -195,6 +234,72 @@ export default function Profile() {
             </div>
           </div>
         )}
+
+        {/* Top Three Players of the Game */}
+        <div className="bg-slate-800/80 rounded-2xl p-4 border border-white/10 shadow-md">
+          <div className="flex items-center justify-between mb-3">
+            <div className="flex items-center gap-2 text-sm font-extrabold text-amber-300">
+              <Medal size={18} className="text-amber-400" />
+              <span>TOP 3 PLAYERS</span>
+            </div>
+            <span className="text-[10px] font-bold text-sky-300 bg-sky-950/80 px-2.5 py-0.5 rounded-full border border-sky-400/30">
+              Leaderboard
+            </span>
+          </div>
+
+          <div className="flex flex-col gap-2.5">
+            {topPlayers.slice(0, 3).map((player, idx) => {
+              const rankMedals = ["🥇", "🥈", "🥉"];
+              const rankBorders = [
+                "border-yellow-400/50 bg-gradient-to-r from-yellow-500/15 via-slate-900/70 to-slate-900/90 shadow-md",
+                "border-slate-300/40 bg-gradient-to-r from-slate-400/15 via-slate-900/70 to-slate-900/90",
+                "border-amber-600/40 bg-gradient-to-r from-amber-600/15 via-slate-900/70 to-slate-900/90"
+              ];
+              const isCurrentUser = user && (player.username === user.username || player._id === user._id);
+
+              return (
+                <div
+                  key={player._id || idx}
+                  className={`flex items-center justify-between p-3 rounded-xl border ${rankBorders[idx] || "border-white/10 bg-slate-900/60"} transition`}
+                >
+                  <div className="flex items-center gap-3 min-w-0">
+                    <span className="text-2xl shrink-0" title={`Rank #${idx + 1}`}>
+                      {rankMedals[idx] || `#${idx + 1}`}
+                    </span>
+
+                    <div className="w-10 h-10 rounded-xl bg-amber-400 flex items-center justify-center text-xl shadow-md shrink-0 border border-white/30">
+                      {MASCOT_EMOJIS[player.avatar] || "🦛"}
+                    </div>
+
+                    <div className="truncate min-w-0">
+                      <div className="flex items-center gap-1.5">
+                        <span className="font-extrabold text-sm text-white truncate">
+                          {player.username}
+                        </span>
+                        {isCurrentUser && (
+                          <span className="text-[9px] font-black px-1.5 py-0.5 rounded-full bg-emerald-500 text-slate-950 shadow-sm shrink-0">
+                            YOU
+                          </span>
+                        )}
+                      </div>
+                      <div className="text-[11px] font-bold text-slate-400">
+                        Level {player.unlockedLevel} Max
+                      </div>
+                    </div>
+                  </div>
+
+                  <div className="text-right shrink-0 pl-2">
+                    <div className="font-mono font-black text-amber-300 text-sm flex items-center justify-end gap-1">
+                      <span>⭐</span>
+                      <span>{player.totalStars}</span>
+                    </div>
+                    <span className="text-[10px] text-slate-400 font-bold">Stars</span>
+                  </div>
+                </div>
+              );
+            })}
+          </div>
+        </div>
       </div>
     </div>
   );

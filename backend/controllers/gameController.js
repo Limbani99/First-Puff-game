@@ -176,9 +176,45 @@ const getUserStats = async (req, res) => {
   }
 };
 
+/**
+ * Get top 3 players of the game (ranked by totalStars, then unlockedLevel)
+ */
+const getTopPlayers = async (req, res) => {
+  try {
+    const topUsers = await User.find({})
+      .select("username avatar image totalStars unlockedLevel stars")
+      .sort({ totalStars: -1, unlockedLevel: -1, createdAt: 1 })
+      .limit(3)
+      .lean();
+
+    const formatted = topUsers.map((u) => {
+      let starsCount = u.totalStars || 0;
+      if (starsCount === 0 && u.stars) {
+        const starsMap = u.stars instanceof Map ? Object.fromEntries(u.stars) : u.stars;
+        starsCount = Object.values(starsMap).reduce((a, b) => a + (Number(b) || 0), 0);
+      }
+
+      return {
+        _id: u._id,
+        username: u.username,
+        avatar: u.avatar || "hippo",
+        image: u.image || "",
+        totalStars: starsCount,
+        unlockedLevel: u.unlockedLevel || 1,
+      };
+    });
+
+    res.status(200).json({ topPlayers: formatted });
+  } catch (err) {
+    console.error("Fetch top players error:", err);
+    res.status(500).json({ message: "Failed to fetch top players", error: err.message });
+  }
+};
+
 module.exports = {
   saveProgress,
   syncProgress,
   getLeaderboard,
   getUserStats,
+  getTopPlayers,
 };
