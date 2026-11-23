@@ -84,11 +84,11 @@ export default function Home() {
       {/* Hero Title & Bobbing Raft */}
       <div className="flex flex-col items-center my-auto z-10 scale-90 sm:scale-100 transition-transform">
         <div className="flex flex-col items-center mb-2 sm:mb-5">
-          <h1 className="text-3xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans">
-            First Puff
+          <h1 className="text-3xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans text-center">
+            Gujarati Banka Ho
           </h1>
           <p className="text-sky-100 font-bold text-xs sm:text-sm mt-0.5 drop-shadow text-center max-w-[280px]">
-            Four silly animal friends, one raft, infinite gas power!
+            Chaar Gujarati Bankas, ek raft, full power dhamaal!
           </p>
         </div>
 

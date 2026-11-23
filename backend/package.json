@@ -1,7 +1,7 @@
 {
   "name": "backend",
   "version": "1.0.0",
-  "description": "First Puff Game Backend API",
+  "description": "Gujarati Banka Ho Game Backend API",
   "main": "script.js",
   "scripts": {
     "start": "node script.js",

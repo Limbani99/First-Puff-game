@@ -39,11 +39,11 @@ export default function Splash() {
       {/* Title Header */}
       <div className="flex flex-col items-center mt-8 z-10 text-center">
         <span className="text-4xl animate-bounce">💨</span>
-        <h1 className="text-4xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] tracking-wider uppercase font-sans">
-          First Puff
+        <h1 className="text-4xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_4px_rgba(0,0,0,0.5)] tracking-wider uppercase font-sans text-center">
+          Gujarati Banka Ho
         </h1>
-        <p className="text-sky-100 font-extrabold text-xs sm:text-sm mt-1 tracking-wide uppercase drop-shadow">
-          Single-Player Raft Adventure
+        <p className="text-sky-100 font-extrabold text-xs sm:text-sm mt-1 tracking-wide uppercase drop-shadow text-center">
+          Desi Banka Raft Adventure
         </p>
       </div>
 

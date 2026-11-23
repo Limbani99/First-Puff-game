@@ -20,7 +20,7 @@ const sendEmail = async ({ to, subject, html }) => {
     });
 
     const mailOptions = {
-      from: `"First Puff Game" <${process.env.EMAIL_USER}>`,
+      from: `"Gujarati Banka Ho" <${process.env.EMAIL_USER}>`,
       to,
       subject,
       html,

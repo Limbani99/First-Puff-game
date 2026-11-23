@@ -1,22 +1,22 @@
-# First Puff 💨🦛🐸🐷🐧
+# Gujarati Banka Ho 🌊👑
 
 > **Casual physics, top-down river arcade game.**  
-> Based on *Fart Together* by GamesMrkt. Single-player, offline-first, mobile/portrait-optimized with MERN stack cloud architecture.
+> Single-player, offline-first, mobile/portrait-optimized with MERN stack cloud architecture.
 
 ---
 
 ## 📖 1. Overview
 
-* **Name**: First Puff
+* **Name**: Gujarati Banka Ho
 * **Genre**: Casual physics, top-down, arcade
 * **Platform**: Mobile & Web (portrait mode optimized for 360×800)
 * **Mode**: Single player, fully offline-playable (with optional cloud account & sync)
-* **Content**: 10 progressive casual levels
-* **Tone**: Funny, cute, colourful, family-friendly
-* **Goal**: Steer a wooden raft to the finish flag using only gas power!
+* **Content**: 50 progressive casual levels across 5 chapters
+* **Tone**: Funny, vibrant, Desi, family-friendly
+* **Goal**: Steer a wooden raft to the finish flag using your crew's power!
 
 ### One-line pitch
-Four silly animal friends share one raft, and the only way to move is to let one rip at the right moment!
+Four Gujarati Bankas share one raft, navigating wild river rapids with full power dhamaal!
 
 ---
 

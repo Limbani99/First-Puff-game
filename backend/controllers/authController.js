@@ -258,7 +258,7 @@ const forgetPassword = async (req, res) => {
 
     const html = `
       <div style="font-family: Arial, sans-serif; max-width: 500px; margin: auto; padding: 20px; border: 1px solid #ddd; border-radius: 12px;">
-        <h2 style="color: #0284c7; text-align: center;">First Puff Password Reset</h2>
+        <h2 style="color: #0284c7; text-align: center;">Gujarati Banka Ho Password Reset</h2>
         <p>Hello <b>${user.username}</b>,</p>
         <p>You requested a password reset. Click the button below to choose a new password:</p>
         <div style="text-align: center; margin: 25px 0;">
@@ -270,7 +270,7 @@ const forgetPassword = async (req, res) => {
 
     await sendEmail({
       to: user.email,
-      subject: "First Puff - Reset Your Password",
+      subject: "Gujarati Banka Ho - Reset Your Password",
       html,
     });
 
