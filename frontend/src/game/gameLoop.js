@@ -1136,6 +1136,164 @@ function drawShorelineFence(ctx, world, cameraY, canvasHeight, time) {
   }
 }
 
+/**
+ * Dharal Log Obstacle (Darshan Raval's wife Dharal riding the log)
+ * Features the authentic wooden river log, moving left/right with water ripples,
+ * an elegant circular portrait badge of Dharal with rose-gold glowing rings,
+ * floating animated hearts & music notes, and a cute "🌸 Dharal 🌸" nameplate!
+ */
+function drawDharalLogObstacle(ctx, obs) {
+  const halfW = obs.width / 2;
+  const halfH = obs.height / 2;
+  const time = performance.now() * 0.002;
+
+  ctx.save();
+
+  // 1. Water wake & ripple around moving log
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.28)';
+  ctx.lineWidth = 1.2;
+  const rippleWave = Math.sin(time * 3 + obs.x * 0.05) * 1.5;
+  ctx.beginPath();
+  ctx.ellipse(obs.x, obs.y + halfH + 2, halfW + 4 + rippleWave, halfH * 0.6, 0, 0, Math.PI * 2);
+  ctx.stroke();
+
+  // 2. Log shadow
+  ctx.fillStyle = 'rgba(15, 23, 42, 0.28)';
+  ctx.beginPath();
+  ctx.roundRect(obs.x - halfW + 3, obs.y - halfH + 4, obs.width, obs.height, halfH);
+  ctx.fill();
+
+  // 3. Wooden Log Body
+  const logGrad = ctx.createLinearGradient(obs.x - halfW, obs.y, obs.x + halfW, obs.y);
+  logGrad.addColorStop(0, '#854d0e');
+  logGrad.addColorStop(0.5, '#a16207');
+  logGrad.addColorStop(1, '#713f12');
+
+  ctx.fillStyle = logGrad;
+  ctx.beginPath();
+  ctx.roundRect(obs.x - halfW, obs.y - halfH, obs.width, obs.height, halfH);
+  ctx.fill();
+
+  // Bark grain lines
+  ctx.strokeStyle = '#ca8a04';
+  ctx.lineWidth = 1.5;
+  ctx.beginPath();
+  ctx.moveTo(obs.x - halfW + 10, obs.y - 2);
+  ctx.lineTo(obs.x - 16, obs.y - 2);
+  ctx.stroke();
+
+  ctx.beginPath();
+  ctx.moveTo(obs.x + 16, obs.y - 2);
+  ctx.lineTo(obs.x + halfW - 10, obs.y - 2);
+  ctx.stroke();
+
+  // Decorative marigold / pink floral accents on log ends
+  ctx.fillStyle = '#f472b6'; // Blossom pink
+  ctx.beginPath();
+  ctx.arc(obs.x - halfW + 6, obs.y, 2.5, 0, Math.PI * 2);
+  ctx.arc(obs.x + halfW - 6, obs.y, 2.5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#fef08a';
+  ctx.beginPath();
+  ctx.arc(obs.x - halfW + 6, obs.y, 1.2, 0, Math.PI * 2);
+  ctx.arc(obs.x + halfW - 6, obs.y, 1.2, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 4. Dharal Avatar Portrait in Center
+  const avatarX = obs.x;
+  const avatarY = obs.y - 2;
+  const avatarR = Math.max(13, halfH * 1.3);
+
+  // Animated pulse
+  const pulse = Math.sin(time * 3 + obs.x * 0.1) * 1.2;
+
+  // Outer glowing ring
+  const glowGrad = ctx.createRadialGradient(avatarX, avatarY, avatarR * 0.8, avatarX, avatarY, avatarR + 5);
+  glowGrad.addColorStop(0, 'rgba(244, 114, 182, 0.55)');
+  glowGrad.addColorStop(1, 'rgba(244, 114, 182, 0)');
+  ctx.fillStyle = glowGrad;
+  ctx.beginPath();
+  ctx.arc(avatarX, avatarY, avatarR + 5 + pulse, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Rose-gold / Golden pedestal ring
+  ctx.fillStyle = '#facc15';
+  ctx.beginPath();
+  ctx.arc(avatarX, avatarY, avatarR + 2, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Inner border ring
+  ctx.fillStyle = '#f472b6';
+  ctx.beginPath();
+  ctx.arc(avatarX, avatarY, avatarR + 1, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Circular clip with portrait
+  ctx.save();
+  ctx.beginPath();
+  ctx.arc(avatarX, avatarY, avatarR, 0, Math.PI * 2);
+  ctx.clip();
+
+  const dharalImg = crewAvatarImages['dharal'];
+  if (dharalImg && dharalImg.complete && dharalImg.naturalWidth > 0) {
+    ctx.drawImage(dharalImg, avatarX - avatarR, avatarY - avatarR, avatarR * 2, avatarR * 2);
+  } else {
+    // Elegant cartoon illustration fallback
+    ctx.fillStyle = '#fed7aa'; // warm skin
+    ctx.fillRect(avatarX - avatarR, avatarY - avatarR, avatarR * 2, avatarR * 2);
+
+    // Flowing dark wavy hair
+    ctx.fillStyle = '#451a03';
+    ctx.beginPath();
+    ctx.arc(avatarX, avatarY - 3, avatarR * 0.9, Math.PI * 0.8, Math.PI * 2.2);
+    ctx.fill();
+    ctx.fillRect(avatarX - avatarR * 0.8, avatarY - 2, 4, avatarR * 1.2);
+
+    // Warm eyes
+    ctx.fillStyle = '#0f172a';
+    ctx.beginPath();
+    ctx.arc(avatarX - 3.5, avatarY - 1, 1.2, 0, Math.PI * 2);
+    ctx.arc(avatarX + 3.5, avatarY - 1, 1.2, 0, Math.PI * 2);
+    ctx.fill();
+
+    // Smile
+    ctx.strokeStyle = '#e11d48';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.arc(avatarX, avatarY + 3.5, 3.5, 0.1 * Math.PI, 0.9 * Math.PI);
+    ctx.stroke();
+
+    // Peach dress
+    ctx.fillStyle = '#fca5a5';
+    ctx.beginPath();
+    ctx.arc(avatarX, avatarY + avatarR + 2, avatarR * 0.7, Math.PI, Math.PI * 2);
+    ctx.fill();
+  }
+  ctx.restore();
+
+  // 5. Floating Animated Heart / Musical Notes
+  const heartFloat = Math.sin(time * 4 + obs.x) * 2.5;
+  ctx.font = 'bold 10px "Segoe UI", Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('💖', avatarX, avatarY - avatarR - 7 + heartFloat);
+
+  // 6. Cute Name Pill Badge: "🌸 Dharal 🌸"
+  const badgeY = obs.y + halfH + 8;
+  ctx.font = 'bold 7.5px "Segoe UI", Arial, sans-serif';
+  const nameTxt = '🌸 Dharal 🌸';
+  const tw = ctx.measureText(nameTxt).width;
+  ctx.fillStyle = 'rgba(15, 23, 42, 0.9)';
+  fillSafeRoundRect(ctx, avatarX - tw / 2 - 3, badgeY - 5, tw + 6, 10, 3);
+  ctx.strokeStyle = '#f472b6';
+  ctx.lineWidth = 1;
+  strokeSafeRoundRect(ctx, avatarX - tw / 2 - 3, badgeY - 5, tw + 6, 10, 3);
+  ctx.fillStyle = '#fdf2f8';
+  ctx.fillText(nameTxt, avatarX, badgeY);
+
+  ctx.restore();
+}
+
 function drawObstacles(ctx, world, cameraY, canvasHeight) {
   if (!world.obstacles) return;
 
@@ -1145,43 +1303,7 @@ function drawObstacles(ctx, world, cameraY, canvasHeight) {
       drawStageObstacle(ctx, obs);
     } else if (obs.type === 'log') {
       if (obs.y < cameraY - 50 || obs.y > cameraY + canvasHeight + 50) continue;
-
-      ctx.save();
-      const halfW = obs.width / 2;
-      const halfH = obs.height / 2;
-
-      // Log shadow
-      ctx.fillStyle = 'rgba(15, 23, 42, 0.25)';
-      ctx.beginPath();
-      ctx.roundRect(obs.x - halfW + 3, obs.y - halfH + 4, obs.width, obs.height, halfH);
-      ctx.fill();
-
-      // Log body
-      const logGrad = ctx.createLinearGradient(obs.x - halfW, obs.y, obs.x + halfW, obs.y);
-      logGrad.addColorStop(0, '#854d0e');
-      logGrad.addColorStop(0.5, '#a16207');
-      logGrad.addColorStop(1, '#713f12');
-
-      ctx.fillStyle = logGrad;
-      ctx.beginPath();
-      ctx.roundRect(obs.x - halfW, obs.y - halfH, obs.width, obs.height, halfH);
-      ctx.fill();
-
-      // Bark lines
-      ctx.strokeStyle = '#ca8a04';
-      ctx.lineWidth = 1.5;
-      ctx.beginPath();
-      ctx.moveTo(obs.x - halfW + 15, obs.y - 3);
-      ctx.lineTo(obs.x + halfW - 15, obs.y - 3);
-      ctx.stroke();
-
-      // Moss on log
-      ctx.fillStyle = '#22c55e';
-      ctx.beginPath();
-      ctx.arc(obs.x - halfW * 0.3, obs.y - halfH * 0.6, 5, 0, Math.PI * 2);
-      ctx.fill();
-
-      ctx.restore();
+      drawDharalLogObstacle(ctx, obs);
     } else if (obs.type === 'gate') {
       if (obs.y < cameraY - 50 || obs.y > cameraY + canvasHeight + 50) continue;
 
@@ -1339,6 +1461,7 @@ if (typeof window !== 'undefined') {
     frog: '/avatar/Aditya-Gadhvi.webp',
     pig: '/avatar/singer-gaman-santhal.webp',
     penguin: '/avatar/Darshan-Raval.webp',
+    dharal: '/avatar/Darshan-Raval-wife-Dharal.png',
   };
   for (const [key, src] of Object.entries(avatarSources)) {
     const img = new Image();

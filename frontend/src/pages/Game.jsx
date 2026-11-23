@@ -115,8 +115,11 @@ export default function Game() {
         updatePhysics(raft, world, dt);
 
         // Resolve collisions
-        resolveCollisions(raft, world, () => {
+        resolveCollisions(raft, world, (hitObs) => {
           soundManager.playBump();
+          if (hitObs && hitObs.type === 'log') {
+            soundManager.playDharalMusic();
+          }
           shakeRef.current = 1.0;
           setBumps(raft.bumps);
 
@@ -217,6 +220,7 @@ export default function Game() {
   };
 
   const handleRestart = () => {
+    soundManager.stopMusic();
     soundManager.playClick();
     setIsGameOver(false);
     resetGame();

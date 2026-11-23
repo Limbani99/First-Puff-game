@@ -52,6 +52,7 @@ export function getRiverBounds(waypoints, y) {
 // Check and resolve collisions with river banks and obstacles
 export function resolveCollisions(raft, world, onBump) {
   let bumped = false;
+  let hitObs = null;
   const now = performance.now();
   const canBump = now - raft.lastBumpTime > 300;
 
@@ -117,7 +118,10 @@ export function resolveCollisions(raft, world, onBump) {
           if (dot < 0) {
             raft.vx = (raft.vx - 1.45 * dot * nx) * 0.7;
             raft.vy = (raft.vy - 1.45 * dot * ny) * 0.7;
-            if (canBump) bumped = true;
+            if (canBump) {
+              bumped = true;
+              hitObs = obs;
+            }
           }
         }
       } else if (obs.type === 'log') {
@@ -143,7 +147,10 @@ export function resolveCollisions(raft, world, onBump) {
           if (dot < 0) {
             raft.vx = (raft.vx - 1.4 * dot * nx) * 0.65;
             raft.vy = (raft.vy - 1.4 * dot * ny) * 0.65;
-            if (canBump) bumped = true;
+            if (canBump) {
+              bumped = true;
+              hitObs = obs;
+            }
           }
         }
       } else if (obs.type === 'gate') {
@@ -171,7 +178,10 @@ export function resolveCollisions(raft, world, onBump) {
             if (dot < 0) {
               raft.vx = (raft.vx - 1.4 * dot * nx) * 0.7;
               raft.vy = (raft.vy - 1.4 * dot * ny) * 0.7;
-              if (canBump) bumped = true;
+              if (canBump) {
+                bumped = true;
+                hitObs = obs;
+              }
             }
           }
         }
@@ -182,7 +192,7 @@ export function resolveCollisions(raft, world, onBump) {
   if (bumped) {
     raft.bumps += 1;
     raft.lastBumpTime = now;
-    if (onBump) onBump();
+    if (onBump) onBump(hitObs);
   }
 
   return bumped;

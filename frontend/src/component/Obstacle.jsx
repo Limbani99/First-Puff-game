@@ -10,8 +10,9 @@ export default function Obstacle({ type = 'rock' }) {
   }
   if (type === 'log') {
     return (
-      <div className="w-14 h-6 rounded-full bg-amber-800 border-2 border-amber-600 shadow-md flex items-center justify-center text-xs text-amber-200 font-bold">
-        🪵
+      <div className="w-14 h-6 rounded-full bg-amber-800 border-2 border-pink-400 shadow-md flex items-center justify-center text-xs text-amber-200 font-bold gap-1">
+        <span>🪵</span>
+        <span className="text-[10px]">🌸</span>
       </div>
     );
   }

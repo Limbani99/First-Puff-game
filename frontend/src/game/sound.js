@@ -72,6 +72,26 @@ export const soundManager = {
     }
   },
 
+  // Play Darshan Raval & Dharal song when touching the Dharal obstacle
+  playDharalMusic() {
+    if (this.muted) return;
+    this.stopMusic();
+    try {
+      const audio = new Audio(encodeURI('/music/darshan wife song.mp3'));
+      audio.loop = false;
+      audio.volume = 0.85;
+      this.currentMusic = audio;
+      const promise = audio.play();
+      if (promise !== undefined) {
+        promise.catch((err) => {
+          console.warn('Dharal music playback error:', err);
+        });
+      }
+    } catch (e) {
+      console.warn('Dharal music error:', e);
+    }
+  },
+
   // Stop currently playing win or loss music track
   stopMusic() {
     if (this.currentMusic) {
