@@ -188,10 +188,25 @@ export function resolveCollisions(raft, world, onBump) {
   return bumped;
 }
 
-// Check if raft has entered the finish zone
+// Check if raft has entered the finish zone or sailed across the finish line
 export function checkFinish(raft, world) {
   const dx = raft.x - world.finishX;
   const dy = raft.y - world.finishY;
   const dist = Math.hypot(dx, dy);
-  return dist <= world.finishRadius;
+  const finishR = world.finishRadius || 46;
+
+  // 1. Enter finish circle
+  if (dist <= finishR) {
+    return true;
+  }
+
+  // 2. Sail across the finish line anywhere within the river banks
+  if (raft.y <= world.finishY + 15) {
+    const bounds = getRiverBounds(world.waypoints, raft.y);
+    if (raft.x >= bounds.leftBank - 12 && raft.x <= bounds.rightBank + 12) {
+      return true;
+    }
+  }
+
+  return false;
 }

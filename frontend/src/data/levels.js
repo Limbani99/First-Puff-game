@@ -342,21 +342,21 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 481,
-          "width": 78,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 58,
-          "x": 265,
+          "y": 768,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 50,
+          "x": 240,
           "dir": -1
         },
         {
           "id": "rock2",
           "type": "rock",
           "x": 215,
-          "y": 501,
-          "radius": 22
+          "y": 494,
+          "radius": 20
         }
       ]
     }
@@ -465,50 +465,50 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "gate1",
-          "type": "gate",
-          "y": 508,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
+          "id": "rock4",
+          "type": "rock",
+          "x": 215,
+          "y": 950,
+          "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 644,
-          "width": 78,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 46,
-          "x": 265,
+          "y": 804,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 45,
+          "x": 240,
           "dir": -1
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 658,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 372,
-          "width": 78,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 46,
-          "x": 95,
+          "y": 512,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 45,
+          "x": 105,
           "dir": 1
-        },
-        {
-          "id": "rock4",
-          "type": "rock",
-          "x": 215,
-          "y": 681,
-          "radius": 22
         },
         {
           "id": "rock5",
           "type": "rock",
-          "x": 128,
-          "y": 375,
-          "radius": 24
+          "x": 130,
+          "y": 366,
+          "radius": 22
         }
       ]
     }
@@ -558,31 +558,38 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "gate1",
-          "type": "gate",
-          "y": 522,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
+          "id": "log1",
+          "type": "log",
+          "y": 942,
+          "width": 70,
+          "height": 22,
+          "minX": 110,
+          "maxX": 230,
+          "speed": 42,
+          "x": 120,
+          "dir": 1
         },
         {
-          "id": "log2",
-          "type": "log",
-          "y": 522,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 48,
-          "x": 95,
-          "dir": 1
+          "id": "rock2",
+          "type": "rock",
+          "x": 235,
+          "y": 762,
+          "radius": 20
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 581,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "rock3",
           "type": "rock",
-          "x": 215,
-          "y": 542,
-          "radius": 22
+          "x": 135,
+          "y": 401,
+          "radius": 20
         }
       ]
     }
@@ -632,9 +639,16 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock2",
+          "type": "rock",
+          "x": 215,
+          "y": 918,
+          "radius": 22
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 535,
+          "y": 685,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -644,17 +658,10 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock2",
-          "type": "rock",
-          "x": 215,
-          "y": 717,
-          "radius": 22
-        },
-        {
           "id": "rock3",
           "type": "rock",
           "x": 128,
-          "y": 393,
+          "y": 453,
           "radius": 24
         }
       ]
@@ -707,7 +714,7 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 698,
+          "y": 938,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -717,9 +724,16 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock3",
+          "type": "rock",
+          "x": 215,
+          "y": 699,
+          "radius": 22
+        },
+        {
           "id": "log2",
           "type": "log",
-          "y": 399,
+          "y": 459,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -727,13 +741,6 @@ export const LEVELS = [
           "speed": 52,
           "x": 265,
           "dir": -1
-        },
-        {
-          "id": "rock3",
-          "type": "rock",
-          "x": 215,
-          "y": 569,
-          "radius": 22
         }
       ]
     }
@@ -785,36 +792,37 @@ export const LEVELS = [
         {
           "id": "gate1",
           "type": "gate",
-          "y": 562,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
+          "y": 1007,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 562,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 54,
-          "x": 265,
-          "dir": -1
+          "y": 810,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 50,
+          "x": 105,
+          "dir": 1
         },
         {
-          "id": "rock3",
-          "type": "rock",
-          "x": 215,
-          "y": 753,
-          "radius": 22
+          "id": "gate2",
+          "type": "gate",
+          "y": 614,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "rock4",
           "type": "rock",
-          "x": 128,
-          "y": 411,
-          "radius": 24
+          "x": 135,
+          "y": 417,
+          "radius": 22
         }
       ]
     }
@@ -866,20 +874,20 @@ export const LEVELS = [
         {
           "id": "log1",
           "type": "log",
-          "y": 576,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 56,
-          "x": 95,
+          "y": 894,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 52,
+          "x": 105,
           "dir": 1
         },
         {
           "id": "rock2",
           "type": "rock",
           "x": 215,
-          "y": 596,
+          "y": 557,
           "radius": 22
         }
       ]
@@ -930,61 +938,61 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "log1",
-          "type": "log",
-          "y": 834,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 58,
-          "x": 265,
-          "dir": -1
-        },
-        {
-          "id": "log2",
-          "type": "log",
-          "y": 589,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 58,
-          "x": 95,
-          "dir": 1
-        },
-        {
-          "id": "log3",
-          "type": "log",
-          "y": 345,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 58,
-          "x": 265,
-          "dir": -1
-        },
-        {
           "id": "rock4",
           "type": "rock",
           "x": 215,
-          "y": 879,
+          "y": 1110,
           "radius": 22
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 961,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 52,
+          "x": 240,
+          "dir": -1
         },
         {
           "id": "rock5",
           "type": "rock",
           "x": 128,
-          "y": 609,
-          "radius": 24
+          "y": 813,
+          "radius": 22
+        },
+        {
+          "id": "log2",
+          "type": "log",
+          "y": 665,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 52,
+          "x": 105,
+          "dir": 1
         },
         {
           "id": "rock6",
           "type": "rock",
-          "x": 249,
-          "y": 340,
-          "radius": 26
+          "x": 235,
+          "y": 517,
+          "radius": 22
+        },
+        {
+          "id": "log3",
+          "type": "log",
+          "y": 368,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 52,
+          "x": 240,
+          "dir": -1
         }
       ]
     }
@@ -1039,42 +1047,42 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "log1",
-          "type": "log",
-          "y": 770,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 44,
-          "x": 95,
-          "dir": 1
-        },
-        {
-          "id": "log2",
-          "type": "log",
-          "y": 435,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 44,
-          "x": 265,
-          "dir": -1
-        },
-        {
           "id": "rock3",
           "type": "rock",
           "x": 215,
-          "y": 807,
+          "y": 1072,
           "radius": 22
+        },
+        {
+          "id": "log1",
+          "type": "log",
+          "y": 859,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 44,
+          "x": 105,
+          "dir": 1
         },
         {
           "id": "rock4",
           "type": "rock",
           "x": 128,
-          "y": 438,
-          "radius": 24
+          "y": 646,
+          "radius": 22
+        },
+        {
+          "id": "log2",
+          "type": "log",
+          "y": 433,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 44,
+          "x": 240,
+          "dir": -1
         }
       ]
     }
@@ -1129,9 +1137,16 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock3",
+          "type": "rock",
+          "x": 215,
+          "y": 1130,
+          "radius": 22
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 788,
+          "y": 948,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -1141,9 +1156,16 @@ export const LEVELS = [
           "dir": -1
         },
         {
+          "id": "rock4",
+          "type": "rock",
+          "x": 128,
+          "y": 766,
+          "radius": 24
+        },
+        {
           "id": "log2",
           "type": "log",
-          "y": 444,
+          "y": 584,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -1153,24 +1175,10 @@ export const LEVELS = [
           "dir": 1
         },
         {
-          "id": "rock3",
-          "type": "rock",
-          "x": 215,
-          "y": 919,
-          "radius": 22
-        },
-        {
-          "id": "rock4",
-          "type": "rock",
-          "x": 128,
-          "y": 636,
-          "radius": 24
-        },
-        {
           "id": "rock5",
           "type": "rock",
           "x": 249,
-          "y": 353,
+          "y": 402,
           "radius": 26
         }
       ]
@@ -1226,62 +1234,62 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "gate1",
-          "type": "gate",
-          "y": 630,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
-        },
-        {
           "id": "log2",
           "type": "log",
-          "y": 894,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 48,
-          "x": 95,
-          "dir": 1
-        },
-        {
-          "id": "log3",
-          "type": "log",
-          "y": 630,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 48,
-          "x": 265,
-          "dir": -1
-        },
-        {
-          "id": "log4",
-          "type": "log",
-          "y": 365,
-          "width": 77,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 48,
-          "x": 95,
+          "y": 1179,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 46,
+          "x": 105,
           "dir": 1
         },
         {
           "id": "rock5",
           "type": "rock",
           "x": 215,
-          "y": 843,
+          "y": 1019,
           "radius": 22
+        },
+        {
+          "id": "gate1",
+          "type": "gate",
+          "y": 859,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
+        },
+        {
+          "id": "log3",
+          "type": "log",
+          "y": 700,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 46,
+          "x": 240,
+          "dir": -1
         },
         {
           "id": "rock6",
           "type": "rock",
           "x": 128,
-          "y": 456,
-          "radius": 24
+          "y": 540,
+          "radius": 22
+        },
+        {
+          "id": "log4",
+          "type": "log",
+          "y": 380,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 46,
+          "x": 105,
+          "dir": 1
         }
       ]
     }
@@ -1336,9 +1344,16 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock3",
+          "type": "rock",
+          "x": 215,
+          "y": 1175,
+          "radius": 22
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 824,
+          "y": 984,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -1348,9 +1363,16 @@ export const LEVELS = [
           "dir": -1
         },
         {
+          "id": "rock4",
+          "type": "rock",
+          "x": 128,
+          "y": 793,
+          "radius": 24
+        },
+        {
           "id": "log2",
           "type": "log",
-          "y": 462,
+          "y": 602,
           "width": 77,
           "height": 24,
           "minX": 85,
@@ -1360,24 +1382,10 @@ export const LEVELS = [
           "dir": 1
         },
         {
-          "id": "rock3",
-          "type": "rock",
-          "x": 215,
-          "y": 960,
-          "radius": 22
-        },
-        {
-          "id": "rock4",
-          "type": "rock",
-          "x": 128,
-          "y": 663,
-          "radius": 24
-        },
-        {
           "id": "rock5",
           "type": "rock",
           "x": 249,
-          "y": 367,
+          "y": 411,
           "radius": 26
         }
       ]
@@ -1433,50 +1441,50 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "gate1",
-          "type": "gate",
-          "y": 657,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
+          "id": "rock4",
+          "type": "rock",
+          "x": 215,
+          "y": 1198,
+          "radius": 22
         },
         {
           "id": "log2",
           "type": "log",
-          "y": 842,
-          "width": 76,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 52,
-          "x": 95,
+          "y": 1002,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 50,
+          "x": 105,
           "dir": 1
         },
         {
-          "id": "log3",
-          "type": "log",
-          "y": 471,
-          "width": 76,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 52,
-          "x": 265,
-          "dir": -1
-        },
-        {
-          "id": "rock4",
-          "type": "rock",
-          "x": 215,
-          "y": 879,
-          "radius": 22
+          "id": "gate1",
+          "type": "gate",
+          "y": 807,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "rock5",
           "type": "rock",
           "x": 128,
-          "y": 474,
-          "radius": 24
+          "y": 611,
+          "radius": 22
+        },
+        {
+          "id": "log3",
+          "type": "log",
+          "y": 416,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 50,
+          "x": 240,
+          "dir": -1
         }
       ]
     }
@@ -1531,9 +1539,16 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
+          "id": "rock4",
+          "type": "rock",
+          "x": 215,
+          "y": 1270,
+          "radius": 22
+        },
+        {
           "id": "log1",
           "type": "log",
-          "y": 955,
+          "y": 1120,
           "width": 76,
           "height": 24,
           "minX": 85,
@@ -1543,9 +1558,16 @@ export const LEVELS = [
           "dir": -1
         },
         {
+          "id": "rock5",
+          "type": "rock",
+          "x": 128,
+          "y": 970,
+          "radius": 24
+        },
+        {
           "id": "log2",
           "type": "log",
-          "y": 670,
+          "y": 820,
           "width": 76,
           "height": 24,
           "minX": 85,
@@ -1555,9 +1577,16 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock6",
+          "type": "rock",
+          "x": 249,
+          "y": 670,
+          "radius": 26
+        },
+        {
           "id": "log3",
           "type": "log",
-          "y": 385,
+          "y": 520,
           "width": 76,
           "height": 24,
           "minX": 85,
@@ -1567,31 +1596,10 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock4",
-          "type": "rock",
-          "x": 215,
-          "y": 1062,
-          "radius": 22
-        },
-        {
-          "id": "rock5",
-          "type": "rock",
-          "x": 128,
-          "y": 814,
-          "radius": 24
-        },
-        {
-          "id": "rock6",
-          "type": "rock",
-          "x": 249,
-          "y": 566,
-          "radius": 26
-        },
-        {
           "id": "rock7",
           "type": "rock",
           "x": 139,
-          "y": 318,
+          "y": 370,
           "radius": 22
         }
       ]
@@ -1647,65 +1655,61 @@ export const LEVELS = [
       ],
       "obstacles": [
         {
-          "id": "gate1",
-          "type": "gate",
-          "y": 861,
-          "leftX": 115,
-          "rightX": 245,
-          "postRadius": 18
+          "id": "rock5",
+          "type": "rock",
+          "x": 215,
+          "y": 1294,
+          "radius": 22
         },
         {
-          "id": "gate2",
+          "id": "gate1",
           "type": "gate",
-          "y": 506,
-          "leftX": 135,
-          "rightX": 265,
-          "postRadius": 18
+          "y": 1140,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "log3",
           "type": "log",
-          "y": 878,
-          "width": 76,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 56,
-          "x": 95,
+          "y": 987,
+          "width": 74,
+          "height": 22,
+          "minX": 95,
+          "maxX": 255,
+          "speed": 52,
+          "x": 105,
           "dir": 1
         },
         {
-          "id": "log4",
-          "type": "log",
-          "y": 489,
-          "width": 76,
-          "height": 24,
-          "minX": 85,
-          "maxX": 275,
-          "speed": 56,
-          "x": 265,
-          "dir": -1
-        },
-        {
-          "id": "rock5",
-          "type": "rock",
-          "x": 215,
-          "y": 1020,
-          "radius": 22
+          "id": "gate2",
+          "type": "gate",
+          "y": 834,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "rock6",
           "type": "rock",
           "x": 128,
-          "y": 704,
-          "radius": 24
+          "y": 680,
+          "radius": 22
+        },
+        {
+          "id": "gate3",
+          "type": "gate",
+          "y": 527,
+          "leftX": 105,
+          "rightX": 255,
+          "postRadius": 16
         },
         {
           "id": "rock7",
           "type": "rock",
-          "x": 249,
-          "y": 387,
-          "radius": 26
+          "x": 235,
+          "y": 373,
+          "radius": 22
         }
       ]
     }
@@ -1773,13 +1777,13 @@ export const LEVELS = [
           "id": "rock_6",
           "type": "rock",
           "x": 251,
-          "y": 1350,
+          "y": 1429,
           "radius": 21
         },
         {
           "id": "log_2",
           "type": "log",
-          "y": 1227,
+          "y": 1328,
           "width": 74,
           "height": 22,
           "minX": 114,
@@ -1792,20 +1796,20 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 129,
-          "y": 1172,
+          "y": 1228,
           "radius": 23
         },
         {
           "id": "rock_8",
           "type": "rock",
           "x": 202,
-          "y": 1029,
+          "y": 1127,
           "radius": 18
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1019,
+          "y": 1026,
           "width": 74,
           "height": 22,
           "minX": 132,
@@ -1818,13 +1822,13 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 140,
-          "y": 913,
+          "y": 925,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 865,
+          "y": 825,
           "leftX": 144,
           "rightX": 236,
           "postRadius": 11
@@ -1832,7 +1836,7 @@ export const LEVELS = [
         {
           "id": "log_4",
           "type": "log",
-          "y": 711,
+          "y": 724,
           "width": 74,
           "height": 22,
           "minX": 131,
@@ -1845,20 +1849,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 234,
-          "y": 709,
+          "y": 623,
           "radius": 23
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 138,
-          "y": 531,
+          "y": 522,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 503,
+          "y": 422,
           "width": 74,
           "height": 22,
           "minX": 120,
@@ -1871,7 +1875,7 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 214,
-          "y": 388,
+          "y": 321,
           "radius": 21
         }
       ]
@@ -1940,20 +1944,20 @@ export const LEVELS = [
           "id": "rock_5",
           "type": "rock",
           "x": 263,
-          "y": 1409,
+          "y": 1464,
           "radius": 21
         },
         {
           "id": "rock_6",
           "type": "rock",
           "x": 135,
-          "y": 1260,
+          "y": 1369,
           "radius": 23
         },
         {
           "id": "log_2",
           "type": "log",
-          "y": 1185,
+          "y": 1273,
           "width": 74,
           "height": 22,
           "minX": 91,
@@ -1966,20 +1970,20 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 173,
-          "y": 1147,
+          "y": 1177,
           "radius": 18
         },
         {
           "id": "rock_8",
           "type": "rock",
           "x": 133,
-          "y": 998,
+          "y": 1081,
           "radius": 21
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 935,
+          "y": 986,
           "width": 74,
           "height": 22,
           "minX": 165,
@@ -1991,7 +1995,7 @@ export const LEVELS = [
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 880,
+          "y": 890,
           "leftX": 157,
           "rightX": 249,
           "postRadius": 11
@@ -2000,27 +2004,27 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 261,
-          "y": 832,
+          "y": 794,
           "radius": 23
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 154,
-          "y": 736,
+          "y": 699,
           "radius": 18
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 170,
-          "y": 623,
+          "y": 603,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 525,
+          "y": 507,
           "width": 74,
           "height": 22,
           "minX": 113,
@@ -2033,14 +2037,14 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 115,
-          "y": 474,
+          "y": 411,
           "radius": 23
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 267,
-          "y": 361,
+          "y": 316,
           "radius": 18
         }
       ]
@@ -2109,34 +2113,34 @@ export const LEVELS = [
           "id": "rock_4",
           "type": "rock",
           "x": 257,
-          "y": 1476,
+          "y": 1514,
           "radius": 21
         },
         {
           "id": "rock_5",
           "type": "rock",
           "x": 154,
-          "y": 1355,
+          "y": 1428,
           "radius": 23
         },
         {
           "id": "rock_6",
           "type": "rock",
           "x": 188,
-          "y": 1269,
+          "y": 1341,
           "radius": 18
         },
         {
           "id": "rock_7",
           "type": "rock",
           "x": 108,
-          "y": 1148,
+          "y": 1255,
           "radius": 21
         },
         {
           "id": "log_2",
           "type": "log",
-          "y": 1102,
+          "y": 1169,
           "width": 74,
           "height": 22,
           "minX": 130,
@@ -2149,20 +2153,20 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 235,
-          "y": 1062,
+          "y": 1083,
           "radius": 23
         },
         {
           "id": "rock_9",
           "type": "rock",
           "x": 176,
-          "y": 940,
+          "y": 996,
           "radius": 18
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 900,
+          "y": 910,
           "leftX": 141,
           "rightX": 233,
           "postRadius": 11
@@ -2171,20 +2175,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 220,
-          "y": 855,
+          "y": 824,
           "radius": 21
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 123,
-          "y": 733,
+          "y": 738,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 698,
+          "y": 651,
           "width": 72,
           "height": 22,
           "minX": 128,
@@ -2197,28 +2201,28 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 220,
-          "y": 647,
+          "y": 565,
           "radius": 18
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 144,
-          "y": 526,
+          "y": 479,
           "radius": 21
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 206,
-          "y": 440,
+          "y": 393,
           "radius": 23
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 141,
-          "y": 319,
+          "y": 306,
           "radius": 18
         }
       ]
@@ -2287,13 +2291,13 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 252,
-          "y": 1457,
+          "y": 1536,
           "radius": 21
         },
         {
           "id": "log_2",
           "type": "log",
-          "y": 1353,
+          "y": 1442,
           "width": 74,
           "height": 22,
           "minX": 128,
@@ -2306,13 +2310,13 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 136,
-          "y": 1285,
+          "y": 1348,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1172,
+          "y": 1254,
           "width": 74,
           "height": 22,
           "minX": 118,
@@ -2325,28 +2329,35 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 190,
-          "y": 1150,
+          "y": 1160,
           "radius": 18
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 144,
-          "y": 978,
+          "y": 1066,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 915,
+          "y": 972,
           "leftX": 146,
           "rightX": 238,
           "postRadius": 11
         },
         {
+          "id": "rock_11",
+          "type": "rock",
+          "x": 247,
+          "y": 878,
+          "radius": 23
+        },
+        {
           "id": "log_4",
           "type": "log",
-          "y": 860,
+          "y": 784,
           "width": 72,
           "height": 22,
           "minX": 155,
@@ -2356,16 +2367,9 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_11",
-          "type": "rock",
-          "x": 247,
-          "y": 843,
-          "radius": 23
-        },
-        {
           "id": "log_5",
           "type": "log",
-          "y": 708,
+          "y": 690,
           "width": 72,
           "height": 22,
           "minX": 126,
@@ -2378,20 +2382,20 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 137,
-          "y": 671,
+          "y": 596,
           "radius": 18
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 190,
-          "y": 536,
+          "y": 502,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 427,
+          "y": 408,
           "width": 74,
           "height": 22,
           "minX": 143,
@@ -2404,7 +2408,7 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 143,
-          "y": 364,
+          "y": 314,
           "radius": 23
         }
       ]
@@ -2473,20 +2477,20 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 255,
-          "y": 1483,
+          "y": 1564,
           "radius": 21
         },
         {
           "id": "rock_8",
           "type": "rock",
           "x": 139,
-          "y": 1333,
+          "y": 1468,
           "radius": 23
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1285,
+          "y": 1372,
           "leftX": 90,
           "rightX": 182,
           "postRadius": 11
@@ -2494,7 +2498,7 @@ export const LEVELS = [
         {
           "id": "log_4",
           "type": "log",
-          "y": 1230,
+          "y": 1276,
           "width": 74,
           "height": 22,
           "minX": 105,
@@ -2507,20 +2511,28 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 188,
-          "y": 1170,
+          "y": 1180,
           "radius": 18
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 147,
-          "y": 995,
+          "y": 1084,
           "radius": 21
+        },
+        {
+          "id": "gate_2",
+          "type": "gate",
+          "y": 988,
+          "leftX": 183,
+          "rightX": 275,
+          "postRadius": 11
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 985,
+          "y": 892,
           "width": 73,
           "height": 22,
           "minX": 163,
@@ -2530,31 +2542,23 @@ export const LEVELS = [
           "dir": 1
         },
         {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 930,
-          "leftX": 183,
-          "rightX": 275,
-          "postRadius": 11
-        },
-        {
           "id": "rock_11",
           "type": "rock",
           "x": 249,
-          "y": 856,
+          "y": 796,
           "radius": 23
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 133,
-          "y": 681,
+          "y": 700,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 575,
+          "y": 604,
           "leftX": 111,
           "rightX": 203,
           "postRadius": 11
@@ -2563,13 +2567,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 191,
-          "y": 527,
+          "y": 508,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 520,
+          "y": 412,
           "width": 73,
           "height": 22,
           "minX": 126,
@@ -2582,7 +2586,7 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 146,
-          "y": 368,
+          "y": 316,
           "radius": 23
         }
       ]
@@ -2651,20 +2655,20 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 268,
-          "y": 1548,
+          "y": 1613,
           "radius": 21
         },
         {
           "id": "rock_8",
           "type": "rock",
           "x": 147,
-          "y": 1399,
+          "y": 1526,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1363,
+          "y": 1439,
           "width": 74,
           "height": 22,
           "minX": 113,
@@ -2677,13 +2681,13 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 170,
-          "y": 1285,
+          "y": 1352,
           "radius": 18
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1193,
+          "y": 1265,
           "leftX": 102,
           "rightX": 194,
           "postRadius": 11
@@ -2692,13 +2696,13 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 115,
-          "y": 1135,
+          "y": 1178,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1121,
+          "y": 1091,
           "width": 74,
           "height": 22,
           "minX": 132,
@@ -2711,20 +2715,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 260,
-          "y": 1021,
+          "y": 1004,
           "radius": 23
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 172,
-          "y": 872,
+          "y": 916,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 779,
+          "y": 829,
           "width": 74,
           "height": 22,
           "minX": 129,
@@ -2737,13 +2741,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 195,
-          "y": 758,
+          "y": 742,
           "radius": 21
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 707,
+          "y": 655,
           "leftX": 130,
           "rightX": 222,
           "postRadius": 11
@@ -2752,13 +2756,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 94,
-          "y": 608,
+          "y": 568,
           "radius": 23
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 537,
+          "y": 481,
           "width": 74,
           "height": 22,
           "minX": 120,
@@ -2771,14 +2775,14 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 242,
-          "y": 494,
+          "y": 394,
           "radius": 18
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 186,
-          "y": 345,
+          "y": 307,
           "radius": 21
         }
       ]
@@ -2847,13 +2851,13 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 255,
-          "y": 1562,
+          "y": 1641,
           "radius": 21
         },
         {
           "id": "log_2",
           "type": "log",
-          "y": 1472,
+          "y": 1552,
           "width": 74,
           "height": 22,
           "minX": 139,
@@ -2866,13 +2870,13 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 144,
-          "y": 1396,
+          "y": 1464,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1309,
+          "y": 1375,
           "width": 74,
           "height": 22,
           "minX": 109,
@@ -2885,20 +2889,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 180,
-          "y": 1266,
+          "y": 1286,
           "radius": 18
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 133,
-          "y": 1100,
+          "y": 1197,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1046,
+          "y": 1108,
           "width": 71,
           "height": 22,
           "minX": 156,
@@ -2910,7 +2914,7 @@ export const LEVELS = [
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 965,
+          "y": 1019,
           "leftX": 146,
           "rightX": 238,
           "postRadius": 11
@@ -2919,13 +2923,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 250,
-          "y": 917,
+          "y": 931,
           "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 884,
+          "y": 842,
           "width": 70,
           "height": 22,
           "minX": 153,
@@ -2938,20 +2942,20 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 154,
-          "y": 804,
+          "y": 753,
           "radius": 18
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 178,
-          "y": 674,
+          "y": 664,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 621,
+          "y": 575,
           "width": 70,
           "height": 22,
           "minX": 114,
@@ -2964,13 +2968,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 124,
-          "y": 508,
+          "y": 486,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 458,
+          "y": 398,
           "width": 72,
           "height": 22,
           "minX": 144,
@@ -2983,7 +2987,7 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 259,
-          "y": 378,
+          "y": 309,
           "radius": 18
         }
       ]
@@ -3052,20 +3056,20 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 268,
-          "y": 1633,
+          "y": 1698,
           "radius": 21
         },
         {
           "id": "rock_9",
           "type": "rock",
           "x": 153,
-          "y": 1487,
+          "y": 1616,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1478,
+          "y": 1534,
           "width": 74,
           "height": 22,
           "minX": 132,
@@ -3078,13 +3082,13 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 175,
-          "y": 1378,
+          "y": 1452,
           "radius": 18
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1302,
+          "y": 1369,
           "width": 73,
           "height": 22,
           "minX": 105,
@@ -3097,13 +3101,13 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 93,
-          "y": 1295,
+          "y": 1287,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1247,
+          "y": 1205,
           "leftX": 99,
           "rightX": 191,
           "postRadius": 11
@@ -3119,13 +3123,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 191,
-          "y": 978,
+          "y": 1041,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 965,
+          "y": 959,
           "width": 70,
           "height": 22,
           "minX": 171,
@@ -3138,13 +3142,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 213,
-          "y": 869,
+          "y": 877,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 788,
+          "y": 795,
           "width": 70,
           "height": 22,
           "minX": 129,
@@ -3157,13 +3161,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 117,
-          "y": 781,
+          "y": 713,
           "radius": 23
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 733,
+          "y": 631,
           "leftX": 126,
           "rightX": 218,
           "postRadius": 11
@@ -3172,20 +3176,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 209,
-          "y": 614,
+          "y": 548,
           "radius": 18
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 163,
-          "y": 469,
+          "y": 466,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 452,
+          "y": 384,
           "width": 72,
           "height": 22,
           "minX": 149,
@@ -3198,7 +3202,7 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 238,
-          "y": 359,
+          "y": 302,
           "radius": 23
         }
       ]
@@ -3267,20 +3271,20 @@ export const LEVELS = [
           "id": "rock_7",
           "type": "rock",
           "x": 262,
-          "y": 1660,
+          "y": 1722,
           "radius": 21
         },
         {
           "id": "rock_8",
           "type": "rock",
           "x": 154,
-          "y": 1512,
+          "y": 1633,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1451,
+          "y": 1545,
           "width": 71,
           "height": 22,
           "minX": 124,
@@ -3293,20 +3297,20 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 179,
-          "y": 1401,
+          "y": 1457,
           "radius": 18
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 99,
-          "y": 1315,
+          "y": 1368,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1267,
+          "y": 1280,
           "leftX": 101,
           "rightX": 193,
           "postRadius": 11
@@ -3314,7 +3318,7 @@ export const LEVELS = [
         {
           "id": "log_4",
           "type": "log",
-          "y": 1187,
+          "y": 1192,
           "width": 70,
           "height": 22,
           "minX": 139,
@@ -3327,27 +3331,27 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 238,
-          "y": 1141,
+          "y": 1103,
           "radius": 23
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 186,
-          "y": 993,
+          "y": 1015,
           "radius": 18
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 211,
-          "y": 881,
+          "y": 927,
           "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 823,
+          "y": 838,
           "width": 68,
           "height": 22,
           "minX": 136,
@@ -3357,31 +3361,31 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 121,
-          "y": 791,
-          "radius": 23
-        },
-        {
           "id": "gate_2",
           "type": "gate",
-          "y": 743,
+          "y": 750,
           "leftX": 129,
           "rightX": 221,
           "postRadius": 11
         },
         {
+          "id": "rock_14",
+          "type": "rock",
+          "x": 121,
+          "y": 662,
+          "radius": 23
+        },
+        {
           "id": "rock_15",
           "type": "rock",
           "x": 210,
-          "y": 622,
+          "y": 573,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 559,
+          "y": 485,
           "width": 69,
           "height": 22,
           "minX": 129,
@@ -3394,14 +3398,14 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 163,
-          "y": 474,
+          "y": 397,
           "radius": 21
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 234,
-          "y": 362,
+          "y": 308,
           "radius": 23
         }
       ]
@@ -3470,13 +3474,13 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 257,
-          "y": 1676,
+          "y": 1755,
           "radius": 21
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1566,
+          "y": 1669,
           "width": 71,
           "height": 22,
           "minX": 142,
@@ -3489,13 +3493,13 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 150,
-          "y": 1513,
+          "y": 1584,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1388,
+          "y": 1499,
           "width": 71,
           "height": 22,
           "minX": 111,
@@ -3508,13 +3512,13 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 176,
-          "y": 1387,
+          "y": 1414,
           "radius": 18
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1287,
+          "y": 1328,
           "leftX": 103,
           "rightX": 195,
           "postRadius": 11
@@ -3523,13 +3527,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 124,
-          "y": 1224,
+          "y": 1243,
           "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1109,
+          "y": 1158,
           "width": 69,
           "height": 22,
           "minX": 157,
@@ -3542,20 +3546,20 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 247,
-          "y": 1098,
+          "y": 1073,
           "radius": 23
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 169,
-          "y": 935,
+          "y": 987,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 931,
+          "y": 902,
           "width": 68,
           "height": 22,
           "minX": 154,
@@ -3568,13 +3572,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 195,
-          "y": 809,
+          "y": 817,
           "radius": 21
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 753,
+          "y": 732,
           "leftX": 132,
           "rightX": 224,
           "postRadius": 11
@@ -3582,7 +3586,7 @@ export const LEVELS = [
         {
           "id": "log_7",
           "type": "log",
-          "y": 652,
+          "y": 646,
           "width": 68,
           "height": 22,
           "minX": 117,
@@ -3595,20 +3599,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 109,
-          "y": 646,
+          "y": 561,
           "radius": 23
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 234,
-          "y": 520,
+          "y": 476,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 474,
+          "y": 391,
           "width": 70,
           "height": 22,
           "minX": 147,
@@ -3621,7 +3625,7 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 184,
-          "y": 357,
+          "y": 305,
           "radius": 21
         }
       ]
@@ -3690,20 +3694,20 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 268,
-          "y": 1735,
+          "y": 1797,
           "radius": 21
         },
         {
           "id": "rock_9",
           "type": "rock",
           "x": 160,
-          "y": 1592,
+          "y": 1714,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1507,
+          "y": 1631,
           "width": 69,
           "height": 22,
           "minX": 124,
@@ -3716,13 +3720,13 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 183,
-          "y": 1485,
+          "y": 1548,
           "radius": 18
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1450,
+          "y": 1465,
           "leftX": 89,
           "rightX": 181,
           "postRadius": 11
@@ -3731,20 +3735,13 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 103,
-          "y": 1341,
+          "y": 1382,
           "radius": 21
-        },
-        {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 226,
-          "y": 1234,
-          "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1229,
+          "y": 1299,
           "width": 68,
           "height": 22,
           "minX": 141,
@@ -3754,16 +3751,23 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock_12",
+          "type": "rock",
+          "x": 226,
+          "y": 1216,
+          "radius": 23
+        },
+        {
           "id": "rock_13",
           "type": "rock",
           "x": 187,
-          "y": 1091,
+          "y": 1133,
           "radius": 18
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1040,
+          "y": 1050,
           "leftX": 188,
           "rightX": 280,
           "postRadius": 11
@@ -3772,13 +3776,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 229,
-          "y": 984,
+          "y": 967,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 851,
+          "y": 884,
           "width": 66,
           "height": 22,
           "minX": 137,
@@ -3791,20 +3795,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 127,
-          "y": 841,
+          "y": 801,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 198,
-          "y": 734,
+          "y": 718,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 630,
+          "y": 635,
           "leftX": 110,
           "rightX": 202,
           "postRadius": 11
@@ -3813,13 +3817,13 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 141,
-          "y": 590,
+          "y": 552,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 573,
+          "y": 469,
           "width": 67,
           "height": 22,
           "minX": 131,
@@ -3832,14 +3836,14 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 214,
-          "y": 483,
+          "y": 386,
           "radius": 23
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 164,
-          "y": 340,
+          "y": 303,
           "radius": 18
         }
       ]
@@ -3908,20 +3912,20 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 268,
-          "y": 1752,
+          "y": 1826,
           "radius": 21
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 156,
-          "y": 1596,
+          "y": 1741,
           "radius": 23
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1556,
+          "y": 1657,
           "leftX": 108,
           "rightX": 200,
           "postRadius": 11
@@ -3929,7 +3933,7 @@ export const LEVELS = [
         {
           "id": "log_5",
           "type": "log",
-          "y": 1501,
+          "y": 1572,
           "width": 69,
           "height": 22,
           "minX": 117,
@@ -3942,20 +3946,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 175,
-          "y": 1476,
+          "y": 1488,
           "radius": 18
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 112,
-          "y": 1319,
+          "y": 1403,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1277,
+          "y": 1319,
           "width": 68,
           "height": 22,
           "minX": 133,
@@ -3967,7 +3971,7 @@ export const LEVELS = [
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1222,
+          "y": 1234,
           "leftX": 155,
           "rightX": 247,
           "postRadius": 11
@@ -3976,27 +3980,27 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 243,
-          "y": 1174,
+          "y": 1150,
           "radius": 23
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 193,
-          "y": 1043,
+          "y": 1065,
           "radius": 18
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 212,
-          "y": 923,
+          "y": 981,
           "radius": 21
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 888,
+          "y": 896,
           "leftX": 134,
           "rightX": 226,
           "postRadius": 11
@@ -4004,7 +4008,7 @@ export const LEVELS = [
         {
           "id": "log_7",
           "type": "log",
-          "y": 833,
+          "y": 812,
           "width": 66,
           "height": 22,
           "minX": 130,
@@ -4017,20 +4021,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 106,
-          "y": 767,
+          "y": 727,
           "radius": 23
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 204,
-          "y": 647,
+          "y": 643,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 609,
+          "y": 558,
           "width": 67,
           "height": 22,
           "minX": 124,
@@ -4042,7 +4046,7 @@ export const LEVELS = [
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 554,
+          "y": 474,
           "leftX": 113,
           "rightX": 205,
           "postRadius": 11
@@ -4051,14 +4055,14 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 166,
-          "y": 490,
+          "y": 389,
           "radius": 21
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 242,
-          "y": 370,
+          "y": 305,
           "radius": 23
         }
       ]
@@ -4127,20 +4131,20 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 266,
-          "y": 1808,
+          "y": 1862,
           "radius": 21
         },
         {
           "id": "rock_9",
           "type": "rock",
           "x": 167,
-          "y": 1677,
+          "y": 1784,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1612,
+          "y": 1705,
           "width": 69,
           "height": 22,
           "minX": 138,
@@ -4153,20 +4157,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 197,
-          "y": 1583,
+          "y": 1627,
           "radius": 18
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 96,
-          "y": 1453,
+          "y": 1549,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1408,
+          "y": 1471,
           "width": 69,
           "height": 22,
           "minX": 112,
@@ -4178,7 +4182,7 @@ export const LEVELS = [
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1353,
+          "y": 1393,
           "leftX": 100,
           "rightX": 192,
           "postRadius": 11
@@ -4187,27 +4191,27 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 219,
-          "y": 1305,
+          "y": 1315,
           "radius": 23
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 162,
-          "y": 1228,
+          "y": 1236,
           "radius": 18
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 229,
-          "y": 1134,
+          "y": 1158,
           "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1045,
+          "y": 1080,
           "width": 66,
           "height": 22,
           "minX": 171,
@@ -4220,20 +4224,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 155,
-          "y": 1003,
+          "y": 1002,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 232,
-          "y": 909,
+          "y": 924,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 842,
+          "y": 845,
           "width": 66,
           "height": 22,
           "minX": 131,
@@ -4246,35 +4250,35 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 143,
-          "y": 835,
+          "y": 767,
           "radius": 21
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 787,
-          "leftX": 128,
-          "rightX": 220,
-          "postRadius": 11
         },
         {
           "id": "rock_18",
           "type": "rock",
           "x": 176,
-          "y": 684,
+          "y": 689,
           "radius": 23
+        },
+        {
+          "id": "gate_2",
+          "type": "gate",
+          "y": 611,
+          "leftX": 128,
+          "rightX": 220,
+          "postRadius": 11
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 125,
-          "y": 554,
+          "y": 533,
           "radius": 18
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 478,
+          "y": 455,
           "width": 68,
           "height": 22,
           "minX": 153,
@@ -4287,14 +4291,14 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 246,
-          "y": 460,
+          "y": 376,
           "radius": 21
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 188,
-          "y": 329,
+          "y": 298,
           "radius": 23
         }
       ]
@@ -4363,13 +4367,13 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 258,
-          "y": 1827,
+          "y": 1900,
           "radius": 21
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1718,
+          "y": 1820,
           "width": 67,
           "height": 22,
           "minX": 153,
@@ -4382,20 +4386,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 160,
-          "y": 1676,
+          "y": 1740,
           "radius": 23
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 189,
-          "y": 1561,
+          "y": 1660,
           "radius": 18
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1550,
+          "y": 1580,
           "width": 67,
           "height": 22,
           "minX": 125,
@@ -4408,28 +4412,21 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 108,
-          "y": 1428,
+          "y": 1500,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1380,
+          "y": 1420,
           "leftX": 102,
           "rightX": 194,
           "postRadius": 11
         },
         {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 223,
-          "y": 1296,
-          "radius": 23
-        },
-        {
           "id": "log_5",
           "type": "log",
-          "y": 1283,
+          "y": 1340,
           "width": 66,
           "height": 22,
           "minX": 143,
@@ -4439,16 +4436,23 @@ export const LEVELS = [
           "dir": -1
         },
         {
+          "id": "rock_14",
+          "type": "rock",
+          "x": 223,
+          "y": 1260,
+          "radius": 23
+        },
+        {
           "id": "rock_15",
           "type": "rock",
           "x": 179,
-          "y": 1145,
+          "y": 1180,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1115,
+          "y": 1100,
           "width": 64,
           "height": 22,
           "minX": 171,
@@ -4461,20 +4465,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 223,
-          "y": 1030,
+          "y": 1020,
           "radius": 21
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 131,
-          "y": 879,
+          "y": 940,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 848,
+          "y": 860,
           "width": 64,
           "height": 22,
           "minX": 133,
@@ -4486,7 +4490,7 @@ export const LEVELS = [
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 800,
+          "y": 780,
           "leftX": 128,
           "rightX": 220,
           "postRadius": 11
@@ -4495,13 +4499,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 203,
-          "y": 764,
+          "y": 700,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 680,
+          "y": 620,
           "width": 64,
           "height": 22,
           "minX": 122,
@@ -4514,20 +4518,20 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 146,
-          "y": 614,
+          "y": 540,
           "radius": 21
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 212,
-          "y": 499,
+          "y": 460,
           "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 413,
+          "y": 380,
           "width": 67,
           "height": 22,
           "minX": 164,
@@ -4540,7 +4544,7 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 156,
-          "y": 348,
+          "y": 300,
           "radius": 18
         }
       ]
@@ -4609,20 +4613,20 @@ export const LEVELS = [
           "id": "rock_8",
           "type": "rock",
           "x": 272,
-          "y": 1880,
+          "y": 1932,
           "radius": 21
         },
         {
           "id": "rock_9",
           "type": "rock",
           "x": 176,
-          "y": 1753,
+          "y": 1854,
           "radius": 23
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1670,
+          "y": 1777,
           "width": 67,
           "height": 22,
           "minX": 141,
@@ -4635,20 +4639,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 201,
-          "y": 1661,
+          "y": 1699,
           "radius": 18
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 97,
-          "y": 1534,
+          "y": 1621,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1455,
+          "y": 1543,
           "width": 67,
           "height": 22,
           "minX": 104,
@@ -4661,13 +4665,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 192,
-          "y": 1442,
+          "y": 1465,
           "radius": 23
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1400,
+          "y": 1387,
           "leftX": 94,
           "rightX": 186,
           "postRadius": 11
@@ -4676,27 +4680,27 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 153,
-          "y": 1314,
+          "y": 1310,
           "radius": 18
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 223,
-          "y": 1223,
+          "y": 1232,
           "radius": 21
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 178,
-          "y": 1095,
+          "y": 1154,
           "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1080,
+          "y": 1076,
           "width": 64,
           "height": 22,
           "minX": 181,
@@ -4709,20 +4713,28 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 246,
-          "y": 1003,
+          "y": 998,
           "radius": 18
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 143,
-          "y": 876,
+          "y": 920,
           "radius": 21
+        },
+        {
+          "id": "gate_2",
+          "type": "gate",
+          "y": 843,
+          "leftX": 118,
+          "rightX": 210,
+          "postRadius": 11
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 865,
+          "y": 765,
           "width": 64,
           "height": 22,
           "minX": 128,
@@ -4732,38 +4744,30 @@ export const LEVELS = [
           "dir": 1
         },
         {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 810,
-          "leftX": 118,
-          "rightX": 210,
-          "postRadius": 11
-        },
-        {
           "id": "rock_18",
           "type": "rock",
           "x": 163,
-          "y": 762,
+          "y": 687,
           "radius": 23
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 106,
-          "y": 657,
+          "y": 609,
           "radius": 18
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 225,
-          "y": 565,
+          "y": 531,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 490,
+          "y": 453,
           "width": 66,
           "height": 22,
           "minX": 159,
@@ -4776,14 +4780,14 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 186,
-          "y": 437,
+          "y": 376,
           "radius": 23
         },
         {
           "id": "rock_22",
           "type": "rock",
           "x": 247,
-          "y": 346,
+          "y": 298,
           "radius": 18
         }
       ]
@@ -4852,20 +4856,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 267,
-          "y": 1901,
+          "y": 1964,
           "radius": 21
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 171,
-          "y": 1764,
+          "y": 1888,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1738,
+          "y": 1813,
           "width": 67,
           "height": 22,
           "minX": 151,
@@ -4875,16 +4879,9 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_12",
-          "type": "rock",
-          "x": 197,
-          "y": 1663,
-          "radius": 18
-        },
-        {
           "id": "log_5",
           "type": "log",
-          "y": 1625,
+          "y": 1737,
           "width": 67,
           "height": 22,
           "minX": 127,
@@ -4894,9 +4891,16 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock_12",
+          "type": "rock",
+          "x": 197,
+          "y": 1661,
+          "radius": 18
+        },
+        {
           "id": "gate_1",
           "type": "gate",
-          "y": 1570,
+          "y": 1585,
           "leftX": 91,
           "rightX": 183,
           "postRadius": 11
@@ -4905,27 +4909,27 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 95,
-          "y": 1526,
+          "y": 1509,
           "radius": 21
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 204,
-          "y": 1425,
+          "y": 1433,
           "radius": 23
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 162,
-          "y": 1288,
+          "y": 1358,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1224,
+          "y": 1282,
           "width": 65,
           "height": 22,
           "minX": 164,
@@ -4938,13 +4942,13 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 232,
-          "y": 1187,
+          "y": 1206,
           "radius": 21
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1120,
+          "y": 1130,
           "leftX": 185,
           "rightX": 277,
           "postRadius": 11
@@ -4953,13 +4957,13 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 160,
-          "y": 1050,
+          "y": 1054,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1016,
+          "y": 978,
           "width": 64,
           "height": 22,
           "minX": 160,
@@ -4972,35 +4976,42 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 230,
-          "y": 949,
+          "y": 903,
           "radius": 18
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 129,
-          "y": 812,
+          "y": 827,
           "radius": 21
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 173,
-          "y": 711,
+          "y": 751,
           "radius": 23
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 670,
+          "y": 675,
           "leftX": 112,
           "rightX": 204,
           "postRadius": 11
         },
         {
+          "id": "rock_21",
+          "type": "rock",
+          "x": 128,
+          "y": 599,
+          "radius": 18
+        },
+        {
           "id": "log_8",
           "type": "log",
-          "y": 615,
+          "y": 523,
           "width": 65,
           "height": 22,
           "minX": 132,
@@ -5010,16 +5021,9 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 128,
-          "y": 574,
-          "radius": 18
-        },
-        {
           "id": "log_9",
           "type": "log",
-          "y": 502,
+          "y": 448,
           "width": 66,
           "height": 22,
           "minX": 156,
@@ -5032,14 +5036,14 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 248,
-          "y": 473,
+          "y": 372,
           "radius": 21
         },
         {
           "id": "rock_23",
           "type": "rock",
           "x": 192,
-          "y": 336,
+          "y": 296,
           "radius": 23
         }
       ]
@@ -5108,20 +5112,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 265,
-          "y": 1946,
+          "y": 2006,
           "radius": 21
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 175,
-          "y": 1814,
+          "y": 1931,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1772,
+          "y": 1857,
           "width": 65,
           "height": 22,
           "minX": 153,
@@ -5134,13 +5138,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 202,
-          "y": 1718,
+          "y": 1782,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1655,
+          "y": 1708,
           "width": 65,
           "height": 22,
           "minX": 128,
@@ -5153,13 +5157,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 117,
-          "y": 1648,
+          "y": 1634,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1600,
+          "y": 1559,
           "leftX": 91,
           "rightX": 183,
           "postRadius": 11
@@ -5168,27 +5172,34 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 191,
-          "y": 1490,
+          "y": 1485,
           "radius": 23
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 152,
-          "y": 1358,
+          "y": 1410,
           "radius": 18
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 221,
-          "y": 1262,
+          "y": 1336,
           "radius": 21
+        },
+        {
+          "id": "rock_17",
+          "type": "rock",
+          "x": 173,
+          "y": 1262,
+          "radius": 23
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1246,
+          "y": 1187,
           "width": 63,
           "height": 22,
           "minX": 166,
@@ -5198,16 +5209,9 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_17",
-          "type": "rock",
-          "x": 173,
-          "y": 1188,
-          "radius": 23
-        },
-        {
           "id": "gate_2",
           "type": "gate",
-          "y": 1140,
+          "y": 1113,
           "leftX": 184,
           "rightX": 276,
           "postRadius": 11
@@ -5215,7 +5219,7 @@ export const LEVELS = [
         {
           "id": "log_7",
           "type": "log",
-          "y": 1034,
+          "y": 1038,
           "width": 62,
           "height": 22,
           "minX": 162,
@@ -5228,34 +5232,34 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 242,
-          "y": 1034,
+          "y": 964,
           "radius": 18
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 144,
-          "y": 902,
+          "y": 890,
           "radius": 21
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 171,
-          "y": 806,
+          "y": 815,
           "radius": 23
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 101,
-          "y": 728,
+          "y": 741,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 680,
+          "y": 666,
           "leftX": 111,
           "rightX": 203,
           "postRadius": 11
@@ -5263,7 +5267,7 @@ export const LEVELS = [
         {
           "id": "log_8",
           "type": "log",
-          "y": 625,
+          "y": 592,
           "width": 63,
           "height": 22,
           "minX": 134,
@@ -5276,13 +5280,13 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 224,
-          "y": 578,
+          "y": 518,
           "radius": 21
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 508,
+          "y": 443,
           "width": 64,
           "height": 22,
           "minX": 158,
@@ -5295,14 +5299,14 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 184,
-          "y": 446,
+          "y": 369,
           "radius": 23
         },
         {
           "id": "rock_24",
           "type": "rock",
           "x": 242,
-          "y": 350,
+          "y": 294,
           "radius": 18
         }
       ]
@@ -5371,20 +5375,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 268,
-          "y": 1984,
+          "y": 2047,
           "radius": 21
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 178,
-          "y": 1849,
+          "y": 1974,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1840,
+          "y": 1901,
           "width": 65,
           "height": 22,
           "minX": 163,
@@ -5397,13 +5401,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 203,
-          "y": 1751,
+          "y": 1828,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1685,
+          "y": 1755,
           "width": 65,
           "height": 22,
           "minX": 127,
@@ -5416,13 +5420,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 116,
-          "y": 1678,
+          "y": 1682,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1630,
+          "y": 1608,
           "leftX": 89,
           "rightX": 181,
           "postRadius": 11
@@ -5431,20 +5435,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 189,
-          "y": 1518,
+          "y": 1535,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 152,
-          "y": 1383,
+          "y": 1462,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1370,
+          "y": 1389,
           "width": 63,
           "height": 22,
           "minX": 143,
@@ -5457,13 +5461,13 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 222,
-          "y": 1285,
+          "y": 1316,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1215,
+          "y": 1243,
           "width": 62,
           "height": 22,
           "minX": 180,
@@ -5476,13 +5480,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 175,
-          "y": 1208,
+          "y": 1170,
           "radius": 23
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1160,
+          "y": 1097,
           "leftX": 187,
           "rightX": 279,
           "postRadius": 11
@@ -5491,20 +5495,20 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 243,
-          "y": 1052,
+          "y": 1024,
           "radius": 18
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 143,
-          "y": 917,
+          "y": 951,
           "radius": 21
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 900,
+          "y": 878,
           "width": 62,
           "height": 22,
           "minX": 128,
@@ -5517,13 +5521,13 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 168,
-          "y": 819,
+          "y": 805,
           "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 745,
+          "y": 732,
           "width": 62,
           "height": 22,
           "minX": 108,
@@ -5536,35 +5540,35 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 99,
-          "y": 738,
+          "y": 658,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 690,
+          "y": 585,
           "leftX": 110,
           "rightX": 202,
           "postRadius": 11
         },
         {
-          "id": "rock_23",
-          "type": "rock",
-          "x": 224,
-          "y": 586,
-          "radius": 21
-        },
-        {
           "id": "rock_24",
           "type": "rock",
           "x": 187,
-          "y": 451,
+          "y": 512,
           "radius": 23
+        },
+        {
+          "id": "rock_23",
+          "type": "rock",
+          "x": 224,
+          "y": 439,
+          "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 430,
+          "y": 366,
           "width": 65,
           "height": 22,
           "minX": 179,
@@ -5577,7 +5581,7 @@ export const LEVELS = [
           "id": "rock_25",
           "type": "rock",
           "x": 245,
-          "y": 353,
+          "y": 293,
           "radius": 18
         }
       ]
@@ -5646,20 +5650,20 @@ export const LEVELS = [
           "id": "rock_10",
           "type": "rock",
           "x": 260,
-          "y": 2028,
+          "y": 2085,
           "radius": 21
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 178,
-          "y": 1898,
+          "y": 2011,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1841,
+          "y": 1936,
           "width": 65,
           "height": 22,
           "minX": 154,
@@ -5672,13 +5676,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 208,
-          "y": 1804,
+          "y": 1862,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1715,
+          "y": 1787,
           "width": 65,
           "height": 22,
           "minX": 130,
@@ -5691,13 +5695,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 119,
-          "y": 1708,
+          "y": 1712,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1660,
+          "y": 1638,
           "leftX": 94,
           "rightX": 186,
           "postRadius": 11
@@ -5706,27 +5710,27 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 188,
-          "y": 1580,
+          "y": 1563,
           "radius": 23
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 144,
-          "y": 1450,
+          "y": 1488,
           "radius": 18
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 210,
-          "y": 1356,
+          "y": 1414,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1292,
+          "y": 1339,
           "width": 63,
           "height": 22,
           "minX": 163,
@@ -5739,28 +5743,28 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 170,
-          "y": 1226,
+          "y": 1265,
           "radius": 23
-        },
-        {
-          "id": "gate_2",
-          "type": "gate",
-          "y": 1180,
-          "leftX": 181,
-          "rightX": 273,
-          "postRadius": 11
         },
         {
           "id": "rock_18",
           "type": "rock",
           "x": 253,
-          "y": 1133,
+          "y": 1190,
           "radius": 18
+        },
+        {
+          "id": "gate_2",
+          "type": "gate",
+          "y": 1115,
+          "leftX": 181,
+          "rightX": 273,
+          "postRadius": 11
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1068,
+          "y": 1041,
           "width": 62,
           "height": 22,
           "minX": 160,
@@ -5773,27 +5777,27 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 158,
-          "y": 1003,
+          "y": 966,
           "radius": 21
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 188,
-          "y": 909,
+          "y": 892,
           "radius": 23
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 99,
-          "y": 779,
+          "y": 817,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 700,
+          "y": 742,
           "leftX": 114,
           "rightX": 206,
           "postRadius": 11
@@ -5802,13 +5806,13 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 213,
-          "y": 652,
+          "y": 668,
           "radius": 21
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 645,
+          "y": 593,
           "width": 63,
           "height": 22,
           "minX": 135,
@@ -5821,13 +5825,13 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 164,
-          "y": 555,
+          "y": 518,
           "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 519,
+          "y": 444,
           "width": 64,
           "height": 22,
           "minX": 158,
@@ -5840,14 +5844,14 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 230,
-          "y": 461,
+          "y": 369,
           "radius": 18
         },
         {
           "id": "rock_25",
           "type": "rock",
           "x": 165,
-          "y": 331,
+          "y": 295,
           "radius": 21
         }
       ]
@@ -5916,13 +5920,13 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 256,
-          "y": 2050,
+          "y": 2121,
           "radius": 21
         },
         {
           "id": "log_3",
           "type": "log",
-          "y": 1937,
+          "y": 2042,
           "width": 63,
           "height": 22,
           "minX": 166,
@@ -5935,20 +5939,20 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 171,
-          "y": 1903,
+          "y": 1962,
           "radius": 23
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 200,
-          "y": 1791,
+          "y": 1883,
           "radius": 18
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1769,
+          "y": 1804,
           "width": 63,
           "height": 22,
           "minX": 137,
@@ -5961,13 +5965,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 106,
-          "y": 1643,
+          "y": 1725,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1527,
+          "y": 1646,
           "leftX": 103,
           "rightX": 195,
           "postRadius": 11
@@ -5976,13 +5980,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 209,
-          "y": 1479,
+          "y": 1566,
           "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1472,
+          "y": 1487,
           "width": 62,
           "height": 22,
           "minX": 135,
@@ -5995,13 +5999,13 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 161,
-          "y": 1384,
+          "y": 1408,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1334,
+          "y": 1329,
           "width": 61,
           "height": 22,
           "minX": 160,
@@ -6014,20 +6018,20 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 228,
-          "y": 1272,
+          "y": 1250,
           "radius": 21
         },
         {
           "id": "rock_18",
           "type": "rock",
           "x": 162,
-          "y": 1125,
+          "y": 1170,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1066,
+          "y": 1091,
           "width": 60,
           "height": 22,
           "minX": 157,
@@ -6040,13 +6044,13 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 224,
-          "y": 1013,
+          "y": 1012,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 928,
+          "y": 933,
           "width": 60,
           "height": 22,
           "minX": 133,
@@ -6059,13 +6063,13 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 141,
-          "y": 921,
+          "y": 854,
           "radius": 21
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 873,
+          "y": 774,
           "leftX": 118,
           "rightX": 210,
           "postRadius": 11
@@ -6074,13 +6078,13 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 178,
-          "y": 754,
+          "y": 695,
           "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 631,
+          "y": 616,
           "width": 61,
           "height": 22,
           "minX": 141,
@@ -6093,20 +6097,20 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 135,
-          "y": 606,
+          "y": 537,
           "radius": 18
         },
         {
           "id": "rock_23",
           "type": "rock",
           "x": 242,
-          "y": 494,
+          "y": 458,
           "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 463,
+          "y": 378,
           "width": 63,
           "height": 22,
           "minX": 170,
@@ -6119,7 +6123,7 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 186,
-          "y": 347,
+          "y": 299,
           "radius": 23
         }
       ]
@@ -6188,20 +6192,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 261,
-          "y": 2096,
+          "y": 2162,
           "radius": 21
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 178,
-          "y": 1954,
+          "y": 2085,
           "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1909,
+          "y": 2007,
           "width": 63,
           "height": 22,
           "minX": 158,
@@ -6213,7 +6217,7 @@ export const LEVELS = [
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1820,
+          "y": 1929,
           "leftX": 117,
           "rightX": 209,
           "postRadius": 11
@@ -6222,20 +6226,20 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 189,
-          "y": 1772,
+          "y": 1852,
           "radius": 18
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 108,
-          "y": 1706,
+          "y": 1774,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1674,
+          "y": 1696,
           "width": 63,
           "height": 22,
           "minX": 109,
@@ -6248,20 +6252,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 188,
-          "y": 1600,
+          "y": 1618,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 151,
-          "y": 1458,
+          "y": 1541,
           "radius": 18
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1420,
+          "y": 1463,
           "leftX": 147,
           "rightX": 239,
           "postRadius": 11
@@ -6270,13 +6274,13 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 221,
-          "y": 1352,
+          "y": 1385,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1338,
+          "y": 1308,
           "width": 61,
           "height": 22,
           "minX": 166,
@@ -6289,20 +6293,20 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 180,
-          "y": 1210,
+          "y": 1230,
           "radius": 23
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 239,
-          "y": 1104,
+          "y": 1152,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1102,
+          "y": 1075,
           "width": 60,
           "height": 22,
           "minX": 163,
@@ -6314,7 +6318,7 @@ export const LEVELS = [
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1020,
+          "y": 997,
           "leftX": 133,
           "rightX": 225,
           "postRadius": 11
@@ -6323,20 +6327,20 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 143,
-          "y": 962,
+          "y": 919,
           "radius": 21
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 169,
-          "y": 856,
+          "y": 842,
           "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 766,
+          "y": 764,
           "width": 60,
           "height": 22,
           "minX": 116,
@@ -6349,13 +6353,13 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 116,
-          "y": 714,
+          "y": 686,
           "radius": 18
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 620,
+          "y": 608,
           "leftX": 123,
           "rightX": 215,
           "postRadius": 11
@@ -6364,13 +6368,13 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 231,
-          "y": 572,
+          "y": 531,
           "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 531,
+          "y": 453,
           "width": 62,
           "height": 22,
           "minX": 162,
@@ -6383,14 +6387,14 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 187,
-          "y": 466,
+          "y": 375,
           "radius": 23
         },
         {
           "id": "rock_25",
           "type": "rock",
           "x": 241,
-          "y": 360,
+          "y": 298,
           "radius": 18
         }
       ]
@@ -6459,27 +6463,27 @@ export const LEVELS = [
           "id": "rock_9",
           "type": "rock",
           "x": 256,
-          "y": 2154,
+          "y": 2204,
           "radius": 21
         },
         {
           "id": "rock_10",
           "type": "rock",
           "x": 184,
-          "y": 2029,
+          "y": 2127,
           "radius": 23
         },
         {
           "id": "rock_11",
           "type": "rock",
           "x": 216,
-          "y": 1941,
+          "y": 2051,
           "radius": 18
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 1895,
+          "y": 1975,
           "width": 63,
           "height": 22,
           "minX": 148,
@@ -6492,13 +6496,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 125,
-          "y": 1817,
+          "y": 1899,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1750,
+          "y": 1822,
           "leftX": 99,
           "rightX": 191,
           "postRadius": 11
@@ -6507,13 +6511,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 190,
-          "y": 1702,
+          "y": 1746,
           "radius": 23
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1605,
+          "y": 1670,
           "width": 63,
           "height": 22,
           "minX": 118,
@@ -6526,34 +6530,34 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 129,
-          "y": 1604,
+          "y": 1593,
           "radius": 18
         },
         {
           "id": "rock_15",
           "type": "rock",
           "x": 194,
-          "y": 1515,
+          "y": 1517,
           "radius": 21
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 153,
-          "y": 1391,
+          "y": 1441,
           "radius": 23
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 252,
-          "y": 1303,
+          "y": 1364,
           "radius": 18
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1240,
+          "y": 1288,
           "leftX": 178,
           "rightX": 270,
           "postRadius": 11
@@ -6561,7 +6565,7 @@ export const LEVELS = [
         {
           "id": "log_6",
           "type": "log",
-          "y": 1185,
+          "y": 1212,
           "width": 60,
           "height": 22,
           "minX": 173,
@@ -6574,27 +6578,27 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 181,
-          "y": 1178,
+          "y": 1136,
           "radius": 21
         },
         {
           "id": "rock_19",
           "type": "rock",
           "x": 213,
-          "y": 1090,
+          "y": 1059,
           "radius": 23
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 123,
-          "y": 966,
+          "y": 983,
           "radius": 18
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 925,
+          "y": 907,
           "width": 60,
           "height": 22,
           "minX": 126,
@@ -6607,20 +6611,20 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 190,
-          "y": 877,
+          "y": 830,
           "radius": 21
         },
         {
           "id": "rock_22",
           "type": "rock",
           "x": 128,
-          "y": 778,
+          "y": 754,
           "radius": 23
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 730,
+          "y": 678,
           "leftX": 115,
           "rightX": 207,
           "postRadius": 11
@@ -6629,20 +6633,13 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 197,
-          "y": 664,
+          "y": 601,
           "radius": 18
-        },
-        {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 153,
-          "y": 540,
-          "radius": 21
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 535,
+          "y": 525,
           "width": 62,
           "height": 22,
           "minX": 162,
@@ -6652,17 +6649,24 @@ export const LEVELS = [
           "dir": -1
         },
         {
+          "id": "rock_24",
+          "type": "rock",
+          "x": 153,
+          "y": 449,
+          "radius": 21
+        },
+        {
           "id": "rock_25",
           "type": "rock",
           "x": 253,
-          "y": 452,
+          "y": 373,
           "radius": 23
         },
         {
           "id": "rock_26",
           "type": "rock",
           "x": 186,
-          "y": 327,
+          "y": 296,
           "radius": 18
         }
       ]
@@ -6731,20 +6735,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 256,
-          "y": 2169,
+          "y": 2233,
           "radius": 21
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 181,
-          "y": 2030,
+          "y": 2155,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2006,
+          "y": 2078,
           "width": 61,
           "height": 22,
           "minX": 167,
@@ -6757,13 +6761,20 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 210,
-          "y": 1928,
+          "y": 2000,
           "radius": 18
+        },
+        {
+          "id": "rock_14",
+          "type": "rock",
+          "x": 124,
+          "y": 1923,
+          "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1828,
+          "y": 1846,
           "width": 61,
           "height": 22,
           "minX": 133,
@@ -6773,16 +6784,9 @@ export const LEVELS = [
           "dir": 1
         },
         {
-          "id": "rock_14",
-          "type": "rock",
-          "x": 124,
-          "y": 1821,
-          "radius": 21
-        },
-        {
           "id": "gate_1",
           "type": "gate",
-          "y": 1773,
+          "y": 1768,
           "leftX": 101,
           "rightX": 193,
           "postRadius": 11
@@ -6791,20 +6795,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 180,
-          "y": 1686,
+          "y": 1691,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 143,
-          "y": 1547,
+          "y": 1613,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1489,
+          "y": 1536,
           "width": 59,
           "height": 22,
           "minX": 144,
@@ -6817,13 +6821,13 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 210,
-          "y": 1445,
+          "y": 1459,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1310,
+          "y": 1381,
           "width": 58,
           "height": 22,
           "minX": 180,
@@ -6836,13 +6840,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 176,
-          "y": 1306,
+          "y": 1304,
           "radius": 23
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1255,
+          "y": 1226,
           "leftX": 178,
           "rightX": 270,
           "postRadius": 11
@@ -6851,20 +6855,27 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 249,
-          "y": 1203,
+          "y": 1149,
           "radius": 18
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 158,
-          "y": 1064,
+          "y": 1071,
           "radius": 21
+        },
+        {
+          "id": "rock_21",
+          "type": "rock",
+          "x": 187,
+          "y": 994,
+          "radius": 23
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 971,
+          "y": 917,
           "width": 58,
           "height": 22,
           "minX": 133,
@@ -6874,23 +6885,16 @@ export const LEVELS = [
           "dir": -1
         },
         {
-          "id": "rock_21",
-          "type": "rock",
-          "x": 187,
-          "y": 962,
-          "radius": 23
-        },
-        {
           "id": "rock_22",
           "type": "rock",
           "x": 103,
-          "y": 823,
+          "y": 839,
           "radius": 18
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 793,
+          "y": 762,
           "width": 58,
           "height": 22,
           "minX": 118,
@@ -6902,7 +6906,7 @@ export const LEVELS = [
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 738,
+          "y": 684,
           "leftX": 114,
           "rightX": 206,
           "postRadius": 11
@@ -6911,27 +6915,27 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 208,
-          "y": 690,
+          "y": 607,
           "radius": 21
         },
         {
           "id": "rock_24",
           "type": "rock",
           "x": 166,
-          "y": 581,
+          "y": 530,
           "radius": 23
         },
         {
           "id": "rock_25",
           "type": "rock",
           "x": 233,
-          "y": 479,
+          "y": 452,
           "radius": 18
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 454,
+          "y": 375,
           "width": 61,
           "height": 22,
           "minX": 180,
@@ -6944,7 +6948,7 @@ export const LEVELS = [
           "id": "rock_26",
           "type": "rock",
           "x": 171,
-          "y": 340,
+          "y": 297,
           "radius": 21
         }
       ]
@@ -7013,13 +7017,13 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 254,
-          "y": 2197,
+          "y": 2264,
           "radius": 21
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2062,
+          "y": 2189,
           "width": 61,
           "height": 22,
           "minX": 171,
@@ -7032,20 +7036,20 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 180,
-          "y": 2057,
+          "y": 2113,
           "radius": 23
         },
         {
           "id": "rock_14",
           "type": "rock",
           "x": 210,
-          "y": 1952,
+          "y": 2037,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1878,
+          "y": 1961,
           "width": 61,
           "height": 22,
           "minX": 139,
@@ -7058,13 +7062,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 125,
-          "y": 1843,
+          "y": 1886,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1795,
+          "y": 1810,
           "leftX": 102,
           "rightX": 194,
           "postRadius": 11
@@ -7073,13 +7077,13 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 182,
-          "y": 1707,
+          "y": 1734,
           "radius": 23
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1595,
+          "y": 1659,
           "width": 60,
           "height": 22,
           "minX": 128,
@@ -7092,20 +7096,20 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 143,
-          "y": 1567,
+          "y": 1583,
           "radius": 18
         },
         {
           "id": "rock_18",
           "type": "rock",
           "x": 210,
-          "y": 1462,
+          "y": 1507,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1412,
+          "y": 1431,
           "width": 59,
           "height": 22,
           "minX": 162,
@@ -7118,13 +7122,13 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 175,
-          "y": 1322,
+          "y": 1356,
           "radius": 23
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1270,
+          "y": 1280,
           "leftX": 176,
           "rightX": 268,
           "postRadius": 11
@@ -7133,13 +7137,13 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 247,
-          "y": 1217,
+          "y": 1204,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1128,
+          "y": 1129,
           "width": 58,
           "height": 22,
           "minX": 159,
@@ -7152,20 +7156,13 @@ export const LEVELS = [
           "id": "rock_21",
           "type": "rock",
           "x": 158,
-          "y": 1077,
+          "y": 1053,
           "radius": 21
-        },
-        {
-          "id": "rock_22",
-          "type": "rock",
-          "x": 187,
-          "y": 972,
-          "radius": 23
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 945,
+          "y": 977,
           "width": 58,
           "height": 22,
           "minX": 127,
@@ -7175,16 +7172,23 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock_22",
+          "type": "rock",
+          "x": 187,
+          "y": 901,
+          "radius": 23
+        },
+        {
           "id": "rock_23",
           "type": "rock",
           "x": 105,
-          "y": 832,
+          "y": 826,
           "radius": 18
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 745,
+          "y": 750,
           "leftX": 115,
           "rightX": 207,
           "postRadius": 11
@@ -7193,13 +7197,13 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 209,
-          "y": 697,
+          "y": 674,
           "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 662,
+          "y": 599,
           "width": 59,
           "height": 22,
           "minX": 143,
@@ -7212,20 +7216,20 @@ export const LEVELS = [
           "id": "rock_25",
           "type": "rock",
           "x": 165,
-          "y": 587,
+          "y": 523,
           "radius": 23
         },
         {
           "id": "rock_26",
           "type": "rock",
           "x": 232,
-          "y": 482,
+          "y": 447,
           "radius": 18
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 478,
+          "y": 371,
           "width": 60,
           "height": 22,
           "minX": 175,
@@ -7238,7 +7242,7 @@ export const LEVELS = [
           "id": "rock_27",
           "type": "rock",
           "x": 169,
-          "y": 342,
+          "y": 296,
           "radius": 21
         }
       ]
@@ -7307,20 +7311,20 @@ export const LEVELS = [
           "id": "rock_11",
           "type": "rock",
           "x": 259,
-          "y": 2242,
+          "y": 2303,
           "radius": 21
         },
         {
           "id": "rock_12",
           "type": "rock",
           "x": 188,
-          "y": 2106,
+          "y": 2226,
           "radius": 23
         },
         {
           "id": "log_4",
           "type": "log",
-          "y": 2068,
+          "y": 2149,
           "width": 61,
           "height": 22,
           "minX": 170,
@@ -7333,13 +7337,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 216,
-          "y": 2006,
+          "y": 2071,
           "radius": 18
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 1880,
+          "y": 1994,
           "width": 61,
           "height": 22,
           "minX": 131,
@@ -7352,13 +7356,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 122,
-          "y": 1870,
+          "y": 1917,
           "radius": 21
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1825,
+          "y": 1840,
           "leftX": 99,
           "rightX": 191,
           "postRadius": 11
@@ -7367,27 +7371,27 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 182,
-          "y": 1771,
+          "y": 1763,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 131,
-          "y": 1635,
+          "y": 1686,
           "radius": 18
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 200,
-          "y": 1535,
+          "y": 1609,
           "radius": 21
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1533,
+          "y": 1531,
           "width": 59,
           "height": 22,
           "minX": 143,
@@ -7400,13 +7404,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 168,
-          "y": 1399,
+          "y": 1454,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1345,
+          "y": 1377,
           "width": 58,
           "height": 22,
           "minX": 184,
@@ -7418,7 +7422,7 @@ export const LEVELS = [
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1290,
+          "y": 1300,
           "leftX": 182,
           "rightX": 274,
           "postRadius": 11
@@ -7427,27 +7431,27 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 253,
-          "y": 1242,
+          "y": 1223,
           "radius": 18
         },
         {
           "id": "rock_20",
           "type": "rock",
           "x": 173,
-          "y": 1163,
+          "y": 1146,
           "radius": 21
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 200,
-          "y": 1063,
+          "y": 1069,
           "radius": 23
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 998,
+          "y": 991,
           "width": 58,
           "height": 22,
           "minX": 131,
@@ -7460,20 +7464,20 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 107,
-          "y": 927,
+          "y": 914,
           "radius": 18
         },
         {
           "id": "rock_23",
           "type": "rock",
           "x": 181,
-          "y": 827,
+          "y": 837,
           "radius": 21
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 810,
+          "y": 760,
           "width": 58,
           "height": 22,
           "minX": 115,
@@ -7483,31 +7487,31 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock_24",
+          "type": "rock",
+          "x": 147,
+          "y": 683,
+          "radius": 23
+        },
+        {
           "id": "gate_3",
           "type": "gate",
-          "y": 755,
+          "y": 606,
           "leftX": 112,
           "rightX": 204,
           "postRadius": 11
         },
         {
-          "id": "rock_24",
-          "type": "rock",
-          "x": 147,
-          "y": 692,
-          "radius": 23
-        },
-        {
           "id": "rock_25",
           "type": "rock",
           "x": 216,
-          "y": 592,
+          "y": 529,
           "radius": 18
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 463,
+          "y": 451,
           "width": 61,
           "height": 22,
           "minX": 185,
@@ -7520,14 +7524,14 @@ export const LEVELS = [
           "id": "rock_26",
           "type": "rock",
           "x": 179,
-          "y": 456,
+          "y": 374,
           "radius": 21
         },
         {
           "id": "rock_27",
           "type": "rock",
           "x": 256,
-          "y": 356,
+          "y": 297,
           "radius": 23
         }
       ]
@@ -7596,20 +7600,20 @@ export const LEVELS = [
           "id": "rock_12",
           "type": "rock",
           "x": 256,
-          "y": 2270,
+          "y": 2334,
           "radius": 21
         },
         {
           "id": "rock_13",
           "type": "rock",
           "x": 187,
-          "y": 2133,
+          "y": 2259,
           "radius": 23
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2028,
+          "y": 2183,
           "leftX": 135,
           "rightX": 227,
           "postRadius": 11
@@ -7618,13 +7622,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 205,
-          "y": 1980,
+          "y": 2108,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 1973,
+          "y": 2032,
           "width": 61,
           "height": 22,
           "minX": 146,
@@ -7637,13 +7641,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 123,
-          "y": 1894,
+          "y": 1957,
           "radius": 21
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1795,
+          "y": 1881,
           "width": 61,
           "height": 22,
           "minX": 112,
@@ -7656,20 +7660,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 185,
-          "y": 1792,
+          "y": 1806,
           "radius": 23
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 121,
-          "y": 1715,
+          "y": 1730,
           "radius": 18
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1667,
+          "y": 1655,
           "leftX": 117,
           "rightX": 209,
           "postRadius": 11
@@ -7678,13 +7682,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 200,
-          "y": 1553,
+          "y": 1579,
           "radius": 21
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1435,
+          "y": 1504,
           "width": 58,
           "height": 22,
           "minX": 166,
@@ -7697,13 +7701,13 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 166,
-          "y": 1416,
+          "y": 1428,
           "radius": 23
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1305,
+          "y": 1353,
           "leftX": 174,
           "rightX": 266,
           "postRadius": 11
@@ -7712,20 +7716,20 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 251,
-          "y": 1257,
+          "y": 1277,
           "radius": 18
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 171,
-          "y": 1176,
+          "y": 1202,
           "radius": 21
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1175,
+          "y": 1126,
           "width": 58,
           "height": 22,
           "minX": 164,
@@ -7738,20 +7742,20 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 200,
-          "y": 1075,
+          "y": 1051,
           "radius": 23
         },
         {
           "id": "rock_23",
           "type": "rock",
           "x": 119,
-          "y": 991,
+          "y": 975,
           "radius": 18
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 943,
+          "y": 900,
           "leftX": 99,
           "rightX": 191,
           "postRadius": 11
@@ -7760,13 +7764,13 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 184,
-          "y": 836,
+          "y": 824,
           "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 815,
+          "y": 749,
           "width": 58,
           "height": 22,
           "minX": 118,
@@ -7779,13 +7783,13 @@ export const LEVELS = [
           "id": "rock_25",
           "type": "rock",
           "x": 148,
-          "y": 698,
+          "y": 673,
           "radius": 23
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 637,
+          "y": 598,
           "width": 59,
           "height": 22,
           "minX": 151,
@@ -7797,7 +7801,7 @@ export const LEVELS = [
         {
           "id": "gate_5",
           "type": "gate",
-          "y": 582,
+          "y": 522,
           "leftX": 157,
           "rightX": 249,
           "postRadius": 11
@@ -7806,21 +7810,21 @@ export const LEVELS = [
           "id": "rock_26",
           "type": "rock",
           "x": 228,
-          "y": 534,
+          "y": 447,
           "radius": 18
         },
         {
           "id": "rock_27",
           "type": "rock",
           "x": 177,
-          "y": 459,
+          "y": 371,
           "radius": 21
         },
         {
           "id": "rock_28",
           "type": "rock",
           "x": 254,
-          "y": 358,
+          "y": 296,
           "radius": 23
         }
       ]
@@ -7889,13 +7893,13 @@ export const LEVELS = [
           "id": "rock_13",
           "type": "rock",
           "x": 256,
-          "y": 2292,
+          "y": 2363,
           "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2151,
+          "y": 2287,
           "width": 59,
           "height": 22,
           "minX": 179,
@@ -7908,13 +7912,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 186,
-          "y": 2145,
+          "y": 2210,
           "radius": 23
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2035,
+          "y": 2134,
           "width": 59,
           "height": 22,
           "minX": 156,
@@ -7927,13 +7931,13 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 212,
-          "y": 2035,
+          "y": 2057,
           "radius": 18
         },
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 1980,
+          "y": 1981,
           "leftX": 124,
           "rightX": 216,
           "postRadius": 11
@@ -7942,20 +7946,20 @@ export const LEVELS = [
           "id": "rock_16",
           "type": "rock",
           "x": 119,
-          "y": 1888,
+          "y": 1904,
           "radius": 21
         },
         {
           "id": "rock_17",
           "type": "rock",
           "x": 173,
-          "y": 1778,
+          "y": 1828,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1662,
+          "y": 1751,
           "width": 58,
           "height": 22,
           "minX": 125,
@@ -7968,13 +7972,13 @@ export const LEVELS = [
           "id": "rock_18",
           "type": "rock",
           "x": 140,
-          "y": 1632,
+          "y": 1674,
           "radius": 18
         },
         {
           "id": "gate_2",
           "type": "gate",
-          "y": 1540,
+          "y": 1598,
           "leftX": 142,
           "rightX": 234,
           "postRadius": 11
@@ -7983,13 +7987,13 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 216,
-          "y": 1492,
+          "y": 1521,
           "radius": 21
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1467,
+          "y": 1445,
           "width": 57,
           "height": 22,
           "minX": 165,
@@ -8002,20 +8006,20 @@ export const LEVELS = [
           "id": "rock_20",
           "type": "rock",
           "x": 181,
-          "y": 1375,
+          "y": 1368,
           "radius": 23
         },
         {
           "id": "rock_21",
           "type": "rock",
           "x": 251,
-          "y": 1264,
+          "y": 1292,
           "radius": 18
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1173,
+          "y": 1215,
           "width": 57,
           "height": 22,
           "minX": 162,
@@ -8028,13 +8032,13 @@ export const LEVELS = [
           "id": "rock_22",
           "type": "rock",
           "x": 164,
-          "y": 1148,
+          "y": 1139,
           "radius": 21
         },
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1100,
+          "y": 1062,
           "leftX": 132,
           "rightX": 224,
           "postRadius": 11
@@ -8043,13 +8047,13 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 183,
-          "y": 1007,
+          "y": 986,
           "radius": 23
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 978,
+          "y": 909,
           "width": 57,
           "height": 22,
           "minX": 122,
@@ -8062,20 +8066,20 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 101,
-          "y": 861,
+          "y": 832,
           "radius": 18
         },
         {
           "id": "rock_25",
           "type": "rock",
           "x": 200,
-          "y": 751,
+          "y": 756,
           "radius": 21
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 660,
+          "y": 679,
           "leftX": 129,
           "rightX": 221,
           "postRadius": 11
@@ -8083,7 +8087,7 @@ export const LEVELS = [
         {
           "id": "log_11",
           "type": "log",
-          "y": 605,
+          "y": 603,
           "width": 58,
           "height": 22,
           "minX": 160,
@@ -8096,20 +8100,20 @@ export const LEVELS = [
           "id": "rock_26",
           "type": "rock",
           "x": 168,
-          "y": 604,
+          "y": 526,
           "radius": 23
         },
         {
           "id": "rock_27",
           "type": "rock",
           "x": 239,
-          "y": 494,
+          "y": 450,
           "radius": 18
         },
         {
           "id": "log_12",
           "type": "log",
-          "y": 489,
+          "y": 373,
           "width": 59,
           "height": 22,
           "minX": 183,
@@ -8122,7 +8126,7 @@ export const LEVELS = [
           "id": "rock_28",
           "type": "rock",
           "x": 176,
-          "y": 347,
+          "y": 297,
           "radius": 21
         }
       ]
@@ -8191,13 +8195,13 @@ export const LEVELS = [
           "id": "rock_14",
           "type": "rock",
           "x": 258,
-          "y": 2337,
+          "y": 2407,
           "radius": 21
         },
         {
           "id": "log_5",
           "type": "log",
-          "y": 2211,
+          "y": 2334,
           "width": 59,
           "height": 22,
           "minX": 187,
@@ -8210,20 +8214,20 @@ export const LEVELS = [
           "id": "rock_15",
           "type": "rock",
           "x": 192,
-          "y": 2195,
+          "y": 2261,
           "radius": 23
         },
         {
           "id": "rock_16",
           "type": "rock",
           "x": 218,
-          "y": 2090,
+          "y": 2188,
           "radius": 18
         },
         {
           "id": "log_6",
           "type": "log",
-          "y": 2067,
+          "y": 2115,
           "width": 59,
           "height": 22,
           "minX": 156,
@@ -8235,7 +8239,7 @@ export const LEVELS = [
         {
           "id": "gate_1",
           "type": "gate",
-          "y": 2012,
+          "y": 2043,
           "leftX": 124,
           "rightX": 216,
           "postRadius": 11
@@ -8244,20 +8248,20 @@ export const LEVELS = [
           "id": "rock_17",
           "type": "rock",
           "x": 125,
-          "y": 1948,
+          "y": 1970,
           "radius": 21
         },
         {
           "id": "rock_18",
           "type": "rock",
           "x": 178,
-          "y": 1843,
+          "y": 1897,
           "radius": 23
         },
         {
           "id": "log_7",
           "type": "log",
-          "y": 1763,
+          "y": 1824,
           "width": 59,
           "height": 22,
           "minX": 108,
@@ -8270,13 +8274,13 @@ export const LEVELS = [
           "id": "rock_19",
           "type": "rock",
           "x": 129,
-          "y": 1701,
+          "y": 1751,
           "radius": 18
         },
         {
           "id": "log_8",
           "type": "log",
-          "y": 1619,
+          "y": 1678,
           "width": 58,
           "height": 22,
           "minX": 139,
@@ -8286,38 +8290,38 @@ export const LEVELS = [
           "dir": 1
         },
         {
+          "id": "rock_20",
+          "type": "rock",
+          "x": 217,
+          "y": 1605,
+          "radius": 21
+        },
+        {
           "id": "gate_2",
           "type": "gate",
-          "y": 1564,
+          "y": 1532,
           "leftX": 142,
           "rightX": 234,
           "postRadius": 11
         },
         {
-          "id": "rock_20",
-          "type": "rock",
-          "x": 217,
-          "y": 1516,
-          "radius": 21
-        },
-        {
           "id": "rock_21",
           "type": "rock",
           "x": 171,
-          "y": 1454,
+          "y": 1459,
           "radius": 23
         },
         {
           "id": "rock_22",
           "type": "rock",
           "x": 267,
-          "y": 1349,
+          "y": 1386,
           "radius": 18
         },
         {
           "id": "log_9",
           "type": "log",
-          "y": 1315,
+          "y": 1314,
           "width": 57,
           "height": 22,
           "minX": 190,
@@ -8330,13 +8334,13 @@ export const LEVELS = [
           "id": "rock_23",
           "type": "rock",
           "x": 174,
-          "y": 1208,
+          "y": 1241,
           "radius": 21
         },
         {
           "id": "log_10",
           "type": "log",
-          "y": 1171,
+          "y": 1168,
           "width": 57,
           "height": 22,
           "minX": 159,
@@ -8348,7 +8352,7 @@ export const LEVELS = [
         {
           "id": "gate_3",
           "type": "gate",
-          "y": 1116,
+          "y": 1095,
           "leftX": 132,
           "rightX": 224,
           "postRadius": 11
@@ -8357,20 +8361,20 @@ export const LEVELS = [
           "id": "rock_24",
           "type": "rock",
           "x": 192,
-          "y": 1068,
+          "y": 1022,
           "radius": 23
         },
         {
           "id": "rock_25",
           "type": "rock",
           "x": 106,
-          "y": 961,
+          "y": 949,
           "radius": 18
         },
         {
           "id": "log_11",
           "type": "log",
-          "y": 867,
+          "y": 876,
           "width": 57,
           "height": 22,
           "minX": 108,
@@ -8383,13 +8387,13 @@ export const LEVELS = [
           "id": "rock_26",
           "type": "rock",
           "x": 178,
-          "y": 855,
+          "y": 803,
           "radius": 21
         },
         {
           "id": "log_12",
           "type": "log",
-          "y": 723,
+          "y": 730,
           "width": 58,
           "height": 22,
           "minX": 138,
@@ -8402,13 +8406,13 @@ export const LEVELS = [
           "id": "rock_27",
           "type": "rock",
           "x": 148,
-          "y": 714,
+          "y": 657,
           "radius": 23
         },
         {
           "id": "gate_4",
           "type": "gate",
-          "y": 668,
+          "y": 585,
           "leftX": 130,
           "rightX": 222,
           "postRadius": 11
@@ -8417,20 +8421,20 @@ export const LEVELS = [
           "id": "rock_28",
           "type": "rock",
           "x": 218,
-          "y": 608,
+          "y": 512,
           "radius": 18
         },
         {
           "id": "rock_29",
           "type": "rock",
           "x": 185,
-          "y": 467,
+          "y": 439,
           "radius": 21
         },
         {
           "id": "log_13",
           "type": "log",
-          "y": 419,
+          "y": 366,
           "width": 59,
           "height": 22,
           "minX": 192,
@@ -8443,7 +8447,7 @@ export const LEVELS = [
           "id": "rock_30",
           "type": "rock",
           "x": 256,
-          "y": 361,
+          "y": 293,
           "radius": 23
         }
       ]

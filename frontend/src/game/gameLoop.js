@@ -151,6 +151,18 @@ function drawFinishZone(ctx, world) {
   const fy = world.finishY;
   const r = world.finishRadius || 46;
 
+  // River-wide finish line ribbon
+  const bounds = getRiverBounds(world.waypoints, fy);
+  ctx.save();
+  ctx.strokeStyle = 'rgba(250, 204, 21, 0.85)';
+  ctx.lineWidth = 4;
+  ctx.setLineDash([12, 8]);
+  ctx.beginPath();
+  ctx.moveTo(bounds.leftBank + 4, fy);
+  ctx.lineTo(bounds.rightBank - 4, fy);
+  ctx.stroke();
+  ctx.restore();
+
   // Pulsing finish pond ring
   const pulse = Math.sin(performance.now() * 0.005) * 4;
   ctx.save();
