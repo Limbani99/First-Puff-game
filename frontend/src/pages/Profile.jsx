@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { ArrowLeft, LogOut, Cloud, Key, Trophy, Medal } from "lucide-react";
+import { ArrowLeft, LogOut, Key, Trophy, Medal } from "lucide-react";
 import axios from "axios";
 import { toast } from "react-hot-toast";
 import { useData } from "../context/DataProvider";
@@ -17,9 +17,8 @@ const MASCOT_EMOJIS = {
 
 export default function Profile() {
   const navigate = useNavigate();
-  const { user, isLoggedIn, logout, syncWithCloud, apiBaseUrl } = useData();
-  const { unlockedLevel, stars, bestTimes, settings, clearProgress } = useGame();
-  const [syncing, setSyncing] = useState(false);
+  const { user, isLoggedIn, logout, apiBaseUrl } = useData();
+  const { unlockedLevel, stars, clearProgress } = useGame();
   const [topPlayers, setTopPlayers] = useState([]);
   const [loadingTop, setLoadingTop] = useState(true);
 
@@ -60,26 +59,6 @@ export default function Profile() {
       isMounted = false;
     };
   }, [apiBaseUrl, user, totalStars, unlockedLevel]);
-
-  const handleSync = async () => {
-    soundManager.playClick();
-    setSyncing(true);
-    const result = await syncWithCloud({
-      unlockedLevel,
-      stars,
-      bestTimes,
-      settings,
-    });
-    setSyncing(false);
-
-    if (result) {
-      soundManager.playWin();
-      toast.success("Progress safely synced to cloud ☁️");
-    } else {
-      soundManager.playBump();
-      toast.error("Failed to sync. Make sure server is reachable.");
-    }
-  };
 
   const handleLogout = () => {
     soundManager.playClick();
@@ -163,33 +142,13 @@ export default function Profile() {
           </div>
         </div>
 
-        {/* Cloud Sync Section */}
+        {/* Account Actions Section */}
         {isLoggedIn ? (
           <div className="bg-slate-800/80 rounded-2xl p-4 border border-white/10 shadow-md space-y-3">
-            <div className="flex items-center justify-between">
-              <div>
-                <div className="text-sm font-extrabold text-white flex items-center gap-2">
-                  <Cloud size={18} className="text-sky-400" />
-                  Cloud Save
-                </div>
-                <div className="text-xs text-slate-400 mt-0.5">
-                  Backup your stars and best times to server
-                </div>
-              </div>
-
-              <button
-                onClick={handleSync}
-                disabled={syncing}
-                className="px-4 py-2 rounded-xl bg-sky-600 hover:bg-sky-500 active:scale-95 text-white font-extrabold text-xs shadow-md border border-white/20 transition-all disabled:opacity-50"
-              >
-                {syncing ? "Syncing..." : "Sync Now"}
-              </button>
-            </div>
-
-            <div className="border-t border-white/10 pt-3">
+            <div>
               <Link
                 to="/change-password"
-                className="flex items-center justify-between py-2 text-sm text-sky-200 hover:text-white"
+                className="flex items-center justify-between py-1 text-sm text-sky-200 hover:text-white"
               >
                 <span className="flex items-center gap-2 font-bold">
                   <Key size={16} /> Change Password
