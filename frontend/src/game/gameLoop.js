@@ -35,8 +35,9 @@ export function renderGame(ctx, canvasWidth, canvasHeight, world, raft, particle
   // 3. Floating leaves
   drawLeaves(ctx, world, cameraY, canvasHeight);
 
-  // 4. Finish Zone & Flag
+  // 4. Finish Zone & Tea Stall
   drawFinishZone(ctx, world);
+  drawTeaStall(ctx, world);
 
   // 5. Draw Obstacles (Rocks, Logs, Gates)
   drawObstacles(ctx, world, cameraY, canvasHeight);
@@ -219,6 +220,327 @@ function drawFinishZone(ctx, world) {
   ctx.fillStyle = '#ffffff';
   ctx.fillRect(flagX + 3, flagY + 4, 7, 5);
   ctx.fillRect(flagX + 13, flagY + 10, 7, 5);
+
+  ctx.restore();
+}
+
+function fillSafeRoundRect(ctx, x, y, w, h, r = 4) {
+  if (typeof ctx.roundRect === 'function') {
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, r);
+    ctx.fill();
+  } else {
+    ctx.fillRect(x, y, w, h);
+  }
+}
+
+function strokeSafeRoundRect(ctx, x, y, w, h, r = 4) {
+  if (typeof ctx.roundRect === 'function') {
+    ctx.beginPath();
+    ctx.roundRect(x, y, w, h, r);
+    ctx.stroke();
+  } else {
+    ctx.strokeRect(x, y, w, h);
+  }
+}
+
+/**
+ * Desi Chai Ki Kitli / Tea Stall at the Finish Line
+ * Authentic Gujarati roadside tea stall with wooden pier dock,
+ * striped awning canopy, silver chai kettle, cutting chai glasses,
+ * snack jars, festive toran buntings, and steaming animated hot tea!
+ */
+function drawTeaStall(ctx, world) {
+  const fy = world.finishY || 130;
+  // Stall Y position right at the top water's edge / dock
+  const stallY = Math.max(38, Math.min(65, fy - 75));
+  const bounds = getRiverBounds(world.waypoints, stallY);
+  const stallX = bounds.cx;
+  const time = performance.now() * 0.002;
+
+  ctx.save();
+
+  // 1. Wooden Pier / Dock Platform extending across the riverhead
+  const dockW = Math.min(bounds.width * 0.9, 230);
+  const dockH = 26;
+  const dockX = stallX - dockW / 2;
+  const dockY = stallY + 12;
+
+  // Dock water reflection / shadow
+  ctx.fillStyle = 'rgba(15, 23, 42, 0.35)';
+  fillSafeRoundRect(ctx, dockX + 4, dockY + dockH, dockW - 8, 8, 4);
+
+  // Wooden pilings / stilts in the water
+  const stiltCount = 5;
+  for (let i = 0; i < stiltCount; i++) {
+    const sx = dockX + 16 + (i * (dockW - 32)) / (stiltCount - 1);
+    ctx.fillStyle = '#451a03';
+    ctx.fillRect(sx - 3.5, dockY + dockH - 2, 7, 14);
+    // Stilt water ring / ripple
+    ctx.strokeStyle = 'rgba(255, 255, 255, 0.35)';
+    ctx.lineWidth = 1.2;
+    ctx.beginPath();
+    ctx.ellipse(sx, dockY + dockH + 12, 6, 2.5, 0, 0, Math.PI * 2);
+    ctx.stroke();
+  }
+
+  // Wooden deck planking
+  ctx.fillStyle = '#78350f'; // Dark amber wood base
+  fillSafeRoundRect(ctx, dockX, dockY, dockW, dockH, 5);
+
+  // Wood planks highlight & grain lines
+  ctx.fillStyle = '#92400e';
+  ctx.fillRect(dockX + 2, dockY + 2, dockW - 4, dockH - 4);
+
+  // Individual vertical wood planks
+  ctx.strokeStyle = '#451a03';
+  ctx.lineWidth = 1.5;
+  for (let px = dockX + 12; px < dockX + dockW - 6; px += 14) {
+    ctx.beginPath();
+    ctx.moveTo(px, dockY + 2);
+    ctx.lineTo(px, dockY + dockH - 2);
+    ctx.stroke();
+  }
+
+  // Golden edge trim
+  ctx.fillStyle = '#b45309';
+  ctx.fillRect(dockX, dockY + dockH - 4, dockW, 4);
+
+  // Dock bollards / mooring posts
+  ctx.fillStyle = '#3f1d0b';
+  ctx.fillRect(dockX + 6, dockY - 6, 6, 12);
+  ctx.fillRect(dockX + dockW - 12, dockY - 6, 6, 12);
+  ctx.fillStyle = '#fef08a';
+  ctx.beginPath();
+  ctx.arc(dockX + 9, dockY - 6, 4, 0, Math.PI * 2);
+  ctx.arc(dockX + dockW - 9, dockY - 6, 4, 0, Math.PI * 2);
+  ctx.fill();
+
+  // 2. The Tea Stall Counter & Structure
+  const counterW = 124;
+  const counterH = 28;
+  const counterX = stallX - counterW / 2;
+  const counterY = stallY - 14;
+
+  // Counter body (warm wood)
+  ctx.fillStyle = '#7c2d12';
+  fillSafeRoundRect(ctx, counterX, counterY, counterW, counterH, 4);
+
+  // Counter front panel
+  ctx.fillStyle = '#9a3412';
+  ctx.fillRect(counterX + 3, counterY + 3, counterW - 6, counterH - 6);
+
+  // Signboard: "☕ DESI TEA STALL ☕"
+  const signW = 104;
+  const signH = 14;
+  const signX = stallX - signW / 2;
+  const signY = counterY + 7;
+  ctx.fillStyle = '#1e1b4b'; // Blackboard
+  fillSafeRoundRect(ctx, signX, signY, signW, signH, 3);
+  ctx.strokeStyle = '#facc15';
+  ctx.lineWidth = 1.2;
+  strokeSafeRoundRect(ctx, signX, signY, signW, signH, 3);
+
+  // Sign text
+  ctx.fillStyle = '#fef08a';
+  ctx.font = 'bold 8.5px "Segoe UI", Arial, sans-serif';
+  ctx.textAlign = 'center';
+  ctx.textBaseline = 'middle';
+  ctx.fillText('☕ DESI TEA STALL ☕', stallX, signY + signH / 2);
+
+  // Countertop slab (smooth polished marble / zinc top)
+  ctx.fillStyle = '#e2e8f0';
+  fillSafeRoundRect(ctx, counterX - 4, counterY - 4, counterW + 8, 6, 2);
+  ctx.fillStyle = '#94a3b8';
+  ctx.fillRect(counterX - 4, counterY - 1, counterW + 8, 2);
+
+  // 3. Wooden Canopy Poles
+  const poleLeftX = counterX - 1;
+  const poleRightX = counterX + counterW + 1;
+  const canopyTopY = stallY - 50;
+  const canopyBottomY = stallY - 26;
+
+  ctx.strokeStyle = '#5c2207';
+  ctx.lineWidth = 3;
+  ctx.beginPath();
+  ctx.moveTo(poleLeftX, counterY);
+  ctx.lineTo(poleLeftX, canopyBottomY);
+  ctx.moveTo(poleRightX, counterY);
+  ctx.lineTo(poleRightX, canopyBottomY);
+  ctx.stroke();
+
+  // 4. Striped Awning Canopy (Festive Saffron Orange & Cream White)
+  const awningW = counterW + 20;
+  const awningX = stallX - awningW / 2;
+  const stripeWidth = awningW / 7;
+
+  ctx.save();
+  for (let i = 0; i < 7; i++) {
+    const sx = awningX + i * stripeWidth;
+    ctx.fillStyle = i % 2 === 0 ? '#ea580c' : '#fef08a'; // Saffron and golden cream
+    ctx.beginPath();
+    ctx.moveTo(sx, canopyBottomY);
+    ctx.lineTo(sx + stripeWidth * 0.15, canopyTopY);
+    ctx.lineTo(sx + stripeWidth * 0.85, canopyTopY);
+    ctx.lineTo(sx + stripeWidth, canopyBottomY);
+    ctx.closePath();
+    ctx.fill();
+
+    // Scalloped ruffle at bottom edge
+    ctx.beginPath();
+    ctx.arc(sx + stripeWidth / 2, canopyBottomY, stripeWidth / 2, 0, Math.PI);
+    ctx.fill();
+  }
+
+  // Canopy ridge line
+  ctx.strokeStyle = '#9a3412';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo(awningX, canopyTopY);
+  ctx.lineTo(awningX + awningW, canopyTopY);
+  ctx.stroke();
+
+  // 5. Festive Buntings (Toran) hanging under the roof
+  const toranY = canopyBottomY + 4;
+  const flagColors = ['#f43f5e', '#facc15', '#10b981', '#3b82f6', '#f97316'];
+  for (let f = 0; f < 6; f++) {
+    const fx = awningX + 8 + (f * (awningW - 16)) / 5;
+    ctx.fillStyle = flagColors[f % flagColors.length];
+    ctx.beginPath();
+    ctx.moveTo(fx - 4, toranY);
+    ctx.lineTo(fx + 4, toranY);
+    ctx.lineTo(fx, toranY + 7);
+    ctx.closePath();
+    ctx.fill();
+  }
+  ctx.restore();
+
+  // 6. Traditional Silver Chai Kitli (Tea Kettle)
+  const kitliX = counterX + 22;
+  const kitliY = counterY - 9;
+
+  // Kettle body (shiny steel)
+  ctx.fillStyle = '#cbd5e1';
+  ctx.beginPath();
+  ctx.arc(kitliX, kitliY, 7.5, 0, Math.PI * 2);
+  ctx.fill();
+  ctx.fillStyle = '#f8fafc';
+  ctx.beginPath();
+  ctx.arc(kitliX - 2, kitliY - 2, 3.5, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Kettle Spout
+  ctx.strokeStyle = '#94a3b8';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.moveTo(kitliX - 6, kitliY + 2);
+  ctx.quadraticCurveTo(kitliX - 12, kitliY - 2, kitliX - 10, kitliY - 8);
+  ctx.stroke();
+
+  // Kettle lid and golden knob
+  ctx.fillStyle = '#64748b';
+  ctx.fillRect(kitliX - 4, kitliY - 9, 8, 2);
+  ctx.fillStyle = '#f59e0b';
+  ctx.beginPath();
+  ctx.arc(kitliX, kitliY - 10, 2, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Big overhead black handle
+  ctx.strokeStyle = '#1e293b';
+  ctx.lineWidth = 2.5;
+  ctx.beginPath();
+  ctx.arc(kitliX, kitliY - 5, 8.5, Math.PI * 1.1, Math.PI * 1.9);
+  ctx.stroke();
+
+  // 7. Animated Hot Chai Steam Curls wafting from kettle!
+  ctx.save();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.7)';
+  ctx.lineWidth = 1.5;
+  ctx.lineCap = 'round';
+  for (let s = 0; s < 3; s++) {
+    const sPhase = time * 2.5 + s * 1.8;
+    const sYOffset = (sPhase % 3) * 6;
+    const sWave = Math.sin(sPhase * 1.5) * 3;
+    const sx = kitliX - 10 + sWave;
+    const sy = kitliY - 10 - sYOffset;
+
+    ctx.globalAlpha = Math.max(0, 1 - sYOffset / 18);
+    ctx.beginPath();
+    ctx.moveTo(sx, sy);
+    ctx.quadraticCurveTo(sx + 3, sy - 3, sx, sy - 6);
+    ctx.stroke();
+  }
+  ctx.restore();
+
+  // 8. Cutting Chai Stand & Glasses
+  const standX = counterX + counterW - 32;
+  const standY = counterY - 6;
+
+  // Wire cutting chai stand
+  ctx.strokeStyle = '#64748b';
+  ctx.lineWidth = 1.5;
+  ctx.strokeRect(standX - 12, standY - 1, 24, 7);
+
+  // 3 Cutting chai glasses with hot brown tea
+  const glassSpacing = 7;
+  for (let g = -1; g <= 1; g++) {
+    const gx = standX + g * glassSpacing;
+    const gy = standY - 4;
+
+    // Glass cup
+    ctx.fillStyle = 'rgba(255, 255, 255, 0.7)';
+    ctx.fillRect(gx - 2.5, gy, 5, 8);
+
+    // Brown Kadak Chai inside
+    ctx.fillStyle = '#b45309';
+    ctx.fillRect(gx - 2, gy + 2.5, 4, 5);
+
+    // Cup rim
+    ctx.fillStyle = '#e2e8f0';
+    ctx.fillRect(gx - 3, gy, 6, 1.2);
+  }
+
+  // Little steam from tea glasses
+  ctx.save();
+  ctx.strokeStyle = 'rgba(255, 255, 255, 0.55)';
+  ctx.lineWidth = 1;
+  const gWave = Math.sin(time * 3) * 2;
+  ctx.beginPath();
+  ctx.moveTo(standX + gWave, standY - 6);
+  ctx.quadraticCurveTo(standX + 2 + gWave, standY - 10, standX + gWave, standY - 14);
+  ctx.stroke();
+  ctx.restore();
+
+  // 9. Glass Snack Jars (Gathiya / Fafda & Biscuits)
+  const jarX = counterX + counterW / 2 + 10;
+  const jarY = counterY - 8;
+
+  // Jar: Gathiya / Snacks (Yellow)
+  ctx.fillStyle = 'rgba(241, 245, 249, 0.7)';
+  ctx.fillRect(jarX - 6, jarY, 12, 10);
+  ctx.fillStyle = '#eab308'; // Crunchy yellow snacks
+  ctx.fillRect(jarX - 4.5, jarY + 2.5, 9, 7);
+  // Red lid
+  ctx.fillStyle = '#dc2626';
+  ctx.fillRect(jarX - 6.5, jarY - 1.5, 13, 2.5);
+
+  // 10. Warm Lantern Glow on Stall
+  const lanternX = counterX + 5;
+  const lanternY = canopyBottomY + 5;
+  const glowGrad = ctx.createRadialGradient(lanternX, lanternY, 2, lanternX, lanternY, 18);
+  glowGrad.addColorStop(0, 'rgba(254, 240, 138, 0.85)');
+  glowGrad.addColorStop(0.5, 'rgba(245, 158, 11, 0.35)');
+  glowGrad.addColorStop(1, 'rgba(245, 158, 11, 0)');
+  ctx.fillStyle = glowGrad;
+  ctx.beginPath();
+  ctx.arc(lanternX, lanternY, 18, 0, Math.PI * 2);
+  ctx.fill();
+
+  // Lantern body
+  ctx.fillStyle = '#78350f';
+  ctx.fillRect(lanternX - 2.5, lanternY - 4, 5, 8);
+  ctx.fillStyle = '#fef08a';
+  ctx.fillRect(lanternX - 1.5, lanternY - 2, 3, 5);
 
   ctx.restore();
 }
