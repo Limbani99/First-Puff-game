@@ -89,7 +89,7 @@ export default function Profile() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col bg-slate-900 text-white select-none overflow-y-auto">
+    <div className="relative w-full h-full flex flex-col bg-slate-900 text-white select-none overflow-y-auto no-scrollbar">
       {/* Top Header */}
       <div className="w-full flex items-center justify-between px-4 py-4 bg-sky-950 border-b border-sky-800/50 shadow-md z-10">
         <button

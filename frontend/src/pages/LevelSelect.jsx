@@ -45,7 +45,7 @@ export default function LevelSelect() {
 
       {/* Level Cards Grid */}
       <div 
-        className="flex-1 overflow-y-auto p-4 space-y-3"
+        className="flex-1 overflow-y-auto no-scrollbar p-4 space-y-3"
         style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
       >
         <div className="grid grid-cols-2 gap-3">

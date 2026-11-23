@@ -51,7 +51,7 @@ export default function Settings() {
 
       {/* Settings Options */}
       <div 
-        className="flex-1 overflow-y-auto p-4 space-y-4"
+        className="flex-1 overflow-y-auto no-scrollbar p-4 space-y-4"
         style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
       >
         {/* Audio Toggle */}

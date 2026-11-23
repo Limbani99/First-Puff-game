@@ -57,7 +57,7 @@ export default function Login() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-between items-center py-6 px-5 bg-gradient-to-b from-sky-500 via-sky-700 to-sky-950 text-white select-none overflow-y-auto">
+    <div className="relative w-full h-full flex flex-col justify-between items-center py-6 px-5 bg-gradient-to-b from-sky-500 via-sky-700 to-sky-950 text-white select-none overflow-y-auto no-scrollbar">
       {/* Top Header */}
       <div className="w-full flex items-center justify-between z-10 mb-2">
         <button
