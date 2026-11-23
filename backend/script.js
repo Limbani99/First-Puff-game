@@ -3,6 +3,12 @@ const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const path = require("path");
+const dns = require("dns");
+
+// Use public DNS to ensure SRV records resolve reliably across all networks
+try {
+  dns.setServers(["8.8.8.8", "1.1.1.1"]);
+} catch {}
 
 dotenv.config();
 
@@ -82,10 +88,12 @@ app.get("/", (req, res) => {
 });
 
 // MongoDB Connection
-const MONGO_URI = process.env.MONGO_URI || "mongodb://127.0.0.1:27017/first_puff";
+const DEFAULT_ATLAS_URI = "mongodb+srv://patelmann2424_db_user:argMpoZzSVqoBOJP@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
+const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
+
 mongoose
   .connect(MONGO_URI, {
-    serverSelectionTimeoutMS: 5000,
+    serverSelectionTimeoutMS: 8000,
   })
   .then(() => {
     console.log("MongoDB connected successfully for First Puff 🦛💨");
