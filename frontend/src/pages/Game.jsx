@@ -170,19 +170,21 @@ export default function Game() {
       }
 
       // Smooth camera follow on Y axis
-      const targetCameraY = raft.y - canvas.height * 0.62;
+      const canvasWidth = canvas.clientWidth || 360;
+      const canvasHeight = canvas.clientHeight || 740;
+      const targetCameraY = raft.y - canvasHeight * 0.62;
       cameraYRef.current += (targetCameraY - cameraYRef.current) * Math.min(1, dt * 6.5);
 
       // Clamp camera so it never goes off world bounds
       const minCamY = -30;
-      const maxCamY = Math.max(0, world.height - canvas.height + 40);
+      const maxCamY = Math.max(0, world.height - canvasHeight + 40);
       cameraYRef.current = Math.max(minCamY, Math.min(maxCamY, cameraYRef.current));
 
       // Render frame
       renderGame(
         ctx,
-        canvas.width,
-        canvas.height,
+        canvasWidth,
+        canvasHeight,
         world,
         raft,
         particles,
@@ -205,9 +207,12 @@ export default function Game() {
   useEffect(() => {
     const updateSize = () => {
       if (containerRef.current && canvasRef.current) {
-        const { clientWidth, clientHeight } = containerRef.current;
-        canvasRef.current.width = clientWidth || 360;
-        canvasRef.current.height = clientHeight || 740;
+        const width = containerRef.current.clientWidth || 360;
+        const height = containerRef.current.clientHeight || 740;
+        const pixelRatio = window.devicePixelRatio || 1;
+        canvasRef.current.width = Math.round(width * pixelRatio);
+        canvasRef.current.height = Math.round(height * pixelRatio);
+        canvasRef.current.getContext('2d').setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);
       }
     };
 

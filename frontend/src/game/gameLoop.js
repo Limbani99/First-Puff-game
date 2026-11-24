@@ -1364,87 +1364,30 @@ function drawRaft(ctx, raft, unlockedCrew = []) {
   ctx.ellipse(2, 6, r * 1.15, r * 0.95, 0, 0, Math.PI * 2);
   ctx.fill();
 
-  // 3. Wooden Raft Planks (4 logs bound together)
-  const plankWidth = (r * 2.1) / 4;
-  const plankHeight = r * 2.3;
-  const startPx = -r * 1.05;
-
-  for (let i = 0; i < 4; i++) {
-    const px = startPx + i * plankWidth;
-    const py = -plankHeight / 2;
-
-    // Plank body
-    const logGrad = ctx.createLinearGradient(px, py, px + plankWidth, py);
-    logGrad.addColorStop(0, '#78350f');
-    logGrad.addColorStop(0.3, '#92400e');
-    logGrad.addColorStop(0.7, '#b45309');
-    logGrad.addColorStop(1, '#78350f');
-
-    ctx.fillStyle = logGrad;
-    ctx.beginPath();
-    ctx.roundRect(px + 1, py, plankWidth - 2, plankHeight, 5);
-    ctx.fill();
-
-    // Wood grain lines
-    ctx.strokeStyle = '#d97706';
-    ctx.lineWidth = 1;
-    ctx.beginPath();
-    ctx.moveTo(px + plankWidth * 0.5, py + 4);
-    ctx.lineTo(px + plankWidth * 0.5, py + plankHeight - 4);
-    ctx.stroke();
+  // 3. Supplied artist boat artwork
+  const boatImage = crewAvatarImages.raft;
+  if (boatImage && boatImage.complete && boatImage.naturalWidth > 0) {
+    const boatWidth = r * 2.7;
+    const boatHeight = boatWidth * (boatImage.naturalHeight / boatImage.naturalWidth);
+    ctx.drawImage(boatImage, -boatWidth / 2, -boatHeight / 2, boatWidth, boatHeight);
   }
 
-  // Crossbeams (tied support logs top and bottom)
-  ctx.fillStyle = '#5c2b09';
-  ctx.fillRect(-r * 1.1, -plankHeight * 0.35, r * 2.2, 5);
-  ctx.fillRect(-r * 1.1, plankHeight * 0.35, r * 2.2, 5);
-
-  // Rope bindings
-  ctx.strokeStyle = '#fef08a';
-  ctx.lineWidth = 2;
-  const ropeX = [-r * 0.7, -r * 0.2, r * 0.2, r * 0.7];
-  for (const rx of ropeX) {
-    ctx.beginPath();
-    ctx.moveTo(rx, -plankHeight * 0.38);
-    ctx.lineTo(rx, -plankHeight * 0.32);
-    ctx.stroke();
-
-    ctx.beginPath();
-    ctx.moveTo(rx, plankHeight * 0.32);
-    ctx.lineTo(rx, plankHeight * 0.38);
-    ctx.stroke();
-  }
-
-  // 4. Crew Members on Raft
-  // 🦛 Hippo: Back (y > 0)
-  // 🐧 Penguin: Front (y < 0)
-  // 🐸 Frog: Left (x < 0)
-  // 🐷 Pig: Right (x > 0)
-
-  // Hippo (Back)
-  if (unlockedCrew.includes('hippo')) {
-    drawCrewAnimal(ctx, 'hippo', 0, r * 0.52, raft.activePuffCrew === 'hippo');
-  }
-
-  // Penguin (Front / Brake)
-  if (unlockedCrew.includes('penguin')) {
-    drawCrewAnimal(ctx, 'penguin', 0, -r * 0.52, raft.activePuffCrew === 'penguin');
-  }
-
-  // Frog (Left side)
-  if (unlockedCrew.includes('frog')) {
-    drawCrewAnimal(ctx, 'frog', -r * 0.52, 0, raft.activePuffCrew === 'frog');
-  }
-
-  // Pig (Right side)
-  if (unlockedCrew.includes('pig')) {
-    drawCrewAnimal(ctx, 'pig', r * 0.52, 0, raft.activePuffCrew === 'pig');
+  // Show the active crew member's puff animation while keeping the boat art clear.
+  const activeCrewPositions = {
+    hippo: [0, r * 0.52],
+    penguin: [0, -r * 0.52],
+    frog: [-r * 0.52, 0],
+    pig: [r * 0.52, 0],
+  };
+  const activePosition = activeCrewPositions[raft.activePuffCrew];
+  if (activePosition && unlockedCrew.includes(raft.activePuffCrew)) {
+    drawCrewAnimal(ctx, raft.activePuffCrew, activePosition[0], activePosition[1], true);
   }
 
   ctx.restore();
 }
 
-// Preload avatar portraits from /avatar/ in public for on-raft rendering
+// Preload portraits and boat artwork from /avatar/ in public.
 const crewAvatarImages = {};
 if (typeof window !== 'undefined') {
   const avatarSources = {
@@ -1453,6 +1396,7 @@ if (typeof window !== 'undefined') {
     pig: '/avatar/singer-gaman-santhal.webp',
     penguin: '/avatar/Darshan-Raval.webp',
     dharal: '/avatar/wife.png',
+    raft: '/avatar/artist-boat.png',
   };
   for (const [key, src] of Object.entries(avatarSources)) {
     const img = new Image();
