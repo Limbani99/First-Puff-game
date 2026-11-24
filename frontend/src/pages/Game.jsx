@@ -209,7 +209,7 @@ export default function Game() {
       if (containerRef.current && canvasRef.current) {
         const width = containerRef.current.clientWidth || 360;
         const height = containerRef.current.clientHeight || 740;
-        const pixelRatio = window.devicePixelRatio || 1;
+        const pixelRatio = Math.min(Math.max(window.devicePixelRatio || 1, 2), 3);
         canvasRef.current.width = Math.round(width * pixelRatio);
         canvasRef.current.height = Math.round(height * pixelRatio);
         canvasRef.current.getContext('2d').setTransform(pixelRatio, 0, 0, pixelRatio, 0, 0);

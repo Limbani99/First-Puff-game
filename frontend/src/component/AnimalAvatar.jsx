@@ -328,6 +328,7 @@ export default function AnimalAvatar({ crew = 'hippo', size = 36, className = ''
           src={imgSrc}
           alt={norm}
           className="w-full h-full object-cover rounded-full select-none pointer-events-none"
+          style={{ objectPosition: 'center 30%' }}
           loading="eager"
         />
       </div>

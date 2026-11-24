@@ -174,9 +174,8 @@ export default function CrewButton({
         {/* Crew Vector Avatar */}
         <AnimalAvatar
           crew={crew.id}
-          size={34}
+          size={40}
           isPuffing={isCharging}
-          className="sm:w-9 sm:h-9"
         />
 
         {/* Push Direction Label */}

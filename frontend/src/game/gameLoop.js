@@ -13,6 +13,8 @@ const DECORATIVE_LEAVES = [
 
 export function renderGame(ctx, canvasWidth, canvasHeight, world, raft, particleSystem, cameraY, unlockedCrew = [], shake = 0) {
   ctx.save();
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = 'high';
 
   // Screen shake on bump
   if (shake > 0) {
@@ -1142,7 +1144,7 @@ function drawShorelineFence(ctx, world, cameraY, canvasHeight, time) {
  */
 function drawDharalLogObstacle(ctx, obs) {
   const time = performance.now() * 0.002;
-  const boatWidth = obs.width * 1.2;
+  const boatWidth = obs.width * 1.4;
   const boatHeight = boatWidth * (1024 / 1536);
 
   ctx.save();
@@ -1184,10 +1186,7 @@ function drawDharalLogObstacle(ctx, obs) {
 }
 
 /**
- * Gaman Santhal Gate / Toran Arch (Gate obstacle)
- * Authentic royal toran gateway with carved wooden posts, fluttering red/saffron flags,
- * festive hanging buntings, water ripple foam, and an animated royal "👑 GAMAN BHUVAJI 👑"
- * banner that celebrates with floating musical notes and gold sparks when passed through!
+ * Gaman Santhal Gate / Toran Arch with portraits above each post.
  */
 function drawGamanGate(ctx, obs) {
   const time = performance.now() * 0.002;
@@ -1198,7 +1197,7 @@ function drawGamanGate(ctx, obs) {
   ctx.save();
 
   // 1. Water wake and shadows around posts
-  for (const px of posts) {
+  for (const [index, px] of posts.entries()) {
     // Post shadow
     ctx.fillStyle = 'rgba(15, 23, 42, 0.3)';
     ctx.beginPath();
@@ -1232,23 +1231,20 @@ function drawGamanGate(ctx, obs) {
     ctx.arc(px, obs.y, 4, 0, Math.PI * 2);
     ctx.fill();
 
-    // Fluttering saffron flag on top of post
-    const flagWave = Math.sin(time * 5 + px) * 2;
-    ctx.fillStyle = '#f97316'; // Saffron
-    ctx.beginPath();
-    ctx.moveTo(px, obs.y - obs.postRadius);
-    ctx.lineTo(px + 15, obs.y - obs.postRadius - 6 + flagWave);
-    ctx.lineTo(px, obs.y - obs.postRadius - 13);
-    ctx.closePath();
-    ctx.fill();
-
-    // Flag pole
-    ctx.strokeStyle = '#78350f';
-    ctx.lineWidth = 1.8;
-    ctx.beginPath();
-    ctx.moveTo(px, obs.y - obs.postRadius + 2);
-    ctx.lineTo(px, obs.y - obs.postRadius - 15);
-    ctx.stroke();
+    const personImage = crewAvatarImages[index === 0 ? 'pillar1' : 'pillar2'];
+    if (personImage && personImage.complete && personImage.naturalWidth > 0) {
+      const personHeight = obs.postRadius * 3.8;
+      const personWidth = personHeight * (personImage.naturalWidth / personImage.naturalHeight);
+      ctx.imageSmoothingEnabled = true;
+      ctx.imageSmoothingQuality = 'high';
+      ctx.drawImage(
+        personImage,
+        px - personWidth / 2,
+        obs.y - obs.postRadius - personHeight + 1,
+        personWidth,
+        personHeight
+      );
+    }
   }
 
   // 2. Gate String / Toran Arch
@@ -1367,7 +1363,7 @@ function drawRaft(ctx, raft, unlockedCrew = []) {
   // 3. Supplied artist boat artwork
   const boatImage = crewAvatarImages.raft;
   if (boatImage && boatImage.complete && boatImage.naturalWidth > 0) {
-    const boatWidth = r * 2.7;
+    const boatWidth = r * 3;
     const boatHeight = boatWidth * (boatImage.naturalHeight / boatImage.naturalWidth);
     ctx.drawImage(boatImage, -boatWidth / 2, -boatHeight / 2, boatWidth, boatHeight);
   }
@@ -1397,6 +1393,8 @@ if (typeof window !== 'undefined') {
     penguin: '/avatar/Darshan-Raval.webp',
     dharal: '/avatar/wife.png',
     raft: '/avatar/artist-boat.png',
+    pillar1: '/avatar/pillar%201.png',
+    pillar2: '/avatar/pillar%202.png',
   };
   for (const [key, src] of Object.entries(avatarSources)) {
     const img = new Image();
@@ -1433,7 +1431,7 @@ function drawCrewAnimal(ctx, crewId, x, y, isPuffing) {
   // Check if avatar photo is loaded
   const avatarImg = crewAvatarImages[crewId];
   if (avatarImg && avatarImg.complete && avatarImg.naturalWidth > 0) {
-    const avatarR = 10.5;
+    const avatarR = 13;
 
     // Glowing ring on puff
     if (isPuffing) {
@@ -1460,7 +1458,24 @@ function drawCrewAnimal(ctx, crewId, x, y, isPuffing) {
     ctx.beginPath();
     ctx.arc(0, -1, avatarR, 0, Math.PI * 2);
     ctx.clip();
-    ctx.drawImage(avatarImg, -avatarR, -avatarR - 1, avatarR * 2, avatarR * 2);
+    const cropSize = Math.min(avatarImg.naturalWidth, avatarImg.naturalHeight);
+    const cropX = (avatarImg.naturalWidth - cropSize) / 2;
+    const cropY = avatarImg.naturalHeight > avatarImg.naturalWidth
+      ? Math.min(avatarImg.naturalHeight - cropSize, avatarImg.naturalHeight * 0.05)
+      : (avatarImg.naturalHeight - cropSize) / 2;
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(
+      avatarImg,
+      cropX,
+      cropY,
+      cropSize,
+      cropSize,
+      -avatarR,
+      -avatarR - 1,
+      avatarR * 2,
+      avatarR * 2
+    );
     ctx.restore();
 
     ctx.restore();
