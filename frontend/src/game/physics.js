@@ -150,6 +150,7 @@ export class ParticleSystem {
       const spreadAngle = (Math.random() - 0.5) * 1.2;
       let vx = dirX * speed + (Math.random() - 0.5) * 40;
       let vy = dirY * speed + (Math.random() - 0.5) * 40;
+      const life = 0.5 + Math.random() * 0.3;
 
       // Apply angle spread
       const cos = Math.cos(spreadAngle);
@@ -167,8 +168,8 @@ export class ParticleSystem {
         maxRadius: (18 + Math.random() * 14) * (1 + charge * 0.9),
         alpha: 0.9,
         color: colors[Math.floor(Math.random() * colors.length)],
-        life: 0.5 + Math.random() * 0.3,
-        maxLife: 0.5 + Math.random() * 0.3
+        life,
+        maxLife: life
       });
     }
   }
@@ -220,7 +221,7 @@ export class ParticleSystem {
         continue;
       }
 
-      const progress = 1 - p.life / p.maxLife;
+      const progress = Math.min(1, Math.max(0, 1 - p.life / p.maxLife));
 
       if (p.type === 'puff') {
         p.x += p.vx * dt;

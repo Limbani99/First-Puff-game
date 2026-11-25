@@ -72,7 +72,7 @@ function drawRiver(ctx, world, canvasWidth, cameraY, canvasHeight) {
   const rightPoints = [];
 
   for (let y = startY; y <= endY; y += step) {
-    const b = getRiverBounds(waypoints, y);
+    const b = getRiverBounds(waypoints, y, world.width || canvasWidth);
     leftPoints.push({ x: b.leftBank, y });
     rightPoints.push({ x: b.rightBank, y });
   }
@@ -117,7 +117,7 @@ function drawRiver(ctx, world, canvasWidth, cameraY, canvasHeight) {
   ctx.lineWidth = 2.5;
 
   for (let y = startY; y <= endY; y += 60) {
-    const b = getRiverBounds(waypoints, y);
+    const b = getRiverBounds(waypoints, y, world.width || canvasWidth);
     const waveOffset = Math.sin(time + y * 0.04) * 14;
     ctx.beginPath();
     ctx.moveTo(b.cx - 40 + waveOffset, y);
@@ -133,7 +133,7 @@ function drawLeaves(ctx, world, cameraY, canvasHeight) {
     const y = world.height * leaf.yRatio;
     if (y < cameraY - 40 || y > cameraY + canvasHeight + 40) continue;
 
-    const bounds = getRiverBounds(world.waypoints, y);
+    const bounds = getRiverBounds(world.waypoints, y, world.width);
     const x = bounds.cx + leaf.offset + Math.sin(time + i) * 8;
 
     ctx.save();
@@ -158,7 +158,7 @@ function drawFinishZone(ctx, world) {
   const r = world.finishRadius || 46;
 
   // River-wide finish line ribbon
-  const bounds = getRiverBounds(world.waypoints, fy);
+  const bounds = getRiverBounds(world.waypoints, fy, world.width);
   ctx.save();
   ctx.strokeStyle = 'rgba(250, 204, 21, 0.85)';
   ctx.lineWidth = 4;
@@ -259,7 +259,7 @@ function drawTeaStall(ctx, world) {
   const fy = world.finishY || 130;
   // Stall Y position right at the top water's edge / dock
   const stallY = Math.max(38, Math.min(65, fy - 75));
-  const bounds = getRiverBounds(world.waypoints, stallY);
+  const bounds = getRiverBounds(world.waypoints, stallY, world.width);
   const stallX = bounds.cx;
   const time = performance.now() * 0.002;
 
@@ -870,7 +870,7 @@ function drawCrowd(ctx, world, canvasWidth, cameraY, canvasHeight) {
     const p = crowd[i];
     if (p.y < startY || p.y > endY) continue;
 
-    const b = getRiverBounds(world.waypoints, p.y);
+    const b = getRiverBounds(world.waypoints, p.y, world.width);
     const x = p.side === 'left' ? b.leftBank - p.baseXOffset : b.rightBank + p.baseXOffset;
 
     drawSpectator(ctx, p, x, p.y, time);
@@ -1073,8 +1073,8 @@ function drawShorelineFence(ctx, world, cameraY, canvasHeight, time) {
   const flagColors = ['#f97316', '#dc2626', '#facc15', '#10b981', '#3b82f6'];
 
   for (let y = startY; y <= endY; y += fenceStep) {
-    const b1 = getRiverBounds(waypoints, y);
-    const b2 = getRiverBounds(waypoints, y + fenceStep);
+    const b1 = getRiverBounds(waypoints, y, world.width || 360);
+    const b2 = getRiverBounds(waypoints, y + fenceStep, world.width || 360);
 
     // Left bank fence
     const lx1 = b1.leftBank - 11;

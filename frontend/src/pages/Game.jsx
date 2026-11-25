@@ -97,6 +97,8 @@ export default function Game() {
     const canvas = canvasRef.current;
     if (!canvas) return;
     const ctx = canvas.getContext('2d');
+    const physicsStep = 1 / 60;
+    let physicsAccumulator = 0;
 
     const loop = (now) => {
       const dt = Math.min(0.1, (now - lastTimeRef.current) / 1000);
@@ -111,34 +113,36 @@ export default function Game() {
         totalElapsedRef.current += dt;
         setElapsedTime(totalElapsedRef.current);
 
-        // Update physics
-        updatePhysics(raft, world, dt);
+        physicsAccumulator += dt;
+        while (physicsAccumulator >= physicsStep && timerRunningRef.current) {
+          updatePhysics(raft, world, physicsStep);
 
-        // Resolve collisions and gate passing
-        resolveCollisions(raft, world, (hitObs) => {
-          soundManager.playBump();
-          if (hitObs && hitObs.type === 'log') {
-            soundManager.playDharalMusic();
-          } else if (hitObs && hitObs.type === 'gate') {
+          // Resolve collisions and gate passing on every physics step.
+          resolveCollisions(raft, world, (hitObs) => {
+            soundManager.playBump();
+            if (hitObs && hitObs.type === 'log') {
+              soundManager.playDharalMusic();
+            } else if (hitObs && hitObs.type === 'gate') {
+              soundManager.playGamanMusic();
+            }
+            shakeRef.current = 1.0;
+            setBumps(raft.bumps);
+
+            // 10 Collisions Trigger Game Over Screen
+            if (raft.bumps >= 10) {
+              timerRunningRef.current = false;
+              setIsGameOver(true);
+              soundManager.playGameOver();
+              soundManager.playLossMusic();
+            }
+          }, () => {
+            // Play Gaman Santhal music when passing cleanly through the gate!
             soundManager.playGamanMusic();
-          }
-          shakeRef.current = 1.0;
-          setBumps(raft.bumps);
-
-          // 10 Collisions Trigger Game Over Screen
-          if (raft.bumps >= 10) {
-            timerRunningRef.current = false;
-            setIsGameOver(true);
-            soundManager.playGameOver();
-            soundManager.playLossMusic();
-          }
-        }, (passedGate) => {
-          // Play Gaman Santhal music when passing cleanly through the gate!
-          soundManager.playGamanMusic();
-          if (particlesRef.current) {
             particlesRef.current.spawnRipple(raft.x, raft.y, 28);
-          }
-        });
+          });
+
+          physicsAccumulator -= physicsStep;
+        }
 
         // Periodic small water ripples when moving
         const speed = Math.hypot(raft.vx, raft.vy);

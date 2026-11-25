@@ -31,18 +31,22 @@ export default function Home() {
   };
 
   return (
-    <div className="relative w-full h-full flex flex-col justify-between items-center py-8 px-6 bg-gradient-to-b from-sky-400 via-sky-600 to-sky-900 select-none overflow-hidden no-scrollbar">
-      {/* Decorative River Water Ripples in background */}
-      <div className="absolute inset-0 pointer-events-none opacity-20">
-        <div className="absolute top-1/4 left-1/3 w-32 h-32 rounded-full border-4 border-white animate-ping" />
-        <div className="absolute top-2/3 right-1/4 w-40 h-40 rounded-full border-4 border-white animate-ping" />
+    <div className="relative w-full h-full flex flex-col items-center px-6 pt-5 pb-5 text-white bg-[radial-gradient(ellipse_at_50%_38%,rgba(14,165,233,0.56),transparent_58%),linear-gradient(160deg,#082f49_0%,#075985_48%,#082f49_100%)] select-none overflow-hidden no-scrollbar">
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        <div className="absolute -top-24 -right-20 w-64 h-64 rounded-full border border-white/10" />
+        <div className="absolute -top-16 -right-12 w-48 h-48 rounded-full border border-white/10" />
+        <div className="absolute top-[38%] -left-20 w-44 h-44 rounded-full border border-white/10" />
+        <div className="absolute bottom-28 right-[-5rem] w-64 h-64 rounded-full border border-white/10" />
       </div>
 
       {/* Top Header Bar */}
       <div className="w-full flex items-center justify-between z-10">
-        <div className="flex items-center gap-1.5 bg-slate-900/60 backdrop-blur-md px-3 py-1.5 rounded-full border border-white/20 shadow-lg">
-          <span className="text-amber-400 text-lg">⭐</span>
-          <span className="text-white font-black text-sm">{totalStars} / 150</span>
+        <div className="flex items-center gap-2 bg-slate-950/35 px-3.5 py-2 rounded-2xl border border-white/15 shadow-lg">
+          <span className="w-8 h-8 rounded-xl bg-amber-300/15 flex items-center justify-center text-amber-300 text-lg">⭐</span>
+          <div className="leading-tight">
+            <span className="block text-white/55 text-[9px] font-black uppercase tracking-[0.16em]">Your score</span>
+            <span className="text-white font-black text-sm">{totalStars}<span className="text-white/45"> / 150</span></span>
+          </div>
         </div>
 
         <div className="flex items-center gap-2">
@@ -52,7 +56,7 @@ export default function Home() {
                 soundManager.playClick();
                 navigate('/login');
               }}
-              className="px-3 py-1.5 rounded-full bg-gradient-to-r from-amber-400 to-yellow-400 hover:brightness-110 active:scale-95 text-slate-950 font-black text-xs flex items-center gap-1 shadow-md border border-white/30 transition-transform"
+              className="px-3.5 py-2 rounded-2xl bg-white/10 hover:bg-white/15 active:scale-95 text-white font-extrabold text-xs flex items-center gap-1.5 shadow-md border border-white/15 transition-all"
               aria-label="Log In"
             >
               <UserIcon size={14} />
@@ -64,7 +68,7 @@ export default function Home() {
                 soundManager.playClick();
                 navigate('/profile');
               }}
-              className="w-10 h-10 rounded-full bg-slate-900/60 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-lg transition-transform"
+              className="w-11 h-11 rounded-2xl bg-white/10 hover:bg-white/15 active:scale-95 text-white flex items-center justify-center border border-white/15 shadow-lg transition-all"
               aria-label="Profile and Online Sync"
             >
               <UserIcon size={20} />
@@ -73,7 +77,7 @@ export default function Home() {
 
           <button
             onClick={handleSettings}
-            className="w-10 h-10 rounded-full bg-slate-900/60 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-lg transition-transform"
+            className="w-11 h-11 rounded-2xl bg-white/10 hover:bg-white/15 active:scale-95 text-white flex items-center justify-center border border-white/15 shadow-lg transition-all"
             aria-label="Settings"
           >
             <SettingsIcon size={20} />
@@ -82,33 +86,40 @@ export default function Home() {
       </div>
 
       {/* Hero Title & Bobbing Raft */}
-      <div className="flex flex-col items-center my-auto z-10 scale-90 sm:scale-100 transition-transform">
-        <div className="flex flex-col items-center mb-2 sm:mb-5">
-          <h1 className="text-3xl sm:text-5xl font-black text-amber-300 drop-shadow-[0_4px_6px_rgba(0,0,0,0.6)] tracking-wider uppercase font-sans text-center">
+      <div className="flex flex-col items-center justify-center my-auto z-10 w-full">
+        <div className="flex flex-col items-center mb-3 sm:mb-5">
+          <span className="mb-2 rounded-full border border-cyan-100/20 bg-slate-950/25 px-3 py-1 text-[9px] font-black uppercase tracking-[0.24em] text-cyan-100/80">A Gujarati river adventure</span>
+          <h1 className="text-[2rem] leading-[0.96] sm:text-5xl font-black text-white drop-shadow-[0_4px_12px_rgba(0,0,0,0.38)] tracking-tight uppercase font-sans text-center">
             Gujarati Banka Ho
           </h1>
-          <p className="text-sky-100 font-bold text-xs sm:text-sm mt-0.5 drop-shadow text-center max-w-[280px]">
-            Chaar Gujarati Bankas, ek raft, full power dhamaal!
+          <p className="text-cyan-50/75 font-semibold text-xs sm:text-sm mt-2 text-center max-w-[280px]">
+            Four bankas. One raft. Full-power dhamaal.
           </p>
         </div>
 
         {/* Animated bobbing raft */}
-        <div className="animate-bob cursor-pointer" onClick={() => soundManager.playPuff('hippo', 0.6)}>
-          <Raft activeCrew={['hippo', 'frog', 'pig', 'penguin']} />
+        <div className="relative flex items-center justify-center w-full min-h-[190px] my-1">
+          <div className="absolute w-56 h-40 rounded-full bg-cyan-300/10 blur-2xl" />
+          <div className="absolute bottom-4 w-48 h-9 rounded-full border border-cyan-100/20 bg-cyan-100/5" />
+          <div className="relative animate-bob cursor-pointer drop-shadow-[0_22px_22px_rgba(2,12,27,0.4)]" onClick={() => soundManager.playPuff('hippo', 0.6)}>
+            <Raft activeCrew={['hippo', 'frog', 'pig', 'penguin']} />
+          </div>
         </div>
 
         {/* Crew preview chips */}
-        <div className="flex items-center gap-2.5 mt-3 sm:mt-5 bg-slate-900/50 backdrop-blur-sm px-4 py-1.5 rounded-2xl border border-white/10 shadow-lg">
-          <button type="button" onClick={() => soundManager.playPuff('hippo', 0.6)} title="Devayat: Forward Propulsion" className="hover:scale-115 active:scale-95 transition-transform">
+        <div className="flex items-center gap-3 mt-2 bg-slate-950/25 px-4 py-2 rounded-2xl border border-white/10 shadow-lg">
+          <span className="text-[9px] font-black uppercase tracking-[0.16em] text-cyan-50/50">Crew</span>
+          <span className="h-6 w-px bg-white/10" />
+          <button type="button" onClick={() => soundManager.playPuff('hippo', 0.6)} title="Devayat: Forward Propulsion" className="rounded-full hover:scale-110 active:scale-95 transition-transform">
             <AnimalAvatar crew="hippo" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('frog', 0.6)} title="Aditya: Steer Right" className="hover:scale-115 active:scale-95 transition-transform">
+          <button type="button" onClick={() => soundManager.playPuff('frog', 0.6)} title="Aditya: Steer Right" className="rounded-full hover:scale-110 active:scale-95 transition-transform">
             <AnimalAvatar crew="frog" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('pig', 0.6)} title="Gaman: Steer Left" className="hover:scale-115 active:scale-95 transition-transform">
+          <button type="button" onClick={() => soundManager.playPuff('pig', 0.6)} title="Gaman: Steer Left" className="rounded-full hover:scale-110 active:scale-95 transition-transform">
             <AnimalAvatar crew="pig" size={28} />
           </button>
-          <button type="button" onClick={() => soundManager.playPuff('penguin', 0.6)} title="Darshan: Brake Shield" className="hover:scale-115 active:scale-95 transition-transform">
+          <button type="button" onClick={() => soundManager.playPuff('penguin', 0.6)} title="Darshan: Brake Shield" className="rounded-full hover:scale-110 active:scale-95 transition-transform">
             <AnimalAvatar crew="penguin" size={28} />
           </button>
         </div>
@@ -116,23 +127,25 @@ export default function Home() {
 
       {/* Bottom Main Action Buttons (Positioned with safe clearance above mobile system navigation bar) */}
       <div
-        className="w-full flex flex-col gap-2.5 max-w-[280px] z-10"
-        style={{ paddingBottom: 'max(2.5rem, calc(env(safe-area-inset-bottom, 0px) + 2rem))' }}
+        className="w-full flex flex-col gap-2.5 max-w-[340px] z-10 mt-5"
+        style={{ paddingBottom: 'max(1.25rem, env(safe-area-inset-bottom, 1.25rem))' }}
       >
         <button
           onClick={handlePlay}
-          className="w-full py-3.5 px-6 rounded-2xl bg-gradient-to-r from-emerald-400 to-green-500 hover:brightness-110 active:scale-95 text-white font-black text-lg sm:text-xl shadow-xl border-2 border-white/60 flex items-center justify-center gap-3 transition-transform"
+          className="group relative w-full py-4 px-6 rounded-2xl bg-gradient-to-r from-amber-300 via-yellow-300 to-amber-400 hover:brightness-105 active:scale-[0.98] text-slate-950 font-black text-base sm:text-lg shadow-[0_14px_32px_rgba(251,191,36,0.24)] border border-yellow-100/80 flex items-center justify-center gap-3 transition-all"
         >
-          <Play fill="white" size={22} />
+          <span className="w-9 h-9 rounded-xl bg-slate-950/10 flex items-center justify-center group-hover:translate-x-0.5 transition-transform">
+            <Play fill="currentColor" size={18} />
+          </span>
           {unlockedLevel === 1 ? 'START ADVENTURE' : unlockedLevel > 50 ? 'ALL 50 LEVELS CLEARED! 🏆' : `PLAY LEVEL ${unlockedLevel}`}
         </button>
 
         <button
           onClick={handleLevels}
-          className="w-full py-3 px-6 rounded-2xl bg-sky-800/80 hover:bg-sky-700/80 active:scale-95 text-white font-extrabold text-sm sm:text-base shadow-lg border border-white/20 flex items-center justify-center gap-2 transition-transform"
+          className="w-full py-3.5 px-6 rounded-2xl bg-slate-950/25 hover:bg-slate-950/40 active:scale-[0.98] text-white font-extrabold text-sm shadow-lg border border-white/15 flex items-center justify-center gap-2 transition-all"
         >
           <Grid size={18} />
-          SELECT LEVEL
+          EXPLORE LEVELS
         </button>
       </div>
     </div>
