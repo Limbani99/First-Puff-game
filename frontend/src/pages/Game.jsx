@@ -21,6 +21,8 @@ export default function Game() {
   const currentLevel = LEVELS.find((lvl) => lvl.id === levelId) || LEVELS[0];
 
   const canvasRef = useRef(null);
+  const containerRef = useRef(null);
+
   const [isPaused, setIsPaused] = useState(false);
   const [isCompleted, setIsCompleted] = useState(false);
   const [isGameOver, setIsGameOver] = useState(false);
@@ -208,9 +210,9 @@ export default function Game() {
   // Adjust canvas size to fit container dynamically
   useEffect(() => {
     const updateSize = () => {
-      if (canvasRef.current) {
-        const width = canvasRef.current.clientWidth || 360;
-        const height = canvasRef.current.clientHeight || 740;
+      if (containerRef.current && canvasRef.current) {
+        const width = containerRef.current.clientWidth || 360;
+        const height = containerRef.current.clientHeight || 740;
         const pixelRatio = Math.min(Math.max(window.devicePixelRatio || 1, 2), 3);
         canvasRef.current.width = Math.round(width * pixelRatio);
         canvasRef.current.height = Math.round(height * pixelRatio);
@@ -280,6 +282,7 @@ export default function Game() {
 
   return (
     <div
+      ref={containerRef}
       className="relative w-full h-full flex flex-col bg-slate-950 overflow-hidden select-none"
     >
       {/* HUD Header */}
@@ -296,7 +299,7 @@ export default function Game() {
       {/* Game Canvas Viewport */}
       <canvas
         ref={canvasRef}
-        className="w-full flex-1 min-h-0 touch-none block"
+        className="w-full h-full flex-1 touch-none block"
       />
 
       {/* Thumb Controls Zone Overlay (Lifted safely above mobile OS navigation bar) */}
