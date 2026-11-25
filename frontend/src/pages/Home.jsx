@@ -119,7 +119,7 @@ export default function Home() {
       {/* Bottom Main Action Buttons (Positioned with safe clearance above mobile system navigation bar) */}
       <div
         className="w-full flex flex-col gap-2 max-w-[236px] z-10 mt-1"
-        style={{ paddingBottom: 'env(safe-area-inset-bottom, 0px)' }}
+        style={{ paddingBottom: 'max(1.5rem, calc(env(safe-area-inset-bottom, 0px) + 1rem))' }}
       >
         <button
           onClick={handlePlay}
