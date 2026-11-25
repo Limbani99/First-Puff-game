@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { ArrowLeft, Lock } from 'lucide-react';
 import { LEVELS } from '../data/levels';
@@ -20,15 +20,28 @@ export default function LevelSelect() {
   const navigate = useNavigate();
   const { unlockedLevel, stars, bestTimes } = useGame();
   const [selectedZone, setSelectedZone] = useState('all');
+  const levelListRef = useRef(null);
   const activeLevelRef = useRef(null);
 
-  // Auto-scroll to the current unlocked level card on load
+  // Keep the selected level in view without scrolling the header off-screen.
   useEffect(() => {
-    if (activeLevelRef.current) {
-      setTimeout(() => {
-        activeLevelRef.current?.scrollIntoView({ behavior: 'smooth', block: 'center' });
-      }, 150);
-    }
+    const levelList = levelListRef.current;
+    const activeLevel = activeLevelRef.current;
+    if (!levelList || !activeLevel) return;
+
+    const frame = requestAnimationFrame(() => {
+      const listBounds = levelList.getBoundingClientRect();
+      const levelBounds = activeLevel.getBoundingClientRect();
+      const scrollTop =
+        levelList.scrollTop +
+        levelBounds.top -
+        listBounds.top -
+        (levelList.clientHeight - levelBounds.height) / 2;
+
+      levelList.scrollTo({ top: Math.max(0, scrollTop), behavior: 'smooth' });
+    });
+
+    return () => cancelAnimationFrame(frame);
   }, []);
 
   const handleSelectLevel = (levelId) => {
@@ -94,6 +107,7 @@ export default function LevelSelect() {
 
       {/* Level Cards Grid */}
       <div 
+        ref={levelListRef}
         className="flex-1 overflow-y-auto no-scrollbar p-4 space-y-3"
         style={{ paddingBottom: 'max(5.5rem, calc(env(safe-area-inset-bottom, 0px) + 4.5rem))' }}
       >
