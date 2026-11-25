@@ -1,4 +1,3 @@
-import React from "react";
 import { HashRouter, Routes, Route } from "react-router-dom";
 import { Toaster } from "react-hot-toast";
 import GameProvider from "./context/GameContext";
@@ -19,6 +18,7 @@ import Register from "./auth/Register";
 import ForgetPassword from "./auth/ForgetPassword";
 import ResetPassword from "./auth/ResetPassword";
 import ChangePassword from "./auth/ChangePassword";
+import PrivateRoute from "./utils/PrivateRoute";
 
 export default function App() {
   return (
@@ -54,7 +54,14 @@ export default function App() {
               <Route path="/register" element={<Register />} />
               <Route path="/forget-password" element={<ForgetPassword />} />
               <Route path="/reset-password/:token" element={<ResetPassword />} />
-              <Route path="/change-password" element={<ChangePassword />} />
+              <Route
+                path="/change-password"
+                element={
+                  <PrivateRoute>
+                    <ChangePassword />
+                  </PrivateRoute>
+                }
+              />
             </Routes>
           </MobileLayout>
         </HashRouter>

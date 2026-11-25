@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -32,7 +32,9 @@ export default function Login() {
       try {
         const raw = localStorage.getItem("first_puff_save");
         if (raw) gameSave = JSON.parse(raw);
-      } catch {}
+      } catch (error) {
+        console.warn("Could not read the local game save:", error);
+      }
 
       const { data } = await axios.post(`${apiBaseUrl}/api/users/login`, {
         ...form,

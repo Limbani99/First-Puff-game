@@ -1,37 +1,34 @@
 const { User } = require("../models/users");
 const bcrypt = require("bcryptjs");
-const jwt = require("jsonwebtoken");
 const crypto = require("crypto");
 const sendEmail = require("../utils/sendEmail");
-
-// Generate JWT token matching Career-Bridge pattern
-const createToken = (user) => {
-  return jwt.sign(
-    { id: user._id, role: user.role, username: user.username },
-    process.env.JWT_SECRET || "default_fallback_secret",
-    { expiresIn: "7d" }
-  );
-};
+const { createToken, getJwtSecret } = require("../utils/authToken");
 
 // ================== Player Auth ===================
 
 // Register player
 const register = async (req, res) => {
   try {
+    getJwtSecret();
     const { username, email, password, avatar, gameSave } = req.body;
+    const cleanUsername = typeof username === "string" ? username.trim() : "";
+    const cleanEmail = typeof email === "string" ? email.trim().toLowerCase() : "";
 
-    if (!username || !email || !password) {
+    if (!cleanUsername || !cleanEmail || typeof password !== "string") {
       return res.status(400).json({ message: "Username, email, and password are required" });
     }
-
-    const emailExists = await User.findOne({ email: email.toLowerCase() });
-    if (emailExists) {
-      return res.status(400).json({ message: "An account with this email already exists" });
+    if (password.length < 6) {
+      return res.status(400).json({ message: "Password must be at least 6 characters" });
     }
 
-    const usernameExists = await User.findOne({ username });
+    const emailExists = await User.findOne({ email: cleanEmail });
+    if (emailExists) {
+      return res.status(409).json({ message: "An account with this email already exists" });
+    }
+
+    const usernameExists = await User.findOne({ username: cleanUsername });
     if (usernameExists) {
-      return res.status(400).json({ message: "Username is already taken" });
+      return res.status(409).json({ message: "Username is already taken" });
     }
 
     const validAvatars = ["hippo", "frog", "pig", "penguin"];
@@ -42,8 +39,8 @@ const register = async (req, res) => {
 
     // Create user with any existing offline progress
     const user = await User.create({
-      username,
-      email: email.toLowerCase(),
+      username: cleanUsername,
+      email: cleanEmail,
       password,
       role: "player",
       avatar: chosenAvatar,
@@ -69,68 +66,35 @@ const register = async (req, res) => {
     });
   } catch (err) {
     console.error("Registration error:", err);
-    res.status(500).json({ message: "Failed to register account", error: err.message });
+    if (err.code === 11000) {
+      return res.status(409).json({ message: "Email or username is already in use" });
+    }
+    res.status(500).json({ message: "Failed to register account" });
   }
 };
 
-// Login player / user (with auto-create if new & automatic progress sync to DB)
+// Login player / user and sync existing offline progress to the account.
 const login = async (req, res) => {
   try {
     const { email, password, gameSave } = req.body;
+    const cleanEmail = typeof email === "string" ? email.trim().toLowerCase() : "";
 
-    if (!email || !password) {
+    if (!cleanEmail || typeof password !== "string" || !password) {
       return res.status(400).json({ message: "Email and password are required" });
     }
 
-    let user = await User.findOne({ email: email.toLowerCase() });
-
-    // If user does not exist yet, automatically register them and add them to DB!
+    const user = await User.findOne({ email: cleanEmail });
     if (!user) {
-      const cleanPrefix = email.split("@")[0].replace(/[^a-zA-Z0-9_]/g, "");
-      const generatedUsername = cleanPrefix || "Player" + Math.floor(100 + Math.random() * 900);
-
-      // Check if username taken, append suffix if so
-      let finalUsername = generatedUsername;
-      const userExists = await User.findOne({ username: finalUsername });
-      if (userExists) {
-        finalUsername = `${generatedUsername}_${Math.floor(100 + Math.random() * 900)}`;
-      }
-
-      const initialStars = gameSave?.stars && typeof gameSave.stars === "object" ? gameSave.stars : {};
-      const totalStars = Object.values(initialStars).reduce((acc, curr) => acc + (Number(curr) || 0), 0);
-
-      user = await User.create({
-        username: finalUsername,
-        email: email.toLowerCase(),
-        password,
-        role: "player",
-        avatar: "hippo",
-        unlockedLevel: gameSave?.unlockedLevel || 1,
-        totalStars,
-        stars: initialStars,
-        bestTimes: gameSave?.bestTimes || {},
-        settings: gameSave?.settings || { sound: true, vibration: true },
-      });
-
-      const token = createToken(user);
-      const userData = user.toObject();
-      delete userData.password;
-      userData.totalStars = totalStars;
-      userData.stars = initialStars;
-
-      return res.status(200).json({
-        message: "New account created and game data added to DB! 🎉",
-        token,
-        user: userData,
-        isNewUser: true,
-      });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
 
     // Existing user: verify password
     const isMatch = await bcrypt.compare(password, user.password);
     if (!isMatch) {
-      return res.status(400).json({ message: "Invalid email or password" });
+      return res.status(401).json({ message: "Invalid email or password" });
     }
+
+    getJwtSecret();
 
     // Merge offline game progress into DB if provided
     if (gameSave) {
@@ -186,7 +150,7 @@ const login = async (req, res) => {
     });
   } catch (err) {
     console.error("Login error:", err);
-    res.status(500).json({ message: "Login failed", error: err.message });
+    res.status(500).json({ message: "Login failed" });
   }
 };
 
@@ -292,6 +256,9 @@ const resetPassword = async (req, res) => {
     if (!password) {
       return res.status(400).json({ message: "New password is required" });
     }
+    if (typeof password !== "string" || password.length < 6) {
+      return res.status(400).json({ message: "Password must be at least 6 characters" });
+    }
 
     const hashedToken = crypto.createHash("sha256").update(token).digest("hex");
 
@@ -321,6 +288,9 @@ const changePassword = async (req, res) => {
     const { oldPassword, newPassword } = req.body;
     if (!oldPassword || !newPassword) {
       return res.status(400).json({ message: "Old and new passwords are required" });
+    }
+    if (typeof newPassword !== "string" || newPassword.length < 6) {
+      return res.status(400).json({ message: "Password must be at least 6 characters" });
     }
 
     const user = await User.findById(req.user.id);

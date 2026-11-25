@@ -123,6 +123,14 @@ npm start
 ```
 Local server runs at `http://localhost:5000` (cloud backend runs on Render).
 
+Before starting the backend, configure `backend/.env` with `MONGO_URI` (or
+`MONGODB_URI`), a long, private `JWT_SECRET`, and `CLIENT_URL` (for local development,
+`http://localhost:5173`). Configure the same required environment variables in the
+backend deployment. The server will refuse to start without the MongoDB URI and
+`JWT_SECRET`; tokens must use one configured secret for both signing and verification.
+Set the frontend's `VITE_API_URL` to the backend origin without a trailing `/api`
+(for example, `https://first-puff.onrender.com`) before building the frontend.
+
 ---
 
 ## 📜 License

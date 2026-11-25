@@ -1,4 +1,5 @@
 const jwt = require("jsonwebtoken");
+const { getJwtSecret } = require("../utils/authToken");
 
 /**
  * Career-Bridge style Auth Middleware with optional role checking
@@ -18,7 +19,7 @@ const authMiddleware = (roles = []) => {
     }
 
     try {
-      const decoded = jwt.verify(token, process.env.JWT_SECRET);
+      const decoded = jwt.verify(token, getJwtSecret());
       req.user = decoded;
 
       if (roles.length && !roles.includes(decoded.role)) {
@@ -27,6 +28,10 @@ const authMiddleware = (roles = []) => {
 
       next();
     } catch (err) {
+      if (err.message === "JWT_SECRET is not configured") {
+        console.error("Authentication unavailable: JWT_SECRET is not configured");
+        return res.status(503).json({ message: "Authentication service is not configured" });
+      }
       return res.status(401).json({ message: "Invalid or expired token" });
     }
   };

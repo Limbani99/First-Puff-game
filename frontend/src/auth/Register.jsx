@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
 import axios from "axios";
@@ -49,23 +49,23 @@ export default function Register() {
       try {
         const raw = localStorage.getItem("first_puff_save");
         if (raw) gameSave = JSON.parse(raw);
-      } catch {}
+      } catch (error) {
+        console.warn("Could not read the local game save:", error);
+      }
 
       const { data } = await axios.post(`${apiBaseUrl}/api/users/register`, {
         ...form,
         gameSave,
       });
 
-      if (data.token && data.user) {
-        login(data.user, data.token);
-        syncFromUser(data.user);
-      }
+      login(data.user, data.token);
+      syncFromUser(data.user);
       toast.success(data.message || "Registration Successful 🎉");
       soundManager.playWin();
       navigate("/home");
     } catch (err) {
       soundManager.playBump();
-      toast.error(err.response?.data?.message || "Registration failed");
+      toast.error(err.response?.data?.message || err.message || "Registration failed");
     } finally {
       setLoading(false);
     }

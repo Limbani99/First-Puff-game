@@ -16,9 +16,9 @@ export default function HUD({
   const isUnderTarget = elapsedTime <= level.targetTime;
 
   return (
-    <div className="w-full flex items-center justify-between px-3 pt-3 pb-1 pointer-events-none select-none z-20">
+    <div className="w-full flex items-center justify-between px-2 sm:px-3 pt-3 pb-1 pointer-events-none select-none z-20">
       {/* Level Info & Target */}
-      <div className="flex flex-col gap-1 pointer-events-auto">
+      <div className="flex flex-col gap-1 min-w-0 pointer-events-auto">
         <div className="flex items-center gap-2">
           <span className="px-2.5 py-0.5 rounded-full bg-sky-600/90 text-white font-extrabold text-xs shadow-md border border-sky-400/40">
             Level {level.id}
@@ -36,10 +36,10 @@ export default function HUD({
       </div>
 
       {/* Timer & Bumps & Pause Button */}
-      <div className="flex items-center gap-2 pointer-events-auto">
+      <div className="flex items-center gap-1 sm:gap-2 shrink-0 pointer-events-auto">
         {/* Timer */}
         <div
-          className={`px-3 py-1 rounded-xl font-mono font-black text-sm shadow-md border backdrop-blur-sm ${
+          className={`px-2 sm:px-3 py-1 rounded-xl font-mono font-black text-sm whitespace-nowrap shadow-md border backdrop-blur-sm ${
             isUnderTarget
               ? 'bg-slate-900/70 text-emerald-300 border-emerald-500/30'
               : 'bg-slate-900/70 text-amber-400 border-amber-500/30'
@@ -50,7 +50,7 @@ export default function HUD({
 
         {/* Bumps / Collision counter (Limit: 10) */}
         <div
-          className={`px-2.5 py-1 rounded-xl font-black text-xs shadow-md border backdrop-blur-sm transition-colors ${
+          className={`px-1.5 sm:px-2.5 py-1 rounded-xl font-black text-xs whitespace-nowrap shadow-md border backdrop-blur-sm transition-colors ${
             bumps < 7
               ? 'bg-slate-900/70 text-sky-200 border-white/10'
               : bumps < 10
@@ -65,7 +65,7 @@ export default function HUD({
         {/* Pause Button */}
         <button
           onClick={handlePause}
-          className="w-9 h-9 rounded-xl bg-slate-900/80 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-md transition-transform"
+          className="w-9 h-9 shrink-0 rounded-xl bg-slate-900/80 hover:bg-slate-800 active:scale-95 text-white flex items-center justify-center border border-white/20 shadow-md transition-transform"
           aria-label="Pause"
         >
           <Pause size={18} />

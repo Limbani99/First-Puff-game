@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { soundManager } from '../game/sound';
 import Raft from '../component/Raft';
@@ -50,14 +50,14 @@ export default function Splash() {
       {/* Animated Bobbing Raft */}
       <div className="relative flex flex-col items-center my-auto z-10">
         <div className="animate-bob">
-          <Raft activeCrew={['hippo', 'frog', 'pig', 'penguin']} />
+          <Raft />
         </div>
         {/* Animated puff cloud beneath */}
         <div className="flex items-center gap-1 mt-4 animate-pulse">
           <span className="text-2xl">💨</span>
           <span className="text-xs font-black text-white bg-slate-900/60 px-3 py-1 rounded-full border border-white/20">
-            Powered by pure gas!
-          </span>
+ created by <span className="text-amber-400">Desi Banka</span> & <span className="text-amber-400">MANN PATEL</span>
+           </span>
         </div>
       </div>
 

@@ -6,6 +6,10 @@ const path = require("path");
 
 dotenv.config();
 
+if (!process.env.JWT_SECRET) {
+  throw new Error("JWT_SECRET must be configured before starting the backend");
+}
+
 const app = express();
 
 app.use(cors());
@@ -25,14 +29,9 @@ app.get("/", (req, res) => {
 });
 
 // MongoDB Connection
-const DEFAULT_ATLAS_URI =
-  "mongodb+srv://patelmann2424_db_user:mannnareshbhai@cluster0.a4ncyih.mongodb.net/first_puff?retryWrites=true&w=majority";
-
-let MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI || DEFAULT_ATLAS_URI;
-
-// If MONGO_URI points to localhost/127.0.0.1 on Render, automatically route to Atlas
-if (!MONGO_URI || MONGO_URI.includes("127.0.0.1") || MONGO_URI.includes("localhost")) {
-  MONGO_URI = DEFAULT_ATLAS_URI;
+const MONGO_URI = process.env.MONGO_URI || process.env.MONGODB_URI;
+if (!MONGO_URI) {
+  throw new Error("MONGO_URI or MONGODB_URI must be configured before starting the backend");
 }
 
 mongoose

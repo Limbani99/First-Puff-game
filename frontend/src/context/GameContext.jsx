@@ -1,6 +1,8 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
+import { createContext, useContext, useState, useEffect } from 'react';
+import axios from 'axios';
 import { soundManager } from '../game/sound';
 import { useData } from './DataProvider';
+import { mergeProgress } from '../utils/progress';
 
 const STORAGE_KEY = 'first_puff_save';
 
@@ -67,18 +69,9 @@ export default function GameProvider({ children }) {
   useEffect(() => {
     if (isLoggedIn && user) {
       setGameState((prev) => {
-        const userStars = user.stars || {};
-        const userTimes = user.bestTimes || {};
-        const mergedUnlocked = Math.max(prev.unlockedLevel || 1, user.unlockedLevel || 1);
-        const mergedStars = { ...(prev.stars || {}), ...userStars };
-        const mergedTimes = { ...(prev.bestTimes || {}), ...userTimes };
-
         const updated = {
           ...prev,
-          unlockedLevel: mergedUnlocked,
-          stars: mergedStars,
-          bestTimes: mergedTimes,
-          settings: user.settings || prev.settings,
+          ...mergeProgress(prev, user),
         };
         try {
           localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
@@ -145,27 +138,16 @@ export default function GameProvider({ children }) {
         const currentToken = token || localStorage.getItem('first_puff_token');
         const apiUrl = import.meta.env.VITE_API_URL || "https://first-puff.onrender.com";
         const targetUnlocked = numId < 50 ? numId + 1 : 50;
-        fetch(`${apiUrl}/api/game/save`, {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            Authorization: `Bearer ${currentToken}`
-          },
-          body: JSON.stringify({
-            levelId: numId,
-            time: timeNum,
-            bumps,
-            stars: earnedStars,
-            unlockedLevel: targetUnlocked
-          })
+        axios.post(`${apiUrl}/api/game/save`, {
+          levelId: numId,
+          time: timeNum,
+          bumps,
+          stars: earnedStars,
+          unlockedLevel: targetUnlocked
+        }, {
+          headers: { Authorization: `Bearer ${currentToken}` }
         })
-          .then((res) => {
-            if (!res.ok) {
-              console.warn("Cloud save HTTP status:", res.status);
-            }
-            return res.json();
-          })
-          .then((data) => {
+          .then(({ data }) => {
             if (data && data.unlockedLevel && updateUserProgress) {
               updateUserProgress({
                 unlockedLevel: data.unlockedLevel,
@@ -176,10 +158,12 @@ export default function GameProvider({ children }) {
             }
           })
           .catch((err) => {
-            console.warn("Cloud save network error:", err);
+            console.warn("Cloud save failed:", err.message);
           });
       }
-    } catch {}
+    } catch (err) {
+      console.warn("Could not start cloud save:", err.message);
+    }
 
     return earnedStars;
   };
@@ -218,15 +202,9 @@ export default function GameProvider({ children }) {
   const syncFromUser = (userData) => {
     if (!userData) return;
     setGameState((prev) => {
-      const mergedUnlocked = Math.max(prev.unlockedLevel || 1, userData.unlockedLevel || 1);
-      const mergedStars = { ...(prev.stars || {}), ...(userData.stars || {}) };
-      const mergedTimes = { ...(prev.bestTimes || {}), ...(userData.bestTimes || {}) };
       const updated = {
         ...prev,
-        unlockedLevel: mergedUnlocked,
-        stars: mergedStars,
-        bestTimes: mergedTimes,
-        settings: userData.settings || prev.settings,
+        ...mergeProgress(prev, userData),
       };
       try {
         localStorage.setItem(STORAGE_KEY, JSON.stringify(updated));
